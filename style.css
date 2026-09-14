@@ -52,6 +52,100 @@
 
 .browse-row-unavailable td { color: var(--muted); }
 
+/* ── 統計ページ（stats.html） ── */
+.stats-section { margin-bottom: 40px; }
+
+.stats-section h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+.stat-table { width: 100%; max-width: 420px; border-collapse: collapse; font-size: 0.875rem; }
+
+.stat-table td { padding: 5px 8px; border-bottom: 1px solid var(--border); }
+
+.stat-table .num-cell {
+  width: 72px;
+  text-align: right;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── 年月別件数の棒グラフ（stats.html） ── */
+.month-radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  margin-bottom: 10px;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.month-radio { display: inline-flex; align-items: center; gap: 5px; cursor: pointer; }
+.month-radio input { cursor: pointer; }
+
+.month-swatch { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+
+.month-chart-wrap { display: flex; gap: 8px; }
+
+.month-axis {
+  position: relative;
+  flex: 0 0 auto;
+  width: 34px;
+  height: 160px;
+  font-size: 0.6875rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.month-axis-tick { position: absolute; right: 4px; transform: translateY(50%); }
+
+.month-chart {
+  position: relative;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 160px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+}
+
+.month-bar-col {
+  position: relative;
+  flex: 0 0 auto;
+  width: 12px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.month-bar {
+  width: 12px;
+  min-height: 1px;
+  border-radius: 3px 3px 0 0;
+  transition: height 0.15s ease, background-color 0.15s ease;
+}
+
+.month-bar-label {
+  position: absolute;
+  bottom: -20px;
+  font-size: 0.6875rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.month-table-scroll { overflow-x: auto; }
+.month-table { max-width: none; }
+.month-table thead th { text-align: left; padding: 5px 6px; border-bottom: 1px solid var(--border); color: var(--muted); font-weight: 500; }
+.month-table td { padding: 5px 6px; }
+.month-table .num-cell { width: 48px; }
+
 .unavailable-badge {
   display: inline-block;
   margin-left: 8px;

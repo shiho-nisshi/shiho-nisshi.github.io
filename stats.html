@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: { fontFamily: { sans: ['"Noto Sans JP"', 'ui-sans-serif', 'system-ui', 'sans-serif'] } } } }
+</script>
+<title>統計情報 | 司法省日誌</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen font-sans">
+
+<div class="max-w-3xl mx-auto px-4 py-12">
+
+  <header class="mb-6 fade-down">
+    <h1 class="text-2xl font-bold text-gray-900 tracking-wide">統計情報</h1>
+    <p class="mt-2 text-sm text-gray-500">
+      司法省日誌の伺（うかがい）記事は、多くが宛先の府県・裁判所名を伴う。
+      全巻を横断してその件数を集計したもの。
+    </p>
+  </header>
+
+  <div class="nav-bar">
+    <a href="index.html">← 巻一覧</a>
+  </div>
+
+<section class="stats-section">
+  <h2>種別別件数（全7129件）</h2>
+  <table class="stat-table"><tbody>
+<tr><td>未分類</td><td class="num-cell">5701</td></tr>
+<tr><td>伺</td><td class="num-cell">1092</td></tr>
+<tr><td>人事</td><td class="num-cell">168</td></tr>
+<tr><td>布達</td><td class="num-cell">137</td></tr>
+<tr><td>正誤</td><td class="num-cell">31</td></tr>
+</tbody></table>
+</section>
+<section class="stats-section">
+  <h2>年月別件数（34ヶ月分・7122件、種別内訳付き）</h2>
+  <div class="month-radio-group" role="radiogroup" aria-label="表示する系列">
+<label class="month-radio"><input type="radio" name="monthSeries" value="total" checked><span class="month-swatch" style="background:#4a3aa7"></span>合計</label>
+<label class="month-radio"><input type="radio" name="monthSeries" value="伺"><span class="month-swatch" style="background:#2a78d6"></span>伺</label>
+<label class="month-radio"><input type="radio" name="monthSeries" value="布達"><span class="month-swatch" style="background:#eb6834"></span>布達</label>
+<label class="month-radio"><input type="radio" name="monthSeries" value="人事"><span class="month-swatch" style="background:#1baf7a"></span>人事</label>
+<label class="month-radio"><input type="radio" name="monthSeries" value="正誤"><span class="month-swatch" style="background:#eda100"></span>正誤</label>
+<label class="month-radio"><input type="radio" name="monthSeries" value="article"><span class="month-swatch" style="background:#c9c9c9"></span>未分類</label>
+</div>
+<div class="month-chart-wrap">
+  <div class="month-axis" id="month-axis"><div class="month-axis-tick" style="bottom:0%">0</div><div class="month-axis-tick" style="bottom:25%">125</div><div class="month-axis-tick" style="bottom:50%">250</div><div class="month-axis-tick" style="bottom:75%">375</div><div class="month-axis-tick" style="bottom:100%">500</div></div>
+  <div class="month-chart" id="month-chart"><div class="month-bar-col" title="1873年1月 計230件（未分類230件）"><div class="month-bar" style="height:46.00%;background:#4a3aa7"></div><div class="month-bar-label">1873</div></div><div class="month-bar-col" title="1873年2月 計70件（未分類70件）"><div class="month-bar" style="height:14.00%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1873年3月 計0件"><div class="month-bar" style="height:0.00%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1873年4月 計0件"><div class="month-bar" style="height:0.00%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1873年5月 計0件"><div class="month-bar" style="height:0.00%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1873年6月 計0件"><div class="month-bar" style="height:0.00%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1873年7月 計288件（未分類288件）"><div class="month-bar" style="height:57.60%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1873年8月 計323件（未分類323件）"><div class="month-bar" style="height:64.60%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1873年9月 計318件（未分類318件）"><div class="month-bar" style="height:63.60%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1873年10月 計0件"><div class="month-bar" style="height:0.00%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1873年11月 計0件"><div class="month-bar" style="height:0.00%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1873年12月 計0件"><div class="month-bar" style="height:0.00%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1874年1月 計330件（未分類330件）"><div class="month-bar" style="height:66.00%;background:#4a3aa7"></div><div class="month-bar-label">1874</div></div><div class="month-bar-col" title="1874年2月 計413件（未分類413件）"><div class="month-bar" style="height:82.60%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1874年3月 計287件（未分類287件）"><div class="month-bar" style="height:57.40%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1874年4月 計278件（人事2件、未分類276件）"><div class="month-bar" style="height:55.60%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1874年5月 計334件（伺171件、布達16件、人事22件、正誤6件、未分類119件）"><div class="month-bar" style="height:66.80%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1874年6月 計296件（伺155件、布達9件、人事16件、正誤4件、未分類112件）"><div class="month-bar" style="height:59.20%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1874年7月 計193件（伺94件、布達22件、人事12件、正誤2件、未分類63件）"><div class="month-bar" style="height:38.60%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1874年8月 計177件（伺92件、布達21件、人事21件、正誤2件、未分類41件）"><div class="month-bar" style="height:35.40%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1874年9月 計182件（伺97件、布達15件、人事7件、正誤5件、未分類58件）"><div class="month-bar" style="height:36.40%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1874年10月 計344件（伺185件、布達21件、人事28件、正誤4件、未分類106件）"><div class="month-bar" style="height:68.80%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1874年11月 計268件（伺140件、布達18件、人事40件、正誤4件、未分類66件）"><div class="month-bar" style="height:53.60%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1874年12月 計274件（伺158件、布達15件、人事20件、正誤4件、未分類77件）"><div class="month-bar" style="height:54.80%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1875年1月 計240件（未分類240件）"><div class="month-bar" style="height:48.00%;background:#4a3aa7"></div><div class="month-bar-label">1875</div></div><div class="month-bar-col" title="1875年2月 計201件（未分類201件）"><div class="month-bar" style="height:40.20%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1875年3月 計276件（未分類276件）"><div class="month-bar" style="height:55.20%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1875年4月 計260件（未分類260件）"><div class="month-bar" style="height:52.00%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1875年5月 計70件（未分類70件）"><div class="month-bar" style="height:14.00%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1875年6月 計23件（未分類23件）"><div class="month-bar" style="height:4.60%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1875年7月 計22件（未分類22件）"><div class="month-bar" style="height:4.40%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1875年8月 計17件（未分類17件）"><div class="month-bar" style="height:3.40%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1875年9月 計71件（未分類71件）"><div class="month-bar" style="height:14.20%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1875年10月 計135件（未分類135件）"><div class="month-bar" style="height:27.00%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1875年11月 計86件（未分類86件）"><div class="month-bar" style="height:17.20%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1875年12月 計175件（未分類175件）"><div class="month-bar" style="height:35.00%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1876年1月 計148件（未分類148件）"><div class="month-bar" style="height:29.60%;background:#4a3aa7"></div><div class="month-bar-label">1876</div></div><div class="month-bar-col" title="1876年2月 計214件（未分類214件）"><div class="month-bar" style="height:42.80%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1876年3月 計212件（未分類212件）"><div class="month-bar" style="height:42.40%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1876年4月 計165件（未分類165件）"><div class="month-bar" style="height:33.00%;background:#4a3aa7"></div><div class="month-bar-label"></div></div><div class="month-bar-col" title="1876年5月 計202件（未分類202件）"><div class="month-bar" style="height:40.40%;background:#4a3aa7"></div><div class="month-bar-label"></div></div></div>
+</div>
+<script>
+(function () {
+  var chartData = {"values": {"total": [230, 70, 0, 0, 0, 0, 288, 323, 318, 0, 0, 0, 330, 413, 287, 278, 334, 296, 193, 177, 182, 344, 268, 274, 240, 201, 276, 260, 70, 23, 22, 17, 71, 135, 86, 175, 148, 214, 212, 165, 202], "伺": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 171, 155, 94, 92, 97, 185, 140, 158, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "布達": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 9, 22, 21, 15, 21, 18, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "人事": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 22, 16, 12, 21, 7, 28, 40, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "正誤": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 4, 2, 2, 5, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "article": [230, 70, 0, 0, 0, 0, 288, 323, 318, 0, 0, 0, 330, 413, 287, 276, 119, 112, 63, 41, 58, 106, 66, 77, 240, 201, 276, 260, 70, 23, 22, 17, 71, 135, 86, 175, 148, 214, 212, 165, 202]}, "max": {"total": 500, "伺": 200, "布達": 50, "人事": 50, "正誤": 10, "article": 500}, "colors": {"total": "#4a3aa7", "伺": "#2a78d6", "布達": "#eb6834", "人事": "#1baf7a", "正誤": "#eda100", "article": "#c9c9c9"}};
+  var barCols = Array.prototype.slice.call(document.querySelectorAll('#month-chart .month-bar-col'));
+  var axisEl = document.getElementById('month-axis');
+  function renderSeries(series) {
+    var max = chartData.max[series];
+    var color = chartData.colors[series];
+    var values = chartData.values[series];
+    barCols.forEach(function (col, i) {
+      var pct = max ? (values[i] / max * 100) : 0;
+      var barEl = col.querySelector('.month-bar');
+      barEl.style.height = pct.toFixed(2) + '%';
+      barEl.style.background = color;
+    });
+    axisEl.innerHTML = [0, 0.25, 0.5, 0.75, 1].map(function (f, i) {
+      return '<div class="month-axis-tick" style="bottom:' + (i * 25) + '%">' + Math.round(max * f) + '</div>';
+    }).join('');
+  }
+  Array.prototype.slice.call(document.querySelectorAll('input[name="monthSeries"]')).forEach(function (radio) {
+    radio.addEventListener('change', function () { renderSeries(this.value); });
+  });
+})();
+</script>
+<details class="mt-2">
+  <summary>表で見る</summary>
+  <div class="month-table-scroll"><table class="stat-table month-table">
+<thead><tr><th></th><th class="num-cell">伺</th><th class="num-cell">布達</th><th class="num-cell">人事</th><th class="num-cell">正誤</th><th class="num-cell">未分類</th><th class="num-cell">合計</th></tr></thead>
+<tbody>
+<tr><td>1873-01</td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell">230</td><td class="num-cell"><b>230</b></td></tr>
+<tr><td>1873-02</td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell">70</td><td class="num-cell"><b>70</b></td></tr>
+<tr><td>1873-03</td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"><b>0</b></td></tr>
+<tr><td>1873-04</td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"><b>0</b></td></tr>
+<tr><td>1873-05</td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"><b>0</b></td></tr>
+<tr><td>1873-06</td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"><b>0</b></td></tr>
+<tr><td>1873-07</td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell">288</td><td class="num-cell"><b>288</b></td></tr>
+<tr><td>1873-08</td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell">323</td><td class="num-cell"><b>323</b></td></tr>
+<tr><td>1873-09</td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell">318</td><td class="num-cell"><b>318</b></td></tr>
+<tr><td>1873-10</td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"><b>0</b></td></tr>
+<tr><td>1873-11</td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"><b>0</b></td></tr>
+<tr><td>1873-12</td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"><b>0</b></td></tr>
+<tr><td>1874-01</td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell">330</td><td class="num-cell"><b>330</b></td></tr>
+<tr><td>1874-02</td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell">413</td><td class="num-cell"><b>413</b></td></tr>
+<tr><td>1874-03</td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell">287</td><td class="num-cell"><b>287</b></td></tr>
+<tr><td>1874-04</td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell">2</td><td class="num-cell"></td><td class="num-cell">276</td><td class="num-cell"><b>278</b></td></tr>
+<tr><td>1874-05</td><td class="num-cell">171</td><td class="num-cell">16</td><td class="num-cell">22</td><td class="num-cell">6</td><td class="num-cell">119</td><td class="num-cell"><b>334</b></td></tr>
+<tr><td>1874-06</td><td class="num-cell">155</td><td class="num-cell">9</td><td class="num-cell">16</td><td class="num-cell">4</td><td class="num-cell">112</td><td class="num-cell"><b>296</b></td></tr>
+<tr><td>1874-07</td><td class="num-cell">94</td><td class="num-cell">22</td><td class="num-cell">12</td><td class="num-cell">2</td><td class="num-cell">63</td><td class="num-cell"><b>193</b></td></tr>
+<tr><td>1874-08</td><td class="num-cell">92</td><td class="num-cell">21</td><td class="num-cell">21</td><td class="num-cell">2</td><td class="num-cell">41</td><td class="num-cell"><b>177</b></td></tr>
+<tr><td>1874-09</td><td class="num-cell">97</td><td class="num-cell">15</td><td class="num-cell">7</td><td class="num-cell">5</td><td class="num-cell">58</td><td class="num-cell"><b>182</b></td></tr>
+<tr><td>1874-10</td><td class="num-cell">185</td><td class="num-cell">21</td><td class="num-cell">28</td><td class="num-cell">4</td><td class="num-cell">106</td><td class="num-cell"><b>344</b></td></tr>
+<tr><td>1874-11</td><td class="num-cell">140</td><td class="num-cell">18</td><td class="num-cell">40</td><td class="num-cell">4</td><td class="num-cell">66</td><td class="num-cell"><b>268</b></td></tr>
+<tr><td>1874-12</td><td class="num-cell">158</td><td class="num-cell">15</td><td class="num-cell">20</td><td class="num-cell">4</td><td class="num-cell">77</td><td class="num-cell"><b>274</b></td></tr>
+<tr><td>1875-01</td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell">240</td><td class="num-cell"><b>240</b></td></tr>
+<tr><td>1875-02</td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell">201</td><td class="num-cell"><b>201</b></td></tr>
+<tr><td>1875-03</td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell">276</td><td class="num-cell"><b>276</b></td></tr>
+<tr><td>1875-04</td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell">260</td><td class="num-cell"><b>260</b></td></tr>
+<tr><td>1875-05</td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell">70</td><td class="num-cell"><b>70</b></td></tr>
+<tr><td>1875-06</td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell">23</td><td class="num-cell"><b>23</b></td></tr>
+<tr><td>1875-07</td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell">22</td><td class="num-cell"><b>22</b></td></tr>
+<tr><td>1875-08</td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell">17</td><td class="num-cell"><b>17</b></td></tr>
+<tr><td>1875-09</td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell">71</td><td class="num-cell"><b>71</b></td></tr>
+<tr><td>1875-10</td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell">135</td><td class="num-cell"><b>135</b></td></tr>
+<tr><td>1875-11</td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell">86</td><td class="num-cell"><b>86</b></td></tr>
+<tr><td>1875-12</td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell">175</td><td class="num-cell"><b>175</b></td></tr>
+<tr><td>1876-01</td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell">148</td><td class="num-cell"><b>148</b></td></tr>
+<tr><td>1876-02</td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell">214</td><td class="num-cell"><b>214</b></td></tr>
+<tr><td>1876-03</td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell">212</td><td class="num-cell"><b>212</b></td></tr>
+<tr><td>1876-04</td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell">165</td><td class="num-cell"><b>165</b></td></tr>
+<tr><td>1876-05</td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell"></td><td class="num-cell">202</td><td class="num-cell"><b>202</b></td></tr>
+</tbody>
+</table></div>
+</details>
+</section>
+<section class="stats-section">
+  <h2>伺の府県・機関別件数（93種類・1062件）</h2>
+  <table class="stat-table"><tbody>
+<tr><td>京都裁判所</td><td class="num-cell">63</td></tr>
+<tr><td>島根県</td><td class="num-cell">50</td></tr>
+<tr><td>滋賀県</td><td class="num-cell">47</td></tr>
+<tr><td>熊本県</td><td class="num-cell">39</td></tr>
+<tr><td>新潟県</td><td class="num-cell">36</td></tr>
+<tr><td>東京府</td><td class="num-cell">34</td></tr>
+<tr><td>埼玉裁判所</td><td class="num-cell">32</td></tr>
+<tr><td>山形県</td><td class="num-cell">31</td></tr>
+<tr><td>新治裁判所</td><td class="num-cell">29</td></tr>
+<tr><td>愛知県</td><td class="num-cell">28</td></tr>
+<tr><td>筑摩県</td><td class="num-cell">27</td></tr>
+<tr><td>大分県</td><td class="num-cell">25</td></tr>
+<tr><td>福岡県</td><td class="num-cell">22</td></tr>
+<tr><td>三重県</td><td class="num-cell">21</td></tr>
+<tr><td>東京裁判所</td><td class="num-cell">21</td></tr>
+<tr><td>名東県</td><td class="num-cell">21</td></tr>
+<tr><td>若松県</td><td class="num-cell">19</td></tr>
+<tr><td>和歌山県</td><td class="num-cell">19</td></tr>
+<tr><td>千葉裁判所</td><td class="num-cell">18</td></tr>
+<tr><td>大阪裁判所</td><td class="num-cell">18</td></tr>
+<tr><td>茨城裁判所</td><td class="num-cell">18</td></tr>
+<tr><td>岡山県</td><td class="num-cell">17</td></tr>
+<tr><td>司法省裁判所</td><td class="num-cell">17</td></tr>
+<tr><td>小田県</td><td class="num-cell">16</td></tr>
+<tr><td>鳥取県</td><td class="num-cell">15</td></tr>
+<tr><td>三潴県</td><td class="num-cell">15</td></tr>
+<tr><td>廣島県</td><td class="num-cell">15</td></tr>
+<tr><td>高知県</td><td class="num-cell">14</td></tr>
+<tr><td>愛媛県</td><td class="num-cell">14</td></tr>
+<tr><td>山梨裁判所</td><td class="num-cell">13</td></tr>
+<tr><td>静岡県</td><td class="num-cell">13</td></tr>
+<tr><td>山口県</td><td class="num-cell">13</td></tr>
+<tr><td>奈良県</td><td class="num-cell">13</td></tr>
+<tr><td>兵庫裁判所</td><td class="num-cell">11</td></tr>
+<tr><td>水澤県</td><td class="num-cell">11</td></tr>
+<tr><td>長崎裁判所</td><td class="num-cell">11</td></tr>
+<tr><td>熊谷裁判所</td><td class="num-cell">11</td></tr>
+<tr><td>小倉県</td><td class="num-cell">11</td></tr>
+<tr><td>豐岡県</td><td class="num-cell">9</td></tr>
+<tr><td>京都府</td><td class="num-cell">9</td></tr>
+<tr><td>新川県</td><td class="num-cell">9</td></tr>
+<tr><td>堺県</td><td class="num-cell">8</td></tr>
+<tr><td>秋田県</td><td class="num-cell">8</td></tr>
+<tr><td>岐阜県</td><td class="num-cell">8</td></tr>
+<tr><td>石川県</td><td class="num-cell">8</td></tr>
+<tr><td>宮城県</td><td class="num-cell">8</td></tr>
+<tr><td>靜岡県</td><td class="num-cell">7</td></tr>
+<tr><td>岩手県</td><td class="num-cell">7</td></tr>
+<tr><td>置賜県</td><td class="num-cell">7</td></tr>
+<tr><td>飾磨県</td><td class="num-cell">7</td></tr>
+<tr><td>青森県</td><td class="num-cell">7</td></tr>
+<tr><td>警視廳</td><td class="num-cell">7</td></tr>
+<tr><td>足柄裁判所</td><td class="num-cell">6</td></tr>
+<tr><td>度會県</td><td class="num-cell">6</td></tr>
+<tr><td>大阪府</td><td class="num-cell">6</td></tr>
+<tr><td>敦賀県</td><td class="num-cell">6</td></tr>
+<tr><td>長野県</td><td class="num-cell">5</td></tr>
+<tr><td>磐前県</td><td class="num-cell">5</td></tr>
+<tr><td>神奈川裁判所</td><td class="num-cell">5</td></tr>
+<tr><td>佐賀裁判所</td><td class="num-cell">5</td></tr>
+<tr><td>神奈川県</td><td class="num-cell">4</td></tr>
+<tr><td>杤木裁判所</td><td class="num-cell">4</td></tr>
+<tr><td>長崎県</td><td class="num-cell">4</td></tr>
+<tr><td>山梨県</td><td class="num-cell">3</td></tr>
+<tr><td>相川県</td><td class="num-cell">3</td></tr>
+<tr><td>熊谷県</td><td class="num-cell">3</td></tr>
+<tr><td>箱館裁判所</td><td class="num-cell">3</td></tr>
+<tr><td>杤木県</td><td class="num-cell">3</td></tr>
+<tr><td>埼玉県</td><td class="num-cell">2</td></tr>
+<tr><td>鹿兒島県</td><td class="num-cell">2</td></tr>
+<tr><td>新治県</td><td class="num-cell">2</td></tr>
+<tr><td>橡木裁判所</td><td class="num-cell">2</td></tr>
+<tr><td>福島県</td><td class="num-cell">2</td></tr>
+<tr><td>司法裁判所</td><td class="num-cell">2</td></tr>
+<tr><td>函館裁判所</td><td class="num-cell">2</td></tr>
+<tr><td>茨城県</td><td class="num-cell">2</td></tr>
+<tr><td>宮崎県</td><td class="num-cell">2</td></tr>
+<tr><td>箱舘裁判所長權少判事井上好武</td><td class="num-cell">1</td></tr>
+<tr><td>演松県</td><td class="num-cell">1</td></tr>
+<tr><td>東京裁判所聽訟課</td><td class="num-cell">1</td></tr>
+<tr><td>權少判事大久保親正</td><td class="num-cell">1</td></tr>
+<tr><td>兵庫県</td><td class="num-cell">1</td></tr>
+<tr><td>薩摩県</td><td class="num-cell">1</td></tr>
+<tr><td>豊岡県</td><td class="num-cell">1</td></tr>
+<tr><td>干葉裁判所</td><td class="num-cell">1</td></tr>
+<tr><td>開拓使</td><td class="num-cell">1</td></tr>
+<tr><td>足柄県</td><td class="num-cell">1</td></tr>
+<tr><td>佐賀県</td><td class="num-cell">1</td></tr>
+<tr><td>司法省臨時裁判所</td><td class="num-cell">1</td></tr>
+<tr><td>酒田県</td><td class="num-cell">1</td></tr>
+<tr><td>愛知懸</td><td class="num-cell">1</td></tr>
+<tr><td>朽木裁判所</td><td class="num-cell">1</td></tr>
+<tr><td>千葉懸</td><td class="num-cell">1</td></tr>
+</tbody></table>
+</section>
+
+  <footer class="mt-16 pt-6 border-t border-gray-200 text-sm text-gray-500">
+    <p class="leading-relaxed">原本: 国立国会図書館デジタルコレクション所蔵『司法省日誌』</p>
+  </footer>
+
+</div>
+</body>
+</html>
