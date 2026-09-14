@@ -22,12 +22,18 @@
   .tab-btn:hover { color: #111827; }
   .tab-btn.active { color: #2563eb; border-bottom-color: #2563eb; }
 
-  /* テキスト表示: 階層はボックス装飾なし、インデントとガイド線のみで表す */
+  /* テキスト表示: 号・日付の見出しはボックス装飾なしのインデント、
+     本文のある記事だけ白背景の箱にして読みやすくする */
   .ol-issue { margin: 1.75em 0 0; }
   .ol-dategroup { margin: .5em 0 .5em 1.25rem; padding-left: .9rem; border-left: 2px solid #e2e2e2; }
-  .ol-article { margin: .6em 0; padding-left: .9rem; border-left: 2px solid #ececec; }
-  /* 記事の切れ目を分かりやすくする区切り線（同じdateGroup内の2件目以降） */
-  .ol-article + .ol-article { border-top: 1px dashed #d5d5d5; margin-top: .9em; padding-top: .7em; }
+  .ol-article {
+    margin: .6em 0;
+    padding: .6em 1rem;
+    background: #fff;
+    border-left: 2px solid #ececec;
+    border-radius: 0 6px 6px 0;
+  }
+  .ol-article + .ol-article { margin-top: .7em; }
   .ol-head { font-weight: 600; }
   .ol-issue-head { font-size: 1.05rem; border-bottom: 2px solid #ddd; padding-bottom: .25em; }
   .ol-dategroup-head { color: #666; font-weight: 500; }
