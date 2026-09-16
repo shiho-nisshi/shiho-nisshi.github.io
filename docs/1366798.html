@@ -49,13 +49,15 @@
   .ol-body { white-space: pre-wrap; word-break: break-all; margin: .2em 0 0; }
 
   /* 記事カード・テキスト表示共通、右側のIIIF原文画像サムネイル＋URL
-     （人名アーカイブス側と同じ構成、サムネイルとURLは横並び） */
+     （人名アーカイブス側と同じ構成。ブロック自体は文の横に並べるが、
+     幅の制約上サムネイルとURLは縦積み＝サムネイルの下にURL） */
   .source-ref {
     flex-shrink: 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
+    width: 96px;
   }
   .source-ref-thumb-link {
     display: block;
@@ -70,11 +72,12 @@
     transition: opacity .15s;
   }
   .source-ref-thumb-link:hover { opacity: .8; }
-  .source-ref-thumb { display: block; width: 80px; height: auto; }
+  .source-ref-thumb { display: block; width: 96px; height: auto; }
   .source-ref-link {
     font-size: .6875rem;
     color: #8a8a8a;
     text-decoration: underline;
+    text-align: center;
     word-break: break-all;
     max-width: 96px;
   }
