@@ -43,17 +43,18 @@
   .ol-dategroup-head { color: #666; font-weight: 500; }
   .ol-body { white-space: pre-wrap; word-break: break-all; margin: .2em 0 0; }
 
-  /* テキスト表示の右側: IIIF原文画像サムネイル＋URL（人名アーカイブス側と同じ構成） */
+  /* 記事カード・テキスト表示共通、右側のIIIF原文画像サムネイル＋URL
+     （人名アーカイブス側と同じ構成、サムネイルとURLは横並び） */
   .source-ref {
     flex-shrink: 0;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 4px;
-    width: 96px;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
   }
   .source-ref-thumb-link {
     display: block;
+    flex-shrink: 0;
     line-height: 0;
     border-radius: 4px;
     overflow: hidden;
@@ -64,13 +65,13 @@
     transition: opacity .15s;
   }
   .source-ref-thumb-link:hover { opacity: .8; }
-  .source-ref-thumb { display: block; width: 96px; height: auto; }
+  .source-ref-thumb { display: block; width: 80px; height: auto; }
   .source-ref-link {
     font-size: .6875rem;
     color: #8a8a8a;
     text-decoration: underline;
     word-break: break-all;
-    text-align: right;
+    max-width: 96px;
   }
 
   /* ライトボックス（サムネイルクリックで原寸画像をその場拡大表示） */
@@ -110,8 +111,7 @@
 
   @media (max-width: 480px) {
     .ol-article { flex-direction: column; }
-    .source-ref { width: 100%; flex-direction: row; align-items: center; }
-    .source-ref-link { text-align: left; }
+    .source-ref-link { max-width: none; }
   }
 </style>
 </head>
