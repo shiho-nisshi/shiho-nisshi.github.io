@@ -38,6 +38,11 @@
   }
   .ol-article + .ol-article { margin-top: .7em; }
   .ol-main { flex: 1; min-width: 0; }
+
+  /* 記事カード（DaisyUIの.card-bodyはflex-direction:columnがデフォルトのため、
+     テキスト表示の.ol-article/.ol-mainと同じ横並びにするには明示的に上書きが必要） */
+  .article-card-body { display: flex; flex-direction: row; align-items: flex-start; gap: 16px; }
+  .article-card-main { flex: 1; min-width: 0; }
   .ol-head { font-weight: 600; }
   .ol-issue-head { font-size: 1.05rem; border-bottom: 2px solid #ddd; padding-bottom: .25em; }
   .ol-dategroup-head { color: #666; font-weight: 500; }
@@ -110,7 +115,7 @@
   .lightbox-close:hover { opacity: 1; }
 
   @media (max-width: 480px) {
-    .ol-article { flex-direction: column; }
+    .ol-article, .article-card-body { flex-direction: column; }
     .source-ref-link { max-width: none; }
   }
 </style>
@@ -181,8 +186,8 @@
 
 <div id="view-card">
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-001" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-001</span>
         <span class="badge badge-outline">article</span>
@@ -204,8 +209,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-002" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-002</span>
         <span class="badge badge-outline">article</span>
@@ -222,8 +227,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-003" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-003</span>
         <span class="badge badge-outline">article</span>
@@ -241,8 +246,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-004" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-004</span>
         <span class="badge badge-outline">article</span>
@@ -297,8 +302,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-005" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-005</span>
         <span class="badge badge-outline">article</span>
@@ -320,8 +325,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-006" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-006</span>
         <span class="badge badge-outline">article</span>
@@ -376,8 +381,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-007" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-007</span>
         <span class="badge badge-outline">article</span>
@@ -396,8 +401,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-008" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-008</span>
         <span class="badge badge-outline">article</span>
@@ -436,8 +441,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-009" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-009</span>
         <span class="badge badge-outline">article</span>
@@ -459,8 +464,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-010" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-010</span>
         <span class="badge badge-outline">article</span>
@@ -478,8 +483,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-011" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-011</span>
         <span class="badge badge-outline">article</span>
@@ -499,8 +504,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-012" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-012</span>
         <span class="badge badge-outline">article</span>
@@ -519,8 +524,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-013" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-013</span>
         <span class="badge badge-outline">article</span>
@@ -541,8 +546,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-014" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-014</span>
         <span class="badge badge-outline">article</span>
@@ -560,8 +565,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-015" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-015</span>
         <span class="badge badge-outline">article</span>
@@ -578,8 +583,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-016" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-016</span>
         <span class="badge badge-outline">article</span>
@@ -600,8 +605,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-017" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-017</span>
         <span class="badge badge-outline">article</span>
@@ -648,8 +653,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-018" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-018</span>
         <span class="badge badge-outline">article</span>
@@ -666,8 +671,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-019" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-019</span>
         <span class="badge badge-outline">article</span>
@@ -704,8 +709,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-020" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-020</span>
         <span class="badge badge-outline">article</span>
@@ -723,8 +728,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-021" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-021</span>
         <span class="badge badge-outline">article</span>
@@ -742,8 +747,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-022" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-022</span>
         <span class="badge badge-outline">article</span>
@@ -780,8 +785,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-023" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-023</span>
         <span class="badge badge-outline">article</span>
@@ -810,8 +815,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-024" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-024</span>
         <span class="badge badge-outline">article</span>
@@ -846,8 +851,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-025" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-025</span>
         <span class="badge badge-outline">article</span>
@@ -906,8 +911,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-026" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-026</span>
         <span class="badge badge-outline">article</span>
@@ -928,8 +933,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-027" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-027</span>
         <span class="badge badge-outline">article</span>
@@ -968,8 +973,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-028" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-028</span>
         <span class="badge badge-outline">article</span>
@@ -999,8 +1004,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-029" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-029</span>
         <span class="badge badge-outline">article</span>
@@ -1037,8 +1042,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-030" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-030</span>
         <span class="badge badge-outline">article</span>
@@ -1063,8 +1068,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-031" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-031</span>
         <span class="badge badge-outline">article</span>
@@ -1085,8 +1090,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-032" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-032</span>
         <span class="badge badge-outline">article</span>
@@ -1106,8 +1111,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-033" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-033</span>
         <span class="badge badge-outline">article</span>
@@ -1129,8 +1134,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-034" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-034</span>
         <span class="badge badge-outline">article</span>
@@ -1150,8 +1155,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-035" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-035</span>
         <span class="badge badge-outline">article</span>
@@ -1170,8 +1175,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-036" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-036</span>
         <span class="badge badge-outline">article</span>
@@ -1194,8 +1199,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-037" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-037</span>
         <span class="badge badge-outline">article</span>
@@ -1236,8 +1241,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-038" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-038</span>
         <span class="badge badge-outline">article</span>
@@ -1274,8 +1279,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-039" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-039</span>
         <span class="badge badge-outline">article</span>
@@ -1297,8 +1302,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-040" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-040</span>
         <span class="badge badge-outline">article</span>
@@ -1329,8 +1334,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-041" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-041</span>
         <span class="badge badge-outline">article</span>
@@ -1348,8 +1353,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-042" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-042</span>
         <span class="badge badge-outline">article</span>
@@ -1439,8 +1444,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-043" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-043</span>
         <span class="badge badge-outline">article</span>
@@ -1464,8 +1469,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-044" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-044</span>
         <span class="badge badge-outline">article</span>
@@ -1483,8 +1488,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-045" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-045</span>
         <span class="badge badge-outline">article</span>
@@ -1507,8 +1512,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-046" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-046</span>
         <span class="badge badge-outline">article</span>
@@ -1529,8 +1534,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-047" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-047</span>
         <span class="badge badge-outline">article</span>
@@ -1549,8 +1554,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-048" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-048</span>
         <span class="badge badge-outline">article</span>
@@ -1585,8 +1590,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-049" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-049</span>
         <span class="badge badge-outline">article</span>
@@ -1621,8 +1626,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-050" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-050</span>
         <span class="badge badge-outline">article</span>
@@ -1658,8 +1663,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-051" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-051</span>
         <span class="badge badge-outline">article</span>
@@ -1685,8 +1690,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-052" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-052</span>
         <span class="badge badge-outline">article</span>
@@ -1703,8 +1708,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-053" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-053</span>
         <span class="badge badge-outline">article</span>
@@ -1721,8 +1726,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-054" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-054</span>
         <span class="badge badge-outline">article</span>
@@ -1764,8 +1769,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-055" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-055</span>
         <span class="badge badge-outline">article</span>
@@ -1784,8 +1789,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-056" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-056</span>
         <span class="badge badge-outline">article</span>
@@ -1825,8 +1830,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-057" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-057</span>
         <span class="badge badge-outline">article</span>
@@ -1856,8 +1861,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-058" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-058</span>
         <span class="badge badge-outline">article</span>
@@ -1901,8 +1906,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-059" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-059</span>
         <span class="badge badge-outline">article</span>
@@ -1921,8 +1926,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-060" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-060</span>
         <span class="badge badge-outline">article</span>
@@ -1947,8 +1952,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-061" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-061</span>
         <span class="badge badge-outline">article</span>
@@ -1981,8 +1986,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-062" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-062</span>
         <span class="badge badge-outline">article</span>
@@ -2009,8 +2014,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-063" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-063</span>
         <span class="badge badge-outline">article</span>
@@ -2052,8 +2057,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-064" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-064</span>
         <span class="badge badge-outline">article</span>
@@ -2086,8 +2091,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-065" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-065</span>
         <span class="badge badge-outline">article</span>
@@ -2113,8 +2118,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-066" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-066</span>
         <span class="badge badge-outline">article</span>
@@ -2134,8 +2139,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-067" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-067</span>
         <span class="badge badge-outline">article</span>
@@ -2157,8 +2162,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-068" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-068</span>
         <span class="badge badge-outline">article</span>
@@ -2179,8 +2184,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-069" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-069</span>
         <span class="badge badge-outline">article</span>
@@ -2208,8 +2213,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-070" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-070</span>
         <span class="badge badge-outline">article</span>
@@ -2251,8 +2256,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-071" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-071</span>
         <span class="badge badge-outline">article</span>
@@ -2279,8 +2284,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-072" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-072</span>
         <span class="badge badge-outline">article</span>
@@ -2300,8 +2305,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-073" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-073</span>
         <span class="badge badge-outline">article</span>
@@ -2332,8 +2337,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-074" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-074</span>
         <span class="badge badge-outline">article</span>
@@ -2352,8 +2357,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-075" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-075</span>
         <span class="badge badge-outline">article</span>
@@ -2370,8 +2375,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-076" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-076</span>
         <span class="badge badge-outline">article</span>
@@ -2417,8 +2422,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-077" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-077</span>
         <span class="badge badge-outline">article</span>
@@ -2457,8 +2462,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-078" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-078</span>
         <span class="badge badge-outline">article</span>
@@ -2475,8 +2480,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-079" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-079</span>
         <span class="badge badge-outline">article</span>
@@ -2498,8 +2503,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-080" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-080</span>
         <span class="badge badge-outline">article</span>
@@ -2526,8 +2531,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-081" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-081</span>
         <span class="badge badge-outline">article</span>
@@ -2552,8 +2557,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-082" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-082</span>
         <span class="badge badge-outline">article</span>
@@ -2572,8 +2577,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-083" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-083</span>
         <span class="badge badge-outline">article</span>
@@ -2610,8 +2615,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-084" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-084</span>
         <span class="badge badge-outline">article</span>
@@ -2632,8 +2637,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-085" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-085</span>
         <span class="badge badge-outline">article</span>
@@ -2654,8 +2659,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-086" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-086</span>
         <span class="badge badge-outline">article</span>
@@ -2682,8 +2687,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-087" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-087</span>
         <span class="badge badge-outline">article</span>
@@ -2710,8 +2715,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-088" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-088</span>
         <span class="badge badge-outline">article</span>
@@ -2742,8 +2747,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-089" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-089</span>
         <span class="badge badge-outline">article</span>
@@ -2761,8 +2766,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-090" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-090</span>
         <span class="badge badge-outline">article</span>
@@ -2808,8 +2813,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-091" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-091</span>
         <span class="badge badge-outline">article</span>
@@ -2828,8 +2833,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-092" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-092</span>
         <span class="badge badge-outline">article</span>
@@ -2849,8 +2854,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-093" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-093</span>
         <span class="badge badge-outline">article</span>
@@ -2871,8 +2876,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-094" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-094</span>
         <span class="badge badge-outline">article</span>
@@ -2891,8 +2896,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-095" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-095</span>
         <span class="badge badge-outline">article</span>
@@ -2928,8 +2933,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-096" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-096</span>
         <span class="badge badge-outline">article</span>
@@ -2962,8 +2967,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-097" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-097</span>
         <span class="badge badge-outline">article</span>
@@ -2992,8 +2997,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-098" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-098</span>
         <span class="badge badge-outline">article</span>
@@ -3013,8 +3018,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-099" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-099</span>
         <span class="badge badge-outline">article</span>
@@ -3045,8 +3050,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-100" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-100</span>
         <span class="badge badge-outline">article</span>
@@ -3127,8 +3132,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-101" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-101</span>
         <span class="badge badge-outline">article</span>
@@ -3161,8 +3166,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-102" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-102</span>
         <span class="badge badge-outline">article</span>
@@ -3182,8 +3187,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-103" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-103</span>
         <span class="badge badge-outline">article</span>
@@ -3216,8 +3221,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-104" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-104</span>
         <span class="badge badge-outline">article</span>
@@ -3281,8 +3286,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-105" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-105</span>
         <span class="badge badge-outline">article</span>
@@ -3309,8 +3314,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-106" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-106</span>
         <span class="badge badge-outline">article</span>
@@ -3340,8 +3345,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-107" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-107</span>
         <span class="badge badge-outline">article</span>
@@ -3374,8 +3379,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-108" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-108</span>
         <span class="badge badge-outline">article</span>
@@ -3422,8 +3427,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-109" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-109</span>
         <span class="badge badge-outline">article</span>
@@ -3458,8 +3463,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-110" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-110</span>
         <span class="badge badge-outline">article</span>
@@ -3507,8 +3512,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-111" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-111</span>
         <span class="badge badge-outline">article</span>
@@ -3536,8 +3541,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-112" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-112</span>
         <span class="badge badge-outline">article</span>
@@ -3560,8 +3565,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-113" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-113</span>
         <span class="badge badge-outline">article</span>
@@ -3578,8 +3583,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-114" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-114</span>
         <span class="badge badge-outline">article</span>
@@ -3612,8 +3617,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-115" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-115</span>
         <span class="badge badge-outline">article</span>
@@ -3657,8 +3662,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-116" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-116</span>
         <span class="badge badge-outline">article</span>
@@ -3687,8 +3692,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-117" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-117</span>
         <span class="badge badge-outline">article</span>
@@ -3732,8 +3737,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-118" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-118</span>
         <span class="badge badge-outline">article</span>
@@ -3800,8 +3805,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-119" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-119</span>
         <span class="badge badge-outline">article</span>
@@ -3827,8 +3832,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-120" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-120</span>
         <span class="badge badge-outline">article</span>
@@ -3850,8 +3855,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-121" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-121</span>
         <span class="badge badge-outline">article</span>
@@ -3890,8 +3895,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-122" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-122</span>
         <span class="badge badge-outline">article</span>
@@ -3912,8 +3917,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-123" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-123</span>
         <span class="badge badge-outline">article</span>
@@ -3932,8 +3937,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-124" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-124</span>
         <span class="badge badge-outline">article</span>
@@ -3953,8 +3958,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-125" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-125</span>
         <span class="badge badge-outline">article</span>
@@ -3976,8 +3981,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-126" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-126</span>
         <span class="badge badge-outline">article</span>
@@ -4043,8 +4048,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-127" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-127</span>
         <span class="badge badge-outline">article</span>
@@ -4141,8 +4146,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-128" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-128</span>
         <span class="badge badge-outline">article</span>
@@ -4174,8 +4179,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-129" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-129</span>
         <span class="badge badge-outline">article</span>
@@ -4195,8 +4200,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-130" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-130</span>
         <span class="badge badge-outline">article</span>
@@ -4212,8 +4217,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-131" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-131</span>
         <span class="badge badge-outline">article</span>
@@ -4230,8 +4235,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-132" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-132</span>
         <span class="badge badge-outline">article</span>
@@ -4269,8 +4274,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-133" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-133</span>
         <span class="badge badge-outline">article</span>
@@ -4295,8 +4300,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-134" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-134</span>
         <span class="badge badge-outline">article</span>
@@ -4316,8 +4321,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-135" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-135</span>
         <span class="badge badge-outline">article</span>
@@ -4378,8 +4383,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-136" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-136</span>
         <span class="badge badge-outline">article</span>
@@ -4400,8 +4405,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-137" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-137</span>
         <span class="badge badge-outline">article</span>
@@ -4417,8 +4422,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-138" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-138</span>
         <span class="badge badge-outline">article</span>
@@ -4450,8 +4455,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-139" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-139</span>
         <span class="badge badge-outline">article</span>
@@ -4494,8 +4499,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-140" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-140</span>
         <span class="badge badge-outline">article</span>
@@ -4525,8 +4530,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-141" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-141</span>
         <span class="badge badge-outline">article</span>
@@ -4553,8 +4558,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-142" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-142</span>
         <span class="badge badge-outline">article</span>
@@ -4592,8 +4597,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-143" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-143</span>
         <span class="badge badge-outline">article</span>
@@ -4613,8 +4618,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-144" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-144</span>
         <span class="badge badge-outline">article</span>
@@ -4637,8 +4642,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-145" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-145</span>
         <span class="badge badge-outline">article</span>
@@ -4654,8 +4659,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-146" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-146</span>
         <span class="badge badge-outline">article</span>
@@ -4684,8 +4689,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-147" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-147</span>
         <span class="badge badge-outline">article</span>
@@ -4703,8 +4708,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-148" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-148</span>
         <span class="badge badge-outline">article</span>
@@ -4723,8 +4728,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-149" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-149</span>
         <span class="badge badge-outline">article</span>
@@ -4757,8 +4762,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-150" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-150</span>
         <span class="badge badge-outline">article</span>
@@ -4799,8 +4804,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-151" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-151</span>
         <span class="badge badge-outline">article</span>
@@ -4832,8 +4837,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-152" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-152</span>
         <span class="badge badge-outline">article</span>
@@ -4856,8 +4861,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-153" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-153</span>
         <span class="badge badge-outline">article</span>
@@ -4879,8 +4884,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-154" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-154</span>
         <span class="badge badge-outline">article</span>
@@ -4899,8 +4904,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-155" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-155</span>
         <span class="badge badge-outline">article</span>
@@ -4919,8 +4924,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-156" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-156</span>
         <span class="badge badge-outline">article</span>
@@ -4941,8 +4946,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-157" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-157</span>
         <span class="badge badge-outline">article</span>
@@ -4964,8 +4969,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-158" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-158</span>
         <span class="badge badge-outline">article</span>
@@ -4985,8 +4990,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-159" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-159</span>
         <span class="badge badge-outline">article</span>
@@ -5017,8 +5022,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-160" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-160</span>
         <span class="badge badge-outline">article</span>
@@ -5043,8 +5048,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-161" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-161</span>
         <span class="badge badge-outline">article</span>
@@ -5071,8 +5076,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-162" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-162</span>
         <span class="badge badge-outline">article</span>
@@ -5091,8 +5096,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-163" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-163</span>
         <span class="badge badge-outline">article</span>
@@ -5123,8 +5128,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-164" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-164</span>
         <span class="badge badge-outline">article</span>
@@ -5144,8 +5149,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-165" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-165</span>
         <span class="badge badge-outline">article</span>
@@ -5171,8 +5176,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-166" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-166</span>
         <span class="badge badge-outline">article</span>
@@ -5197,8 +5202,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-167" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-167</span>
         <span class="badge badge-outline">article</span>
@@ -5219,8 +5224,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-168" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-168</span>
         <span class="badge badge-outline">article</span>
@@ -5251,8 +5256,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-169" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-169</span>
         <span class="badge badge-outline">article</span>
@@ -5284,8 +5289,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-170" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-170</span>
         <span class="badge badge-outline">article</span>
@@ -5315,8 +5320,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-171" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-171</span>
         <span class="badge badge-outline">article</span>
@@ -5398,8 +5403,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-172" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-172</span>
         <span class="badge badge-outline">article</span>
@@ -5425,8 +5430,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-173" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-173</span>
         <span class="badge badge-outline">article</span>
@@ -5480,8 +5485,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-174" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-174</span>
         <span class="badge badge-outline">article</span>
@@ -5499,8 +5504,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-175" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-175</span>
         <span class="badge badge-outline">article</span>
@@ -5524,8 +5529,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-176" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-176</span>
         <span class="badge badge-outline">article</span>
@@ -5583,8 +5588,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-177" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-177</span>
         <span class="badge badge-outline">article</span>
@@ -5601,8 +5606,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-178" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-178</span>
         <span class="badge badge-outline">article</span>
@@ -5618,8 +5623,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-179" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-179</span>
         <span class="badge badge-outline">article</span>
@@ -5720,8 +5725,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-180" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-180</span>
         <span class="badge badge-outline">article</span>
@@ -5747,8 +5752,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-181" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-181</span>
         <span class="badge badge-outline">article</span>
@@ -5766,8 +5771,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-182" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-182</span>
         <span class="badge badge-outline">article</span>
@@ -5797,8 +5802,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-183" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-183</span>
         <span class="badge badge-outline">article</span>
@@ -5821,8 +5826,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-184" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-184</span>
         <span class="badge badge-outline">article</span>
@@ -5845,8 +5850,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-185" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-185</span>
         <span class="badge badge-outline">article</span>
@@ -5867,8 +5872,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-186" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-186</span>
         <span class="badge badge-outline">article</span>
@@ -5903,8 +5908,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-187" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-187</span>
         <span class="badge badge-outline">article</span>
@@ -5930,8 +5935,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-188" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-188</span>
         <span class="badge badge-outline">article</span>
@@ -5952,8 +5957,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-189" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-189</span>
         <span class="badge badge-outline">article</span>
@@ -5977,8 +5982,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-190" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-190</span>
         <span class="badge badge-outline">article</span>
@@ -5995,8 +6000,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-191" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-191</span>
         <span class="badge badge-outline">article</span>
@@ -6023,8 +6028,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-192" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-192</span>
         <span class="badge badge-outline">article</span>
@@ -6111,8 +6116,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-193" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-193</span>
         <span class="badge badge-outline">article</span>
@@ -6129,8 +6134,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-194" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-194</span>
         <span class="badge badge-outline">article</span>
@@ -6149,8 +6154,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-195" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-195</span>
         <span class="badge badge-outline">article</span>
@@ -6178,8 +6183,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-196" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-196</span>
         <span class="badge badge-outline">article</span>
@@ -6206,8 +6211,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-197" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-197</span>
         <span class="badge badge-outline">article</span>
@@ -6228,8 +6233,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-198" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-198</span>
         <span class="badge badge-outline">article</span>
@@ -6260,8 +6265,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-199" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-199</span>
         <span class="badge badge-outline">article</span>
@@ -6298,8 +6303,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-200" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-200</span>
         <span class="badge badge-outline">article</span>
@@ -6333,8 +6338,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-201" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-201</span>
         <span class="badge badge-outline">article</span>
@@ -6361,8 +6366,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-202" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-202</span>
         <span class="badge badge-outline">article</span>
@@ -6384,8 +6389,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-203" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-203</span>
         <span class="badge badge-outline">article</span>
@@ -6426,8 +6431,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-204" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-204</span>
         <span class="badge badge-outline">article</span>
@@ -6458,8 +6463,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-205" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-205</span>
         <span class="badge badge-outline">article</span>
@@ -6476,8 +6481,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-206" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-206</span>
         <span class="badge badge-outline">article</span>
@@ -6505,8 +6510,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-207" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-207</span>
         <span class="badge badge-outline">article</span>
@@ -6537,8 +6542,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-208" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-208</span>
         <span class="badge badge-outline">article</span>
@@ -6576,8 +6581,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-209" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-209</span>
         <span class="badge badge-outline">article</span>
@@ -6617,8 +6622,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-210" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-210</span>
         <span class="badge badge-outline">article</span>
@@ -6647,8 +6652,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-211" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-211</span>
         <span class="badge badge-outline">article</span>
@@ -6665,8 +6670,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-212" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-212</span>
         <span class="badge badge-outline">article</span>
@@ -6704,8 +6709,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-213" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-213</span>
         <span class="badge badge-outline">article</span>
@@ -6776,8 +6781,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-214" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-214</span>
         <span class="badge badge-outline">article</span>
@@ -6802,8 +6807,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-215" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-215</span>
         <span class="badge badge-outline">article</span>
@@ -6821,8 +6826,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-216" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-216</span>
         <span class="badge badge-outline">article</span>
@@ -6867,8 +6872,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-217" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-217</span>
         <span class="badge badge-outline">article</span>
@@ -6896,8 +6901,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-218" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-218</span>
         <span class="badge badge-outline">article</span>
@@ -6929,8 +6934,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-219" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-219</span>
         <span class="badge badge-outline">article</span>
@@ -6947,8 +6952,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-220" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-220</span>
         <span class="badge badge-outline">article</span>
@@ -6972,8 +6977,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-221" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-221</span>
         <span class="badge badge-outline">article</span>
@@ -6996,8 +7001,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-222" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-222</span>
         <span class="badge badge-outline">article</span>
@@ -7019,8 +7024,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-223" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-223</span>
         <span class="badge badge-outline">article</span>
@@ -7043,8 +7048,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-224" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-224</span>
         <span class="badge badge-outline">article</span>
@@ -7067,8 +7072,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-225" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-225</span>
         <span class="badge badge-outline">article</span>
@@ -7101,8 +7106,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-226" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-226</span>
         <span class="badge badge-outline">article</span>
@@ -7125,8 +7130,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-227" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-227</span>
         <span class="badge badge-outline">article</span>
@@ -7148,8 +7153,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-228" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-228</span>
         <span class="badge badge-outline">article</span>
@@ -7165,8 +7170,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-229" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-229</span>
         <span class="badge badge-outline">article</span>
@@ -7189,8 +7194,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-230" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-230</span>
         <span class="badge badge-outline">article</span>
@@ -7213,8 +7218,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-231" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-231</span>
         <span class="badge badge-outline">article</span>
@@ -7231,8 +7236,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-232" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-232</span>
         <span class="badge badge-outline">article</span>
@@ -7249,8 +7254,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-233" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-233</span>
         <span class="badge badge-outline">article</span>
@@ -7268,8 +7273,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-234" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-234</span>
         <span class="badge badge-outline">article</span>
@@ -7291,8 +7296,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-235" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-235</span>
         <span class="badge badge-outline">article</span>
@@ -7334,8 +7339,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-236" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-236</span>
         <span class="badge badge-outline">article</span>
@@ -7384,8 +7389,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-237" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-237</span>
         <span class="badge badge-outline">article</span>
@@ -7429,8 +7434,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-238" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-238</span>
         <span class="badge badge-outline">article</span>
@@ -7450,8 +7455,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-239" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-239</span>
         <span class="badge badge-outline">article</span>
@@ -7471,8 +7476,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-240" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-240</span>
         <span class="badge badge-outline">article</span>
@@ -7514,8 +7519,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-241" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-241</span>
         <span class="badge badge-outline">article</span>
@@ -7540,8 +7545,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-242" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-242</span>
         <span class="badge badge-outline">article</span>
@@ -7570,8 +7575,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-243" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-243</span>
         <span class="badge badge-outline">article</span>
@@ -7610,8 +7615,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-244" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-244</span>
         <span class="badge badge-outline">article</span>
@@ -7655,8 +7660,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-245" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-245</span>
         <span class="badge badge-outline">article</span>
@@ -7679,8 +7684,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-246" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-246</span>
         <span class="badge badge-outline">article</span>
@@ -7701,8 +7706,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-247" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-247</span>
         <span class="badge badge-outline">article</span>
@@ -7721,8 +7726,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-248" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-248</span>
         <span class="badge badge-outline">article</span>
@@ -7743,8 +7748,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-249" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-249</span>
         <span class="badge badge-outline">article</span>
@@ -7789,8 +7794,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-250" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-250</span>
         <span class="badge badge-outline">article</span>
@@ -7807,8 +7812,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-251" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-251</span>
         <span class="badge badge-outline">article</span>
@@ -7827,8 +7832,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-252" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-252</span>
         <span class="badge badge-outline">article</span>
@@ -7848,8 +7853,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-253" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-253</span>
         <span class="badge badge-outline">article</span>
@@ -7886,8 +7891,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-254" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-254</span>
         <span class="badge badge-outline">article</span>
@@ -7911,8 +7916,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-255" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-255</span>
         <span class="badge badge-outline">article</span>
@@ -7949,8 +7954,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-256" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-256</span>
         <span class="badge badge-outline">article</span>
@@ -7992,8 +7997,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-257" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-257</span>
         <span class="badge badge-outline">article</span>
@@ -8014,8 +8019,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-258" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-258</span>
         <span class="badge badge-outline">article</span>
@@ -8045,8 +8050,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-259" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-259</span>
         <span class="badge badge-outline">article</span>
@@ -8066,8 +8071,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-260" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-260</span>
         <span class="badge badge-outline">article</span>
@@ -8097,8 +8102,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-261" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-261</span>
         <span class="badge badge-outline">article</span>
@@ -8130,8 +8135,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-262" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-262</span>
         <span class="badge badge-outline">article</span>
@@ -8163,8 +8168,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-263" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-263</span>
         <span class="badge badge-outline">article</span>
@@ -8205,8 +8210,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-264" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-264</span>
         <span class="badge badge-outline">article</span>
@@ -8233,8 +8238,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-265" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-265</span>
         <span class="badge badge-outline">article</span>
@@ -8255,8 +8260,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-266" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-266</span>
         <span class="badge badge-outline">article</span>
@@ -8279,8 +8284,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-267" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-267</span>
         <span class="badge badge-outline">article</span>
@@ -8305,8 +8310,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-268" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-268</span>
         <span class="badge badge-outline">article</span>
@@ -8331,8 +8336,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-269" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-269</span>
         <span class="badge badge-outline">article</span>
@@ -8355,8 +8360,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-270" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-270</span>
         <span class="badge badge-outline">article</span>
@@ -8372,8 +8377,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-271" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-271</span>
         <span class="badge badge-outline">article</span>
@@ -8399,8 +8404,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-272" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-272</span>
         <span class="badge badge-outline">article</span>
@@ -8463,8 +8468,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-273" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-273</span>
         <span class="badge badge-outline">article</span>
@@ -8485,8 +8490,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-274" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-274</span>
         <span class="badge badge-outline">article</span>
@@ -8507,8 +8512,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-275" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-275</span>
         <span class="badge badge-outline">article</span>
@@ -8553,8 +8558,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-276" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-276</span>
         <span class="badge badge-outline">article</span>
@@ -8572,8 +8577,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-277" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-277</span>
         <span class="badge badge-outline">article</span>
@@ -8590,8 +8595,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-278" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-278</span>
         <span class="badge badge-outline">article</span>
@@ -8611,8 +8616,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-279" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-279</span>
         <span class="badge badge-outline">article</span>
@@ -8628,8 +8633,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-280" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-280</span>
         <span class="badge badge-outline">article</span>
@@ -8646,8 +8651,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-281" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-281</span>
         <span class="badge badge-outline">article</span>
@@ -8680,8 +8685,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-282" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-282</span>
         <span class="badge badge-outline">article</span>
@@ -8707,8 +8712,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-283" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-283</span>
         <span class="badge badge-outline">article</span>
@@ -8730,8 +8735,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-284" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-284</span>
         <span class="badge badge-outline">article</span>
@@ -8762,8 +8767,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-285" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-285</span>
         <span class="badge badge-outline">article</span>
@@ -8784,8 +8789,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-286" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-286</span>
         <span class="badge badge-outline">article</span>
@@ -8812,8 +8817,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-287" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-287</span>
         <span class="badge badge-outline">article</span>
@@ -8829,8 +8834,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-288" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-288</span>
         <span class="badge badge-outline">article</span>
@@ -8850,8 +8855,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-289" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-289</span>
         <span class="badge badge-outline">article</span>
@@ -8876,8 +8881,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-290" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-290</span>
         <span class="badge badge-outline">article</span>
@@ -8905,8 +8910,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-291" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-291</span>
         <span class="badge badge-outline">article</span>
@@ -8931,8 +8936,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-292" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-292</span>
         <span class="badge badge-outline">article</span>
@@ -8964,8 +8969,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-293" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-293</span>
         <span class="badge badge-outline">article</span>
@@ -8999,8 +9004,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-294" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-294</span>
         <span class="badge badge-outline">article</span>
@@ -9016,8 +9021,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-295" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-295</span>
         <span class="badge badge-outline">article</span>
@@ -9048,8 +9053,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-296" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-296</span>
         <span class="badge badge-outline">article</span>
@@ -9068,8 +9073,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-297" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-297</span>
         <span class="badge badge-outline">article</span>
@@ -9097,8 +9102,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-298" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-298</span>
         <span class="badge badge-outline">article</span>
@@ -9119,8 +9124,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-299" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-299</span>
         <span class="badge badge-outline">article</span>
@@ -9137,8 +9142,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-300" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-300</span>
         <span class="badge badge-outline">article</span>
@@ -9193,8 +9198,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-301" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-301</span>
         <span class="badge badge-outline">article</span>
@@ -9227,8 +9232,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-302" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-302</span>
         <span class="badge badge-outline">article</span>
@@ -9251,8 +9256,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-303" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-303</span>
         <span class="badge badge-outline">article</span>
@@ -9269,8 +9274,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-304" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-304</span>
         <span class="badge badge-outline">article</span>
@@ -9319,8 +9324,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-305" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-305</span>
         <span class="badge badge-outline">article</span>
@@ -9342,8 +9347,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-306" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-306</span>
         <span class="badge badge-outline">article</span>
@@ -9361,8 +9366,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-307" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-307</span>
         <span class="badge badge-outline">article</span>
@@ -9391,8 +9396,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-308" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-308</span>
         <span class="badge badge-outline">article</span>
@@ -9416,8 +9421,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-309" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-309</span>
         <span class="badge badge-outline">article</span>
@@ -9466,8 +9471,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-310" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-310</span>
         <span class="badge badge-outline">article</span>
@@ -9486,8 +9491,8 @@ T第名古航號御指令ニハ一旦絶家シタル事ノ確証之レ 十七
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a19-311" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a19-311</span>
         <span class="badge badge-outline">article</span>

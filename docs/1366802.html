@@ -38,6 +38,11 @@
   }
   .ol-article + .ol-article { margin-top: .7em; }
   .ol-main { flex: 1; min-width: 0; }
+
+  /* 記事カード（DaisyUIの.card-bodyはflex-direction:columnがデフォルトのため、
+     テキスト表示の.ol-article/.ol-mainと同じ横並びにするには明示的に上書きが必要） */
+  .article-card-body { display: flex; flex-direction: row; align-items: flex-start; gap: 16px; }
+  .article-card-main { flex: 1; min-width: 0; }
   .ol-head { font-weight: 600; }
   .ol-issue-head { font-size: 1.05rem; border-bottom: 2px solid #ddd; padding-bottom: .25em; }
   .ol-dategroup-head { color: #666; font-weight: 500; }
@@ -110,7 +115,7 @@
   .lightbox-close:hover { opacity: 1; }
 
   @media (max-width: 480px) {
-    .ol-article { flex-direction: column; }
+    .ol-article, .article-card-body { flex-direction: column; }
     .source-ref-link { max-width: none; }
   }
 </style>
@@ -204,8 +209,8 @@
 
 <div id="view-card">
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-001" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-001</span>
         <span class="badge badge-outline">伺;熊本県</span>
@@ -246,8 +251,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-002" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-002</span>
         <span class="badge badge-outline">伺;京都裁判所</span>
@@ -292,8 +297,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-003" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-003</span>
         <span class="badge badge-outline">article</span>
@@ -314,8 +319,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-004" data-type-base="布達">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-004</span>
         <span class="badge badge-outline">布達</span>
@@ -391,8 +396,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-005" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-005</span>
         <span class="badge badge-outline">article</span>
@@ -410,8 +415,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-006" data-type-base="布達">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-006</span>
         <span class="badge badge-outline">布達</span>
@@ -467,8 +472,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-007" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-007</span>
         <span class="badge badge-outline">伺;新潟県</span>
@@ -490,8 +495,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-008" data-type-base="布達">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-008</span>
         <span class="badge badge-outline">布達</span>
@@ -511,8 +516,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-009" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-009</span>
         <span class="badge badge-outline">article</span>
@@ -530,8 +535,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-010" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-010</span>
         <span class="badge badge-outline">伺;静岡県</span>
@@ -560,8 +565,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-011" data-type-base="人事">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-011</span>
         <span class="badge badge-outline">人事</span>
@@ -578,8 +583,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-012" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-012</span>
         <span class="badge badge-outline">伺;豐岡県</span>
@@ -602,8 +607,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-013" data-type-base="人事">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-013</span>
         <span class="badge badge-outline">人事</span>
@@ -619,8 +624,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-014" data-type-base="人事">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-014</span>
         <span class="badge badge-outline">人事</span>
@@ -639,8 +644,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-015" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-015</span>
         <span class="badge badge-outline">article</span>
@@ -666,8 +671,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-016" data-type-base="布達">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-016</span>
         <span class="badge badge-outline">布達</span>
@@ -688,8 +693,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-017" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-017</span>
         <span class="badge badge-outline">伺;東京府</span>
@@ -726,8 +731,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-018" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-018</span>
         <span class="badge badge-outline">伺;東京府</span>
@@ -752,8 +757,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-019" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-019</span>
         <span class="badge badge-outline">伺;島根県</span>
@@ -776,8 +781,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-020" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-020</span>
         <span class="badge badge-outline">伺;島根県</span>
@@ -799,8 +804,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-021" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-021</span>
         <span class="badge badge-outline">伺;島根県</span>
@@ -856,8 +861,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-022" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-022</span>
         <span class="badge badge-outline">article</span>
@@ -885,8 +890,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-023" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-023</span>
         <span class="badge badge-outline">伺;奈良県</span>
@@ -911,8 +916,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-024" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-024</span>
         <span class="badge badge-outline">article</span>
@@ -943,8 +948,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-025" data-type-base="布達">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-025</span>
         <span class="badge badge-outline">布達</span>
@@ -966,8 +971,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-026" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-026</span>
         <span class="badge badge-outline">article</span>
@@ -990,8 +995,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-027" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-027</span>
         <span class="badge badge-outline">伺;青森県</span>
@@ -1021,8 +1026,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-028" data-type-base="人事">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-028</span>
         <span class="badge badge-outline">人事</span>
@@ -1038,8 +1043,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-029" data-type-base="人事">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-029</span>
         <span class="badge badge-outline">人事</span>
@@ -1055,8 +1060,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-030" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-030</span>
         <span class="badge badge-outline">article</span>
@@ -1074,8 +1079,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-031" data-type-base="正誤">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-031</span>
         <span class="badge badge-outline">正誤</span>
@@ -1093,8 +1098,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-032" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-032</span>
         <span class="badge badge-outline">伺;橡木裁判所</span>
@@ -1146,8 +1151,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-033" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-033</span>
         <span class="badge badge-outline">伺;兵庫裁判所</span>
@@ -1187,8 +1192,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-034" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-034</span>
         <span class="badge badge-outline">伺;名東県</span>
@@ -1226,8 +1231,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-035" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-035</span>
         <span class="badge badge-outline">article</span>
@@ -1244,8 +1249,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-036" data-type-base="裁判所申渡">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-036</span>
         <span class="badge badge-outline">裁判所申渡</span>
@@ -1276,8 +1281,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-037" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-037</span>
         <span class="badge badge-outline">伺;小倉県</span>
@@ -1307,8 +1312,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-038" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-038</span>
         <span class="badge badge-outline">article</span>
@@ -1334,8 +1339,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-039" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-039</span>
         <span class="badge badge-outline">伺;若松県</span>
@@ -1371,8 +1376,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-040" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-040</span>
         <span class="badge badge-outline">article</span>
@@ -1391,8 +1396,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-041" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-041</span>
         <span class="badge badge-outline">article</span>
@@ -1416,8 +1421,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-042" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-042</span>
         <span class="badge badge-outline">伺;名東県</span>
@@ -1440,8 +1445,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-043" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-043</span>
         <span class="badge badge-outline">article</span>
@@ -1462,8 +1467,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-044" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-044</span>
         <span class="badge badge-outline">article</span>
@@ -1480,8 +1485,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-045" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-045</span>
         <span class="badge badge-outline">article</span>
@@ -1499,8 +1504,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-046" data-type-base="人事">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-046</span>
         <span class="badge badge-outline">人事</span>
@@ -1516,8 +1521,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-047" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-047</span>
         <span class="badge badge-outline">article</span>
@@ -1535,8 +1540,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-048" data-type-base="人事">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-048</span>
         <span class="badge badge-outline">人事</span>
@@ -1552,8 +1557,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-049" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-049</span>
         <span class="badge badge-outline">伺;三潴県</span>
@@ -1583,8 +1588,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-050" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-050</span>
         <span class="badge badge-outline">伺;京都裁判所</span>
@@ -1626,8 +1631,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-051" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-051</span>
         <span class="badge badge-outline">article</span>
@@ -1649,8 +1654,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-052" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-052</span>
         <span class="badge badge-outline">伺;熊本県</span>
@@ -1678,8 +1683,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-053" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-053</span>
         <span class="badge badge-outline">伺;名東県</span>
@@ -1698,8 +1703,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-054" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-054</span>
         <span class="badge badge-outline">article</span>
@@ -1723,8 +1728,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-055" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-055</span>
         <span class="badge badge-outline">article</span>
@@ -1756,8 +1761,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-056" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-056</span>
         <span class="badge badge-outline">伺;敦賀県</span>
@@ -1783,8 +1788,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-057" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-057</span>
         <span class="badge badge-outline">伺;愛知県</span>
@@ -1808,8 +1813,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-058" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-058</span>
         <span class="badge badge-outline">伺;東京府</span>
@@ -1842,8 +1847,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-059" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-059</span>
         <span class="badge badge-outline">伺;愛知県</span>
@@ -1875,8 +1880,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-060" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-060</span>
         <span class="badge badge-outline">伺;和歌山県</span>
@@ -1909,8 +1914,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-061" data-type-base="裁判所申渡">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-061</span>
         <span class="badge badge-outline">裁判所申渡</span>
@@ -1948,8 +1953,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-062" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-062</span>
         <span class="badge badge-outline">article</span>
@@ -1968,8 +1973,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-063" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-063</span>
         <span class="badge badge-outline">article</span>
@@ -1985,8 +1990,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-064" data-type-base="正誤">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-064</span>
         <span class="badge badge-outline">正誤</span>
@@ -2002,8 +2007,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-065" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-065</span>
         <span class="badge badge-outline">伺;滋賀県</span>
@@ -2045,8 +2050,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-066" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-066</span>
         <span class="badge badge-outline">article</span>
@@ -2065,8 +2070,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-067" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-067</span>
         <span class="badge badge-outline">article</span>
@@ -2083,8 +2088,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-068" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-068</span>
         <span class="badge badge-outline">伺;司法裁判所</span>
@@ -2122,8 +2127,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-069" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-069</span>
         <span class="badge badge-outline">伺;和歌山県</span>
@@ -2182,8 +2187,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-070" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-070</span>
         <span class="badge badge-outline">伺;警視廳</span>
@@ -2244,8 +2249,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-071" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-071</span>
         <span class="badge badge-outline">伺;警視廳</span>
@@ -2287,8 +2292,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-072" data-type-base="裁判所申渡">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-072</span>
         <span class="badge badge-outline">裁判所申渡</span>
@@ -2314,8 +2319,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-073" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-073</span>
         <span class="badge badge-outline">article</span>
@@ -2331,8 +2336,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-074" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-074</span>
         <span class="badge badge-outline">article</span>
@@ -2351,8 +2356,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-075" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-075</span>
         <span class="badge badge-outline">article</span>
@@ -2376,8 +2381,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-076" data-type-base="正誤">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-076</span>
         <span class="badge badge-outline">正誤</span>
@@ -2394,8 +2399,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-077" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-077</span>
         <span class="badge badge-outline">伺;熊本県</span>
@@ -2439,8 +2444,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-078" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-078</span>
         <span class="badge badge-outline">伺;京都裁判所</span>
@@ -2469,8 +2474,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-079" data-type-base="布達">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-079</span>
         <span class="badge badge-outline">布達</span>
@@ -2491,8 +2496,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-080" data-type-base="布達">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-080</span>
         <span class="badge badge-outline">布達</span>
@@ -2511,8 +2516,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-081" data-type-base="布達">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-081</span>
         <span class="badge badge-outline">布達</span>
@@ -2532,8 +2537,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-082" data-type-base="布達">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-082</span>
         <span class="badge badge-outline">布達</span>
@@ -2556,8 +2561,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-083" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-083</span>
         <span class="badge badge-outline">伺;岩手県</span>
@@ -2577,8 +2582,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-084" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-084</span>
         <span class="badge badge-outline">伺;高知県</span>
@@ -2611,8 +2616,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-085" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-085</span>
         <span class="badge badge-outline">伺;大分県</span>
@@ -2640,8 +2645,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-086" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-086</span>
         <span class="badge badge-outline">伺;高知県</span>
@@ -2677,8 +2682,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-087" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-087</span>
         <span class="badge badge-outline">伺;廣島県</span>
@@ -2708,8 +2713,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-088" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-088</span>
         <span class="badge badge-outline">article</span>
@@ -2743,8 +2748,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-089" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-089</span>
         <span class="badge badge-outline">伺;小田県</span>
@@ -2771,8 +2776,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-090" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-090</span>
         <span class="badge badge-outline">article</span>
@@ -2812,8 +2817,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-091" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-091</span>
         <span class="badge badge-outline">伺;愛知県</span>
@@ -2839,8 +2844,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-092" data-type-base="正誤">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-092</span>
         <span class="badge badge-outline">正誤</span>
@@ -2859,8 +2864,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-093" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-093</span>
         <span class="badge badge-outline">article</span>
@@ -2890,8 +2895,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-094" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-094</span>
         <span class="badge badge-outline">伺;豐岡県</span>
@@ -2928,8 +2933,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-095" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-095</span>
         <span class="badge badge-outline">article</span>
@@ -2945,8 +2950,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-096" data-type-base="布達">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-096</span>
         <span class="badge badge-outline">布達</span>
@@ -2983,8 +2988,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-097" data-type-base="布達">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-097</span>
         <span class="badge badge-outline">布達</span>
@@ -3012,8 +3017,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-098" data-type-base="布達">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-098</span>
         <span class="badge badge-outline">布達</span>
@@ -3032,8 +3037,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-099" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-099</span>
         <span class="badge badge-outline">伺;敦賀県</span>
@@ -3078,8 +3083,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-100" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-100</span>
         <span class="badge badge-outline">伺;東京裁判所</span>
@@ -3110,8 +3115,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-101" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-101</span>
         <span class="badge badge-outline">伺;新潟県</span>
@@ -3140,8 +3145,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-102" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-102</span>
         <span class="badge badge-outline">伺;島根県</span>
@@ -3176,8 +3181,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-103" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-103</span>
         <span class="badge badge-outline">伺;愛知県</span>
@@ -3230,8 +3235,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-104" data-type-base="人事">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-104</span>
         <span class="badge badge-outline">人事</span>
@@ -3248,8 +3253,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-105" data-type-base="人事">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-105</span>
         <span class="badge badge-outline">人事</span>
@@ -3265,8 +3270,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-106" data-type-base="正誤">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-106</span>
         <span class="badge badge-outline">正誤</span>
@@ -3284,8 +3289,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-107" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-107</span>
         <span class="badge badge-outline">伺</span>
@@ -3309,8 +3314,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-108" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-108</span>
         <span class="badge badge-outline">article</span>
@@ -3337,8 +3342,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-109" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-109</span>
         <span class="badge badge-outline">伺;大阪裁判所</span>
@@ -3361,8 +3366,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-110" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-110</span>
         <span class="badge badge-outline">伺;足柄裁判所</span>
@@ -3408,8 +3413,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-111" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-111</span>
         <span class="badge badge-outline">伺;大阪裁判所</span>
@@ -3434,8 +3439,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-112" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-112</span>
         <span class="badge badge-outline">伺;福岡県</span>
@@ -3464,8 +3469,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-113" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-113</span>
         <span class="badge badge-outline">伺;名東県</span>
@@ -3487,8 +3492,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-114" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-114</span>
         <span class="badge badge-outline">伺;東京府</span>
@@ -3513,8 +3518,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-115" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-115</span>
         <span class="badge badge-outline">伺;岐阜県</span>
@@ -3543,8 +3548,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-116" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-116</span>
         <span class="badge badge-outline">伺;山形県</span>
@@ -3565,8 +3570,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-117" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-117</span>
         <span class="badge badge-outline">伺;名東県</span>
@@ -3598,8 +3603,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-118" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-118</span>
         <span class="badge badge-outline">伺;福岡県</span>
@@ -3624,8 +3629,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-119" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-119</span>
         <span class="badge badge-outline">伺;筑摩県</span>
@@ -3655,8 +3660,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-120" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-120</span>
         <span class="badge badge-outline">article</span>
@@ -3673,8 +3678,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-121" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-121</span>
         <span class="badge badge-outline">伺;埼玉裁判所</span>
@@ -3698,8 +3703,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-122" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-122</span>
         <span class="badge badge-outline">article</span>
@@ -3734,8 +3739,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-123" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-123</span>
         <span class="badge badge-outline">article</span>
@@ -3752,8 +3757,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-124" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-124</span>
         <span class="badge badge-outline">article</span>
@@ -3769,8 +3774,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-125" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-125</span>
         <span class="badge badge-outline">伺;新潟県</span>
@@ -3793,8 +3798,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-126" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-126</span>
         <span class="badge badge-outline">伺;島根県</span>
@@ -3816,8 +3821,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-127" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-127</span>
         <span class="badge badge-outline">伺;長野県</span>
@@ -3836,8 +3841,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-128" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-128</span>
         <span class="badge badge-outline">article</span>
@@ -3860,8 +3865,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-129" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-129</span>
         <span class="badge badge-outline">伺;鳥取県</span>
@@ -3889,8 +3894,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-130" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-130</span>
         <span class="badge badge-outline">伺;和歌山県</span>
@@ -3918,8 +3923,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-131" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-131</span>
         <span class="badge badge-outline">伺;福岡県</span>
@@ -3944,8 +3949,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-132" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-132</span>
         <span class="badge badge-outline">article</span>
@@ -3964,8 +3969,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-133" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-133</span>
         <span class="badge badge-outline">伺;大阪府</span>
@@ -3989,8 +3994,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-134" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-134</span>
         <span class="badge badge-outline">伺;三潴県</span>
@@ -4014,8 +4019,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-135" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-135</span>
         <span class="badge badge-outline">伺;長崎裁判所</span>
@@ -4043,8 +4048,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-136" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-136</span>
         <span class="badge badge-outline">伺;若松県</span>
@@ -4066,8 +4071,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-137" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-137</span>
         <span class="badge badge-outline">伺;筑摩県</span>
@@ -4098,8 +4103,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-138" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-138</span>
         <span class="badge badge-outline">伺;筑摩県</span>
@@ -4130,8 +4135,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-139" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-139</span>
         <span class="badge badge-outline">article</span>
@@ -4148,8 +4153,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-140" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-140</span>
         <span class="badge badge-outline">伺;滋賀県</span>
@@ -4179,8 +4184,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-141" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-141</span>
         <span class="badge badge-outline">article</span>
@@ -4218,8 +4223,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-142" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-142</span>
         <span class="badge badge-outline">伺;開拓使</span>
@@ -4252,8 +4257,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-143" data-type-base="布達">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-143</span>
         <span class="badge badge-outline">布達</span>
@@ -4276,8 +4281,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-144" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-144</span>
         <span class="badge badge-outline">伺;島根県</span>
@@ -4327,8 +4332,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-145" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-145</span>
         <span class="badge badge-outline">article</span>
@@ -4374,8 +4379,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-146" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-146</span>
         <span class="badge badge-outline">伺;山形県</span>
@@ -4424,8 +4429,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-147" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-147</span>
         <span class="badge badge-outline">伺;愛知県</span>
@@ -4457,8 +4462,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-148" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-148</span>
         <span class="badge badge-outline">伺;新治裁判所</span>
@@ -4495,8 +4500,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-149" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-149</span>
         <span class="badge badge-outline">article</span>
@@ -4520,8 +4525,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-150" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-150</span>
         <span class="badge badge-outline">伺;和歌山県</span>
@@ -4552,8 +4557,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-151" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-151</span>
         <span class="badge badge-outline">article</span>
@@ -4576,8 +4581,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-152" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-152</span>
         <span class="badge badge-outline">伺;和歌山県</span>
@@ -4606,8 +4611,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-153" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-153</span>
         <span class="badge badge-outline">伺;岐阜県</span>
@@ -4630,8 +4635,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-154" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-154</span>
         <span class="badge badge-outline">伺;置賜県</span>
@@ -4731,8 +4736,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-155" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-155</span>
         <span class="badge badge-outline">伺;箱館裁判所</span>
@@ -4761,8 +4766,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-156" data-type-base="布達">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-156</span>
         <span class="badge badge-outline">布達</span>
@@ -4781,8 +4786,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-157" data-type-base="布達">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-157</span>
         <span class="badge badge-outline">布達</span>
@@ -4802,8 +4807,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-158" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-158</span>
         <span class="badge badge-outline">伺;京都裁判所</span>
@@ -4863,8 +4868,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-159" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-159</span>
         <span class="badge badge-outline">伺;長崎県</span>
@@ -4890,8 +4895,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-160" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-160</span>
         <span class="badge badge-outline">article</span>
@@ -4908,8 +4913,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-161" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-161</span>
         <span class="badge badge-outline">伺;飾磨県</span>
@@ -4939,8 +4944,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-162" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-162</span>
         <span class="badge badge-outline">article</span>
@@ -4970,8 +4975,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-163" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-163</span>
         <span class="badge badge-outline">article</span>
@@ -4989,8 +4994,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-164" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-164</span>
         <span class="badge badge-outline">伺;山梨裁判所</span>
@@ -5018,8 +5023,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-165" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-165</span>
         <span class="badge badge-outline">伺;若松県</span>
@@ -5060,8 +5065,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-166" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-166</span>
         <span class="badge badge-outline">article</span>
@@ -5090,8 +5095,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-167" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-167</span>
         <span class="badge badge-outline">伺;水澤県</span>
@@ -5113,8 +5118,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-168" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-168</span>
         <span class="badge badge-outline">伺;三潴県</span>
@@ -5144,8 +5149,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-169" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-169</span>
         <span class="badge badge-outline">article</span>
@@ -5166,8 +5171,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-170" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-170</span>
         <span class="badge badge-outline">伺;豐岡県</span>
@@ -5192,8 +5197,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-171" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-171</span>
         <span class="badge badge-outline">article</span>
@@ -5210,8 +5215,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-172" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-172</span>
         <span class="badge badge-outline">article</span>
@@ -5229,8 +5234,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-173" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-173</span>
         <span class="badge badge-outline">article</span>
@@ -5249,8 +5254,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-174" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-174</span>
         <span class="badge badge-outline">article</span>
@@ -5272,8 +5277,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-175" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-175</span>
         <span class="badge badge-outline">伺;京都裁判所</span>
@@ -5316,8 +5321,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-176" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-176</span>
         <span class="badge badge-outline">伺;三重県</span>
@@ -5346,8 +5351,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-177" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-177</span>
         <span class="badge badge-outline">article</span>
@@ -5384,8 +5389,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-178" data-type-base="布達">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-178</span>
         <span class="badge badge-outline">布達</span>
@@ -5404,8 +5409,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-179" data-type-base="布達">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-179</span>
         <span class="badge badge-outline">布達</span>
@@ -5429,8 +5434,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-180" data-type-base="伺">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-180</span>
         <span class="badge badge-outline">伺;東京裁判所</span>
@@ -5452,8 +5457,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-181" data-type-base="正誤">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-181</span>
         <span class="badge badge-outline">正誤</span>
@@ -5471,8 +5476,8 @@
   </div>
 </section>
 <section class="card bg-white shadow-sm border border-gray-200 mb-4" id="a13-182" data-type-base="article">
-  <div class="card-body p-4 flex items-start gap-4">
-    <div class="flex-1 min-w-0">
+  <div class="card-body p-4 article-card-body">
+    <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
         <span class="badge badge-neutral">a13-182</span>
         <span class="badge badge-outline">article</span>
