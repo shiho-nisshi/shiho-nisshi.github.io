@@ -79,6 +79,18 @@
     max-width: 96px;
   }
 
+  /* 正誤対応の相互リンク・リンク先記事の強調 */
+  .xref {
+    margin-top: .6em;
+    padding-top: .4em;
+    border-top: 1px dashed #e5e7eb;
+    font-size: .875rem;
+    line-height: 1.7;
+  }
+  .xref-caption { color: #6b7280; }
+  section[id] { scroll-margin-top: 1rem; }
+  section[id]:target { outline: 3px solid #eda100; outline-offset: 2px; }
+
   @media (max-width: 480px) {
     .ol-article, .article-card-body { flex-direction: column; }
     .source-ref-link { max-width: none; }
@@ -176,7 +188,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-001</span>
+        <a href="#a12-001" class="badge badge-neutral" title="この記事へのリンク">a12-001</a>
         <span class="badge badge-outline">裁判所申渡</span>
         <span class="badge badge-outline">明治7年第134号</span>
         <span class="badge badge-outline">1874-08-02</span>
@@ -218,6 +230,7 @@
 百四拾兩ノ內ニテ引之殘金拾二圓五錢ノ內金二兩ハ前
 文讓渡ノ節己ニ引去リニ相成リ彌殘金ハ拾圓五錢ト可
 相心得候事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/2" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/2"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000002/full/200,/0/default.jpg" loading="lazy" alt="原本画像（2頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -226,7 +239,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-002</span>
+        <a href="#a12-002" class="badge badge-neutral" title="この記事へのリンク">a12-002</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第134号</span>
         <span class="badge badge-outline">1874-08-02</span>
@@ -237,6 +250,7 @@
       <div class="item-body text-base leading-relaxed">司法省裁判所ニ於テ英國商人シヨウセツフヨリ大坂東
 大組道修町商松永太兵衞ヘ掛ル控訴ノ裁許アリ其事多
 端ニ付記載セス</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/4" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/4"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000004/full/200,/0/default.jpg" loading="lazy" alt="原本画像（4頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -245,7 +259,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-003</span>
+        <a href="#a12-003" class="badge badge-neutral" title="この記事へのリンク">a12-003</a>
         <span class="badge badge-outline">布達</span>
         <span class="badge badge-outline">明治7年第134号</span>
         <span class="badge badge-outline">1874-08-02</span>
@@ -260,6 +274,7 @@
 藤 勝 次 郞 伊
 右ノ者共儀本年乙第八十號人相書ヲ以及布達置候處岐
 阜縣ニ於テ捕縛相成候以下 例 文</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/4" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/4"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000004/full/200,/0/default.jpg" loading="lazy" alt="原本画像（4頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -268,7 +283,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-004</span>
+        <a href="#a12-004" class="badge badge-neutral" title="この記事へのリンク">a12-004</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第134号</span>
         <span class="badge badge-outline">1874-08-03</span>
@@ -282,6 +297,7 @@
 茨城裁判所在勤申付候事 十一等出仕 鷹 明 松 重
 少解部 關 耕 作 田
 御用都合有之歸京申付候事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/4" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/4"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000004/full/200,/0/default.jpg" loading="lazy" alt="原本画像（4頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -290,7 +306,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-005</span>
+        <a href="#a12-005" class="badge badge-neutral" title="この記事へのリンク">a12-005</a>
         <span class="badge badge-outline">人事</span>
         <span class="badge badge-outline">明治7年第134号</span>
         <span class="badge badge-outline">1874-08-03</span>
@@ -299,6 +315,7 @@
       </div>
       <div class="card-title text-base">○</div>
       <div class="item-body text-base leading-relaxed">補十一等出仕 東京府十一等出仕 鯰 景 江 利</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/5" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/5"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000005/full/200,/0/default.jpg" loading="lazy" alt="原本画像（5頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -307,7 +324,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-006</span>
+        <a href="#a12-006" class="badge badge-neutral" title="この記事へのリンク">a12-006</a>
         <span class="badge badge-outline">伺;東京府</span>
         <span class="badge badge-outline">明治7年第134号</span>
         <span class="badge badge-outline">1874-08-03</span>
@@ -329,6 +346,7 @@
 指令
 伺ノ趣難聞届候事 但除族禁獄ノ者動作運養ノ儀ハ伺
 中ニ付追テ相達儀モ可有之候事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/5" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/5"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000005/full/200,/0/default.jpg" loading="lazy" alt="原本画像（5頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -337,7 +355,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-007</span>
+        <a href="#a12-007" class="badge badge-neutral" title="この記事へのリンク">a12-007</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第134号</span>
         <span class="badge badge-outline">1874-08-03</span>
@@ -354,6 +372,7 @@
 牛ヲ埋藏スルノ後之ヲ發掘シテ其皮ヲ剝ク者違式重ニ
 擬シ同二十日良吉以下
 十日等ノ指令アリ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/5" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/5"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000005/full/200,/0/default.jpg" loading="lazy" alt="原本画像（5頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -362,7 +381,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-008</span>
+        <a href="#a12-008" class="badge badge-neutral" title="この記事へのリンク">a12-008</a>
         <span class="badge badge-outline">布達</span>
         <span class="badge badge-outline">明治7年第134号</span>
         <span class="badge badge-outline">1874-08-03</span>
@@ -376,6 +395,7 @@
 右ノ者儀三潴縣ニ於テ懲役終身所刑中本月五日致逃亡
 候條各地方
 文人 以下但書迄例 相書畧之</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/6" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/6"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000006/full/200,/0/default.jpg" loading="lazy" alt="原本画像（6頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -384,7 +404,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-009</span>
+        <a href="#a12-009" class="badge badge-neutral" title="この記事へのリンク">a12-009</a>
         <span class="badge badge-outline">布達</span>
         <span class="badge badge-outline">明治7年第134号</span>
         <span class="badge badge-outline">1874-08-03</span>
@@ -396,6 +416,7 @@
 八次男無籍 中 雷 吉 山
 右ノ者儀三重縣ニ於テ懲役終身所刑中去月廿三日致逃
 亡候條各地方 文人 以下但書 相書畧之 迄例</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/6" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/6"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000006/full/200,/0/default.jpg" loading="lazy" alt="原本画像（6頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -404,7 +425,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-010</span>
+        <a href="#a12-010" class="badge badge-neutral" title="この記事へのリンク">a12-010</a>
         <span class="badge badge-outline">人事</span>
         <span class="badge badge-outline">明治7年第134号</span>
         <span class="badge badge-outline">1874-08-03</span>
@@ -413,6 +434,7 @@
       </div>
       <div class="card-title text-base">○</div>
       <div class="item-body text-base leading-relaxed">補十等出仕 荒 邦 藏 川</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/6" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/6"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000006/full/200,/0/default.jpg" loading="lazy" alt="原本画像（6頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -421,7 +443,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-011</span>
+        <a href="#a12-011" class="badge badge-neutral" title="この記事へのリンク">a12-011</a>
         <span class="badge badge-outline">伺;鹿兒島県</span>
         <span class="badge badge-outline">明治7年第134号</span>
         <span class="badge badge-outline">1874-08-05</span>
@@ -494,6 +516,7 @@
 可シ
 第九條 犯情ニ依テ〓刑ニ處スル〓モ之レ有ル可シ
 〓ニ破廉耻甚ヲ以テ論スル限ニアラス</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/7" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/7"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000007/full/200,/0/default.jpg" loading="lazy" alt="原本画像（7頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -502,7 +525,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-012</span>
+        <a href="#a12-012" class="badge badge-neutral" title="この記事へのリンク">a12-012</a>
         <span class="badge badge-outline">伺;新川県</span>
         <span class="badge badge-outline">明治7年第134号</span>
         <span class="badge badge-outline">1874-08-05</span>
@@ -522,6 +545,7 @@
 ヲ沒収セス只タ罰金ノミヲ科シ
 罰金三圓
 河 部 彌 三 太</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/10" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/10"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000010/full/200,/0/default.jpg" loading="lazy" alt="原本画像（10頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -530,7 +554,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-013</span>
+        <a href="#a12-013" class="badge badge-neutral" title="この記事へのリンク">a12-013</a>
         <span class="badge badge-outline">伺;石川県</span>
         <span class="badge badge-outline">明治7年第134号</span>
         <span class="badge badge-outline">1874-08-05</span>
@@ -546,6 +570,7 @@
 指令
 証書〓ニ地劵爲替手形等ヲ竊取シ詐欺シテ財ヲ圖ル者
 ハ竊盜ニ準シテ論シ財ヲ得サレハ末得財ヲ以テ論ス</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/10" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/10"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000010/full/200,/0/default.jpg" loading="lazy" alt="原本画像（10頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -554,7 +579,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-014</span>
+        <a href="#a12-014" class="badge badge-neutral" title="この記事へのリンク">a12-014</a>
         <span class="badge badge-outline">伺;和歌山県</span>
         <span class="badge badge-outline">明治7年第134号</span>
         <span class="badge badge-outline">1874-08-05</span>
@@ -574,6 +599,7 @@
 指令
 條 浦高札ニ依テ處分ス可シ
 第二條 逃七罪ヲ論セス本人望ノ地ヘ入籍セシム可シ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/10" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/10"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000010/full/200,/0/default.jpg" loading="lazy" alt="原本画像（10頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -582,7 +608,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-015</span>
+        <a href="#a12-015" class="badge badge-neutral" title="この記事へのリンク">a12-015</a>
         <span class="badge badge-outline">裁判所申渡</span>
         <span class="badge badge-outline">明治7年第134号</span>
         <span class="badge badge-outline">1874-08-05</span>
@@ -602,6 +628,7 @@
 六年第百六十七號御布告ニ據リ同年七月迄ニ証書々改
 可申ノ處無其儀右証書ヲ以訴訟致スニ付及控訴ト雖モ
 難及受理訴狀下ケ戾候事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/11" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/11"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000011/full/200,/0/default.jpg" loading="lazy" alt="原本画像（11頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -610,7 +637,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-016</span>
+        <a href="#a12-016" class="badge badge-neutral" title="この記事へのリンク">a12-016</a>
         <span class="badge badge-outline">伺;長崎裁判所</span>
         <span class="badge badge-outline">明治7年第135号</span>
         <span class="badge badge-outline">1874-08-05</span>
@@ -628,6 +655,7 @@
 指令
 滯獄減役例ハ入獄ノ者ニ限ル親属責付及ヒ待罪書處分
 等ハ此限ニ在ラス</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/12" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/12"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000012/full/200,/0/default.jpg" loading="lazy" alt="原本画像（12頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -636,7 +664,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-017</span>
+        <a href="#a12-017" class="badge badge-neutral" title="この記事へのリンク">a12-017</a>
         <span class="badge badge-outline">伺;岩手県</span>
         <span class="badge badge-outline">明治7年第135号</span>
         <span class="badge badge-outline">1874-08-05</span>
@@ -654,6 +682,7 @@
 指令
 責付內本文ノ如キハ逃走スル者ト亦同ク本罪ニ一等ヲ
 加フ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/13" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/13"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000013/full/200,/0/default.jpg" loading="lazy" alt="原本画像（13頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -662,7 +691,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-018</span>
+        <a href="#a12-018" class="badge badge-neutral" title="この記事へのリンク">a12-018</a>
         <span class="badge badge-outline">伺;島根県</span>
         <span class="badge badge-outline">明治7年第135号</span>
         <span class="badge badge-outline">1874-08-05</span>
@@ -685,6 +714,7 @@
 沒入スヘ シ 但シ其貪リ取タル金錢ハ之ヲ追スヘ シ
 第二條 乙丙丁ノ三名科料申付ヘシ其甲ハ鑑札アルニ
 付處罰ニ及ハス</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/13" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/13"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000013/full/200,/0/default.jpg" loading="lazy" alt="原本画像（13頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -693,7 +723,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-019</span>
+        <a href="#a12-019" class="badge badge-neutral" title="この記事へのリンク">a12-019</a>
         <span class="badge badge-outline">伺;埼玉裁判所</span>
         <span class="badge badge-outline">明治7年第135号</span>
         <span class="badge badge-outline">1874-08-05</span>
@@ -728,6 +758,7 @@
 日誌第九十二號京都裁判所ヘ指令ノ通心得可シ 日誌
 披閱ノ上輕重ノ處斷齟齬アルヲ撿擧スレハ其都度伺出
 ノ上例第三百十四條ニ依リ處分ス可シ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/14" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/14"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000014/full/200,/0/default.jpg" loading="lazy" alt="原本画像（14頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -736,7 +767,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-020</span>
+        <a href="#a12-020" class="badge badge-neutral" title="この記事へのリンク">a12-020</a>
         <span class="badge badge-outline">布達</span>
         <span class="badge badge-outline">明治7年第135号</span>
         <span class="badge badge-outline">1874-08-07</span>
@@ -748,6 +779,7 @@
 從來各裁判所解部ノ輩犯罪ノ節ハ裁判官ニ準シ臨時裁
 判所ニ於テ處分致來候處本年甲第十二號相達候上ハ今
 後右ニ准シ取扱ヒ可申此旨更ニ相達候事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/15" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/15"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000015/full/200,/0/default.jpg" loading="lazy" alt="原本画像（15頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -756,7 +788,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-021</span>
+        <a href="#a12-021" class="badge badge-neutral" title="この記事へのリンク">a12-021</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第135号</span>
         <span class="badge badge-outline">1874-08-08</span>
@@ -767,6 +799,7 @@
       <div class="item-body text-base leading-relaxed">司法省裁判所ニ於テ東京本八丁堀海老塚嘉兵衛ヨリ久
 保喜太郞ヘ掛ル預ケ金爭論控訴一件裁許アレトモ其事多
 端ニ付記載セス</div>
+      <div class="xref"><div><span class="xref-caption">正誤:</span> <a href="#a12-090" class="link link-primary xref-link" onclick="showView('card')">a12-090 ○正誤</a></div></div>
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/16" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/16"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000016/full/200,/0/default.jpg" loading="lazy" alt="原本画像（16頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -775,7 +808,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-022</span>
+        <a href="#a12-022" class="badge badge-neutral" title="この記事へのリンク">a12-022</a>
         <span class="badge badge-outline">伺;岐阜県</span>
         <span class="badge badge-outline">明治7年第135号</span>
         <span class="badge badge-outline">1874-08-07</span>
@@ -788,6 +821,7 @@
 牛 加等罪モ亦贖金ニ處シ候テ宜敷哉相伺候也
 指令
 伺ノ通</div>
+      <div class="xref"><div><span class="xref-caption">正誤:</span> <a href="#a12-090" class="link link-primary xref-link" onclick="showView('card')">a12-090 ○正誤</a></div></div>
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/16" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/16"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000016/full/200,/0/default.jpg" loading="lazy" alt="原本画像（16頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -796,7 +830,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-023</span>
+        <a href="#a12-023" class="badge badge-neutral" title="この記事へのリンク">a12-023</a>
         <span class="badge badge-outline">布達</span>
         <span class="badge badge-outline">明治7年第135号</span>
         <span class="badge badge-outline">1874-08-07</span>
@@ -811,6 +845,7 @@
 但シ其判任以下北海道ニアル者ハ箱館裁判所ニ於テ
 處斷ス可シト雖モ使廳ノ官吏ハ箱館管轄地內ニ在ル
 者ニ限ル可シ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/16" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/16"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000016/full/200,/0/default.jpg" loading="lazy" alt="原本画像（16頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -819,7 +854,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-024</span>
+        <a href="#a12-024" class="badge badge-neutral" title="この記事へのリンク">a12-024</a>
         <span class="badge badge-outline">布達</span>
         <span class="badge badge-outline">明治7年第135号</span>
         <span class="badge badge-outline">1874-08-07</span>
@@ -836,6 +871,7 @@
 右ノ者共儀本年乙第七拾五號乙第八拾四號人相書ヲ以
 テ及布達置候處芳松儀ハ奈良縣ニ於テ常次郞儀ハ滋賀
 縣ニ於テ文吉儀ハ小田縣ニ於テ捕縛相成候以下 例文</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/16" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/16"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000016/full/200,/0/default.jpg" loading="lazy" alt="原本画像（16頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -844,7 +880,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-025</span>
+        <a href="#a12-025" class="badge badge-neutral" title="この記事へのリンク">a12-025</a>
         <span class="badge badge-outline">伺;岩手県</span>
         <span class="badge badge-outline">明治7年第135号</span>
         <span class="badge badge-outline">1874-08-07</span>
@@ -861,6 +897,7 @@
 然歟奉伺候也
 指令
 伺ノ通</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/17" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/17"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000017/full/200,/0/default.jpg" loading="lazy" alt="原本画像（17頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -869,7 +906,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-026</span>
+        <a href="#a12-026" class="badge badge-neutral" title="この記事へのリンク">a12-026</a>
         <span class="badge badge-outline">伺;愛知県</span>
         <span class="badge badge-outline">明治7年第135号</span>
         <span class="badge badge-outline">1874-08-07</span>
@@ -889,6 +926,7 @@
 指令
 賣附買附等ノ約定証文無利足ノ分ハ第一類利足附ノ分
 ハ第二類ト相心得ヘ キ事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/17" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/17"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000017/full/200,/0/default.jpg" loading="lazy" alt="原本画像（17頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -897,7 +935,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-027</span>
+        <a href="#a12-027" class="badge badge-neutral" title="この記事へのリンク">a12-027</a>
         <span class="badge badge-outline">伺;熊本県</span>
         <span class="badge badge-outline">明治7年第135号</span>
         <span class="badge badge-outline">1874-08-07</span>
@@ -916,6 +954,7 @@
 ヲ貼シタルモ又本條同樣ノ處分ニ及ヒ可然哉相伺候也
 指令
 訴狀取上ケスト雖モ規則ノ通罰金申付ヘキ事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/18" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/18"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000018/full/200,/0/default.jpg" loading="lazy" alt="原本画像（18頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -924,7 +963,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-028</span>
+        <a href="#a12-028" class="badge badge-neutral" title="この記事へのリンク">a12-028</a>
         <span class="badge badge-outline">伺;茨城裁判所</span>
         <span class="badge badge-outline">明治7年第135号</span>
         <span class="badge badge-outline">1874-08-07</span>
@@ -939,6 +978,7 @@
 指令
 其過剰ノ金高ヲ別帳簿ニ附替ヘ更ニ証印申受ケサス ヘ
 キ 事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/18" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/18"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000018/full/200,/0/default.jpg" loading="lazy" alt="原本画像（18頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -947,7 +987,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-029</span>
+        <a href="#a12-029" class="badge badge-neutral" title="この記事へのリンク">a12-029</a>
         <span class="badge badge-outline">裁判所申渡</span>
         <span class="badge badge-outline">明治7年第135号</span>
         <span class="badge badge-outline">1874-08-07</span>
@@ -977,6 +1017,7 @@
 張ノ通殘金百四十兩三分一朱ト一匁五分一厘被告人ヨ
 リ原告人ヘ償却申付候事
 但訴訟入費ハ被告吉藏ヨリ可致償却事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/19" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/19"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000019/full/200,/0/default.jpg" loading="lazy" alt="原本画像（19頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -985,7 +1026,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-030</span>
+        <a href="#a12-030" class="badge badge-neutral" title="この記事へのリンク">a12-030</a>
         <span class="badge badge-outline">伺;兵庫裁判所</span>
         <span class="badge badge-outline">明治7年第135号</span>
         <span class="badge badge-outline">1874-08-10</span>
@@ -1001,6 +1042,7 @@
 サル哉相伺候也
 指令
 不應爲重ニ問フ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/20" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/20"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000020/full/200,/0/default.jpg" loading="lazy" alt="原本画像（20頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1009,7 +1051,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-031</span>
+        <a href="#a12-031" class="badge badge-neutral" title="この記事へのリンク">a12-031</a>
         <span class="badge badge-outline">伺;滋賀県</span>
         <span class="badge badge-outline">明治7年第135号</span>
         <span class="badge badge-outline">1874-08-10</span>
@@ -1038,6 +1080,7 @@
 第二條 已ニ入籍スルヲ知ラス且未タ婚姻ノ禮ヲ行ハ
 ス止タ人ト夫妻ノ約アルヲ知テ通姦スル者ハ無夫姦
 ヲ以テ論ス但シ聘禮ヲ行フ以上ハ有夫ヲ以テ論ス</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/20" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/20"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000020/full/200,/0/default.jpg" loading="lazy" alt="原本画像（20頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1046,7 +1089,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-032</span>
+        <a href="#a12-032" class="badge badge-neutral" title="この記事へのリンク">a12-032</a>
         <span class="badge badge-outline">伺;高知県</span>
         <span class="badge badge-outline">明治7年第135号</span>
         <span class="badge badge-outline">1874-08-10</span>
@@ -1062,6 +1105,7 @@
 指令
 第一條 當省本年七月第十六號布達ノ通心得ヘシ
 第二條 伺ノ通</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/21" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/21"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000021/full/200,/0/default.jpg" loading="lazy" alt="原本画像（21頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1070,7 +1114,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-033</span>
+        <a href="#a12-033" class="badge badge-neutral" title="この記事へのリンク">a12-033</a>
         <span class="badge badge-outline">伺;長野県</span>
         <span class="badge badge-outline">明治7年第136号</span>
         <span class="badge badge-outline">1874-08-10</span>
@@ -1092,6 +1136,7 @@
 懲役塲逃走後犯ノ罪懲役終身ニ該ル者ト雖モ逃走ノ棒
 鎖ヲ科シ後犯ノ年限ヲ役スト改定ス東京裁判所處分ノ
 通心得可シ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/22" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/22"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000022/full/200,/0/default.jpg" loading="lazy" alt="原本画像（22頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1100,7 +1145,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-034</span>
+        <a href="#a12-034" class="badge badge-neutral" title="この記事へのリンク">a12-034</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第136号</span>
         <span class="badge badge-outline">1874-08-10</span>
@@ -1110,6 +1155,7 @@
       <div class="card-title text-base">○</div>
       <div class="item-body text-base leading-relaxed">本月八日上申スル甲斐國巨摩郡鰍澤村靑柳助次郞以下
 斷刑伺書本日裁下アリ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/23" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/23"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000023/full/200,/0/default.jpg" loading="lazy" alt="原本画像（23頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1118,7 +1164,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-035</span>
+        <a href="#a12-035" class="badge badge-neutral" title="この記事へのリンク">a12-035</a>
         <span class="badge badge-outline">伺;若松県</span>
         <span class="badge badge-outline">明治7年第136号</span>
         <span class="badge badge-outline">1874-08-10</span>
@@ -1145,6 +1191,7 @@
 條ニ依リ貼斷改正可仕哉相伺候也
 指令
 伺ノ通</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/23" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/23"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000023/full/200,/0/default.jpg" loading="lazy" alt="原本画像（23頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1153,7 +1200,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-036</span>
+        <a href="#a12-036" class="badge badge-neutral" title="この記事へのリンク">a12-036</a>
         <span class="badge badge-outline">伺;埼玉裁判所</span>
         <span class="badge badge-outline">明治7年第136号</span>
         <span class="badge badge-outline">1874-08-10</span>
@@ -1193,6 +1240,7 @@
 ハ自他ヲ論セス減等スルヿヲ聽ス
 第六條 主守ハ例第三百九條ニ依リ捕得スルト同ク减
 二等ニ從ヒ保管人ハ前第三條ト同ク處分ス</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/24" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/24"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000024/full/200,/0/default.jpg" loading="lazy" alt="原本画像（24頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1201,7 +1249,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-037</span>
+        <a href="#a12-037" class="badge badge-neutral" title="この記事へのリンク">a12-037</a>
         <span class="badge badge-outline">伺;静岡県</span>
         <span class="badge badge-outline">明治7年第136号</span>
         <span class="badge badge-outline">1874-08-10</span>
@@ -1215,6 +1263,7 @@
 人ト別異シ置キ可然哉相伺候也
 指令
 當省本年七月第十六號布達ノ通リ心得可シ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/25" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/25"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000025/full/200,/0/default.jpg" loading="lazy" alt="原本画像（25頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1223,7 +1272,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-038</span>
+        <a href="#a12-038" class="badge badge-neutral" title="この記事へのリンク">a12-038</a>
         <span class="badge badge-outline">伺;熊谷裁判所</span>
         <span class="badge badge-outline">明治7年第136号</span>
         <span class="badge badge-outline">1874-08-10</span>
@@ -1249,6 +1298,7 @@
 指令
 送籍狀ハ餘ノ文書ヲ以テ論ス 但シ奈良縣伺ノ指令ハ
 改正ニ相成候事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/26" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/26"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000026/full/200,/0/default.jpg" loading="lazy" alt="原本画像（26頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1257,7 +1307,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-039</span>
+        <a href="#a12-039" class="badge badge-neutral" title="この記事へのリンク">a12-039</a>
         <span class="badge badge-outline">伺;飾磨県</span>
         <span class="badge badge-outline">明治7年第136号</span>
         <span class="badge badge-outline">1874-08-10</span>
@@ -1299,6 +1349,7 @@
 ニ放免致シ可然哉奉伺候也
 指令
 總テ伺ノ通</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/27" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/27"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000027/full/200,/0/default.jpg" loading="lazy" alt="原本画像（27頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1307,7 +1358,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-040</span>
+        <a href="#a12-040" class="badge badge-neutral" title="この記事へのリンク">a12-040</a>
         <span class="badge badge-outline">人事</span>
         <span class="badge badge-outline">明治7年第136号</span>
         <span class="badge badge-outline">1874-08-11</span>
@@ -1318,6 +1369,7 @@
       <div class="item-body text-base leading-relaxed">任大解部 權大解部 田 篤 忠 川
 任司法少属 權少属 〓 水 異 之 助
 補十四等出仕 十五等出仕 宮 井 英 太 郞</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/28" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/28"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000028/full/200,/0/default.jpg" loading="lazy" alt="原本画像（28頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1326,7 +1378,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-041</span>
+        <a href="#a12-041" class="badge badge-neutral" title="この記事へのリンク">a12-041</a>
         <span class="badge badge-outline">伺;東京府</span>
         <span class="badge badge-outline">明治7年第136号</span>
         <span class="badge badge-outline">1874-08-12</span>
@@ -1366,6 +1418,7 @@
 可申候此段相伺申候也
 指令
 伺ノ通</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/28" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/28"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000028/full/200,/0/default.jpg" loading="lazy" alt="原本画像（28頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1374,7 +1427,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-042</span>
+        <a href="#a12-042" class="badge badge-neutral" title="この記事へのリンク">a12-042</a>
         <span class="badge badge-outline">伺;京都府</span>
         <span class="badge badge-outline">明治7年第136号</span>
         <span class="badge badge-outline">1874-08-12</span>
@@ -1389,6 +1442,7 @@
 儀ト相心得可然哉相伺候也
 指令
 伺ノ通</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/30" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/30"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000030/full/200,/0/default.jpg" loading="lazy" alt="原本画像（30頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1397,7 +1451,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-043</span>
+        <a href="#a12-043" class="badge badge-neutral" title="この記事へのリンク">a12-043</a>
         <span class="badge badge-outline">人事</span>
         <span class="badge badge-outline">明治7年第136号</span>
         <span class="badge badge-outline">1874-07-31</span>
@@ -1406,6 +1460,7 @@
       </div>
       <div class="card-title text-base">○</div>
       <div class="item-body text-base leading-relaxed">依願免出仕 十五等出仕 宅 馨 德 三</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/30" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/30"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000030/full/200,/0/default.jpg" loading="lazy" alt="原本画像（30頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1414,7 +1469,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-044</span>
+        <a href="#a12-044" class="badge badge-neutral" title="この記事へのリンク">a12-044</a>
         <span class="badge badge-outline">人事</span>
         <span class="badge badge-outline">明治7年第136号</span>
         <span class="badge badge-outline">1874-08-05</span>
@@ -1429,6 +1484,7 @@
 補十三等出仕 同 補十四等出仕 依願免本官 任少解部
 權少解部 岡 風 良
 權大解部 同 十五等出仕 十四等出仕 上 直 正 牧 野 重 昇 松 尾 大 記 沼 重 材 野</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/31" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/31"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000031/full/200,/0/default.jpg" loading="lazy" alt="原本画像（31頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1437,7 +1493,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-045</span>
+        <a href="#a12-045" class="badge badge-neutral" title="この記事へのリンク">a12-045</a>
         <span class="badge badge-outline">人事</span>
         <span class="badge badge-outline">明治7年第136号</span>
         <span class="badge badge-outline">1874-08-07</span>
@@ -1447,6 +1503,7 @@
       <div class="card-title text-base">○</div>
       <div class="item-body text-base leading-relaxed">任權中解部 少解部 服 矣 堅 部
 補十五等出仕 等外一等出仕 飯 精 泉 明</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/31" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/31"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000031/full/200,/0/default.jpg" loading="lazy" alt="原本画像（31頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1455,7 +1512,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-046</span>
+        <a href="#a12-046" class="badge badge-neutral" title="この記事へのリンク">a12-046</a>
         <span class="badge badge-outline">人事</span>
         <span class="badge badge-outline">明治7年第136号</span>
         <span class="badge badge-outline">1874-08-07</span>
@@ -1464,6 +1521,7 @@
       </div>
       <div class="card-title text-base">○</div>
       <div class="item-body text-base leading-relaxed">十四等出仕畑政萬病歿ス</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/31" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/31"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000031/full/200,/0/default.jpg" loading="lazy" alt="原本画像（31頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1472,7 +1530,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-047</span>
+        <a href="#a12-047" class="badge badge-neutral" title="この記事へのリンク">a12-047</a>
         <span class="badge badge-outline">人事</span>
         <span class="badge badge-outline">明治7年第136号</span>
         <span class="badge badge-outline">1874-08-09</span>
@@ -1483,6 +1541,7 @@
       <div class="item-body text-base leading-relaxed">司法省裁判所ニ於テ名東縣下阿波國那賀郡木頭村農仁
 義武一郞等ヨリ同村用掛リ湯淺賢太郞ヘ掛ル切畠山行
 キ縫レ控訴一件裁許申渡アレトモ多端ニ付記載セス</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/31" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/31"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000031/full/200,/0/default.jpg" loading="lazy" alt="原本画像（31頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1491,7 +1550,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-048</span>
+        <a href="#a12-048" class="badge badge-neutral" title="この記事へのリンク">a12-048</a>
         <span class="badge badge-outline">人事</span>
         <span class="badge badge-outline">明治7年第136号</span>
         <span class="badge badge-outline">1874-08-10</span>
@@ -1500,6 +1559,7 @@
       </div>
       <div class="card-title text-base">○</div>
       <div class="item-body text-base leading-relaxed">十二等出仕羊川親賢小田縣十一等出仕ニ轉ス</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/32" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/32"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000032/full/200,/0/default.jpg" loading="lazy" alt="原本画像（32頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1508,7 +1568,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-049</span>
+        <a href="#a12-049" class="badge badge-neutral" title="この記事へのリンク">a12-049</a>
         <span class="badge badge-outline">伺;静岡県</span>
         <span class="badge badge-outline">明治7年第137号</span>
         <span class="badge badge-outline">1874-08-12</span>
@@ -1535,6 +1595,7 @@
 〓ヲ聽ス
 第二條 伺ノ通 但本夫ヨリ其離婚ノ事由ヲ管廳ニ届
 ケ出サシム可シ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/32" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/32"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000032/full/200,/0/default.jpg" loading="lazy" alt="原本画像（32頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1543,7 +1604,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-050</span>
+        <a href="#a12-050" class="badge badge-neutral" title="この記事へのリンク">a12-050</a>
         <span class="badge badge-outline">裁判所申渡</span>
         <span class="badge badge-outline">明治7年第137号</span>
         <span class="badge badge-outline">1874-08-12</span>
@@ -1562,6 +1623,7 @@
 テ確乎タル證據無之ニ付訴狀難採用右裁判書寫下ケ渡
 ス處尙得心不致寫難請取段申募裁判差拒ム科雜犯律違
 令重ニ問ヒ懲役四十日申付候事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/33" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/33"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000033/full/200,/0/default.jpg" loading="lazy" alt="原本画像（33頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1570,7 +1632,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-051</span>
+        <a href="#a12-051" class="badge badge-neutral" title="この記事へのリンク">a12-051</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第137号</span>
         <span class="badge badge-outline">1874-08-12</span>
@@ -1582,6 +1644,7 @@
 非人 牛 郞 太
 其方儀先年流罪申付置候處今般律例〓正相成候ニ付放
 免申付候事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/34" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/34"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000034/full/200,/0/default.jpg" loading="lazy" alt="原本画像（34頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1590,7 +1653,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-052</span>
+        <a href="#a12-052" class="badge badge-neutral" title="この記事へのリンク">a12-052</a>
         <span class="badge badge-outline">伺;兵庫裁判所</span>
         <span class="badge badge-outline">明治7年第137号</span>
         <span class="badge badge-outline">1874-08-13</span>
@@ -1612,6 +1675,7 @@
 所爲ニ非ルヲ以テ販賣阿片律ニ擬シ難シ依テ狀情ヲ酌
 量シ不應爲重キニ問セ
 同七十日 阿 錢 六</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/34" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/34"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000034/full/200,/0/default.jpg" loading="lazy" alt="原本画像（34頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1620,7 +1684,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-053</span>
+        <a href="#a12-053" class="badge badge-neutral" title="この記事へのリンク">a12-053</a>
         <span class="badge badge-outline">人事</span>
         <span class="badge badge-outline">明治7年第137号</span>
         <span class="badge badge-outline">1874-08-13</span>
@@ -1629,6 +1693,7 @@
       </div>
       <div class="card-title text-base">○</div>
       <div class="item-body text-base leading-relaxed">中解部中御門經明豐岡縣九等出仕ニ轉職ス</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/35" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/35"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000035/full/200,/0/default.jpg" loading="lazy" alt="原本画像（35頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1637,7 +1702,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-054</span>
+        <a href="#a12-054" class="badge badge-neutral" title="この記事へのリンク">a12-054</a>
         <span class="badge badge-outline">人事</span>
         <span class="badge badge-outline">明治7年第137号</span>
         <span class="badge badge-outline">1874-08-13</span>
@@ -1668,6 +1733,7 @@
 終身ノ囚人逃走スル者豐吉ハ持兒器强盜財ヲ得サル者
 ニ付五名共皆絞罪末次郞ハ例第百二十八條ニ依リ懲役
 終身等ノ指令アリ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/35" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/35"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000035/full/200,/0/default.jpg" loading="lazy" alt="原本画像（35頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1676,7 +1742,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-055</span>
+        <a href="#a12-055" class="badge badge-neutral" title="この記事へのリンク">a12-055</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第137号</span>
         <span class="badge badge-outline">1874-08-13</span>
@@ -1692,6 +1758,7 @@
 權大属 秀 近 藤 寬
 臨時御用有之靑森縣出張申付候事 通 各
 但御用ノ儀ハ大塚少判事ヘ可承合事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/36" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/36"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000036/full/200,/0/default.jpg" loading="lazy" alt="原本画像（36頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1700,7 +1767,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-056</span>
+        <a href="#a12-056" class="badge badge-neutral" title="この記事へのリンク">a12-056</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第137号</span>
         <span class="badge badge-outline">1874-08-13</span>
@@ -1723,6 +1790,7 @@
 六十 常彌ハ懲役百日以下ノ囚人限內逃走シ外ニ在テ竊
 盜三百圓以上ヲ犯ス者棒鎖一日懲役終身等ノ指令アリ
 皆懲役八十日以下ノ輕罪ニ付指令共畧之 滋賀縣山梨裁判所等ヨリ各處斷伺アレトモ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/36" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/36"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000036/full/200,/0/default.jpg" loading="lazy" alt="原本画像（36頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1731,7 +1799,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-057</span>
+        <a href="#a12-057" class="badge badge-neutral" title="この記事へのリンク">a12-057</a>
         <span class="badge badge-outline">布達</span>
         <span class="badge badge-outline">明治7年第137号</span>
         <span class="badge badge-outline">1874-08-14</span>
@@ -1746,6 +1814,7 @@
 五號御達ノ通取計其段可届出此旨布達候事 人相 略之 書
 但裁判所被置候府縣ハ見當次第致捕縛其地撿事局 へ
 引渡同局於テ本文ノ通取計其旨可届出候事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/37" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/37"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000037/full/200,/0/default.jpg" loading="lazy" alt="原本画像（37頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1754,7 +1823,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-058</span>
+        <a href="#a12-058" class="badge badge-neutral" title="この記事へのリンク">a12-058</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第137号</span>
         <span class="badge badge-outline">1874-08-15</span>
@@ -1765,6 +1834,7 @@
       <div class="item-body text-base leading-relaxed">十等出仕 上 豐 村 行
 臨時御用ニ付靑森縣出張申付候事
 但御用ノ儀ハ橋口中撿事ヘ可承合事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/37" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/37"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000037/full/200,/0/default.jpg" loading="lazy" alt="原本画像（37頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1773,7 +1843,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-059</span>
+        <a href="#a12-059" class="badge badge-neutral" title="この記事へのリンク">a12-059</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第137号</span>
         <span class="badge badge-outline">1874-08-15</span>
@@ -1785,6 +1855,7 @@
 鎭臺用達手代由井百之助佐賀縣賊徒征
 討ノ日官物盜取セシニ付常軍兩律比較表云々ノ伺ニ常
 律軍律比較表ノ儀ハ陸軍省ヘ可伺出ト指令アリ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/37" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/37"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000037/full/200,/0/default.jpg" loading="lazy" alt="原本画像（37頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1793,7 +1864,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-060</span>
+        <a href="#a12-060" class="badge badge-neutral" title="この記事へのリンク">a12-060</a>
         <span class="badge badge-outline">伺;福岡県</span>
         <span class="badge badge-outline">明治7年第137号</span>
         <span class="badge badge-outline">1874-08-15</span>
@@ -1812,6 +1883,7 @@
 親屬姦居喪姦鷄姦等ハ第十號布達ノ限ニ在ラス親属ハ
 律ニ該載スル處ノ五等親皆申告スルヿヲ得可シ 但書
 伺ノ通</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/38" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/38"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000038/full/200,/0/default.jpg" loading="lazy" alt="原本画像（38頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1820,7 +1892,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-061</span>
+        <a href="#a12-061" class="badge badge-neutral" title="この記事へのリンク">a12-061</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第137号</span>
         <span class="badge badge-outline">1874-08-15</span>
@@ -1832,6 +1904,7 @@
 筑後國御井郡野中村平民池田百人等管外出行差止 月同
 親族ヘ保管申付置所悔悟ノ實跡相顯候ニ付管外出行被
 差許度伺ニ伺ノ通差許スト指令アリ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/38" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/38"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000038/full/200,/0/default.jpg" loading="lazy" alt="原本画像（38頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1840,7 +1913,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-062</span>
+        <a href="#a12-062" class="badge badge-neutral" title="この記事へのリンク">a12-062</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第137号</span>
         <span class="badge badge-outline">1874-08-15</span>
@@ -1852,6 +1925,7 @@
 丈三郞處斷伺ニ强姦スル者懲役十年ト指令アリ 根兩縣
 リ各處置伺アレトモ懲役九十 ヨ
 日已下ノ輕罪ニ付指令共畧之</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/38" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/38"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000038/full/200,/0/default.jpg" loading="lazy" alt="原本画像（38頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1860,7 +1934,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-063</span>
+        <a href="#a12-063" class="badge badge-neutral" title="この記事へのリンク">a12-063</a>
         <span class="badge badge-outline">伺;埼玉裁判所</span>
         <span class="badge badge-outline">明治7年第137号</span>
         <span class="badge badge-outline">1874-08-17</span>
@@ -1913,6 +1987,7 @@
 第四條 質地處分ノ規則ハ追々布告布達モ有之百箇條
 中刑法ニ涉ル規則ハ新律綱領頒布ノ節相廢シタル〓
 ト可心得事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/39" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/39"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000039/full/200,/0/default.jpg" loading="lazy" alt="原本画像（39頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1921,7 +1996,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-064</span>
+        <a href="#a12-064" class="badge badge-neutral" title="この記事へのリンク">a12-064</a>
         <span class="badge badge-outline">布達</span>
         <span class="badge badge-outline">明治7年第137号</span>
         <span class="badge badge-outline">1874-08-17</span>
@@ -1933,6 +2008,7 @@
 傳吉厄介 吉 田 仁 三 郞
 右ノ者儀山梨縣於テ懲役終身所刑中本月三日逃亡候條
 各地方</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/41" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/41"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000041/full/200,/0/default.jpg" loading="lazy" alt="原本画像（41頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1941,7 +2017,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-065</span>
+        <a href="#a12-065" class="badge badge-neutral" title="この記事へのリンク">a12-065</a>
         <span class="badge badge-outline">布達</span>
         <span class="badge badge-outline">明治7年第137号</span>
         <span class="badge badge-outline">1874-08-17</span>
@@ -1962,6 +2038,7 @@
 木半次郞ハ故殺ノ犯狀有之ニ付滋賀縣ニ於テ入獄鞠問
 中本月三日午後第八時反獄逃走候條各地方 例文人 以下但
 之畧</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/41" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/41"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000041/full/200,/0/default.jpg" loading="lazy" alt="原本画像（41頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1970,7 +2047,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-066</span>
+        <a href="#a12-066" class="badge badge-neutral" title="この記事へのリンク">a12-066</a>
         <span class="badge badge-outline">人事</span>
         <span class="badge badge-outline">明治7年第137号</span>
         <span class="badge badge-outline">1874-08-08</span>
@@ -1983,6 +2060,7 @@
 任中解部 權中解部 景 亮 田 鹽
 同 同 正 平 野 迪
 任司法中属 權中属 筧 足 躬</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/42" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/42"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000042/full/200,/0/default.jpg" loading="lazy" alt="原本画像（42頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -1991,7 +2069,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-067</span>
+        <a href="#a12-067" class="badge badge-neutral" title="この記事へのリンク">a12-067</a>
         <span class="badge badge-outline">布達</span>
         <span class="badge badge-outline">明治7年第138号</span>
         <span class="badge badge-outline">1874-08-17</span>
@@ -2012,6 +2090,7 @@
 間ハ犯則ノ者有之候共處罰ニ及ハサル事
 但八月三十一日以前犯則ノ者ハ前條ノ通タル可キ
 事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/42" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/42"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000042/full/200,/0/default.jpg" loading="lazy" alt="原本画像（42頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2020,7 +2099,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-068</span>
+        <a href="#a12-068" class="badge badge-neutral" title="この記事へのリンク">a12-068</a>
         <span class="badge badge-outline">布達</span>
         <span class="badge badge-outline">明治7年第138号</span>
         <span class="badge badge-outline">1874-08-17</span>
@@ -2034,6 +2113,7 @@
 雇人三河屋九八方ヘ被雇中本年一月庄右衛門店商用之
 反物數十端欺取逃走歸國致候ニ付捕縛糾問中去ル五月
 廿七日越獄逃亡候條各地方人 人 書畧之</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/43" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/43"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000043/full/200,/0/default.jpg" loading="lazy" alt="原本画像（43頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2042,7 +2122,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-069</span>
+        <a href="#a12-069" class="badge badge-neutral" title="この記事へのリンク">a12-069</a>
         <span class="badge badge-outline">布達</span>
         <span class="badge badge-outline">明治7年第138号</span>
         <span class="badge badge-outline">1874-08-17</span>
@@ -2055,6 +2135,7 @@
 藏 勘 林
 右之者儀神奈川縣於テ懲役終身處刑中本月八日逃亡候
 條各地方</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/43" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/43"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000043/full/200,/0/default.jpg" loading="lazy" alt="原本画像（43頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2063,7 +2144,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-070</span>
+        <a href="#a12-070" class="badge badge-neutral" title="この記事へのリンク">a12-070</a>
         <span class="badge badge-outline">伺;司法省裁判所</span>
         <span class="badge badge-outline">明治7年第138号</span>
         <span class="badge badge-outline">1874-08-17</span>
@@ -2075,6 +2156,7 @@
 候所以來ハ確信ノ爲該官實印相用度此段相伺候也
 府縣〓各裁判所等ヘ判事ヨリ往復ノ書面以來可成丈實
 印ヲ押シ確信ヲ表ス可キ事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/43" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/43"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000043/full/200,/0/default.jpg" loading="lazy" alt="原本画像（43頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2083,7 +2165,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-071</span>
+        <a href="#a12-071" class="badge badge-neutral" title="この記事へのリンク">a12-071</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第138号</span>
         <span class="badge badge-outline">1874-08-17</span>
@@ -2111,6 +2193,7 @@
 同三年滿限ノ後加役三十日等ノ指令アリ
 リ各處刑伺アレ共懲役百日ノ収贖以 ヨ
 下或ハ免罪呵責等ノ者ニ付指令共略之</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/44" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/44"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000044/full/200,/0/default.jpg" loading="lazy" alt="原本画像（44頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2119,7 +2202,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-072</span>
+        <a href="#a12-072" class="badge badge-neutral" title="この記事へのリンク">a12-072</a>
         <span class="badge badge-outline">人事</span>
         <span class="badge badge-outline">明治7年第138号</span>
         <span class="badge badge-outline">1874-08-18</span>
@@ -2130,6 +2213,7 @@
       <div class="item-body text-base leading-relaxed">任司法權大属 中錄 龍 來 船
 任少解部 十三等出仕 山 岡 愨 而
 依願免本官 權大錄 直 土 方 行</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/44" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/44"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000044/full/200,/0/default.jpg" loading="lazy" alt="原本画像（44頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2138,7 +2222,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-073</span>
+        <a href="#a12-073" class="badge badge-neutral" title="この記事へのリンク">a12-073</a>
         <span class="badge badge-outline">伺;置賜県</span>
         <span class="badge badge-outline">明治7年第138号</span>
         <span class="badge badge-outline">1874-08-19</span>
@@ -2163,6 +2247,7 @@
 第三條 周旋人ハ代言代書人等ノ手數料ニ比依スルノ
 限ニ在ヲス其謝金ヲ受ル詐欺恐喝等ノ情無クシテ互
 ノ承諾ニ出ルハ罪ノ問可キナシ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/45" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/45"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000045/full/200,/0/default.jpg" loading="lazy" alt="原本画像（45頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2171,7 +2256,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-074</span>
+        <a href="#a12-074" class="badge badge-neutral" title="この記事へのリンク">a12-074</a>
         <span class="badge badge-outline">伺;東京裁判所</span>
         <span class="badge badge-outline">明治7年第138号</span>
         <span class="badge badge-outline">1874-08-19</span>
@@ -2189,6 +2274,7 @@
 差出サセ出仕ノ廳ヨリ本省ヘ相廻シ本省ヨリ所在裁 へ
 判所ヘ相廻シ然ルヘシ通達方ハ伺ノ通
 但通達濟ノ上本省ヘ可届事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/46" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/46"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000046/full/200,/0/default.jpg" loading="lazy" alt="原本画像（46頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2197,7 +2283,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-075</span>
+        <a href="#a12-075" class="badge badge-neutral" title="この記事へのリンク">a12-075</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第138号</span>
         <span class="badge badge-outline">1874-08-19</span>
@@ -2216,6 +2302,7 @@
 時間ヲ過テ投歸セス外ニ在テ竊盜四犯財ヲ得ル者棒鎖
 郞ハ竊盜三犯五十圓以上與三郞ハ捕吏ヲ毆チ折傷以上
 ニ至ル者ヲ以テ論シ四名共皆懲役終身ノ指令アリ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/46" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/46"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000046/full/200,/0/default.jpg" loading="lazy" alt="原本画像（46頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2224,7 +2311,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-076</span>
+        <a href="#a12-076" class="badge badge-neutral" title="この記事へのリンク">a12-076</a>
         <span class="badge badge-outline">伺;山形県</span>
         <span class="badge badge-outline">明治7年第138号</span>
         <span class="badge badge-outline">1874-08-19</span>
@@ -2246,6 +2333,7 @@
 指令
 秋田縣伺指令ハ有夫ノ妾ハ懲役三年誘セラルヽ妾ハ三
 等ヲ減スト例第百四十九條ト相戾ルヿナシトス</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/47" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/47"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000047/full/200,/0/default.jpg" loading="lazy" alt="原本画像（47頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2254,7 +2342,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-077</span>
+        <a href="#a12-077" class="badge badge-neutral" title="この記事へのリンク">a12-077</a>
         <span class="badge badge-outline">伺;愛知県</span>
         <span class="badge badge-outline">明治7年第138号</span>
         <span class="badge badge-outline">1874-08-20</span>
@@ -2272,6 +2360,7 @@
 取財ノ詐術成ヲサルモ文書ハ已ニ僞爲スルヲ以テ例第
 二百四十六條ニ依リ處斷スヘキノ所自首スルヲ以テ免
 罪</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/47" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/47"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000047/full/200,/0/default.jpg" loading="lazy" alt="原本画像（47頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2280,7 +2369,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-078</span>
+        <a href="#a12-078" class="badge badge-neutral" title="この記事へのリンク">a12-078</a>
         <span class="badge badge-outline">伺;島根県</span>
         <span class="badge badge-outline">明治7年第138号</span>
         <span class="badge badge-outline">1874-08-20</span>
@@ -2295,6 +2384,7 @@
 例ノ者往々有之候ニ付同樣處置不苦儀ニ候哉相伺候也
 指令
 伺ノ通</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/48" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/48"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000048/full/200,/0/default.jpg" loading="lazy" alt="原本画像（48頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2303,7 +2393,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-079</span>
+        <a href="#a12-079" class="badge badge-neutral" title="この記事へのリンク">a12-079</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第138号</span>
         <span class="badge badge-outline">1874-08-20</span>
@@ -2313,6 +2403,7 @@
       <div class="card-title text-base">○</div>
       <div class="item-body text-base leading-relaxed">千葉裁判所ヨリ 七月 七年 禁獄者所遇方ノ伺ニ當省本年第十
 六號布達ノ通可心得ト指令アリ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/48" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/48"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000048/full/200,/0/default.jpg" loading="lazy" alt="原本画像（48頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2321,7 +2412,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-080</span>
+        <a href="#a12-080" class="badge badge-neutral" title="この記事へのリンク">a12-080</a>
         <span class="badge badge-outline">伺;京都裁判所</span>
         <span class="badge badge-outline">明治7年第138号</span>
         <span class="badge badge-outline">1874-08-20</span>
@@ -2347,6 +2438,7 @@
 情實自ラ懸殊アルヲ謂フ客塵倉庫等ニシテ寄託ノ財物
 ヲ費用スルハ償還情〓ノ有無ヲ問ハス先般其裁判所 ヘ
 指令ノ通心得可シ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/48" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/48"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000048/full/200,/0/default.jpg" loading="lazy" alt="原本画像（48頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2355,7 +2447,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-081</span>
+        <a href="#a12-081" class="badge badge-neutral" title="この記事へのリンク">a12-081</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第138号</span>
         <span class="badge badge-outline">1874-08-20</span>
@@ -2378,6 +2470,7 @@
 各處斷伺ア レ〓皆懲役百
 日以下ノ者ニ
 付指令共畧之</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/49" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/49"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000049/full/200,/0/default.jpg" loading="lazy" alt="原本画像（49頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2386,7 +2479,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-082</span>
+        <a href="#a12-082" class="badge badge-neutral" title="この記事へのリンク">a12-082</a>
         <span class="badge badge-outline">伺;岡山県</span>
         <span class="badge badge-outline">明治7年第138号</span>
         <span class="badge badge-outline">1874-08-22</span>
@@ -2403,6 +2496,7 @@
 候右ハ支給難仕筋ニ御座候哉此段奉伺候也
 指令
 伺ノ通</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/50" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/50"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000050/full/200,/0/default.jpg" loading="lazy" alt="原本画像（50頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2411,7 +2505,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-083</span>
+        <a href="#a12-083" class="badge badge-neutral" title="この記事へのリンク">a12-083</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第138号</span>
         <span class="badge badge-outline">1874-08-22</span>
@@ -2422,6 +2516,7 @@
       <div class="item-body text-base leading-relaxed">長崎縣ヨリ 七年 七月 管外出行差止メ親属保管申付置候當縣
 士族金田孝興弟中村直金儀悔悟謹愼罷在ニ付管外出行
 親属保管等差許ス可キ哉ノ伺ニ伺ノ通差許ト指令アリ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/50" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/50"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000050/full/200,/0/default.jpg" loading="lazy" alt="原本画像（50頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2430,7 +2525,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-084</span>
+        <a href="#a12-084" class="badge badge-neutral" title="この記事へのリンク">a12-084</a>
         <span class="badge badge-outline">人事</span>
         <span class="badge badge-outline">明治7年第138号</span>
         <span class="badge badge-outline">1874-08-08</span>
@@ -2440,6 +2535,7 @@
       <div class="card-title text-base">○</div>
       <div class="item-body text-base leading-relaxed">任權中解部 十二等出仕 半 佐 伯 次
 任少解部 十三等出仕 上 島 政 明</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/51" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/51"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000051/full/200,/0/default.jpg" loading="lazy" alt="原本画像（51頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2448,7 +2544,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-085</span>
+        <a href="#a12-085" class="badge badge-neutral" title="この記事へのリンク">a12-085</a>
         <span class="badge badge-outline">人事</span>
         <span class="badge badge-outline">明治7年第138号</span>
         <span class="badge badge-outline">1874-08-10</span>
@@ -2459,6 +2555,7 @@
       <div class="item-body text-base leading-relaxed">補九等出仕 十等出仕 近 野 種 德
 任中解部 權中解部 國 義 東 路
 任司法中屬 權中属 貞 明 早 野</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/51" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/51"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000051/full/200,/0/default.jpg" loading="lazy" alt="原本画像（51頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2467,7 +2564,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-086</span>
+        <a href="#a12-086" class="badge badge-neutral" title="この記事へのリンク">a12-086</a>
         <span class="badge badge-outline">人事</span>
         <span class="badge badge-outline">明治7年第138号</span>
         <span class="badge badge-outline">1874-08-12</span>
@@ -2476,6 +2573,7 @@
       </div>
       <div class="card-title text-base">○</div>
       <div class="item-body text-base leading-relaxed">補十五等出仕 等外一等出仕 忠 義 野 水</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/51" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/51"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000051/full/200,/0/default.jpg" loading="lazy" alt="原本画像（51頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2484,7 +2582,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-087</span>
+        <a href="#a12-087" class="badge badge-neutral" title="この記事へのリンク">a12-087</a>
         <span class="badge badge-outline">人事</span>
         <span class="badge badge-outline">明治7年第138号</span>
         <span class="badge badge-outline">1874-08-13</span>
@@ -2493,6 +2591,7 @@
       </div>
       <div class="card-title text-base">○</div>
       <div class="item-body text-base leading-relaxed">依願免出仕 十三等出仕 宅 洌 三</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/51" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/51"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000051/full/200,/0/default.jpg" loading="lazy" alt="原本画像（51頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2501,7 +2600,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-088</span>
+        <a href="#a12-088" class="badge badge-neutral" title="この記事へのリンク">a12-088</a>
         <span class="badge badge-outline">人事</span>
         <span class="badge badge-outline">明治7年第138号</span>
         <span class="badge badge-outline">1874-08-14</span>
@@ -2512,6 +2611,7 @@
       <div class="item-body text-base leading-relaxed">補十三等出仕 豐岡縣十三等出仕 問 正 名 草
 補十四等出仕
 同 十四等出仕 川 達 夫 宮</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/51" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/51"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000051/full/200,/0/default.jpg" loading="lazy" alt="原本画像（51頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2520,7 +2620,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-089</span>
+        <a href="#a12-089" class="badge badge-neutral" title="この記事へのリンク">a12-089</a>
         <span class="badge badge-outline">人事</span>
         <span class="badge badge-outline">明治7年第138号</span>
         <span class="badge badge-outline">1874-08-15</span>
@@ -2530,6 +2630,7 @@
       <div class="card-title text-base">○</div>
       <div class="item-body text-base leading-relaxed">補十四等出仕 十五等出仕 井 三 精 一
 同 同 栗 原 發</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/52" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/52"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000052/full/200,/0/default.jpg" loading="lazy" alt="原本画像（52頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2538,7 +2639,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-090</span>
+        <a href="#a12-090" class="badge badge-neutral" title="この記事へのリンク">a12-090</a>
         <span class="badge badge-outline">正誤</span>
         <span class="badge badge-outline">明治7年第138号</span>
         <span class="badge badge-outline">1874-08-15</span>
@@ -2550,6 +2651,7 @@
 ノ誤リ
 第百三十三號ニ載スル東京裁判所行刑表中 贖金六百
 六十六圓七十五錢ノ十二字ヲ脫ス</div>
+      <div class="xref"><div><span class="xref-caption">訂正対象:</span> <a href="#a12-021" class="link link-primary xref-link" onclick="showView('card')">a12-021 ○</a>、<a href="#a12-022" class="link link-primary xref-link" onclick="showView('card')">a12-022 〔岐阜縣伺〕 七年七月十四日</a></div></div>
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/52" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/52"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000052/full/200,/0/default.jpg" loading="lazy" alt="原本画像（52頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2558,7 +2660,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-091</span>
+        <a href="#a12-091" class="badge badge-neutral" title="この記事へのリンク">a12-091</a>
         <span class="badge badge-outline">伺;和歌山県</span>
         <span class="badge badge-outline">明治7年第139号</span>
         <span class="badge badge-outline">1874-08-22</span>
@@ -2579,6 +2681,7 @@
 事實取糺相違無之上ハ聞届可然候哉此段相伺候也
 指令
 伺ノ通</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/52" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/52"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000052/full/200,/0/default.jpg" loading="lazy" alt="原本画像（52頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2587,7 +2690,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-092</span>
+        <a href="#a12-092" class="badge badge-neutral" title="この記事へのリンク">a12-092</a>
         <span class="badge badge-outline">伺;京都裁判所</span>
         <span class="badge badge-outline">明治7年第139号</span>
         <span class="badge badge-outline">1874-08-22</span>
@@ -2609,6 +2712,7 @@
 指令
 無期限〓ニ月賦年賦崩濟等ノ約定ニテモ貸借ノ證文ハ
 總テ壬申四十號當省布達ノ通可心得事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/53" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/53"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000053/full/200,/0/default.jpg" loading="lazy" alt="原本画像（53頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2617,7 +2721,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-093</span>
+        <a href="#a12-093" class="badge badge-neutral" title="この記事へのリンク">a12-093</a>
         <span class="badge badge-outline">伺;三重県</span>
         <span class="badge badge-outline">明治7年第139号</span>
         <span class="badge badge-outline">1874-08-22</span>
@@ -2639,6 +2743,7 @@
 指令
 伺ノ通
 七年七月</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/53" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/53"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000053/full/200,/0/default.jpg" loading="lazy" alt="原本画像（53頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2647,7 +2752,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-094</span>
+        <a href="#a12-094" class="badge badge-neutral" title="この記事へのリンク">a12-094</a>
         <span class="badge badge-outline">伺;水澤県</span>
         <span class="badge badge-outline">明治7年第139号</span>
         <span class="badge badge-outline">1874-08-22</span>
@@ -2676,6 +2781,7 @@
 ハ奪ヒ難キ者ナレハ悉皆償却致サセ可然哉相伺候也
 指令
 訴訟入費規則ノ通リ可心得事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/54" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/54"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000054/full/200,/0/default.jpg" loading="lazy" alt="原本画像（54頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2684,7 +2790,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-095</span>
+        <a href="#a12-095" class="badge badge-neutral" title="この記事へのリンク">a12-095</a>
         <span class="badge badge-outline">伺;愛知県</span>
         <span class="badge badge-outline">明治7年第139号</span>
         <span class="badge badge-outline">1874-08-22</span>
@@ -2705,6 +2811,7 @@
 ヲ月賦ニナシタル約定證書ニ付固ヨリ加印ノ者ヨリ辨
 金可致云々ハ保證ノ義ニシテ賣掛代金タル〓現然タル
 上ハ丁卯以前ト雖採上ケ裁判可及事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/55" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/55"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000055/full/200,/0/default.jpg" loading="lazy" alt="原本画像（55頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2713,7 +2820,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-096</span>
+        <a href="#a12-096" class="badge badge-neutral" title="この記事へのリンク">a12-096</a>
         <span class="badge badge-outline">伺;青森県</span>
         <span class="badge badge-outline">明治7年第139号</span>
         <span class="badge badge-outline">1874-08-22</span>
@@ -2752,6 +2859,7 @@
 レアル時ハ不足ノ分新規證文ニ仕立其者身代持直シ
 次第償却可受旨常例ノ通リ裏書シ原告人ニ下附ス
 キ事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/56" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/56"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000056/full/200,/0/default.jpg" loading="lazy" alt="原本画像（56頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2760,7 +2868,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-097</span>
+        <a href="#a12-097" class="badge badge-neutral" title="この記事へのリンク">a12-097</a>
         <span class="badge badge-outline">伺;石川県</span>
         <span class="badge badge-outline">明治7年第139号</span>
         <span class="badge badge-outline">1874-08-22</span>
@@ -2785,6 +2893,7 @@
 指令
 明治六年七月以前滿期ノ質地証文ハ里正等ノ奧印ニ不
 拘採上ケ質地ノ裁判可及事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/57" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/57"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000057/full/200,/0/default.jpg" loading="lazy" alt="原本画像（57頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2793,7 +2902,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-098</span>
+        <a href="#a12-098" class="badge badge-neutral" title="この記事へのリンク">a12-098</a>
         <span class="badge badge-outline">伺;大分県</span>
         <span class="badge badge-outline">明治7年第139号</span>
         <span class="badge badge-outline">1874-08-22</span>
@@ -2824,6 +2933,7 @@
 則ニ觸レタル証書ヲ以テ訴出タル者ハ本年第六號布告
 ノ通リ可心得將又流地糶賣ノ區別ハ明治六年第五十 一
 號布告〓當省布達第四十六號ノ通可心得事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/58" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/58"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000058/full/200,/0/default.jpg" loading="lazy" alt="原本画像（58頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2832,7 +2942,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-099</span>
+        <a href="#a12-099" class="badge badge-neutral" title="この記事へのリンク">a12-099</a>
         <span class="badge badge-outline">伺;山形県</span>
         <span class="badge badge-outline">明治7年第139号</span>
         <span class="badge badge-outline">1874-08-22</span>
@@ -2847,6 +2957,7 @@
 認メノ押印致スヘキ儀ニ候哉右相伺候也
 指令
 伺ノ通</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/59" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/59"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000059/full/200,/0/default.jpg" loading="lazy" alt="原本画像（59頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2855,7 +2966,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-100</span>
+        <a href="#a12-100" class="badge badge-neutral" title="この記事へのリンク">a12-100</a>
         <span class="badge badge-outline">伺;名東県</span>
         <span class="badge badge-outline">明治7年第139号</span>
         <span class="badge badge-outline">1874-08-22</span>
@@ -2872,6 +2983,7 @@
 因リ其丁卯以前ノ貸借タル事ヲ看認ム可キヤモシ証書
 上丁卯以前借用ノ旨記載有之ヵ又ハ原被口供符合スル
 ニ於テハ無論裁判不及事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/59" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/59"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000059/full/200,/0/default.jpg" loading="lazy" alt="原本画像（59頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2880,7 +2992,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-101</span>
+        <a href="#a12-101" class="badge badge-neutral" title="この記事へのリンク">a12-101</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第139号</span>
         <span class="badge badge-outline">1874-08-23</span>
@@ -2896,6 +3008,7 @@
 リ収贖金四十四圓但四十圓ハ被殺家ニ四圓ハ被傷人ニ
 給付ス等ノ指令アリ
 豐岡鳥取兩縣千葉東京兩裁判所等</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/60" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/60"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000060/full/200,/0/default.jpg" loading="lazy" alt="原本画像（60頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2904,7 +3017,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-102</span>
+        <a href="#a12-102" class="badge badge-neutral" title="この記事へのリンク">a12-102</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第139号</span>
         <span class="badge badge-outline">1874-08-23</span>
@@ -2917,6 +3030,7 @@
 在勤 兵庫 大解部 遠 重 塚 犬
 又四郞 在千 勤葉 鹽 高 同
 千葉裁判所副所長申付候事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/60" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/60"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000060/full/200,/0/default.jpg" loading="lazy" alt="原本画像（60頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2925,7 +3039,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-103</span>
+        <a href="#a12-103" class="badge badge-neutral" title="この記事へのリンク">a12-103</a>
         <span class="badge badge-outline">伺;三重県</span>
         <span class="badge badge-outline">明治7年第139号</span>
         <span class="badge badge-outline">1874-08-24</span>
@@ -2949,6 +3063,7 @@
 論ス可カラサルニ付採上ケ裁判可及事
 第二條 從前ノ通可相心得事
 第三條 前同斷</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/61" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/61"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000061/full/200,/0/default.jpg" loading="lazy" alt="原本画像（61頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2957,7 +3072,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-104</span>
+        <a href="#a12-104" class="badge badge-neutral" title="この記事へのリンク">a12-104</a>
         <span class="badge badge-outline">人事</span>
         <span class="badge badge-outline">明治7年第139号</span>
         <span class="badge badge-outline">1874-08-18</span>
@@ -2966,6 +3081,7 @@
       </div>
       <div class="card-title text-base">○</div>
       <div class="item-body text-base leading-relaxed">補十四等出仕 兵庫縣十五等出仕 今 枝 千 森</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/62" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/62"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000062/full/200,/0/default.jpg" loading="lazy" alt="原本画像（62頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2974,7 +3090,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-105</span>
+        <a href="#a12-105" class="badge badge-neutral" title="この記事へのリンク">a12-105</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第139号</span>
         <span class="badge badge-outline">1874-08-18</span>
@@ -2983,6 +3099,7 @@
       </div>
       <div class="card-title text-base">〔達書〕</div>
       <div class="item-body text-base leading-relaxed">大坂裁判所在勤申付候事 權大屬 船 來 龍</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/62" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/62"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000062/full/200,/0/default.jpg" loading="lazy" alt="原本画像（62頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -2991,7 +3108,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-106</span>
+        <a href="#a12-106" class="badge badge-neutral" title="この記事へのリンク">a12-106</a>
         <span class="badge badge-outline">伺;新治裁判所</span>
         <span class="badge badge-outline">明治7年第140号</span>
         <span class="badge badge-outline">1874-08-24</span>
@@ -3009,6 +3126,7 @@
 念此段奉伺候也
 指令
 伺ノ通</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/62" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/62"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000062/full/200,/0/default.jpg" loading="lazy" alt="原本画像（62頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -3017,7 +3135,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-107</span>
+        <a href="#a12-107" class="badge badge-neutral" title="この記事へのリンク">a12-107</a>
         <span class="badge badge-outline">伺;熊本県</span>
         <span class="badge badge-outline">明治7年第140号</span>
         <span class="badge badge-outline">1874-08-24</span>
@@ -3059,6 +3177,7 @@
 准判規程第十三條第十四條ニ參准シ別段原告管轄廳ノ
 添翰ヲ取ルニ及ハス直チニ被告管轄廳ニ於テ受理可及
 事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/63" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/63"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000063/full/200,/0/default.jpg" loading="lazy" alt="原本画像（63頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -3067,7 +3186,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-108</span>
+        <a href="#a12-108" class="badge badge-neutral" title="この記事へのリンク">a12-108</a>
         <span class="badge badge-outline">布達</span>
         <span class="badge badge-outline">明治7年第140号</span>
         <span class="badge badge-outline">1874-08-24</span>
@@ -3079,6 +3198,7 @@
 渡邊平藏養子
 邊 喜 郞 三 渡
 右之者儀本月七日午後十時自宅ニ於テ妻シマヲ致殺害</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/64" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/64"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000064/full/200,/0/default.jpg" loading="lazy" alt="原本画像（64頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -3087,7 +3207,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-109</span>
+        <a href="#a12-109" class="badge badge-neutral" title="この記事へのリンク">a12-109</a>
         <span class="badge badge-outline">布達</span>
         <span class="badge badge-outline">明治7年第140号</span>
         <span class="badge badge-outline">1874-08-24</span>
@@ -3100,6 +3220,7 @@
 右之者儀本年七月乙第八十號人相書ヲ以及布達置候所
 三重縣ニ於テ捕縛相成候
 例文</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/64" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/64"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000064/full/200,/0/default.jpg" loading="lazy" alt="原本画像（64頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -3108,7 +3229,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-110</span>
+        <a href="#a12-110" class="badge badge-neutral" title="この記事へのリンク">a12-110</a>
         <span class="badge badge-outline">伺;東京裁判所</span>
         <span class="badge badge-outline">明治7年第140号</span>
         <span class="badge badge-outline">1874-08-24</span>
@@ -3146,6 +3267,7 @@
 第七條 訴訟入費ヲ先キニシ罰金ヲ後ニス可シ
 第八條 違式ノ重キニ從テ處斷シ斷獄課ニ付スルニ及
 ス ハ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/65" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/65"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000065/full/200,/0/default.jpg" loading="lazy" alt="原本画像（65頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -3154,7 +3276,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-111</span>
+        <a href="#a12-111" class="badge badge-neutral" title="この記事へのリンク">a12-111</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第140号</span>
         <span class="badge badge-outline">1874-08-24</span>
@@ -3167,6 +3289,7 @@
 端ニ付總テ記載セス
 同所ニ於テ駿河町商三越則兵衛ヨリ前段手代共ヘ掛ル
 訴訟裁許申渡 前文 以下同</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/66" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/66"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000066/full/200,/0/default.jpg" loading="lazy" alt="原本画像（66頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -3175,7 +3298,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-112</span>
+        <a href="#a12-112" class="badge badge-neutral" title="この記事へのリンク">a12-112</a>
         <span class="badge badge-outline">伺;山形県</span>
         <span class="badge badge-outline">明治7年第140号</span>
         <span class="badge badge-outline">1874-08-25</span>
@@ -3210,6 +3333,7 @@
 ノ日數ヲ算ヘスシテ更ニ後犯ノ本罪ヲ該ルハ原徒罪
 ノ者ヲ新ニ流ニ入ルヽナリ律ノ權衡素ヨリ異ナル者
 ト ス</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/66" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/66"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000066/full/200,/0/default.jpg" loading="lazy" alt="原本画像（66頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -3218,7 +3342,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-113</span>
+        <a href="#a12-113" class="badge badge-neutral" title="この記事へのリンク">a12-113</a>
         <span class="badge badge-outline">伺;山口県</span>
         <span class="badge badge-outline">明治7年第140号</span>
         <span class="badge badge-outline">1874-08-25</span>
@@ -3237,6 +3361,7 @@
 物ニ属ス均ク縣印アルモ情狀異ナレハ一〓ニ論シ難シ
 當省本年第八號布達ノ通リ心得可シ 但シ棄毀ニ係ル
 者ハ詳細ニ伺出スヘ シ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/68" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/68"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000068/full/200,/0/default.jpg" loading="lazy" alt="原本画像（68頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -3245,7 +3370,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-114</span>
+        <a href="#a12-114" class="badge badge-neutral" title="この記事へのリンク">a12-114</a>
         <span class="badge badge-outline">伺;若松県</span>
         <span class="badge badge-outline">明治7年第140号</span>
         <span class="badge badge-outline">1874-08-25</span>
@@ -3270,6 +3395,7 @@
 管內物產ノ蕃殖ニ意ヲ用ユルハ地方官ノ任タリト雖モ
 漆木ハ人民ノ所有物ナレハ說諭ニ違ヒ搔取ルト雖モ律
 ノ問フ所ニ非ス</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/68" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/68"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000068/full/200,/0/default.jpg" loading="lazy" alt="原本画像（68頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -3278,7 +3404,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-115</span>
+        <a href="#a12-115" class="badge badge-neutral" title="この記事へのリンク">a12-115</a>
         <span class="badge badge-outline">伺;島根県</span>
         <span class="badge badge-outline">明治7年第140号</span>
         <span class="badge badge-outline">1874-08-25</span>
@@ -3300,6 +3426,7 @@
 當省本年第八號布達首項ノ棒鎖ニ科スル者ハ同第十三
 號布達ヲ以テ違式ニ改正ス本文ノ如キハ二罪倶發以重
 論律ニ依テ處分ス可シ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/69" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/69"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000069/full/200,/0/default.jpg" loading="lazy" alt="原本画像（69頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -3308,7 +3435,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-116</span>
+        <a href="#a12-116" class="badge badge-neutral" title="この記事へのリンク">a12-116</a>
         <span class="badge badge-outline">伺;若松県</span>
         <span class="badge badge-outline">明治7年第140号</span>
         <span class="badge badge-outline">1874-08-25</span>
@@ -3325,6 +3452,7 @@
 祿ノ士族逃亡二年以外ノ者復歸自首スル中ハ其罪ヲ贖
 ハシメ族ヲ復シ候テ可然哉相伺候也
 指令</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/70" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/70"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000070/full/200,/0/default.jpg" loading="lazy" alt="原本画像（70頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -3333,7 +3461,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-117</span>
+        <a href="#a12-117" class="badge badge-neutral" title="この記事へのリンク">a12-117</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第140号</span>
         <span class="badge badge-outline">1874-08-25</span>
@@ -3344,6 +3472,7 @@
       <div class="item-body text-base leading-relaxed">高知縣ヨリ 七年 懲役人梶原松次以下十九名ノ者同囚ノ
 脫監ヲ企テタル節首報シテ逃走ヲ得サラシメサルニ付
 孰モ減等ノ伺ニ伺ノ通減等ス可シト指令アリ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/70" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/70"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000070/full/200,/0/default.jpg" loading="lazy" alt="原本画像（70頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -3352,7 +3481,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-118</span>
+        <a href="#a12-118" class="badge badge-neutral" title="この記事へのリンク">a12-118</a>
         <span class="badge badge-outline">伺;新潟県</span>
         <span class="badge badge-outline">明治7年第140号</span>
         <span class="badge badge-outline">1874-08-25</span>
@@ -3365,6 +3494,7 @@
 相立可然哉奉伺候也
 指令
 禁獄中ノ食料ハ自費ヲ以ス可シ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/70" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/70"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000070/full/200,/0/default.jpg" loading="lazy" alt="原本画像（70頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -3373,7 +3503,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-119</span>
+        <a href="#a12-119" class="badge badge-neutral" title="この記事へのリンク">a12-119</a>
         <span class="badge badge-outline">伺;山形県</span>
         <span class="badge badge-outline">明治7年第140号</span>
         <span class="badge badge-outline">1874-08-25</span>
@@ -3388,6 +3518,7 @@
 指令
 竊盜條第二項强盜ヲ以テ論ス其財ヲ棄テ逃走スルノ際
 ニ係ル者ハ罪人拒捕律ニ依ル</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/71" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/71"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000071/full/200,/0/default.jpg" loading="lazy" alt="原本画像（71頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -3396,7 +3527,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-120</span>
+        <a href="#a12-120" class="badge badge-neutral" title="この記事へのリンク">a12-120</a>
         <span class="badge badge-outline">伺;島根県</span>
         <span class="badge badge-outline">明治7年第140号</span>
         <span class="badge badge-outline">1874-08-25</span>
@@ -3409,6 +3540,7 @@
 ナ キモノハ賍ニ計ヘ竊盜ニ準シ處分可然哉相伺候也
 指令
 伺之通</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/71" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/71"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000071/full/200,/0/default.jpg" loading="lazy" alt="原本画像（71頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -3417,7 +3549,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-121</span>
+        <a href="#a12-121" class="badge badge-neutral" title="この記事へのリンク">a12-121</a>
         <span class="badge badge-outline">伺;堺県</span>
         <span class="badge badge-outline">明治7年第140号</span>
         <span class="badge badge-outline">1874-08-25</span>
@@ -3430,6 +3562,7 @@
 然哉相伺候也
 指令
 番人捕縛スルノ處女ヲ姦スルハ不應爲重實斷ニ處ス</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/71" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/71"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000071/full/200,/0/default.jpg" loading="lazy" alt="原本画像（71頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -3438,7 +3571,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-122</span>
+        <a href="#a12-122" class="badge badge-neutral" title="この記事へのリンク">a12-122</a>
         <span class="badge badge-outline">布達</span>
         <span class="badge badge-outline">明治7年第141号</span>
         <span class="badge badge-outline">1874-08-25</span>
@@ -3452,6 +3585,7 @@
 可致候尤推問上差支ヲ生シ候樣ノ儀有之候節ハ當分相
 用不苦候得共右相用候ハヽ其〓末ヲ畧記シ月末ニ至リ
 取纒當省ヘ可届出候條此旨相達候事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/72" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/72"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000072/full/200,/0/default.jpg" loading="lazy" alt="原本画像（72頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -3460,7 +3594,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-123</span>
+        <a href="#a12-123" class="badge badge-neutral" title="この記事へのリンク">a12-123</a>
         <span class="badge badge-outline">伺;筑摩県</span>
         <span class="badge badge-outline">明治7年第141号</span>
         <span class="badge badge-outline">1874-08-25</span>
@@ -3487,6 +3621,7 @@
 レハ追徵スルノ限ニアラス 但シ収贖金ノ全數ヲ出ス
 能ハス其幾分ヲ贖フ可キ者ハ分給シテ埋葬及ヒ醫藥ノ
 資ト爲サシム</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/72" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/72"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000072/full/200,/0/default.jpg" loading="lazy" alt="原本画像（72頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -3495,7 +3630,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-124</span>
+        <a href="#a12-124" class="badge badge-neutral" title="この記事へのリンク">a12-124</a>
         <span class="badge badge-outline">伺;筑摩県</span>
         <span class="badge badge-outline">明治7年第141号</span>
         <span class="badge badge-outline">1874-08-25</span>
@@ -3509,6 +3644,7 @@
 座候哉相伺候也
 指令
 伺ノ通</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/73" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/73"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000073/full/200,/0/default.jpg" loading="lazy" alt="原本画像（73頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -3517,7 +3653,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-125</span>
+        <a href="#a12-125" class="badge badge-neutral" title="この記事へのリンク">a12-125</a>
         <span class="badge badge-outline">伺;豐岡県</span>
         <span class="badge badge-outline">明治7年第141号</span>
         <span class="badge badge-outline">1874-08-25</span>
@@ -3535,6 +3671,7 @@
 指令
 事應奏不奏條上司ニ申ス可クシテ申セサル者ヲ以テ罪
 ヲ科ス</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/74" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/74"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000074/full/200,/0/default.jpg" loading="lazy" alt="原本画像（74頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -3543,7 +3680,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-126</span>
+        <a href="#a12-126" class="badge badge-neutral" title="この記事へのリンク">a12-126</a>
         <span class="badge badge-outline">伺;京都裁判所</span>
         <span class="badge badge-outline">明治7年第141号</span>
         <span class="badge badge-outline">1874-08-25</span>
@@ -3565,6 +3702,7 @@
 論シ候義哉相伺候也
 指令
 伺ノ通</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/74" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/74"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000074/full/200,/0/default.jpg" loading="lazy" alt="原本画像（74頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -3573,7 +3711,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-127</span>
+        <a href="#a12-127" class="badge badge-neutral" title="この記事へのリンク">a12-127</a>
         <span class="badge badge-outline">伺;山梨裁判所</span>
         <span class="badge badge-outline">明治7年第141号</span>
         <span class="badge badge-outline">1874-08-25</span>
@@ -3602,6 +3740,7 @@
 經サル限リハ〓役八十日ニ處ス已ニ首免ヲ與フルノ
 後首セサルノ犯狀發覺スト雖モ再ヒ罪ヲ科スルノ限
 リ ニアラス</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/75" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/75"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000075/full/200,/0/default.jpg" loading="lazy" alt="原本画像（75頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -3610,7 +3749,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-128</span>
+        <a href="#a12-128" class="badge badge-neutral" title="この記事へのリンク">a12-128</a>
         <span class="badge badge-outline">伺;長崎裁判所</span>
         <span class="badge badge-outline">明治7年第141号</span>
         <span class="badge badge-outline">1874-08-25</span>
@@ -3631,6 +3770,7 @@
 主守及ヒ護送ノ者ハ違式輕ニ問フ 但シ本年第八號布
 達首項ノ棒鎖ニ科スル者ハ違式ニ改正候條同第十三號
 布達ノ通心得可シ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/76" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/76"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000076/full/200,/0/default.jpg" loading="lazy" alt="原本画像（76頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -3639,7 +3779,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-129</span>
+        <a href="#a12-129" class="badge badge-neutral" title="この記事へのリンク">a12-129</a>
         <span class="badge badge-outline">伺;石川県</span>
         <span class="badge badge-outline">明治7年第141号</span>
         <span class="badge badge-outline">1874-08-25</span>
@@ -3656,6 +3796,7 @@
 指令
 第一條 改定律例第三十二條ニ依テ處分スヘ
 第二條 伺之通</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/76" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/76"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000076/full/200,/0/default.jpg" loading="lazy" alt="原本画像（76頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -3664,7 +3805,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-130</span>
+        <a href="#a12-130" class="badge badge-neutral" title="この記事へのリンク">a12-130</a>
         <span class="badge badge-outline">伺;埼玉裁判所</span>
         <span class="badge badge-outline">明治7年第141号</span>
         <span class="badge badge-outline">1874-08-25</span>
@@ -3694,6 +3835,7 @@
 ス キ無憂者ハ其罪ヲ問ハスシテ可然哉相伺候也 ヘ
 指令
 伺之通</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/77" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/77"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000077/full/200,/0/default.jpg" loading="lazy" alt="原本画像（77頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -3702,7 +3844,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-131</span>
+        <a href="#a12-131" class="badge badge-neutral" title="この記事へのリンク">a12-131</a>
         <span class="badge badge-outline">伺;京都裁判所</span>
         <span class="badge badge-outline">明治7年第141号</span>
         <span class="badge badge-outline">1874-08-25</span>
@@ -3736,6 +3878,7 @@
 戶籍上紊亂ノ罪逃亡律ニ科セサルヲ得ス例第百十八
 條ニ依テ處分ス可シ
 第二條 伺ノ通</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/78" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/78"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000078/full/200,/0/default.jpg" loading="lazy" alt="原本画像（78頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -3744,7 +3887,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-132</span>
+        <a href="#a12-132" class="badge badge-neutral" title="この記事へのリンク">a12-132</a>
         <span class="badge badge-outline">伺;埼玉裁判所</span>
         <span class="badge badge-outline">明治7年第141号</span>
         <span class="badge badge-outline">1874-08-25</span>
@@ -3757,6 +3900,7 @@
 可離哉相伺候也
 指令
 家長雇人ノ爲ニ容隱スルハ勿論ニ置ク可ラス</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/79" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/79"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000079/full/200,/0/default.jpg" loading="lazy" alt="原本画像（79頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -3765,7 +3909,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-133</span>
+        <a href="#a12-133" class="badge badge-neutral" title="この記事へのリンク">a12-133</a>
         <span class="badge badge-outline">伺;滋賀県</span>
         <span class="badge badge-outline">明治7年第141号</span>
         <span class="badge badge-outline">1874-08-25</span>
@@ -3783,6 +3927,7 @@
 然哉此段奉伺候也
 指令
 伺ノ通</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/79" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/79"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000079/full/200,/0/default.jpg" loading="lazy" alt="原本画像（79頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -3791,7 +3936,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-134</span>
+        <a href="#a12-134" class="badge badge-neutral" title="この記事へのリンク">a12-134</a>
         <span class="badge badge-outline">伺;島根県</span>
         <span class="badge badge-outline">明治7年第141号</span>
         <span class="badge badge-outline">1874-08-25</span>
@@ -3815,6 +3960,7 @@
 他管ニ在テ拘執ニ就クト雖モ滿二年ヲ過サレハ逃亡律
 ニ科ス可ラス對馬庄太郞刑名ハ失入ニ候條速ニ改正ニ
 及可シ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/80" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/80"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000080/full/200,/0/default.jpg" loading="lazy" alt="原本画像（80頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -3823,7 +3969,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-135</span>
+        <a href="#a12-135" class="badge badge-neutral" title="この記事へのリンク">a12-135</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第141号</span>
         <span class="badge badge-outline">1874-08-25</span>
@@ -3839,6 +3985,7 @@
 幾平ハ同一年以上ノ囚限
 內逃走シ外ニ在テ竊盜三犯五十圓以上ノ者 ニ付四名 上同
 共皆懲役終身等ノ指令アリ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/81" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/81"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000081/full/200,/0/default.jpg" loading="lazy" alt="原本画像（81頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -3847,7 +3994,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-136</span>
+        <a href="#a12-136" class="badge badge-neutral" title="この記事へのリンク">a12-136</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第141号</span>
         <span class="badge badge-outline">1874-08-20</span>
@@ -3870,6 +4017,7 @@
 八等出仕月 潔 形
 臨時御用ニ付至急函館表出張申付候事
 但御用ノ儀ハ岸良大撿事ヘ可承合事</div>
+      <div class="xref"><div><span class="xref-caption">正誤:</span> <a href="13.html#a13-064" class="link link-primary xref-link" onclick="showView('card')">a13-064 ○正誤</a></div></div>
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/81" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/81"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000081/full/200,/0/default.jpg" loading="lazy" alt="原本画像（81頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -3878,7 +4026,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-137</span>
+        <a href="#a12-137" class="badge badge-neutral" title="この記事へのリンク">a12-137</a>
         <span class="badge badge-outline">伺;大分県</span>
         <span class="badge badge-outline">明治7年第142号</span>
         <span class="badge badge-outline">1874-08-25</span>
@@ -3922,6 +4070,7 @@
 第五條 滿期受返シヲナス懸合ニ及ヒ紛議ヲ生シ其紛
 議ノ爲メ期日ヲ過キ訴出ルトモ受返シノ權利ヲ失ヒ
 タル者ニ無之事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/82" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/82"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000082/full/200,/0/default.jpg" loading="lazy" alt="原本画像（82頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -3930,7 +4079,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-138</span>
+        <a href="#a12-138" class="badge badge-neutral" title="この記事へのリンク">a12-138</a>
         <span class="badge badge-outline">布達</span>
         <span class="badge badge-outline">明治7年第142号</span>
         <span class="badge badge-outline">1874-08-27</span>
@@ -3947,6 +4096,7 @@
 執行致シ候樣處分及フ可ク此段相達候事
 但裁判所設置ナキ地方ニテハ地方官於テ本文ノ通處
 分可及候事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/84" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/84"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000084/full/200,/0/default.jpg" loading="lazy" alt="原本画像（84頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -3955,7 +4105,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-139</span>
+        <a href="#a12-139" class="badge badge-neutral" title="この記事へのリンク">a12-139</a>
         <span class="badge badge-outline">布達</span>
         <span class="badge badge-outline">明治7年第142号</span>
         <span class="badge badge-outline">1874-08-27</span>
@@ -3968,6 +4118,7 @@
 越後國頸城郡靑柳村農無籍
 宮澤 萬喜之助
 右之者共儀長野縣於テ懲役終身處刑中去ル七月七日逃</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/84" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/84"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000084/full/200,/0/default.jpg" loading="lazy" alt="原本画像（84頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -3976,7 +4127,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-140</span>
+        <a href="#a12-140" class="badge badge-neutral" title="この記事へのリンク">a12-140</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第142号</span>
         <span class="badge badge-outline">1874-08-27</span>
@@ -3992,6 +4143,7 @@
 進退伺ニ照止ハ省臺寮司府藩縣ニ申スル文書ヲ錯誤ス
 ル者ヲ以テ論シ懲役二十日列ハ違式重ニ擬シ兩名共贖
 罪スト指令アリ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/85" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/85"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000085/full/200,/0/default.jpg" loading="lazy" alt="原本画像（85頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -4000,7 +4152,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-141</span>
+        <a href="#a12-141" class="badge badge-neutral" title="この記事へのリンク">a12-141</a>
         <span class="badge badge-outline">伺;埼玉裁判所</span>
         <span class="badge badge-outline">明治7年第142号</span>
         <span class="badge badge-outline">1874-08-27</span>
@@ -4021,6 +4173,7 @@
 從前追々伺濟ノ通採上ケ裁判致シ可然哉相伺候也
 指令
 本年甲第十七號當省布達ノ通可心得事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/85" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/85"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000085/full/200,/0/default.jpg" loading="lazy" alt="原本画像（85頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -4029,7 +4182,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-142</span>
+        <a href="#a12-142" class="badge badge-neutral" title="この記事へのリンク">a12-142</a>
         <span class="badge badge-outline">伺;石川県</span>
         <span class="badge badge-outline">明治7年第142号</span>
         <span class="badge badge-outline">1874-08-28</span>
@@ -4050,6 +4203,7 @@
 指令
 見認タルヿヲ記載スルトハ撿閲ノ二字ニテ別段旨趣ヲ
 記載スルニ不及事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/86" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/86"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000086/full/200,/0/default.jpg" loading="lazy" alt="原本画像（86頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -4058,7 +4212,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-143</span>
+        <a href="#a12-143" class="badge badge-neutral" title="この記事へのリンク">a12-143</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第142号</span>
         <span class="badge badge-outline">1874-08-28</span>
@@ -4074,6 +4228,7 @@
 日ノ論决ヲ經ルヲ以テ二罪倶發例ニ依リ前罪ニ通計シ
 テ剰罪懲役二十日二罪共ニ破廉耻甚タルモ未タ除族ノ
 宣告無キヲ以テ除族スト指令アリ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/86" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/86"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000086/full/200,/0/default.jpg" loading="lazy" alt="原本画像（86頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -4082,7 +4237,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-144</span>
+        <a href="#a12-144" class="badge badge-neutral" title="この記事へのリンク">a12-144</a>
         <span class="badge badge-outline">伺;筑摩県</span>
         <span class="badge badge-outline">明治7年第142号</span>
         <span class="badge badge-outline">1874-08-28</span>
@@ -4102,6 +4257,7 @@
 也
 指令
 伺ノ通 但懲役終身ト雖モ差免シ候事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/87" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/87"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000087/full/200,/0/default.jpg" loading="lazy" alt="原本画像（87頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -4110,7 +4266,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-145</span>
+        <a href="#a12-145" class="badge badge-neutral" title="この記事へのリンク">a12-145</a>
         <span class="badge badge-outline">伺;熊本県</span>
         <span class="badge badge-outline">明治7年第142号</span>
         <span class="badge badge-outline">1874-08-28</span>
@@ -4157,6 +4313,7 @@
 發塚毀屍ハ伺ノ通凡人首從ノ法ニ依ル
 第三條 賍物タルノ情ヲ知ラサル者ハ罪ノ問フ可キ無
 シ呵責處スルニ不及候事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/87" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/87"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000087/full/200,/0/default.jpg" loading="lazy" alt="原本画像（87頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -4165,7 +4322,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-146</span>
+        <a href="#a12-146" class="badge badge-neutral" title="この記事へのリンク">a12-146</a>
         <span class="badge badge-outline">伺;水澤県</span>
         <span class="badge badge-outline">明治7年第142号</span>
         <span class="badge badge-outline">1874-08-28</span>
@@ -4184,6 +4341,7 @@
 指令
 第 一條 伺ノ通 但シ畧セラルヽ人ハ坐セス
 第二條 子孫ヲ畧賣シテ雇人ト爲ス者ハ違令重ニ問フ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/89" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/89"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000089/full/200,/0/default.jpg" loading="lazy" alt="原本画像（89頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -4192,7 +4350,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-147</span>
+        <a href="#a12-147" class="badge badge-neutral" title="この記事へのリンク">a12-147</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第142号</span>
         <span class="badge badge-outline">1874-08-28</span>
@@ -4206,6 +4364,7 @@
 主私有ト誤認スルニ至リシ件山形縣廻 同縣十一等
 出仕豐川種房入札拂ニ爲ス可キ租稅米ヲ時價ヲ以テ拂
 下シ件各進退伺ニ三名共違式重ノ贖罪スト指令アリ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/90" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/90"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000090/full/200,/0/default.jpg" loading="lazy" alt="原本画像（90頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -4214,7 +4373,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-148</span>
+        <a href="#a12-148" class="badge badge-neutral" title="この記事へのリンク">a12-148</a>
         <span class="badge badge-outline">伺;鳥取県</span>
         <span class="badge badge-outline">明治7年第142号</span>
         <span class="badge badge-outline">1874-08-28</span>
@@ -4229,6 +4388,7 @@
 候ヘ共爲念相伺候也
 指令
 伺ノ通</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/90" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/90"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000090/full/200,/0/default.jpg" loading="lazy" alt="原本画像（90頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -4237,7 +4397,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-149</span>
+        <a href="#a12-149" class="badge badge-neutral" title="この記事へのリンク">a12-149</a>
         <span class="badge badge-outline">伺;千葉裁判所</span>
         <span class="badge badge-outline">明治7年第142号</span>
         <span class="badge badge-outline">1874-08-28</span>
@@ -4254,6 +4414,7 @@
 指令
 懲役二年半ノ內役過スル八十日ヲ除キ餘ル懲役二年ト
 百日ヲ役ス折杖法ニ依テ計算スルヿヲ用ヒス</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/90" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/90"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000090/full/200,/0/default.jpg" loading="lazy" alt="原本画像（90頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -4262,7 +4423,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-150</span>
+        <a href="#a12-150" class="badge badge-neutral" title="この記事へのリンク">a12-150</a>
         <span class="badge badge-outline">伺;廣島県</span>
         <span class="badge badge-outline">明治7年第142号</span>
         <span class="badge badge-outline">1874-08-28</span>
@@ -4284,6 +4445,7 @@
 指令
 第一條 傷ヲ成サヽル者ハ不問ニ置ク
 第二條 伺ノ通</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/91" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/91"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000091/full/200,/0/default.jpg" loading="lazy" alt="原本画像（91頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -4292,7 +4454,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-151</span>
+        <a href="#a12-151" class="badge badge-neutral" title="この記事へのリンク">a12-151</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第142号</span>
         <span class="badge badge-outline">1874-08-20</span>
@@ -4303,6 +4465,7 @@
       <div class="item-body text-base leading-relaxed">十三等出仕 中 岡 藹
 兼テ佐賀裁判所在勤申付置候處御用都合有之不及其儀
 候事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/92" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/92"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000092/full/200,/0/default.jpg" loading="lazy" alt="原本画像（92頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -4311,7 +4474,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-152</span>
+        <a href="#a12-152" class="badge badge-neutral" title="この記事へのリンク">a12-152</a>
         <span class="badge badge-outline">伺;熊本県</span>
         <span class="badge badge-outline">明治7年第143号</span>
         <span class="badge badge-outline">1874-08-28</span>
@@ -4358,6 +4521,7 @@
 一ノ指令トス兩岐ト認ル可ラス除族云々例十三條ニ
 明文アリ
 第三條 初犯賭博再犯賭房開張ノ者モ同ク加等ス</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/92" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/92"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000092/full/200,/0/default.jpg" loading="lazy" alt="原本画像（92頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -4366,7 +4530,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-153</span>
+        <a href="#a12-153" class="badge badge-neutral" title="この記事へのリンク">a12-153</a>
         <span class="badge badge-outline">伺;岡山県</span>
         <span class="badge badge-outline">明治7年第143号</span>
         <span class="badge badge-outline">1874-08-28</span>
@@ -4383,6 +4547,7 @@
 該犯ハ本罪ニ一等ヲ加フ保管人亦同罪若シ本犯無罪ニ
 歸スル者モ保管人ト同シク違式輕實斷ス 但士族ハ〓
 刑ニ處ス</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/94" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/94"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000094/full/200,/0/default.jpg" loading="lazy" alt="原本画像（94頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -4391,7 +4556,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-154</span>
+        <a href="#a12-154" class="badge badge-neutral" title="この記事へのリンク">a12-154</a>
         <span class="badge badge-outline">伺;愛媛県</span>
         <span class="badge badge-outline">明治7年第143号</span>
         <span class="badge badge-outline">1874-08-28</span>
@@ -4415,6 +4580,7 @@
 行使スト雖モ十ノ一字ヲ欠キ且邊綠ノ摸樣異ナレハ例
 第二百五十一條眞ヲ以テ僞ニ作ル者ト同ク論シ難シ例
 第二百五十條ニ比擬シテ罪ヲ科ス</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/94" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/94"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000094/full/200,/0/default.jpg" loading="lazy" alt="原本画像（94頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -4423,7 +4589,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-155</span>
+        <a href="#a12-155" class="badge badge-neutral" title="この記事へのリンク">a12-155</a>
         <span class="badge badge-outline">伺;神奈川県</span>
         <span class="badge badge-outline">明治7年第143号</span>
         <span class="badge badge-outline">1874-08-29</span>
@@ -4447,6 +4613,7 @@
 諸雜業免許鑑札或ハ人力車荷車等ノ撿印ヲ遺失毀損ス
 ル者ハ改定律例第百一條ニ照依シ贖ヲ聽ルス 諸願届
 許否ノ指令書ヲ遺失スル者ハ論スルヿ勿レ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/95" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/95"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000095/full/200,/0/default.jpg" loading="lazy" alt="原本画像（95頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -4455,7 +4622,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-156</span>
+        <a href="#a12-156" class="badge badge-neutral" title="この記事へのリンク">a12-156</a>
         <span class="badge badge-outline">布達</span>
         <span class="badge badge-outline">明治7年第143号</span>
         <span class="badge badge-outline">1874-08-29</span>
@@ -4469,6 +4636,7 @@
 ニ不至實ニ不相濟儀ニテ朝憲之相不立次第ニ付今一層
 嚴密捜索ヲ遂ケ右賊徒ヲ速カニ捕獲致シ候樣可致候條
 此旨布達候事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/96" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/96"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000096/full/200,/0/default.jpg" loading="lazy" alt="原本画像（96頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -4477,7 +4645,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-157</span>
+        <a href="#a12-157" class="badge badge-neutral" title="この記事へのリンク">a12-157</a>
         <span class="badge badge-outline">伺;函館裁判所</span>
         <span class="badge badge-outline">明治7年第143号</span>
         <span class="badge badge-outline">1874-08-29</span>
@@ -4494,6 +4662,7 @@
 指令
 近方鎭臺ヘ送付スヘキ事 但其地砲臺ヘ引渡ノ儀ハ鎭
 臺ヘ恊議ノ上差支無之候ハヽ便宜ニ任スヘシ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/96" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/96"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000096/full/200,/0/default.jpg" loading="lazy" alt="原本画像（96頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -4502,7 +4671,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-158</span>
+        <a href="#a12-158" class="badge badge-neutral" title="この記事へのリンク">a12-158</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第143号</span>
         <span class="badge badge-outline">1874-08-29</span>
@@ -4514,6 +4683,7 @@
 ル仕事ニ付雇工錢揚リ方僅少ニテ護衞者旅費等迄引
 足ラサル節ハ出入勘定取調ヘ別途御渡方大藏省ヘ申出
 候テ可然哉ノ伺ニ伺ノ通ト指令アリ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/97" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/97"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000097/full/200,/0/default.jpg" loading="lazy" alt="原本画像（97頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -4522,7 +4692,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-159</span>
+        <a href="#a12-159" class="badge badge-neutral" title="この記事へのリンク">a12-159</a>
         <span class="badge badge-outline">伺;新治裁判所</span>
         <span class="badge badge-outline">明治7年第143号</span>
         <span class="badge badge-outline">1874-08-30</span>
@@ -4565,6 +4735,7 @@
 自由ノ權ヲ全ク主家ニ歸スルヲ云フ金談上ヨリ養女ノ
 名目ニ爲シ娼妓ノ所業ヲ爲サシムル者ハ初ヨリ配偶家
 系ヲ續カシムルノ意ナキヲ云フ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/97" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/97"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000097/full/200,/0/default.jpg" loading="lazy" alt="原本画像（97頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -4573,7 +4744,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-160</span>
+        <a href="#a12-160" class="badge badge-neutral" title="この記事へのリンク">a12-160</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第143号</span>
         <span class="badge badge-outline">1874-08-30</span>
@@ -4585,6 +4756,7 @@
 懲役終身ノ囚結城權六同十年飯澤吉彌
 儀同囚人監ノ格子ヲ取外シ逃走ノ企セシ節兩人ニテ差
 押シニ付減等ノ伺ニ各本罪ニ減一等ト指令アリ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/99" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/99"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000099/full/200,/0/default.jpg" loading="lazy" alt="原本画像（99頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -4593,7 +4765,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-161</span>
+        <a href="#a12-161" class="badge badge-neutral" title="この記事へのリンク">a12-161</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第143号</span>
         <span class="badge badge-outline">1874-08-30</span>
@@ -4618,6 +4790,7 @@
 盜三犯五十圓以下ノ者ニ付例第二百九十九條ニ依リ 鎖 棒
 懲役十年等ノ指令アリ 處刑伺アレ共皆懲役三十日
 御飲食者</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/99" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/99"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000099/full/200,/0/default.jpg" loading="lazy" alt="原本画像（99頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -4626,7 +4799,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-162</span>
+        <a href="#a12-162" class="badge badge-neutral" title="この記事へのリンク">a12-162</a>
         <span class="badge badge-outline">伺;筑摩県</span>
         <span class="badge badge-outline">明治7年第143号</span>
         <span class="badge badge-outline">1874-08-31</span>
@@ -4645,6 +4818,7 @@
 指令
 第一條 口供甘結ノ當日ヨリ起算スヘシ
 第二條 伺ノ通</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/100" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/100"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000100/full/200,/0/default.jpg" loading="lazy" alt="原本画像（100頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -4653,7 +4827,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-163</span>
+        <a href="#a12-163" class="badge badge-neutral" title="この記事へのリンク">a12-163</a>
         <span class="badge badge-outline">伺;熊谷県</span>
         <span class="badge badge-outline">明治7年第143号</span>
         <span class="badge badge-outline">1874-08-31</span>
@@ -4669,6 +4843,7 @@
 指令
 當省本年第十六號布達ニ依リ脫逃ノ憂之レナキ樣能ク
 取締リヲ爲ス可シ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/100" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/100"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000100/full/200,/0/default.jpg" loading="lazy" alt="原本画像（100頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -4677,7 +4852,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-164</span>
+        <a href="#a12-164" class="badge badge-neutral" title="この記事へのリンク">a12-164</a>
         <span class="badge badge-outline">布達</span>
         <span class="badge badge-outline">明治7年第143号</span>
         <span class="badge badge-outline">1874-08-31</span>
@@ -4701,6 +4876,7 @@
 件 何
 件 何
 何 件</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/101" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/101"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000101/full/200,/0/default.jpg" loading="lazy" alt="原本画像（101頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -4709,7 +4885,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-165</span>
+        <a href="#a12-165" class="badge badge-neutral" title="この記事へのリンク">a12-165</a>
         <span class="badge badge-outline">布達</span>
         <span class="badge badge-outline">明治7年第143号</span>
         <span class="badge badge-outline">1874-08-31</span>
@@ -4722,6 +4898,7 @@
 右ノ者於福島縣懲役終身處刑中本月十日逃走候條各地
 以下但書迄例
 文 人 相 書 畧之</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/102" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/102"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000102/full/200,/0/default.jpg" loading="lazy" alt="原本画像（102頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -4730,7 +4907,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-166</span>
+        <a href="#a12-166" class="badge badge-neutral" title="この記事へのリンク">a12-166</a>
         <span class="badge badge-outline">布達</span>
         <span class="badge badge-outline">明治7年第144号</span>
         <span class="badge badge-outline">1874-08-31</span>
@@ -4743,6 +4920,7 @@
 但債主利息ヲ請求シテ負債者承諾セサル時ニ限リ本
 文之處分ニ及フ可シ若シ雙方示談整フカ又ハ債主ニ
 於テ請求ヲ爲サヽル分ハ此例ニ非ス</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/102" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/102"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000102/full/200,/0/default.jpg" loading="lazy" alt="原本画像（102頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -4751,7 +4929,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-167</span>
+        <a href="#a12-167" class="badge badge-neutral" title="この記事へのリンク">a12-167</a>
         <span class="badge badge-outline">伺;静岡県</span>
         <span class="badge badge-outline">明治7年第144号</span>
         <span class="badge badge-outline">1874-08-31</span>
@@ -4768,6 +4946,7 @@
 指令
 責付内逃走シ外ニ在テ又罪ヲ犯ス者ハ前後二罪ノ重キ
 者 ニ從ヒ一等ヲ加フ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/102" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/102"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000102/full/200,/0/default.jpg" loading="lazy" alt="原本画像（102頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -4776,7 +4955,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-168</span>
+        <a href="#a12-168" class="badge badge-neutral" title="この記事へのリンク">a12-168</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第144号</span>
         <span class="badge badge-outline">1874-08-31</span>
@@ -4787,6 +4966,7 @@
       <div class="item-body text-base leading-relaxed">司法省裁判所ニ於テ駿河國有渡郡谷田村戶長戶塚仲四
 郞外二人ヨリ同郡中ノ郷村戶長笹田傳吉等ヘ掛ル秣塲
 入會一件控訴ノ裁許アリ其事多端ニ付記載セス</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/103" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/103"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000103/full/200,/0/default.jpg" loading="lazy" alt="原本画像（103頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -4795,7 +4975,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-169</span>
+        <a href="#a12-169" class="badge badge-neutral" title="この記事へのリンク">a12-169</a>
         <span class="badge badge-outline">伺;東京裁判所</span>
         <span class="badge badge-outline">明治7年第144号</span>
         <span class="badge badge-outline">1874-08-31</span>
@@ -4814,6 +4994,7 @@
 第四五條主アレハ全ク主ニ給シ主ナキ中ハ官ニ領置シ
 本犯捕獲ノ後處分スト〓正ス
 ナ</div>
+      <div class="xref"><div><span class="xref-caption">正誤:</span> <a href="13.html#a13-031" class="link link-primary xref-link" onclick="showView('card')">a13-031 ○正誤</a></div></div>
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/103" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/103"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000103/full/200,/0/default.jpg" loading="lazy" alt="原本画像（103頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -4822,7 +5003,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-170</span>
+        <a href="#a12-170" class="badge badge-neutral" title="この記事へのリンク">a12-170</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第144号</span>
         <span class="badge badge-outline">1874-09-02</span>
@@ -4845,6 +5026,7 @@
 刑伺アレトモ皆懲役六十日己
 下ノ者ニ付
 指令共畧之</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/104" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/104"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000104/full/200,/0/default.jpg" loading="lazy" alt="原本画像（104頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -4853,7 +5035,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-171</span>
+        <a href="#a12-171" class="badge badge-neutral" title="この記事へのリンク">a12-171</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第144号</span>
         <span class="badge badge-outline">1874-09-02</span>
@@ -4865,6 +5047,7 @@
 越中國新川郡地方演經田村農野々平六
 外一名私約ヲ違背セシ處分伺ニ人民私約ノ定規ニ違背
 スルハ民法裁判ニ付シ準判スヘシト指令アリ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/104" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/104"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000104/full/200,/0/default.jpg" loading="lazy" alt="原本画像（104頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -4873,7 +5056,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-172</span>
+        <a href="#a12-172" class="badge badge-neutral" title="この記事へのリンク">a12-172</a>
         <span class="badge badge-outline">伺;大分県</span>
         <span class="badge badge-outline">明治7年第144号</span>
         <span class="badge badge-outline">1874-09-02</span>
@@ -4914,6 +5097,7 @@
 百八十二號御布告ニ據リ處分スヘシ 但書ノ如キモ
 竊ニ銃砲ヲ所持スル者ニ付本文ノ通リ處分スヘシ
 第三條 頸輪ヲ用ユル儀不相成候事</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/104" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/104"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000104/full/200,/0/default.jpg" loading="lazy" alt="原本画像（104頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -4922,7 +5106,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-173</span>
+        <a href="#a12-173" class="badge badge-neutral" title="この記事へのリンク">a12-173</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第144号</span>
         <span class="badge badge-outline">1874-09-02</span>
@@ -4937,6 +5121,7 @@
 棄毀官文書條ニ依リ同五十日順貞以下ハ例第百一條ニ
 依リ懲役十日
 或ハ免罪等ノ指令アリ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/106" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/106"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000106/full/200,/0/default.jpg" loading="lazy" alt="原本画像（106頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -4945,7 +5130,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-174</span>
+        <a href="#a12-174" class="badge badge-neutral" title="この記事へのリンク">a12-174</a>
         <span class="badge badge-outline">伺;滋賀県</span>
         <span class="badge badge-outline">明治7年第144号</span>
         <span class="badge badge-outline">1874-09-02</span>
@@ -4999,6 +5184,7 @@
 ルヿヲ要セサレハ速ニ故縱ノ罪ヲ實斷ス可シ
 第四五條 伺ノ通
 第六條 本籍ヲ以テ處分ス可シ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/106" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/106"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000106/full/200,/0/default.jpg" loading="lazy" alt="原本画像（106頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -5007,7 +5193,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-175</span>
+        <a href="#a12-175" class="badge badge-neutral" title="この記事へのリンク">a12-175</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第144号</span>
         <span class="badge badge-outline">1874-09-02</span>
@@ -5027,6 +5213,7 @@
 科森嚴ハ上司ニ申ス可クシテ申セサル者懲役三十日信
 美ハ第二從トシ一等ヲ減シ同二十日孝平ハ第三從トシ
 二等ヲ減シ同一十日皆贖罪ス等ノ指令アリ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/108" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/108"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000108/full/200,/0/default.jpg" loading="lazy" alt="原本画像（108頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -5035,7 +5222,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-176</span>
+        <a href="#a12-176" class="badge badge-neutral" title="この記事へのリンク">a12-176</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第144号</span>
         <span class="badge badge-outline">1874-09-02</span>
@@ -5045,6 +5232,7 @@
       <div class="card-title text-base">〔達書〕</div>
       <div class="item-body text-base leading-relaxed">佐賀裁判所在勤申付候事 十一等出仕井 亨 手
 神奈川裁判所在勤申付候事 十三等出仕三 二郞松 木</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/109" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/109"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000109/full/200,/0/default.jpg" loading="lazy" alt="原本画像（109頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -5053,7 +5241,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-177</span>
+        <a href="#a12-177" class="badge badge-neutral" title="この記事へのリンク">a12-177</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第144号</span>
         <span class="badge badge-outline">1874-09-02</span>
@@ -5069,6 +5257,7 @@
 ニ加ヘサルヲ以テ罪ヲ問ハス保遠外一名ハ不骨被盜條
 ニ依リ懲役四十日ノ贖罪建通ハ罪ノ問フ可ナシ修藏ハ
 竊盜ノ所爲ニ係ルヲ以テ罪ヲ論セス等ノ指令アリ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/109" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/109"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000109/full/200,/0/default.jpg" loading="lazy" alt="原本画像（109頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -5077,7 +5266,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-178</span>
+        <a href="#a12-178" class="badge badge-neutral" title="この記事へのリンク">a12-178</a>
         <span class="badge badge-outline">伺;三重県</span>
         <span class="badge badge-outline">明治7年第144号</span>
         <span class="badge badge-outline">1874-09-03</span>
@@ -5095,6 +5284,7 @@
 指令
 商用印ト店判トハ兩印共商用上ノ証據ト爲シ裁判致ス
 キ事 ヘ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/110" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/110"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000110/full/200,/0/default.jpg" loading="lazy" alt="原本画像（110頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -5103,7 +5293,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-179</span>
+        <a href="#a12-179" class="badge badge-neutral" title="この記事へのリンク">a12-179</a>
         <span class="badge badge-outline">伺;大分県</span>
         <span class="badge badge-outline">明治7年第144号</span>
         <span class="badge badge-outline">1874-09-03</span>
@@ -5134,6 +5324,7 @@
 キ處其義モナクシテ相對示談ヲナシタル上ハ最前尋出
 タル心底ハ自ラ抛棄シテ濟口証文ノ通熟談承諾致シタ
 ル筋ニ付今日ニ至リ訴出ル共不及受理事</div>
+      <div class="xref"><div><span class="xref-caption">正誤:</span> <a href="13.html#a13-031" class="link link-primary xref-link" onclick="showView('card')">a13-031 ○正誤</a></div></div>
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/110" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/110"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000110/full/200,/0/default.jpg" loading="lazy" alt="原本画像（110頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -5142,7 +5333,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-180</span>
+        <a href="#a12-180" class="badge badge-neutral" title="この記事へのリンク">a12-180</a>
         <span class="badge badge-outline">伺;山梨裁判所</span>
         <span class="badge badge-outline">明治7年第144号</span>
         <span class="badge badge-outline">1874-09-03</span>
@@ -5159,6 +5350,7 @@
 也
 指令
 伺ノ通</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/111" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/111"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000111/full/200,/0/default.jpg" loading="lazy" alt="原本画像（111頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -5167,7 +5359,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-181</span>
+        <a href="#a12-181" class="badge badge-neutral" title="この記事へのリンク">a12-181</a>
         <span class="badge badge-outline">article</span>
         <span class="badge badge-outline">明治7年第144号</span>
         <span class="badge badge-outline">1874-09-03</span>
@@ -5179,6 +5371,7 @@
 本ヲ繙閱シ誤テ火中ニ落シ二三分許燒損セシ進退伺ニ
 棄毀器物稼穡條ニ依リ賍金一圓以下ニ付懲役三十日ノ
 贖罪ト指令アリ</div>
+      
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/112" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/112"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000112/full/200,/0/default.jpg" loading="lazy" alt="原本画像（112頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -5187,7 +5380,7 @@
   <div class="card-body p-4 article-card-body">
     <div class="article-card-main">
       <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
-        <span class="badge badge-neutral">a12-182</span>
+        <a href="#a12-182" class="badge badge-neutral" title="この記事へのリンク">a12-182</a>
         <span class="badge badge-outline">正誤</span>
         <span class="badge badge-outline">明治7年第144号</span>
         <span class="badge badge-outline">1874-09-03</span>
@@ -5198,6 +5391,7 @@
       <div class="item-body text-base leading-relaxed">昨六年第六十五號十三葉京都裁判所伺ノ末段ニ二年以
 外ニ復歸シト記載セシハ伺原書ニ二年以內トアリシヲ
 偶マ對校ニ失セシナリ</div>
+      <div class="xref"><div><span class="xref-caption">訂正対象:</span> <a href="04.html#a04-270" class="link link-primary xref-link" onclick="showView('card')">a04-270 ○京都裁判所伺</a></div></div>
     </div>
     <div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/112" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/112"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000112/full/200,/0/default.jpg" loading="lazy" alt="原本画像（112頁）" class="source-ref-thumb"></a></div>
   </div>
@@ -5488,7 +5682,7 @@
 <div class="ol-head ol-dategroup-head">○八月八日</div>
 <div class="ol-article" data-src-id="a12-021" data-type-base="article"><div class="ol-main"><div class="ol-head ol-article-head">○</div><div class="ol-body">司法省裁判所ニ於テ東京本八丁堀海老塚嘉兵衛ヨリ久
 保喜太郞ヘ掛ル預ケ金爭論控訴一件裁許アレトモ其事多
-端ニ付記載セス</div></div><div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/16" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/16"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000016/full/200,/0/default.jpg" loading="lazy" alt="原本画像（16頁）" class="source-ref-thumb"></a></div></div>
+端ニ付記載セス</div><div class="xref"><div><span class="xref-caption">正誤:</span> <a href="#a12-090" class="link link-primary xref-link" onclick="showView('card')">a12-090 ○正誤</a></div></div></div><div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/16" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/16"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000016/full/200,/0/default.jpg" loading="lazy" alt="原本画像（16頁）" class="source-ref-thumb"></a></div></div>
 </div>
 <div class="ol-dategroup">
 <div class="ol-head ol-dategroup-head">○八月七日</div>
@@ -5496,7 +5690,7 @@
 等ヲ加フ云々ト有之右ハ本罪贖罪ニ處スヘキ者ナル
 牛 加等罪モ亦贖金ニ處シ候テ宜敷哉相伺候也
 指令
-伺ノ通</div></div><div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/16" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/16"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000016/full/200,/0/default.jpg" loading="lazy" alt="原本画像（16頁）" class="source-ref-thumb"></a></div></div>
+伺ノ通</div><div class="xref"><div><span class="xref-caption">正誤:</span> <a href="#a12-090" class="link link-primary xref-link" onclick="showView('card')">a12-090 ○正誤</a></div></div></div><div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/16" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/16"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000016/full/200,/0/default.jpg" loading="lazy" alt="原本画像（16頁）" class="source-ref-thumb"></a></div></div>
 <div class="ol-article" data-src-id="a12-023" data-type-base="布達"><div class="ol-main"><div class="ol-head ol-article-head">〔甲第十六號布達〕輪廓附</div><div class="ol-body">各 裁 判 所
 當省本年甲第十二號布達院省使府縣官吏判任以下ノ者
 犯罪處分規則中首條但書左ノ通〓正候條此旨相達候事
@@ -6257,7 +6451,7 @@
 <div class="ol-article" data-src-id="a12-090" data-type-base="正誤"><div class="ol-main"><div class="ol-head ol-article-head">○正誤</div><div class="ol-body">第百三十五號八葉ニ〇八月七日ト揭載セシハ八月九日
 ノ誤リ
 第百三十三號ニ載スル東京裁判所行刑表中 贖金六百
-六十六圓七十五錢ノ十二字ヲ脫ス</div></div><div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/52" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/52"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000052/full/200,/0/default.jpg" loading="lazy" alt="原本画像（52頁）" class="source-ref-thumb"></a></div></div>
+六十六圓七十五錢ノ十二字ヲ脫ス</div><div class="xref"><div><span class="xref-caption">訂正対象:</span> <a href="#a12-021" class="link link-primary xref-link" onclick="showView('card')">a12-021 ○</a>、<a href="#a12-022" class="link link-primary xref-link" onclick="showView('card')">a12-022 〔岐阜縣伺〕 七年七月十四日</a></div></div></div><div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/52" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/52"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000052/full/200,/0/default.jpg" loading="lazy" alt="原本画像（52頁）" class="source-ref-thumb"></a></div></div>
 </div>
 </div>
 <div class="ol-issue">
@@ -6874,7 +7068,7 @@
 臨時御用ニ付至急函館表出張被仰付候事
 八等出仕月 潔 形
 臨時御用ニ付至急函館表出張申付候事
-但御用ノ儀ハ岸良大撿事ヘ可承合事</div></div><div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/81" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/81"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000081/full/200,/0/default.jpg" loading="lazy" alt="原本画像（81頁）" class="source-ref-thumb"></a></div></div>
+但御用ノ儀ハ岸良大撿事ヘ可承合事</div><div class="xref"><div><span class="xref-caption">正誤:</span> <a href="13.html#a13-064" class="link link-primary xref-link" onclick="showView('card')">a13-064 ○正誤</a></div></div></div><div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/81" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/81"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000081/full/200,/0/default.jpg" loading="lazy" alt="原本画像（81頁）" class="source-ref-thumb"></a></div></div>
 </div>
 </div>
 <div class="ol-issue">
@@ -7326,7 +7520,7 @@
 指令
 第四五條主アレハ全ク主ニ給シ主ナキ中ハ官ニ領置シ
 本犯捕獲ノ後處分スト〓正ス
-ナ</div></div><div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/103" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/103"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000103/full/200,/0/default.jpg" loading="lazy" alt="原本画像（103頁）" class="source-ref-thumb"></a></div></div>
+ナ</div><div class="xref"><div><span class="xref-caption">正誤:</span> <a href="13.html#a13-031" class="link link-primary xref-link" onclick="showView('card')">a13-031 ○正誤</a></div></div></div><div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/103" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/103"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000103/full/200,/0/default.jpg" loading="lazy" alt="原本画像（103頁）" class="source-ref-thumb"></a></div></div>
 </div>
 <div class="ol-dategroup">
 <div class="ol-head ol-dategroup-head">○九月二日</div>
@@ -7492,7 +7686,7 @@
 ノ分ハ追テ相分次第可受取旨濟口証文中ニ記載致ス可
 キ處其義モナクシテ相對示談ヲナシタル上ハ最前尋出
 タル心底ハ自ラ抛棄シテ濟口証文ノ通熟談承諾致シタ
-ル筋ニ付今日ニ至リ訴出ル共不及受理事</div></div><div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/110" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/110"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000110/full/200,/0/default.jpg" loading="lazy" alt="原本画像（110頁）" class="source-ref-thumb"></a></div></div>
+ル筋ニ付今日ニ至リ訴出ル共不及受理事</div><div class="xref"><div><span class="xref-caption">正誤:</span> <a href="13.html#a13-031" class="link link-primary xref-link" onclick="showView('card')">a13-031 ○正誤</a></div></div></div><div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/110" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/110"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000110/full/200,/0/default.jpg" loading="lazy" alt="原本画像（110頁）" class="source-ref-thumb"></a></div></div>
 <div class="ol-article" data-src-id="a12-180" data-type-base="伺"><div class="ol-main"><div class="ol-head ol-article-head">〔山梨裁判所伺〕七年七月十三日</div><div class="ol-body">本年第十四號御布達中証據物本紙ニハ總テ年號月日番
 號云々ト有之候ハ訴狀記載ノ番號ニハ無之譬ハ一事件
 ニ付原被告ヨリ差出ス所ノ證書數通之アル時ハ其順序
@@ -7508,7 +7702,7 @@
 贖罪ト指令アリ</div></div><div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/112" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/112"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000112/full/200,/0/default.jpg" loading="lazy" alt="原本画像（112頁）" class="source-ref-thumb"></a></div></div>
 <div class="ol-article" data-src-id="a12-182" data-type-base="正誤"><div class="ol-main"><div class="ol-head ol-article-head">○正誤</div><div class="ol-body">昨六年第六十五號十三葉京都裁判所伺ノ末段ニ二年以
 外ニ復歸シト記載セシハ伺原書ニ二年以內トアリシヲ
-偶マ對校ニ失セシナリ</div></div><div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/112" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/112"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000112/full/200,/0/default.jpg" loading="lazy" alt="原本画像（112頁）" class="source-ref-thumb"></a></div></div>
+偶マ對校ニ失セシナリ</div><div class="xref"><div><span class="xref-caption">訂正対象:</span> <a href="04.html#a04-270" class="link link-primary xref-link" onclick="showView('card')">a04-270 ○京都裁判所伺</a></div></div></div><div class="source-ref"><a class="source-ref-thumb-link" href="https://dl.ndl.go.jp/pid/1366801/1/112" target="_blank" rel="noopener" title="https://dl.ndl.go.jp/pid/1366801/1/112"><img src="https://dl.ndl.go.jp/api/iiif/1366801/R0000112/full/200,/0/default.jpg" loading="lazy" alt="原本画像（112頁）" class="source-ref-thumb"></a></div></div>
 </div>
 </div>
 </div>
@@ -7523,6 +7717,20 @@ function showView(name) {
   document.getElementById('tabBtnCard').classList.toggle('active', isCard);
   document.getElementById('tabBtnOutline').classList.toggle('active', !isCard);
 }
+// #記事id で開かれた記事が種別フィルタで非表示なら、その種別を表示に戻してから移動する
+function revealHashTarget() {
+  var id = decodeURIComponent(location.hash.slice(1));
+  var el = id && document.getElementById(id);
+  if (!el || !el.closest('#view-card')) return;
+  showView('card');
+  if (el.style.display === 'none') {
+    var cb = document.querySelector('#type-filter input[data-type-filter="' + el.dataset.typeBase + '"]');
+    if (cb) { cb.checked = true; cb.dispatchEvent(new Event('change')); }
+  }
+  el.scrollIntoView();
+}
+window.addEventListener('hashchange', revealHashTarget);
+revealHashTarget();
 </script>
 </body>
 </html>
