@@ -8,6 +8,8 @@
  *
  * 使い方（検索欄）:
  *   const fts = FullTextSearch.mount(要素, { base: 'fulltext/', hashKey: 'fulltext', groupLabel: '巻' });
+ *     live: true で入力しながら検索、onChange(検索中か) で検索の開始・解除を受け取れる
+ *     （司法省日誌の索引ページは、これで検索中だけ巻一覧を隠している）
  *   fts.restoreFromHash();   // URLが #fulltext?q=… なら検索を復元して true を返す
  *   fts.hash();              // 現在の検索状態を表す '#fulltext?q=…'（タブ切替時のURL用）
  * 使い方（資料ページ）: 検索結果のリンクには ?q=… が付くので、開いた先で検索語を強調する
@@ -179,7 +181,13 @@ mark.fts-hl { background: #fef08a; color: inherit; padding: 0 1px; border-radius
       const ck = 'b' + key;
       if (this.decoded.has(ck)) return this.decoded.get(ck);
       const shard = await this.json(`b/${shardOf(key, this.meta.bShards)}.json`);
-      const flat = shard[key] || [];
+      const m = Index.decode(shard[key] || []);
+      this.decoded.set(ck, m);
+      return m;
+    }
+
+    // [文書番号差分, 出現数, 位置差分...] → Map(文書番号 → 出現位置の昇順配列)
+    static decode(flat) {
       const m = new Map();
       let d = 0, i = 0;
       while (i < flat.length) {
@@ -190,20 +198,22 @@ mark.fts-hl { background: #fef08a; color: inherit; padding: 0 1px; border-radius
         for (let k = 0; k < n; k++) { p += flat[i++]; ps[k] = p; }
         m.set(d, ps);
       }
-      this.decoded.set(ck, m);
       return m;
     }
 
+    // 1文字 → Map(文書番号 → 出現位置の配列。位置を持たない索引（全文検索）では null)
     async unigram(c) {
       const shard = await this.json(`u/${shardOf(c, this.meta.uShards)}.json`);
       const flat = shard[c] || [];
+      if (this.meta.uPos) return Index.decode(flat);
       const m = new Map();
       let d = 0;
-      for (const delta of flat) { d += delta; m.set(d, 0); }
+      for (const delta of flat) { d += delta; m.set(d, null); }
       return m;
     }
 
-    // 正規化済みの1語（コードポイント配列）を含む文書 → Map(文書番号 → 出現数。1文字の語は0)
+    // 正規化済みの1語（コードポイント配列）を含む文書 → Map(文書番号 → 語の先頭の出現位置の配列。
+    // 1文字の語で、索引が位置を持たない場合は null)
     async matchTerm(cps) {
       if (cps.length === 1) return this.unigram(cps[0]);
       const L = cps.length;
@@ -216,15 +226,13 @@ mark.fts-hl { background: #fef08a; color: inherit; padding: 0 1px; border-radius
       const smallest = lists.reduce((a, b) => (a.size <= b.size ? a : b));
       for (const d of smallest.keys()) {
         if (!lists.every(m => m.has(d))) continue;
-        let count = 0;
-        for (const p of lists[0].get(d)) {
-          let ok = true;
+        const starts = lists[0].get(d).filter(p => {
           for (let k = 1; k < lists.length; k++) {
-            if (!hasSorted(lists[k].get(d), p + offsets[k])) { ok = false; break; }
+            if (!hasSorted(lists[k].get(d), p + offsets[k])) return false;
           }
-          if (ok) count++;
-        }
-        if (count) result.set(d, count);
+          return true;
+        });
+        if (starts.length) result.set(d, starts);
       }
       return result;
     }
@@ -431,10 +439,24 @@ mark.fts-hl { background: #fef08a; color: inherit; padding: 0 1px; border-radius
       }
     }
 
+    // 検索語が空になったら結果を消して元の表示に戻す（opts.onChange(false) で一覧を出し直してもらう）
+    function clear() {
+      token++;
+      state = { q: '', terms: [], docs: [], group: -1, page: 1 };
+      area.innerHTML = '';
+      button.disabled = false;
+      history.replaceState(null, '', location.pathname + location.search);
+      opts.onChange?.(false);
+    }
+
     async function search(q, group = -1, page = 1) {
       q = q.trim();
-      input.value = q;
-      if (!q) { input.focus(); return; }
+      if (input.value.trim() !== q) input.value = q;
+      if (!q) {
+        if (opts.live) clear(); else input.focus();
+        return;
+      }
+      opts.onChange?.(true);
       const my = ++token;
       button.disabled = true;
       area.innerHTML = '<div class="fts-status"><span class="fts-spinner"></span>検索中…</div>';
@@ -452,7 +474,17 @@ mark.fts-hl { background: #fef08a; color: inherit; padding: 0 1px; border-radius
       }
     }
 
-    form.addEventListener('submit', e => { e.preventDefault(); search(input.value); });
+    let timer = null;
+    form.addEventListener('submit', e => { e.preventDefault(); clearTimeout(timer); search(input.value); });
+    if (opts.live) {
+      // 入力しながら検索する（law-platform 議事録の一覧と同じく、打ち終わって 0.4 秒後）。
+      // 「×」で消したとき（search イベント）はすぐ反映する
+      input.addEventListener('input', () => {
+        clearTimeout(timer);
+        timer = setTimeout(() => { if (input.value.trim() !== state.q) search(input.value); }, 400);
+      });
+      input.addEventListener('search', () => { if (!input.value.trim()) { clearTimeout(timer); clear(); } });
+    }
 
     function restoreFromHash() {
       const h = location.hash;
@@ -508,5 +540,25 @@ mark.fts-hl { background: #fef08a; color: inherit; padding: 0 1px; border-radius
     if (first) first.scrollIntoView({ block: 'center' });
   }
 
-  window.FullTextSearch = { mount, highlightFromQuery };
+  // 原文 text を HTML にし、検索語（正規化済み）の箇所を <mark> で囲む（人物検索の結果表示用）。
+  // 改行をまたぐ箇所は改行の前後で <mark> を分ける（呼び出し側が改行で行に分けるため）
+  function markHtml(index, text, normTerms) {
+    text = String(text ?? '');
+    const hits = normTerms.length ? findHits(index, text, normTerms) : [];
+    let html = '', pos = 0;
+    for (const [a, b] of hits) {
+      html += escapeHtml(text.slice(pos, a)) + '<mark>' + escapeHtml(text.slice(a, b)).replace(/\n/g, '</mark>\n<mark>') + '</mark>';
+      pos = b;
+    }
+    return html + escapeHtml(text.slice(pos));
+  }
+
+  window.FullTextSearch = {
+    mount,
+    highlightFromQuery,
+    // 人物検索（index.html の「検索」タブ）が同じ索引形式・正規化を使うための部品
+    openIndex: base => new Index(base),
+    queryTerms,
+    markHtml,
+  };
 })();
