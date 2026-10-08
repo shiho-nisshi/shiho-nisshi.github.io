@@ -10,6 +10,7 @@
 </script>
 <title>司法省日誌</title>
 <link rel="stylesheet" href="style.css">
+<script src="fulltext/fulltext.js"></script>
 </head>
 <body class="bg-gray-50 text-gray-900 min-h-screen font-sans">
 
@@ -26,6 +27,12 @@
     <a href="stats.html">統計情報（伺の府県・機関別集計） →</a>
   </div>
 
+  <div class="tab-nav">
+    <button class="tab-btn active" id="tabBtnBrowse" onclick="showTab('browse')" type="button">巻一覧</button>
+    <button class="tab-btn" id="tabBtnSearch" onclick="showTab('search')" type="button">全文検索</button>
+  </div>
+
+  <div id="tab-browse">
   <p class="mb-4 text-sm text-gray-500">全26巻（うち25巻・記事7130件を収録・閲覧可能）</p>
 
   <table class="browse-table">
@@ -62,11 +69,34 @@
 
     </tbody>
   </table>
+  </div>
+
+  <div id="tab-search" style="display:none">
+    <div id="fulltextRoot"></div>
+  </div>
 
   <footer class="mt-16 pt-6 border-t border-gray-200 text-sm text-gray-500">
     <p class="leading-relaxed">原本: 国立国会図書館デジタルコレクション所蔵『司法省日誌』</p>
   </footer>
 
 </div>
+<script>
+// 全文検索タブ（fulltext/ の静的索引をブラウザ側で検索する。fulltext_index.py が生成）
+const fulltext = FullTextSearch.mount(document.getElementById('fulltextRoot'), {
+  base: 'fulltext/', hashKey: 'search', groupLabel: '巻',
+});
+
+function showTab(name) {
+  const isSearch = name === 'search';
+  document.getElementById('tab-browse').style.display = isSearch ? 'none' : '';
+  document.getElementById('tab-search').style.display = isSearch ? '' : 'none';
+  document.getElementById('tabBtnBrowse').classList.toggle('active', !isSearch);
+  document.getElementById('tabBtnSearch').classList.toggle('active', isSearch);
+  history.replaceState(null, '', location.pathname + location.search + (isSearch ? fulltext.hash() : ''));
+  if (isSearch) fulltext.focus();
+}
+
+if (fulltext.restoreFromHash()) showTab('search');
+</script>
 </body>
 </html>
