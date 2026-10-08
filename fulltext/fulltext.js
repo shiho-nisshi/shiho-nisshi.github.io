@@ -11,7 +11,7 @@
  *     live: true で入力しながら検索、onChange(検索中か) で検索の開始・解除を受け取れる
  *     （司法省日誌の索引ページは、これで検索中だけ巻一覧を隠している）
  *   fts.restoreFromHash();   // URLが #fulltext?q=… なら検索を復元して true を返す
- *   fts.hash();              // 現在の検索状態を表す '#fulltext?q=…'（タブ切替時のURL用）
+ *   fts.hash();              // 現在の検索状態を表す '#fulltext?q=…'
  * 使い方（資料ページ）: 検索結果のリンクには ?q=… が付くので、開いた先で検索語を強調する
  *   FullTextSearch.highlightFromQuery({ base: '../fulltext/', root: '.doc-body' });
  */
@@ -559,7 +559,7 @@ mark.fts-hl { background: #fef08a; color: inherit; padding: 0 1px; border-radius
   window.FullTextSearch = {
     mount,
     highlightFromQuery,
-    // 人物検索（index.html の「検索」タブ）が同じ索引形式・正規化を使うための部品
+    // 人名アーカイブスの人物検索が同じ索引形式・正規化を使うための部品
     openIndex: base => new Index(base),
     queryTerms,
     markHtml,
