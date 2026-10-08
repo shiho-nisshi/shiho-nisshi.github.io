@@ -116,9 +116,12 @@ mark.fts-hl { background: #fef08a; color: inherit; padding: 0 1px; border-radius
       this.meta = null;
     }
 
+    // meta.json は毎回サーバーに更新を確かめ（no-cache）、ほかは ?v=版番号 を付けて読む
+    // （索引を作り直した直後に、キャッシュの古いファイルと新しい meta.json が混ざらないように）
     json(path) {
       if (!this.files.has(path)) {
-        const p = fetch(this.base + path).then(r => {
+        const url = path === 'meta.json' ? this.base + path : `${this.base}${path}?v=${this.meta?.build || ''}`;
+        const p = fetch(url, path === 'meta.json' ? { cache: 'no-cache' } : {}).then(r => {
           if (!r.ok) throw new Error(`${path}: HTTP ${r.status}`);
           return r.json();
         });
