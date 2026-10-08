@@ -10,7 +10,7 @@
 </script>
 <title>司法省日誌</title>
 <link rel="stylesheet" href="style.css">
-<script src="fulltext/fulltext.js?v=ad2b121d"></script>
+<script src="fulltext/fulltext.js?v=181251fe"></script>
 </head>
 <body class="bg-gray-50 text-gray-900 min-h-screen font-sans">
 
@@ -79,7 +79,7 @@
 // 入力しながら検索し、検索中は巻一覧を隠す。欄を空にすると巻一覧に戻る
 const browse = document.getElementById('browse');
 const fulltext = FullTextSearch.mount(document.getElementById('fulltextRoot'), {
-  base: 'fulltext/', hashKey: 'search', groupLabel: '巻', live: true,
+  base: 'fulltext/', hashKey: 'search', groupLabel: '巻',
   onChange: searching => { browse.hidden = searching; },
 });
 fulltext.restoreFromHash();

@@ -2,18 +2,20 @@
  * 全文検索（静的索引をブラウザ側で検索する）
  *
  * 索引は fulltext_index.py がビルド時に生成する（形式はそちらの冒頭コメント参照）。
- * このファイルは各サイトの fulltext/fulltext.js にコピーされて公開される。
+ * このファイルは各サイトにコピーされて公開される（司法省日誌は fulltext/fulltext.js、
+ * 人名アーカイブスはサイト直下の fulltext.js）。
  * 正本は 近世近代人名アーカイブス用データ作成/program/publish/fulltext.js なので、
  * 直すときは正本を直してから各サイトの generate_docs.py を実行し直すこと。
  *
- * 使い方（検索欄）:
- *   const fts = FullTextSearch.mount(要素, { base: 'fulltext/', hashKey: 'fulltext', groupLabel: '巻' });
- *     live: true で入力しながら検索、onChange(検索中か) で検索の開始・解除を受け取れる
- *     （司法省日誌の索引ページは、これで検索中だけ巻一覧を隠している）
- *   fts.restoreFromHash();   // URLが #fulltext?q=… なら検索を復元して true を返す
- *   fts.hash();              // 現在の検索状態を表す '#fulltext?q=…'
+ * 使い方（全文検索の検索欄。司法省日誌の索引ページ）:
+ *   const fts = FullTextSearch.mount(要素, { base: 'fulltext/', hashKey: 'search', groupLabel: '巻',
+ *                                            onChange: 検索中か => { … } });
+ *   入力しながら検索し（打ち終わって0.4秒後、Enterで即時）、検索状態は #search?q=… に残す。
+ *   onChange で検索の開始・解除を受け取れる（司法省日誌は検索中だけ巻一覧を隠している）
+ *   fts.restoreFromHash();   // URLが #search?q=… なら検索を復元して true を返す
  * 使い方（資料ページ）: 検索結果のリンクには ?q=… が付くので、開いた先で検索語を強調する
  *   FullTextSearch.highlightFromQuery({ base: '../fulltext/', root: '.doc-body' });
+ * 人名アーカイブスの人物検索は openIndex / queryTerms / markHtml を使う（index.html 参照）。
  */
 (function () {
   'use strict';
@@ -455,10 +457,7 @@ mark.fts-hl { background: #fef08a; color: inherit; padding: 0 1px; border-radius
     async function search(q, group = -1, page = 1) {
       q = q.trim();
       if (input.value.trim() !== q) input.value = q;
-      if (!q) {
-        if (opts.live) clear(); else input.focus();
-        return;
-      }
+      if (!q) { clear(); return; }
       opts.onChange?.(true);
       const my = ++token;
       button.disabled = true;
@@ -479,15 +478,13 @@ mark.fts-hl { background: #fef08a; color: inherit; padding: 0 1px; border-radius
 
     let timer = null;
     form.addEventListener('submit', e => { e.preventDefault(); clearTimeout(timer); search(input.value); });
-    if (opts.live) {
-      // 入力しながら検索する（law-platform 議事録の一覧と同じく、打ち終わって 0.4 秒後）。
-      // 「×」で消したとき（search イベント）はすぐ反映する
-      input.addEventListener('input', () => {
-        clearTimeout(timer);
-        timer = setTimeout(() => { if (input.value.trim() !== state.q) search(input.value); }, 400);
-      });
-      input.addEventListener('search', () => { if (!input.value.trim()) { clearTimeout(timer); clear(); } });
-    }
+    // 入力しながら検索する（law-platform 議事録の一覧と同じく、打ち終わって 0.4 秒後）。
+    // 「×」で消したとき（search イベント）はすぐ反映する
+    input.addEventListener('input', () => {
+      clearTimeout(timer);
+      timer = setTimeout(() => { if (input.value.trim() !== state.q) search(input.value); }, 400);
+    });
+    input.addEventListener('search', () => { if (!input.value.trim()) { clearTimeout(timer); clear(); } });
 
     function restoreFromHash() {
       const h = location.hash;
@@ -498,7 +495,7 @@ mark.fts-hl { background: #fef08a; color: inherit; padding: 0 1px; border-radius
       return true;
     }
 
-    return { search, hash, restoreFromHash, focus: () => input.focus() };
+    return { restoreFromHash };
   }
 
   // 全文検索の結果から開かれた資料ページ（?q=…）で、本文中の検索語を強調し、
