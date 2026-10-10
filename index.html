@@ -10,7 +10,7 @@
 </script>
 <title>司法省日誌</title>
 <link rel="stylesheet" href="style.css">
-<script src="fulltext/fulltext.js?v=181251fe"></script>
+<script src="fulltext/fulltext.js?v=4efff4a2"></script>
 </head>
 <body class="bg-gray-50 text-gray-900 min-h-screen font-sans">
 
@@ -76,7 +76,7 @@
 </div>
 <script>
 // 全文検索（fulltext/ の静的索引をブラウザ側で検索する。fulltext_index.py が生成）。
-// 入力しながら検索し、検索中は巻一覧を隠す。欄を空にすると巻一覧に戻る
+// Enter・検索ボタンで検索し、検索中は巻一覧を隠す。欄を空にすると巻一覧に戻る
 const browse = document.getElementById('browse');
 const fulltext = FullTextSearch.mount(document.getElementById('fulltextRoot'), {
   base: 'fulltext/', hashKey: 'search', groupLabel: '巻',

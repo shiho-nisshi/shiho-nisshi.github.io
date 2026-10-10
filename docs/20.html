@@ -52,7 +52,10 @@
     line-height: 1.7;
   }
   .xref-caption { color: #6b7280; }
-  section[id] { scroll-margin-top: 1rem; }
+  section[id], .card-issue { scroll-margin-top: 1rem; }
+  .card-issue { margin-top: 2rem; }
+  .card-issue-head { font-size: 1.125rem; font-weight: 700; border-bottom: 2px solid #e5e7eb; padding-bottom: .25em; margin-bottom: .75rem; }
+  .card-dategroup-head { font-weight: 500; color: #4b5563; margin: 1rem 0 .5rem; }
   section[id]:target { outline: 3px solid #eda100; outline-offset: 2px; }
 </style>
 </head>
@@ -87,27 +90,27 @@
 <summary class="px-4 py-3 text-lg font-medium cursor-pointer">目次（号一覧）</summary>
 <div class="px-4 pb-4">
 <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-1">
-<li><a href="#a20-001" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第四十三號</a></li>
-<li><a href="#a20-022" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第四十四號</a></li>
-<li><a href="#a20-032" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第四十五號</a></li>
-<li><a href="#a20-041" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第四十六號</a></li>
-<li><a href="#a20-055" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第四十七號</a></li>
-<li><a href="#a20-071" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第四十八號</a></li>
-<li><a href="#a20-078" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第四十九號</a></li>
-<li><a href="#a20-089" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第五十號</a></li>
-<li><a href="#a20-104" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第五十一號</a></li>
-<li><a href="#a20-116" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第五十二號</a></li>
-<li><a href="#a20-131" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第五十三號</a></li>
-<li><a href="#a20-147" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第五十四號</a></li>
-<li><a href="#a20-162" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第五十五號</a></li>
-<li><a href="#a20-178" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第五十六號</a></li>
-<li><a href="#a20-189" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第五十七號</a></li>
-<li><a href="#a20-198" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第五十八號</a></li>
-<li><a href="#a20-214" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第五十九號</a></li>
-<li><a href="#a20-223" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第六十號</a></li>
-<li><a href="#a20-245" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第六十一號</a></li>
-<li><a href="#a20-259" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第六十二號</a></li>
-<li><a href="#a20-271" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第六十三號</a></li>
+<li><a href="#issue-1" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第四十三號</a></li>
+<li><a href="#issue-2" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第四十四號</a></li>
+<li><a href="#issue-3" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第四十五號</a></li>
+<li><a href="#issue-4" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第四十六號</a></li>
+<li><a href="#issue-5" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第四十七號</a></li>
+<li><a href="#issue-6" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第四十八號</a></li>
+<li><a href="#issue-7" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第四十九號</a></li>
+<li><a href="#issue-8" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第五十號</a></li>
+<li><a href="#issue-9" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第五十一號</a></li>
+<li><a href="#issue-10" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第五十二號</a></li>
+<li><a href="#issue-11" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第五十三號</a></li>
+<li><a href="#issue-12" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第五十四號</a></li>
+<li><a href="#issue-13" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第五十五號</a></li>
+<li><a href="#issue-14" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第五十六號</a></li>
+<li><a href="#issue-15" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第五十七號</a></li>
+<li><a href="#issue-16" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第五十八號</a></li>
+<li><a href="#issue-17" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第五十九號</a></li>
+<li><a href="#issue-18" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第六十號</a></li>
+<li><a href="#issue-19" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第六十一號</a></li>
+<li><a href="#issue-20" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第六十二號</a></li>
+<li><a href="#issue-21" class="hover:underline" onclick="showView('card')">司法省日誌明治八年第六十三號</a></li>
 </ul>
 </div>
 </details>
@@ -132,6 +135,12 @@
     document.querySelectorAll('[data-type-base]').forEach(function (sec) {
       sec.style.display = visible[sec.dataset.typeBase] ? '' : 'none';
     });
+    // 中の記事が全部隠れた号・日付の見出しも隠す
+    document.querySelectorAll('.filter-group').forEach(function (g) {
+      var any = Array.prototype.some.call(g.querySelectorAll('[data-type-base]'),
+        function (sec) { return sec.style.display !== 'none'; });
+      g.style.display = any ? '' : 'none';
+    });
   }
   checkboxes.forEach(function (cb) { cb.addEventListener('change', apply); });
   document.getElementById('type-filter-all').addEventListener('click', function () {
@@ -152,6 +161,10 @@
 </div>
 
 <div id="view-card">
+<div class="card-issue filter-group" id="issue-1">
+<h2 class="card-issue-head">司法省日誌明治八年第四十三號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○三月二十日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-001" data-type-base="article" data-pid="1366809" data-frame="2">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -602,6 +615,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○三月十三日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-020" data-type-base="人事" data-pid="1366809" data-frame="12">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -617,6 +633,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○三月十七日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-021" data-type-base="article" data-pid="1366809" data-frame="12">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -634,6 +653,11 @@
     
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-2">
+<h2 class="card-issue-head">司法省日誌明治八年第四十四號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○三月二十二日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-022" data-type-base="伺" data-pid="1366809" data-frame="12">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -800,6 +824,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○三月二十三日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-027" data-type-base="伺" data-pid="1366809" data-frame="17">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -977,6 +1004,11 @@
     
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-3">
+<h2 class="card-issue-head">司法省日誌明治八年第四十五號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○三月二十三日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-032" data-type-base="伺" data-pid="1366809" data-frame="22">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -1264,6 +1296,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○三月十九日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-039" data-type-base="人事" data-pid="1366809" data-frame="31">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -1312,6 +1347,11 @@
     <div class="xref"><div><span class="xref-caption">訂正対象:</span> <a href="19.html#a19-124" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a19-124</a></div></div>
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-4">
+<h2 class="card-issue-head">司法省日誌明治八年第四十六號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○三月二十三日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-041" data-type-base="伺" data-pid="1366809" data-frame="32">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -1414,6 +1454,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○三月二十四日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-044" data-type-base="伺" data-pid="1366809" data-frame="35">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -1707,6 +1750,11 @@
     
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-5">
+<h2 class="card-issue-head">司法省日誌明治八年第四十七號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○三月二十五日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-055" data-type-base="article" data-pid="1366809" data-frame="42">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -1884,6 +1932,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○三月二十七日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-062" data-type-base="伺" data-pid="1366809" data-frame="46">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -2128,6 +2179,11 @@
     
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-6">
+<h2 class="card-issue-head">司法省日誌明治八年第四十八號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○三月二十七日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-071" data-type-base="article" data-pid="1366809" data-frame="52">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -2419,6 +2475,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○三月十八日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-077" data-type-base="article" data-pid="1366809" data-frame="62">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -2434,6 +2493,11 @@
     
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-7">
+<h2 class="card-issue-head">司法省日誌明治八年第四十九號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○三月二十七日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-078" data-type-base="article" data-pid="1366809" data-frame="62">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -2616,6 +2680,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○三月二十八日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-084" data-type-base="伺" data-pid="1366809" data-frame="67">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -2789,6 +2856,11 @@
     
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-8">
+<h2 class="card-issue-head">司法省日誌明治八年第五十號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○三月二十八日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-089" data-type-base="伺" data-pid="1366809" data-frame="72">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -3058,6 +3130,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○三月二十九日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-098" data-type-base="伺" data-pid="1366809" data-frame="79">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -3085,6 +3160,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○三月三十日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-099" data-type-base="伺" data-pid="1366809" data-frame="80">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -3124,6 +3202,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○三月三十一日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-101" data-type-base="article" data-pid="1366809" data-frame="81">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -3174,6 +3255,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○三月二十七日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-103" data-type-base="人事" data-pid="1366809" data-frame="82">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -3189,6 +3273,11 @@
     
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-9">
+<h2 class="card-issue-head">司法省日誌明治八年第五十一號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○三月三十日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-104" data-type-base="伺" data-pid="1366809" data-frame="82">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -3230,6 +3319,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○三月三十一日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-105" data-type-base="伺" data-pid="1366809" data-frame="84">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -3321,6 +3413,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月二日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-108" data-type-base="article" data-pid="1366809" data-frame="86">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -3360,6 +3455,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月四日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-110" data-type-base="布達" data-pid="1366809" data-frame="87">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -3553,6 +3651,11 @@
     
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-10">
+<h2 class="card-issue-head">司法省日誌明治八年第五十二號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月四日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-116" data-type-base="伺" data-pid="1366809" data-frame="95">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -3888,6 +3991,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○三月二十四日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-127" data-type-base="article" data-pid="1366809" data-frame="104">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -3905,6 +4011,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○三月二十五日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-128" data-type-base="人事" data-pid="1366809" data-frame="104">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -3923,6 +4032,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○三月二十七日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-129" data-type-base="人事" data-pid="1366809" data-frame="104">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -3938,6 +4050,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○三月三十一日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-130" data-type-base="人事" data-pid="1366809" data-frame="105">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -3957,6 +4072,11 @@
     
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-11">
+<h2 class="card-issue-head">司法省日誌明治八年第五十三號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月四日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-131" data-type-base="伺" data-pid="1366809" data-frame="105">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -4060,6 +4180,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月五日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-135" data-type-base="伺" data-pid="1366809" data-frame="108">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -4339,6 +4462,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月二日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-145" data-type-base="article" data-pid="1366809" data-frame="114">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -4375,6 +4501,11 @@
     
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-12">
+<h2 class="card-issue-head">司法省日誌明治八年第五十四號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月七日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-147" data-type-base="伺" data-pid="1366809" data-frame="115">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -4615,6 +4746,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月八日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-156" data-type-base="article" data-pid="1366809" data-frame="121">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -4643,6 +4777,9 @@
     <div class="xref"><div><span class="xref-caption">正誤:</span> <a href="#a20-213" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a20-213 ○正誤</a></div></div>
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月九日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-157" data-type-base="伺" data-pid="1366809" data-frame="122">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -4778,6 +4915,11 @@
     
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-13">
+<h2 class="card-issue-head">司法省日誌明治八年第五十五號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月九日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-162" data-type-base="伺" data-pid="1366809" data-frame="125">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -4879,6 +5021,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-166" data-type-base="布達" data-pid="1366809" data-frame="127">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -4962,6 +5107,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十二日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-170" data-type-base="伺" data-pid="1366809" data-frame="129">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -5193,6 +5341,11 @@
     
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-14">
+<h2 class="card-issue-head">司法省日誌明治八年第五十六號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十二日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-178" data-type-base="伺" data-pid="1366809" data-frame="135">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -5413,6 +5566,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十三日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-184" data-type-base="伺" data-pid="1366809" data-frame="142">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -5484,6 +5640,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-187" data-type-base="伺" data-pid="1366809" data-frame="143">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -5549,6 +5708,11 @@
     
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-15">
+<h2 class="card-issue-head">司法省日誌明治八年第五十七號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十三日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-189" data-type-base="伺" data-pid="1366809" data-frame="145">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -5691,6 +5855,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十四日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-193" data-type-base="伺" data-pid="1366809" data-frame="149">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -5820,6 +5987,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月五日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-196" data-type-base="article" data-pid="1366809" data-frame="153">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -5838,6 +6008,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-197" data-type-base="article" data-pid="1366809" data-frame="154">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -5875,6 +6048,11 @@
     
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-16">
+<h2 class="card-issue-head">司法省日誌明治八年第五十八號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十四日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-198" data-type-base="伺" data-pid="1366809" data-frame="155">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -6071,6 +6249,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十五日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-205" data-type-base="伺" data-pid="1366809" data-frame="160">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -6227,6 +6408,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月五日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-210" data-type-base="人事" data-pid="1366809" data-frame="164">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -6242,6 +6426,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-211" data-type-base="article" data-pid="1366809" data-frame="164">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -6258,6 +6445,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十二日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-212" data-type-base="伺" data-pid="1366809" data-frame="164">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -6295,6 +6485,11 @@
     <div class="xref"><div><span class="xref-caption">訂正対象:</span> <a href="#a20-152" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a20-152 〔岐阜縣伺罪案節録〕八年三月八日</a>、<a href="#a20-156" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a20-156 ○</a></div></div>
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-17">
+<h2 class="card-issue-head">司法省日誌明治八年第五十九號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十五日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-214" data-type-base="伺" data-pid="1366809" data-frame="165">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -6479,6 +6674,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十七日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-218" data-type-base="article" data-pid="1366809" data-frame="171">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -6587,6 +6785,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○一月廿九日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-221" data-type-base="article" data-pid="1366809" data-frame="175">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -6610,6 +6811,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-222" data-type-base="article" data-pid="1366809" data-frame="176">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -6625,6 +6829,11 @@
     
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-18">
+<h2 class="card-issue-head">司法省日誌明治八年第六十號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十七日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-223" data-type-base="布達" data-pid="1366809" data-frame="176">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -6673,6 +6882,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十八日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-225" data-type-base="伺" data-pid="1366809" data-frame="177">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -7052,6 +7264,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十四日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-241" data-type-base="人事" data-pid="1366809" data-frame="185">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -7067,6 +7282,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十五日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-242" data-type-base="article" data-pid="1366809" data-frame="185">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -7103,6 +7321,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十七日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-244" data-type-base="人事" data-pid="1366809" data-frame="186">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -7118,6 +7339,11 @@
     
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-19">
+<h2 class="card-issue-head">司法省日誌明治八年第六十一號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十八日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-245" data-type-base="伺" data-pid="1366809" data-frame="186">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -7218,6 +7444,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十九日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-249" data-type-base="伺" data-pid="1366809" data-frame="188">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -7512,6 +7741,11 @@
     
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-20">
+<h2 class="card-issue-head">司法省日誌明治八年第六十二號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十九日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-259" data-type-base="伺" data-pid="1366809" data-frame="196">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -7691,6 +7925,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月廿日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-264" data-type-base="伺" data-pid="1366809" data-frame="201">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -7814,6 +8051,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月廿二日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-269" data-type-base="伺" data-pid="1366809" data-frame="204">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -7879,6 +8119,11 @@
     
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-21">
+<h2 class="card-issue-head">司法省日誌明治八年第六十三號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月二十二日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-271" data-type-base="伺" data-pid="1366809" data-frame="206">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -7998,6 +8243,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月二十三日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-276" data-type-base="伺" data-pid="1366809" data-frame="209">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -8069,6 +8317,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月二十四日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-278" data-type-base="伺" data-pid="1366809" data-frame="211">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -8123,6 +8374,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月二十五日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-280" data-type-base="伺" data-pid="1366809" data-frame="212">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -8312,11 +8566,12 @@
     
   </div>
 </section>
+</div></div>
 </div>
 <div id="view-outline" style="display:none">
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治八年第四十三號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○三月二十日</div>
 <div class="ol-article" data-src-id="a20-001" data-type-base="article" data-pid="1366809" data-frame="2"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔第四號各裁判所各府縣ヘ達書〕輪廓付</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/2" target="_blank" rel="noopener">原本 コマ2 →</a></div><div class="ol-body">棒鎖ハ婦女ヲ罰スル具ニ無之候處或ハ之ヲ用ユル向モ
 有之不都合候以來婦女ハ監獄則闇室ノ條ニ依リ處分可
@@ -8503,20 +8758,20 @@
 圓申付候條其旨可心得事
 ○</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○三月十三日分</div>
 <div class="ol-article" data-src-id="a20-020" data-type-base="人事" data-pid="1366809" data-frame="12"><div class="ol-article-headrow"><div class="ol-head ol-article-head"></div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/12" target="_blank" rel="noopener">原本 コマ12 →</a></div><div class="ol-body">任司法權少錄 督學局十三等出仕北島義男</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○三月十七日分</div>
 <div class="ol-article" data-src-id="a20-021" data-type-base="article" data-pid="1366809" data-frame="12"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔新潟縣ヘ達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/12" target="_blank" rel="noopener">原本 コマ12 →</a></div><div class="ol-body">七年六月官吏出役先キニ於テ携帶スル所ノ官物被盜者
 只〓中〓〓 置候所右ハ例第百七條ニ照依處置スルヿニ改議候
 條此段相達候也</div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治八年第四十四號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○三月二十二日</div>
 <div class="ol-article" data-src-id="a20-022" data-type-base="伺" data-pid="1366809" data-frame="12"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔伺書〕八年二月二十八日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/12" target="_blank" rel="noopener">原本 コマ12 →</a></div><div class="ol-body">證劵印稅規則中帳簿罰則ノ儀明治七年第百七十五號御
 達ノ趣モ有之候ニ付本年中ハ規則ノ新舊ニ拘ハラス右
@@ -8615,7 +8870,7 @@
 ハ翌月十五日ヲ限リ右製表同斷可差出尤金額納付方ノ
 儀ハ從前ノ通可相心得候事 雛形</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○三月二十三日</div>
 <div class="ol-article" data-src-id="a20-027" data-type-base="伺" data-pid="1366809" data-frame="17"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔名東縣伺〕八年三月</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/17" target="_blank" rel="noopener">原本 コマ17 →</a></div><div class="ol-body">御省日誌明治七年第二百九號筑摩縣伺指令ニ賭博罪ハ
 現塲捕獲及ヒ其一塲ニ連ナル同類ノ者ヲ坐スルヲ律ノ
@@ -8726,9 +8981,9 @@
 井 上 喜三郞</div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治八年第四十五號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○三月二十三日</div>
 <div class="ol-article" data-src-id="a20-032" data-type-base="伺" data-pid="1366809" data-frame="22"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔愛知縣伺〕八年二月十三日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/22" target="_blank" rel="noopener">原本 コマ22 →</a></div><div class="ol-body">第一條　御省日誌明治七年第七十五號靜岡縣伺附籍同
 居人五等ノ親属ニ係ラサル者戶主ノ財物ヲ相盜ムノ御
@@ -8920,7 +9175,7 @@
 ニ給與ス</div></div>
 <div class="ol-article" data-src-id="a20-038" data-type-base="人事" data-pid="1366809" data-frame="31"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/31" target="_blank" rel="noopener">原本 コマ31 →</a></div><div class="ol-body">任明法大属 明法權大属 牧 野 成 行</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○三月十九日分</div>
 <div class="ol-article" data-src-id="a20-039" data-type-base="人事" data-pid="1366809" data-frame="31"><div class="ol-article-headrow"><div class="ol-head ol-article-head"></div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/31" target="_blank" rel="noopener">原本 コマ31 →</a></div><div class="ol-body">堺縣ヨリ 二月 八年 河內國石川郡新堂村工峰吉長男吉岡才大
 郞飾磨縣ヨリ 月 同　但馬國朝來郡山口村農與平弟久藏愛知
@@ -8944,9 +9199,9 @@
 シモ同廿五日ノ部ニ記入スルノ誤リナリ</div><div class="xref"><div><span class="xref-caption">訂正対象:</span> <a href="19.html#a19-124" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a19-124</a></div></div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治八年第四十六號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○三月二十三日</div>
 <div class="ol-article" data-src-id="a20-041" data-type-base="伺" data-pid="1366809" data-frame="32"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔水澤縣伺〕八年二月</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/32" target="_blank" rel="noopener">原本 コマ32 →</a></div><div class="ol-body">第一條　無印ノ證文證據ニ難立ハ勿論ノ處本人名前 ノ
 ミ記載シ無印ノ證書ニ請人並組頭押印シ返金滯ル時ハ
@@ -9009,7 +9264,7 @@
 昨明治七年七月四日付伺書指令 七年第百四 號十七丁 見合 ノ通リ
 心得ヘシ</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○三月二十四日</div>
 <div class="ol-article" data-src-id="a20-044" data-type-base="伺" data-pid="1366809" data-frame="35"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔新治縣伺〕七年十月十八日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/35" target="_blank" rel="noopener">原本 コマ35 →</a></div><div class="ol-body">脫籍無產復籍シカタキ者本刑懲役ノ限滿チシ後ハ壬申
 第百十二號公布ノ通懲役塲ヘ留置罪囚ト別異シ其身相
@@ -9152,9 +9407,9 @@
 梟示 牧野 傳右衛門</div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治八年第四十七號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○三月二十五日</div>
 <div class="ol-article" data-src-id="a20-055" data-type-base="article" data-pid="1366809" data-frame="42"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔上申書〕八年三月十七日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/42" target="_blank" rel="noopener">原本 コマ42 →</a></div><div class="ol-body">廣島縣管下重丸京平斷罪減等ノ儀昨明治七年十二月中
 相伺候末別紙
@@ -9236,7 +9491,7 @@
 懲役百日ノ所舊惡減免例ニ照シ免罪等ノ指令アリ</div></div>
 <div class="ol-article" data-src-id="a20-061" data-type-base="人事" data-pid="1366809" data-frame="46"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/46" target="_blank" rel="noopener">原本 コマ46 →</a></div><div class="ol-body">明法中属木下周一陸軍省九等出仕ニ轉職ス</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○三月二十七日</div>
 <div class="ol-article" data-src-id="a20-062" data-type-base="伺" data-pid="1366809" data-frame="46"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔若松縣伺〕八年二月十五日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/46" target="_blank" rel="noopener">原本 コマ46 →</a></div><div class="ol-body">第一條　甲乙士族ノ子共ニ禁獄十年ノ罪ヲ犯シ甲ノ子
 ハ禁獄十年ニ論决シ乙ノ子ハ外ニ懲役百日以下破廉耻
@@ -9358,9 +9613,9 @@
 至急可申出此旨相達候事</div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治八年第四十八號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○三月二十七日</div>
 <div class="ol-article" data-src-id="a20-071" data-type-base="article" data-pid="1366809" data-frame="52"><div class="ol-article-headrow"><div class="ol-head ol-article-head"></div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/52" target="_blank" rel="noopener">原本 コマ52 →</a></div><div class="ol-body">各裁判所ヘ達書
 皇靈御式年御追祭日ハ兼テ除刑罰拷問ノ御達モ有之候
@@ -9570,14 +9825,14 @@
 指令
 攺正規則ニ依リ印紙界紙ヲ用フルニ及ハス</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○三月十八日分</div>
 <div class="ol-article" data-src-id="a20-077" data-type-base="article" data-pid="1366809" data-frame="62"><div class="ol-article-headrow"><div class="ol-head ol-article-head"></div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/62" target="_blank" rel="noopener">原本 コマ62 →</a></div><div class="ol-body">十四等出仕杉山長民三潴縣權少属ニ轉任ス</div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治八年第四十九號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○三月二十七日</div>
 <div class="ol-article" data-src-id="a20-078" data-type-base="article" data-pid="1366809" data-frame="62"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔第七號 東京府ヲ除キ 府縣ヘ達書〕輪廓付</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/62" target="_blank" rel="noopener">原本 コマ62 →</a></div><div class="ol-body">懲役百日以下犯人總テ服役致シ答杖實决不相用候向ハ
 別紙書式ニ準シ此達書著十日限取調當省ヘ指出可申于
@@ -9678,7 +9933,7 @@
 五圓等ノ指令アリ
 或 指令 贖罪等ノ 付畧之</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○三月二十八日</div>
 <div class="ol-article" data-src-id="a20-084" data-type-base="伺" data-pid="1366809" data-frame="67"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔相川縣伺〕八年二月二十四日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/67" target="_blank" rel="noopener">原本 コマ67 →</a></div><div class="ol-body">昨七年御省日誌第百七十九號裁判所ヨリ明法寮ヘ問合
 持兒噐强盜三人アリ會捕吏ノ來ルニ逢ヒ散逃互ニ黨類
@@ -9785,9 +10040,9 @@
 第六條　伺ノ通</div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治八年第五十號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○三月二十八日</div>
 <div class="ol-article" data-src-id="a20-089" data-type-base="伺" data-pid="1366809" data-frame="72"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔滋賀縣伺〕七年四月十三日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/72" target="_blank" rel="noopener">原本 コマ72 →</a></div><div class="ol-body">第一條　地所質入書入規則第十條ノ通第一番ノ金主ヘ
 引當ニ入レ置候事ヲ第二番ノ金主承知ノ上ニテ地所代
@@ -9933,7 +10188,7 @@
 八十三條ト異ナリ
 補十等出仕 石川縣中属 岡 政 野 一</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○三月二十九日</div>
 <div class="ol-article" data-src-id="a20-098" data-type-base="伺" data-pid="1366809" data-frame="79"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔伺書〕八年三月二十五日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/79" target="_blank" rel="noopener">原本 コマ79 →</a></div><div class="ol-body">授任勅奏判區別ノ儀ニ付當二月十九日伺書ニ伺ノ趣前
 ノ達ハ後ノ達ニテ取消相成但憲法類編第一篇國法部第
@@ -9949,7 +10204,7 @@
 御指令
 伺ノ通</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○三月三十日</div>
 <div class="ol-article" data-src-id="a20-099" data-type-base="伺" data-pid="1366809" data-frame="80"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔警視廳伺〕八年三月三十日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/80" target="_blank" rel="noopener">原本 コマ80 →</a></div><div class="ol-body">警視出張所門前揭示塲〓內ニ金滅金ノ菊御紋付ノ手爐
 箇風呂敷包ノ儘差置有之ヲ小使某ナル者拾ヒ揚ヶ出
@@ -9963,7 +10218,7 @@
 云々伺ニ七年第二百十六號八丁ニ載スル京都府伺ト同
 文ノ指令アリ</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○三月三十一日</div>
 <div class="ol-article" data-src-id="a20-101" data-type-base="article" data-pid="1366809" data-frame="81"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔司法省裁判所言渡〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/81" target="_blank" rel="noopener">原本 コマ81 →</a></div><div class="ol-body">橫濱南仲通三丁目商故山城
 屋和介手代
@@ -9988,14 +10243,14 @@
 各地方ニ於テ嚴密遂捜索捕縛ノ上ハ昨七年當省第廿七
 號達ノ通取計其段可届出此旨布達候事</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○三月二十七日分</div>
 <div class="ol-article" data-src-id="a20-103" data-type-base="人事" data-pid="1366809" data-frame="82"><div class="ol-article-headrow"><div class="ol-head ol-article-head"></div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/82" target="_blank" rel="noopener">原本 コマ82 →</a></div><div class="ol-body">補十一等出仕 開拓使御用掛 村 田 英 俊</div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治八年第五十一號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○三月三十日</div>
 <div class="ol-article" data-src-id="a20-104" data-type-base="伺" data-pid="1366809" data-frame="82"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔埼玉裁判所伺〕八年一月十五日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/82" target="_blank" rel="noopener">原本 コマ82 →</a></div><div class="ol-body">第一條　旣ニ甲ヘ引當書入アル動產不動產ヲ甲ヘ涉議
 セス乙ヘ二重ニ書入スル者明治七年日誌第百七十四號
@@ -10025,7 +10280,7 @@
 第三條　初ヨリ詐取ノ情アルハ詐取律ニ依ル詐取ノ情
 ナ キ者ハ不應輕重ニ問フ村吏等ハ第二條ニ照準ス可</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○三月三十一日</div>
 <div class="ol-article" data-src-id="a20-105" data-type-base="伺" data-pid="1366809" data-frame="84"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔廣島縣伺〕八年二月二十七日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/84" target="_blank" rel="noopener">原本 コマ84 →</a></div><div class="ol-body">明治七年九月廿七日附ヲ以テ安藝國出生榮助竊盜ノ際
 事主ヘ刃傷スル者ニ付捕七律罪人拒捕條ニ依リ絞罪可
@@ -10077,7 +10332,7 @@
 島村貫藏等處斷伺ニ庄吉ハ竊盜四犯財ヲ得ル者貫藏ハ
 同上ヲ以テ論シ兩人共懲役終身ノ指令アリ</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月二日</div>
 <div class="ol-article" data-src-id="a20-108" data-type-base="article" data-pid="1366809" data-frame="86"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔司法省裁判所言渡〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/86" target="_blank" rel="noopener">原本 コマ86 →</a></div><div class="ol-body">元辨官支配諏訪甲斐觸下河
 內鎌太郞養子懲役人
@@ -10091,7 +10346,7 @@
 減シ盡シテ無科成德ハ所由政通無科ニ歸スルヲ以テ無
 科ト指令アリ</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月四日</div>
 <div class="ol-article" data-src-id="a20-110" data-type-base="布達" data-pid="1366809" data-frame="87"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔甲第二號布達〕輪廓附</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/87" target="_blank" rel="noopener">原本 コマ87 →</a></div><div class="ol-body">本年第三十號御布告ニ付テハ左ノ通各裁判所傍聽規則
 相定候條此旨布達候事
@@ -10204,9 +10459,9 @@
 兵庫裁判所在勤申付候事</div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治八年第五十二號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月四日</div>
 <div class="ol-article" data-src-id="a20-116" data-type-base="伺" data-pid="1366809" data-frame="95"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔福岡縣伺〕八年三月五日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/95" target="_blank" rel="noopener">原本 コマ95 →</a></div><div class="ol-body">第一條　明治六年第二百十二號公布七月十日以前ノ証
 書ニシテ年號ヲ略記シ支月ノミヲ記載ナスモノ往々有
@@ -10390,24 +10645,24 @@
 十八條父母ヲ毆チ傷スル者懲役終身ノ處一等ヲ酌減シ
 懲役十年等ノ指令アリ</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○三月二十四日分</div>
 <div class="ol-article" data-src-id="a20-127" data-type-base="article" data-pid="1366809" data-frame="104"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/104" target="_blank" rel="noopener">原本 コマ104 →</a></div><div class="ol-body">中解部 藤 井 光
 兼テ足柄裁判所在勤申付置候所御用都合有之不及其儀
 候事</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○三月二十五日分</div>
 <div class="ol-article" data-src-id="a20-128" data-type-base="人事" data-pid="1366809" data-frame="104"><div class="ol-article-headrow"><div class="ol-head ol-article-head"></div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/104" target="_blank" rel="noopener">原本 コマ104 →</a></div><div class="ol-body">補十四等出仕 十五等出仕 保 恭 野 水
 同　正 就 松 田 同
 同　同 里 信 直 大
 依願免本官 大解部 賴 慶 田 石</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○三月二十七日分</div>
 <div class="ol-article" data-src-id="a20-129" data-type-base="人事" data-pid="1366809" data-frame="104"><div class="ol-article-headrow"><div class="ol-head ol-article-head"></div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/104" target="_blank" rel="noopener">原本 コマ104 →</a></div><div class="ol-body">權少解部石川重玄熊谷縣十二等出仕ニ轉職ス</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○三月三十一日分</div>
 <div class="ol-article" data-src-id="a20-130" data-type-base="人事" data-pid="1366809" data-frame="105"><div class="ol-article-headrow"><div class="ol-head ol-article-head"></div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/105" target="_blank" rel="noopener">原本 コマ105 →</a></div><div class="ol-body">十五等出仕 〓 水 在 信
 補十四等出仕
@@ -10416,9 +10671,9 @@
 同二等出仕 等外一等出仕二階堂 十五等出仕 櫻 井 勇 義 齋 藤 周 藏 次 郞</div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治八年第五十三號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月四日</div>
 <div class="ol-article" data-src-id="a20-131" data-type-base="伺" data-pid="1366809" data-frame="105"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔埼玉裁判所伺〕八年三月十二日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/105" target="_blank" rel="noopener">原本 コマ105 →</a></div><div class="ol-body">第一條　司法省日誌本年第十九號中石川縣伺金穀借用
 証文ノ名下及ヒ印紙消印トモ拇印ヲ用ヒ候證劵ヲ授受
@@ -10468,7 +10723,7 @@
 ハ即决ノ儀不相成候事</div></div>
 <div class="ol-article" data-src-id="a20-134" data-type-base="人事" data-pid="1366809" data-frame="107"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/107" target="_blank" rel="noopener">原本 コマ107 →</a></div><div class="ol-body">權中解部原鼎國債寮十等出仕ニ轉職ス</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月五日</div>
 <div class="ol-article" data-src-id="a20-135" data-type-base="伺" data-pid="1366809" data-frame="108"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔若松縣伺〕八年三月二十九日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/108" target="_blank" rel="noopener">原本 コマ108 →</a></div><div class="ol-body">當縣大属吉田千足儀御省日誌拔萃上梓ノ儀別紙ノ通伺
 書差出候ニ付及進達候也
@@ -10610,7 +10865,7 @@
 日本人身代持直シタルヲ以テ出訴及ヒタル時ハ其日 ヨ
 リ再度証書面約定ノ利息ヲ起算致ス可キ事</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月二日分</div>
 <div class="ol-article" data-src-id="a20-145" data-type-base="article" data-pid="1366809" data-frame="114"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/114" target="_blank" rel="noopener">原本 コマ114 →</a></div><div class="ol-body">權少判事 井 上 好 武
 新治裁判所在勤被仰付候事
@@ -10622,9 +10877,9 @@
 十等出仕 院正 室 田 充 美</div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治八年第五十四號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月七日</div>
 <div class="ol-article" data-src-id="a20-147" data-type-base="伺" data-pid="1366809" data-frame="115"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔箱館裁判所伺〕七年十月二十二日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/115" target="_blank" rel="noopener">原本 コマ115 →</a></div><div class="ol-body">日誌第七十六號岐阜縣ヨリ村社ノ神御神寶ヲ盜ム者處
 分ノ儀相伺候處鄕社ト同シク論スト御指令有之官幣國
@@ -10741,7 +10996,7 @@
 指令
 本條並ニ但書共伺ノ通</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月八日</div>
 <div class="ol-article" data-src-id="a20-156" data-type-base="article" data-pid="1366809" data-frame="121"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/121" target="_blank" rel="noopener">原本 コマ121 →</a></div><div class="ol-body">北條縣出張判事取扱七牌十美作國西々條郡古川村農武 二月
 村伴藏大分縣ヨリ
@@ -10758,7 +11013,7 @@
 ンヿヲ圖ルニ付其情ヲ酌量シ尙ホ三等ヲ減シ懲役五年
 等ノ指令アリ但シ兩藏ノ處斷ハ北條縣ヘ達ス</div><div class="xref"><div><span class="xref-caption">正誤:</span> <a href="#a20-213" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a20-213 ○正誤</a></div></div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月九日</div>
 <div class="ol-article" data-src-id="a20-157" data-type-base="伺" data-pid="1366809" data-frame="122"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔高知縣伺〕八年二月七日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/122" target="_blank" rel="noopener">原本 コマ122 →</a></div><div class="ol-body">第一條　甲士族所有ノ米切手ヲ乙詐取シテ丙ニ賣却ス
 丙再ヒ丁戊巳庚辛ニ賣却ス此追徴法ヲ用ユルニ詐欺人
@@ -10827,9 +11082,9 @@
 十九圓三十五錢</div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治八年第五十五號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月九日</div>
 <div class="ol-article" data-src-id="a20-162" data-type-base="伺" data-pid="1366809" data-frame="125"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔福岡縣伺〕八年二月十九日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/125" target="_blank" rel="noopener">原本 コマ125 →</a></div><div class="ol-body">第一條　明治五年二百七十五號公布ニ隱居別宅シテ財
 產ヲ異ニスル者自分一己ノ負債ハ其戶主ニ及ホサスト
@@ -10877,7 +11132,7 @@
 <div class="ol-article" data-src-id="a20-165" data-type-base="article" data-pid="1366809" data-frame="127"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/127" target="_blank" rel="noopener">原本 コマ127 →</a></div><div class="ol-body">本月七日上請スル東京淺草三間町マツ体藤ノ木卯吉以
 下斷刑伺書本日裁下アリ</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十日</div>
 <div class="ol-article" data-src-id="a20-166" data-type-base="布達" data-pid="1366809" data-frame="127"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔乙第三十三號布達〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/127" target="_blank" rel="noopener">原本 コマ127 →</a></div><div class="ol-body">武四郞 片 山
 右ノ者儀本年二月乙第十四號人相書ヲ以及布達置候處
@@ -10907,7 +11162,7 @@
 指令
 區裁判所ニ於テハ分課印ヲ用ユルニ不及候事</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十二日</div>
 <div class="ol-article" data-src-id="a20-170" data-type-base="伺" data-pid="1366809" data-frame="129"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔足柄裁判所伺罪案節録〕八年三月三日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/129" target="_blank" rel="noopener">原本 コマ129 →</a></div><div class="ol-body">相摸國大住郡堀齋藤村農忠左衛門俸大森吉五郞供 自
 分儀平生家業ヲ怠リ飮酒ヲ好ミ醉ニ乘シ他人ヘ惡ロス
@@ -11030,9 +11285,9 @@
 第四條　起算ノ年月日ヲ保證スルニ不及事</div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治八年第五十六號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十二日</div>
 <div class="ol-article" data-src-id="a20-178" data-type-base="伺" data-pid="1366809" data-frame="135"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔三重縣伺〕八年三月二十七日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/135" target="_blank" rel="noopener">原本 コマ135 →</a></div><div class="ol-body">御省日誌中罰則ト常律ト並犯シ及ヒ一ノ罰則ト他ノ罰
 則ト並犯スル者ノ如キ右イツレモ二罪倶發律ヲ用ヒ ス
@@ -11171,7 +11426,7 @@
 シ禁獄七年熊吉ハ同條賍ヲ分ツ者本犯ニ三等ヲ减シ懲
 役七年等ノ指令アリ</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十三日</div>
 <div class="ol-article" data-src-id="a20-184" data-type-base="伺" data-pid="1366809" data-frame="142"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔長野縣伺〕八年三月二十五日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/142" target="_blank" rel="noopener">原本 コマ142 →</a></div><div class="ol-body">賊盜律詐欺取財條ニ若シ監臨主守監守スル財物ヲ詐取
 スル者ハ監守自盜ヲ以テ論ス未タ得サル者ハ其詐取セ
@@ -11203,7 +11458,7 @@
 價ヲ以當省ヘ相納可申尤賍物賣拂料ト混交不致様別途
 納記明細書ヲ 副可相納候此段相達候事</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十日分</div>
 <div class="ol-article" data-src-id="a20-187" data-type-base="伺" data-pid="1366809" data-frame="143"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔伺書〕八年一月二十八日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/143" target="_blank" rel="noopener">原本 コマ143 →</a></div><div class="ol-body">聽訟上身代限ノ處分ヲ爲ス時ハ六十日間ノ揭示ヲ爲シ
 身代限ニ遇フ者ニ對シ義務ノ請求ヲ爲ス可キ者ハ揭示
@@ -11244,9 +11499,9 @@
 伺ノ趣第五十一號ヲ以テ布告候事</div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治八年第五十七號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十三日</div>
 <div class="ol-article" data-src-id="a20-189" data-type-base="伺" data-pid="1366809" data-frame="145"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔三重縣伺〕七年十月十八日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/145" target="_blank" rel="noopener">原本 コマ145 →</a></div><div class="ol-body">第一條　當縣管下伊勢國員辨郡宇野村農二ノ湯丈三郞
 ナル者强姦ノ所業曩ニ罪案ヲ以テ擬律相伺 十七號十三 七年第百
@@ -11335,7 +11590,7 @@
 同
 藤 吾 謹 加</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十四日</div>
 <div class="ol-article" data-src-id="a20-193" data-type-base="伺" data-pid="1366809" data-frame="149"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔滋賀縣伺〕八年三月四日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/149" target="_blank" rel="noopener">原本 コマ149 →</a></div><div class="ol-body">賣渡申田地ノ事
 一
@@ -11425,14 +11680,14 @@
 懲役三十日 善 吉 野 猪
 夜故ナクシテ人家ニ入ルノ罪ハ等シ一ニ從テ科ス</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月五日分</div>
 <div class="ol-article" data-src-id="a20-196" data-type-base="article" data-pid="1366809" data-frame="153"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/153" target="_blank" rel="noopener">原本 コマ153 →</a></div><div class="ol-body">十二等出仕 足 常 雄 立
 十四等出仕 冷 亮 豐 泉
 同　吾 謹 藤 加
 兵庫裁判所在勤申付候事 通</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十日分</div>
 <div class="ol-article" data-src-id="a20-197" data-type-base="article" data-pid="1366809" data-frame="154"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔司法省裁判所言渡〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/154" target="_blank" rel="noopener">原本 コマ154 →</a></div><div class="ol-body">橫濱南仲通三丁目商故山城
 屋和介手代
@@ -11459,9 +11714,9 @@
 候事　但計算書ハ追テ可相示事</div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治八年第五十八號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十四日</div>
 <div class="ol-article" data-src-id="a20-198" data-type-base="伺" data-pid="1366809" data-frame="155"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔滋賀縣伺〕八年三月五日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/155" target="_blank" rel="noopener">原本 コマ155 →</a></div><div class="ol-body">第一條　明治六年第二百十五號布告代人規則第三條ニ
 凡代人ハ心術正實ニシテ二十一歲以上ノ者ヲ撰ムヘ シ
@@ -11562,7 +11817,7 @@
 定約書中道々トノミ記載有之上ハ無期限ニ付乃チ証書
 面ニ因リ相當ノ處分ニ及フ可キ事</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十五日</div>
 <div class="ol-article" data-src-id="a20-205" data-type-base="伺" data-pid="1366809" data-frame="160"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔和歌山縣伺〕八年三月四日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/160" target="_blank" rel="noopener">原本 コマ160 →</a></div><div class="ol-body">第一條　華士族平民己巳六月二十五日丁卯十二月晦日
 以前ニ動產不動產ヲ入質致サゝル貸借米金ヲ已已六月
@@ -11651,16 +11906,16 @@
 旨訴出ルニ於テハ伺ノ通處分及フ可キ事
 第二條　本年甲第四號大藏省布達ノ通リ可相心得事</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月五日分</div>
 <div class="ol-article" data-src-id="a20-210" data-type-base="人事" data-pid="1366809" data-frame="164"><div class="ol-article-headrow"><div class="ol-head ol-article-head"></div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/164" target="_blank" rel="noopener">原本 コマ164 →</a></div><div class="ol-body">依願免本官 少解部 丸 也 良 田</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十日分</div>
 <div class="ol-article" data-src-id="a20-211" data-type-base="article" data-pid="1366809" data-frame="164"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/164" target="_blank" rel="noopener">原本 コマ164 →</a></div><div class="ol-body">權少判事 吉 幾 本 知
 御用都合有之歸京被仰付候事</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十二日分</div>
 <div class="ol-article" data-src-id="a20-212" data-type-base="伺" data-pid="1366809" data-frame="164"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔伺書〕七年十一月廿四日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/164" target="_blank" rel="noopener">原本 コマ164 →</a></div><div class="ol-body">本年第二號御布告相成候酒造其外取締規則追加ノ條猶
 實際裁判上處分方差支ノ廉有之各裁判所ヨリ伺出候ニ
@@ -11673,9 +11928,9 @@
 ハ暴擧ノ誤リナリ</div><div class="xref"><div><span class="xref-caption">訂正対象:</span> <a href="#a20-152" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a20-152 〔岐阜縣伺罪案節録〕八年三月八日</a>、<a href="#a20-156" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a20-156 ○</a></div></div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治八年第五十九號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十五日</div>
 <div class="ol-article" data-src-id="a20-214" data-type-base="伺" data-pid="1366809" data-frame="165"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔新川縣伺〕八年二月七日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/165" target="_blank" rel="noopener">原本 コマ165 →</a></div><div class="ol-body">第一條　明治七年第九拾一號ヲ以テ御達相成候同年第
 七拾八號御布告其証人タルヘキト思量スル者トハ假設
@@ -11806,7 +12061,7 @@
 ハス賭博再犯ノ廉ハ調違ニ付責付中逃走罪ト通シテ二
 等ヲ加ヘ懲役百日ニ處斷ス可キ事</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十七日</div>
 <div class="ol-article" data-src-id="a20-218" data-type-base="article" data-pid="1366809" data-frame="171"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔司法省裁判所言渡〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/171" target="_blank" rel="noopener">原本 コマ171 →</a></div><div class="ol-body">武藏國足立郡鴻巢宿農
 立川 庄右衛門
@@ -11875,7 +12130,7 @@
 內 二十圓 戊ノ抵當ナキ貸金並利息及訴訟入
 費合二百圓</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○一月廿九日分</div>
 <div class="ol-article" data-src-id="a20-221" data-type-base="article" data-pid="1366809" data-frame="175"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/175" target="_blank" rel="noopener">原本 コマ175 →</a></div><div class="ol-body">○
 熊谷裁判所廻リ
@@ -11887,14 +12142,14 @@
 減シ盡シテ無科御民ハ所由無科ニ歸スルヲ以無科等ノ
 指令アリ</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十日分</div>
 <div class="ol-article" data-src-id="a20-222" data-type-base="article" data-pid="1366809" data-frame="176"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/176" target="_blank" rel="noopener">原本 コマ176 →</a></div><div class="ol-body">少解部 前 茂 川 保</div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治八年第六十號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十七日</div>
 <div class="ol-article" data-src-id="a20-223" data-type-base="布達" data-pid="1366809" data-frame="176"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔乙第卅五號布達〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/176" target="_blank" rel="noopener">原本 コマ176 →</a></div><div class="ol-body">備中國都宇郡妹尾村農
 善次郞 高 木
@@ -11917,7 +12172,7 @@
 右ノ者儀於函館懲役終身處刑中本年二月廿八日出役先
 ヨリ鎖付ノ儘逃亡候條各地方 以下例文人 相書畧之</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十八日</div>
 <div class="ol-article" data-src-id="a20-225" data-type-base="伺" data-pid="1366809" data-frame="177"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔濱田縣伺〕八年三月五日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/177" target="_blank" rel="noopener">原本 コマ177 →</a></div><div class="ol-body">警察上ニ於テ風体不審ノ者見當リ〓貫〓所用ノ筋等ヲ
 推問スルニ一旦本籍ヲ致逃亡候得共當節ニ至前非後悔
@@ -12075,11 +12330,11 @@
 但御用ノ儀ハ高木七等出仕ヘ可承合事</div></div>
 <div class="ol-article" data-src-id="a20-240" data-type-base="人事" data-pid="1366809" data-frame="185"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/185" target="_blank" rel="noopener">原本 コマ185 →</a></div><div class="ol-body">補九等出仕 床 次 正 精</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十四日分</div>
 <div class="ol-article" data-src-id="a20-241" data-type-base="人事" data-pid="1366809" data-frame="185"><div class="ol-article-headrow"><div class="ol-head ol-article-head"></div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/185" target="_blank" rel="noopener">原本 コマ185 →</a></div><div class="ol-body">依願免出仕 十等出仕 修 松 長 造</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十五日分</div>
 <div class="ol-article" data-src-id="a20-242" data-type-base="article" data-pid="1366809" data-frame="185"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/185" target="_blank" rel="noopener">原本 コマ185 →</a></div><div class="ol-body">七等出仕 秀 臣 高 木
 新潟裁判所建築御用ニ付臨時出張被仰付候事</div></div>
@@ -12090,14 +12345,14 @@
 テ無科古復ハ違式重ニ擬スヘキ處二罪倶發 本 第五十 九丁
 錄 見 合ニ係ルヲ以其罪ヲ問ハス等ノ指令アリ 部摘</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十七日分</div>
 <div class="ol-article" data-src-id="a20-244" data-type-base="人事" data-pid="1366809" data-frame="186"><div class="ol-article-headrow"><div class="ol-head ol-article-head"></div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/186" target="_blank" rel="noopener">原本 コマ186 →</a></div><div class="ol-body">補十等出仕 岩手縣中屬中 渚 川</div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治八年第六十一號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十八日</div>
 <div class="ol-article" data-src-id="a20-245" data-type-base="伺" data-pid="1366809" data-frame="186"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔筑摩縣伺〕八年一月二十五日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/186" target="_blank" rel="noopener">原本 コマ186 →</a></div><div class="ol-body">昨明治七年九月一日前第一類證印申受タル帳簿ヘ第二
 類ニ屬スル金員ヲ過テ附込者
@@ -12144,7 +12399,7 @@
 御指令
 伺ノ通</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十九日</div>
 <div class="ol-article" data-src-id="a20-249" data-type-base="伺" data-pid="1366809" data-frame="188"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔石川縣伺〕八年二月二十四日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/188" target="_blank" rel="noopener">原本 コマ188 →</a></div><div class="ol-body">第一條　渡邊甲治郞儀甲乙二號ノ證劵ヘ別ニ丙號證書
 ヲ附シ併テ三通トナシ眞田傳次郞ナル者ヘ兼テ相渡有
@@ -12302,9 +12557,9 @@
 <div class="ol-article" data-src-id="a20-258" data-type-base="article" data-pid="1366809" data-frame="196"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/196" target="_blank" rel="noopener">原本 コマ196 →</a></div><div class="ol-body">少判事杉浦知周病歿ス</div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治八年第六十二號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十九日</div>
 <div class="ol-article" data-src-id="a20-259" data-type-base="伺" data-pid="1366809" data-frame="196"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔埼玉裁判所伺〕八年三月三十一日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/196" target="_blank" rel="noopener">原本 コマ196 →</a></div><div class="ol-body">裁判所取締規則第九條遲参不參者罰金ノ儀ニ付疑義縷
 々明治七年七月三十日相伺候處本年一月七日御指令 年 本
@@ -12416,7 +12671,7 @@
 伺ノ通　但當分地方ニ於テ〓テ収稅致シ候分ハ從前ノ
 通可相心得事</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月廿日</div>
 <div class="ol-article" data-src-id="a20-264" data-type-base="伺" data-pid="1366809" data-frame="201"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔長崎縣伺〕八年四月九日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/201" target="_blank" rel="noopener">原本 コマ201 →</a></div><div class="ol-body">御省日誌本年第廿六號千葉縣伺ニ御省日誌中警察官吏
 心得ニ可相成モノヲ抄寫シ一月三四回ニ區切リ活版ニ
@@ -12472,7 +12727,7 @@
 御指令
 伺ノ通聞届第六十三號ヲ以テ布告候事</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月廿二日</div>
 <div class="ol-article" data-src-id="a20-269" data-type-base="伺" data-pid="1366809" data-frame="204"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔高知縣伺〕八年三月十九日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/204" target="_blank" rel="noopener">原本 コマ204 →</a></div><div class="ol-body">當縣聽訟課斷獄係ニ於テ賍物ノ追徴致シ縣廳內倉庫ニ
 差入置候處昨明治七年九月七日ノ夜盜賊忍入賍物ノ中
@@ -12513,9 +12768,9 @@
 斬罪ノ指令アリ</div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治八年第六十三號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月二十二日</div>
 <div class="ol-article" data-src-id="a20-271" data-type-base="伺" data-pid="1366809" data-frame="206"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔山形縣伺〕八年三月二十二日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/206" target="_blank" rel="noopener">原本 コマ206 →</a></div><div class="ol-body">在官ノ平民犯罪有之禁獄中免官セラレタル者潜出行步
 スル時ハ平民ノ懲役塲ヲ逃ル例ニ照シ棒鎖ノ上從新拘
@@ -12567,7 +12822,7 @@
 伺 ア レ 〓 免 罪 等 ノ置
 指 令 付畧 之 ニ</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月二十三日</div>
 <div class="ol-article" data-src-id="a20-276" data-type-base="伺" data-pid="1366809" data-frame="209"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔水澤縣伺〕八年三月二十五日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/209" target="_blank" rel="noopener">原本 コマ209 →</a></div><div class="ol-body">本年二月廿八日付陸前國登米郡登米村商金作長男塚本
 雄作處斷ノ義罪案ヲ以テ相伺候處今般御指令ニ相成候
@@ -12613,7 +12868,7 @@
 令 ニ 付
 畧 之</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月二十四日</div>
 <div class="ol-article" data-src-id="a20-278" data-type-base="伺" data-pid="1366809" data-frame="211"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔筑摩縣伺〕七年十二月十日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/211" target="_blank" rel="noopener">原本 コマ211 →</a></div><div class="ol-body">第一條　官林誤毀ノ儀ニ付明治六年九月十日附ヲ以テ
 相伺候處同年十二月十日付御指令ニ拂下ノ地右ニシテ
@@ -12642,7 +12897,7 @@
 詳細ニ伺出可シ</div></div>
 <div class="ol-article" data-src-id="a20-279" data-type-base="人事" data-pid="1366809" data-frame="212"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/212" target="_blank" rel="noopener">原本 コマ212 →</a></div><div class="ol-body">任司法權中錄 司法少錄 田 所 千 秋</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月二十五日</div>
 <div class="ol-article" data-src-id="a20-280" data-type-base="伺" data-pid="1366809" data-frame="212"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔新潟縣伺〕八年三月十三日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/212" target="_blank" rel="noopener">原本 コマ212 →</a></div><div class="ol-body">出訴期限ノ儀飯代滯ハ六ケ月借用金ハ五ケ月ニ候處別
 紙畧 之 ノ如キ證書ヲ以出訴致シ候者有之右ハ飯代タル〓
@@ -12751,7 +13006,7 @@ window.addEventListener('hashchange', revealHashTarget);
 revealHashTarget();
 </script>
 <script src="../source_viewer.js?v=5a9dcb52" defer></script>
-<script src="../fulltext/fulltext.js?v=181251fe" defer></script>
+<script src="../fulltext/fulltext.js?v=4efff4a2" defer></script>
 <script>
 // 全文検索の結果から開かれたとき（?q=…）は、本文中の検索語を強調して該当箇所へ移る
 addEventListener('DOMContentLoaded', () => FullTextSearch.highlightFromQuery({ base: '../fulltext/', root: '#view-card, #view-outline' }));

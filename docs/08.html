@@ -52,7 +52,10 @@
     line-height: 1.7;
   }
   .xref-caption { color: #6b7280; }
-  section[id] { scroll-margin-top: 1rem; }
+  section[id], .card-issue { scroll-margin-top: 1rem; }
+  .card-issue { margin-top: 2rem; }
+  .card-issue-head { font-size: 1.125rem; font-weight: 700; border-bottom: 2px solid #e5e7eb; padding-bottom: .25em; margin-bottom: .75rem; }
+  .card-dategroup-head { font-weight: 500; color: #4b5563; margin: 1rem 0 .5rem; }
   section[id]:target { outline: 3px solid #eda100; outline-offset: 2px; }
 </style>
 </head>
@@ -87,24 +90,24 @@
 <summary class="px-4 py-3 text-lg font-medium cursor-pointer">目次（号一覧）</summary>
 <div class="px-4 pb-4">
 <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-1">
-<li><a href="#a08-001" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第六十四號</a></li>
-<li><a href="#a08-018" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第六十五號</a></li>
-<li><a href="#a08-038" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第六十六號</a></li>
-<li><a href="#a08-057" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第六十七號</a></li>
-<li><a href="#a08-070" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第六十八號</a></li>
-<li><a href="#a08-083" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第六十九號</a></li>
-<li><a href="#a08-105" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第七十號</a></li>
-<li><a href="#a08-116" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第七十一號</a></li>
-<li><a href="#a08-132" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第七十二號</a></li>
-<li><a href="#a08-152" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第七十三號</a></li>
-<li><a href="#a08-166" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第七十四號</a></li>
-<li><a href="#a08-177" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第七十五號</a></li>
-<li><a href="#a08-195" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第七十六號</a></li>
-<li><a href="#a08-212" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第七十七號</a></li>
-<li><a href="#a08-227" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第七十八號</a></li>
-<li><a href="#a08-243" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第七十九號</a></li>
-<li><a href="#a08-261" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第八十號</a></li>
-<li><a href="#a08-280" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第八十一號</a></li>
+<li><a href="#issue-1" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第六十四號</a></li>
+<li><a href="#issue-2" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第六十五號</a></li>
+<li><a href="#issue-3" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第六十六號</a></li>
+<li><a href="#issue-4" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第六十七號</a></li>
+<li><a href="#issue-5" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第六十八號</a></li>
+<li><a href="#issue-6" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第六十九號</a></li>
+<li><a href="#issue-7" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第七十號</a></li>
+<li><a href="#issue-8" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第七十一號</a></li>
+<li><a href="#issue-9" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第七十二號</a></li>
+<li><a href="#issue-10" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第七十三號</a></li>
+<li><a href="#issue-11" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第七十四號</a></li>
+<li><a href="#issue-12" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第七十五號</a></li>
+<li><a href="#issue-13" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第七十六號</a></li>
+<li><a href="#issue-14" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第七十七號</a></li>
+<li><a href="#issue-15" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第七十八號</a></li>
+<li><a href="#issue-16" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第七十九號</a></li>
+<li><a href="#issue-17" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第八十號</a></li>
+<li><a href="#issue-18" class="hover:underline" onclick="showView('card')">司法省日誌明治七年第八十一號</a></li>
 </ul>
 </div>
 </details>
@@ -130,6 +133,12 @@
     document.querySelectorAll('[data-type-base]').forEach(function (sec) {
       sec.style.display = visible[sec.dataset.typeBase] ? '' : 'none';
     });
+    // 中の記事が全部隠れた号・日付の見出しも隠す
+    document.querySelectorAll('.filter-group').forEach(function (g) {
+      var any = Array.prototype.some.call(g.querySelectorAll('[data-type-base]'),
+        function (sec) { return sec.style.display !== 'none'; });
+      g.style.display = any ? '' : 'none';
+    });
   }
   checkboxes.forEach(function (cb) { cb.addEventListener('change', apply); });
   document.getElementById('type-filter-all').addEventListener('click', function () {
@@ -150,6 +159,10 @@
 </div>
 
 <div id="view-card">
+<div class="card-issue filter-group" id="issue-1">
+<h2 class="card-issue-head">司法省日誌明治七年第六十四號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月二日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-001" data-type-base="伺" data-pid="1366797" data-frame="2">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -339,10 +352,10 @@
 所豈圖ン夫勝二郞何レニ潜伏致セシ哉俄ニ臥內ヘ蹈込
 ミ來リ取押ヘラレ事遂ニ露顯ニ及ヒ候
 指令
-養母養子ト通姦スル者 改定律例第二百六十一條 伯
+養母養子ト通姦スル者 改定律例第二百六十一條　伯
 叔姑ヲ姦スル者ヲ以テ論シ
 各懲役三年宛 銀
-樓 本 甚 太 郞</div>
+樓本甚太郞</div>
     
   </div>
 </section>
@@ -358,7 +371,7 @@
     </div>
     <div class="font-semibold text-base mb-1">〔司法省裁判所申渡〕</div>
     <div class="item-body text-base leading-relaxed">東京新右衞門町太田惣吉部
-原告 理代人 萬 吉 太 田
+原告　理代人　太田萬吉
 太田惣吉儀明治五年八月中佐賀縣貫属士族深町長藏外
 一人ヲ相手取東京裁判所ヘ出訴及ヒ候貸金淹滯一件當
 裁判所於テ被告深町長藏等取調候所右ハ舊小城縣ノ負
@@ -400,9 +413,9 @@
     <div class="font-semibold text-base mb-1">〔乙第四十號布達〕</div>
     <div class="item-body text-base leading-relaxed">遠江國豐田郡東平松村農肥
 田德太郞附籍舊名肥田松藏
-鈴 木 松 太 郞
+鈴木松太郞
 同郡上野部村農
-同　太 郞 輝
+同　輝太郞
 右之者共儀濱松縣ニ於テ懲役終身處刑中當三月廿二日
 午後四時過致逃七候條各地方</div>
     
@@ -420,7 +433,7 @@
     </div>
     <div class="font-semibold text-base mb-1">〔乙第四十一號布達〕</div>
     <div class="item-body text-base leading-relaxed">遠江國佐野郡掛川宿七濱平
-長男 愛 之助 磯 野
+長男　磯野愛之助
 右之者儀於演松縣懲役十年處刑中去月廿四日午後五時</div>
     
   </div>
@@ -436,8 +449,8 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/7" target="_blank" rel="noopener">原本 コマ7 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔第六號布達〕 輪廓附</div>
-    <div class="item-body text-base leading-relaxed">各 裁 判 所
-府 各 縣
+    <div class="item-body text-base leading-relaxed">各裁判所
+各府縣
 從前諸向ヨリ之伺書中擬律並諸罰則或ハ聽訟事件等往
 々混淆シ一綴ニテ差出候向モ有之候所右ハ當省各課之
 都合ニ寄自然指令淹滯ニ及ビ候儀モ有之候間自今右件
@@ -446,6 +459,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月四日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-014" data-type-base="伺" data-pid="1366797" data-frame="8">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -480,8 +496,8 @@
 ハ左ノ割合ノ通增給料御採用相成歟兩件ノ內御評議或
 ハ御取計被下度相願候也
 增給料
-使役方取締一人給料一箇月五圓ノ所 七 圓
-使役方一人給料一箇月三圓ノ所 圓 五
+使役方取締一人給料一箇月五圓ノ所　七圓
+使役方一人給料一箇月三圓ノ所　五圓
 右相伺候也
 指令
 囚ヲ外役ニ處スルノ間其逃走ヲ制御スルニ於テハ必シ
@@ -582,6 +598,11 @@
     
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-2">
+<h2 class="card-issue-head">司法省日誌明治七年第六十五號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月五日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-018" data-type-base="人事" data-pid="1366797" data-frame="12">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -593,11 +614,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/12" target="_blank" rel="noopener">原本 コマ12 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">任大觧部 權大觧部 尻 彥 田 郞 太
-任中觧部 十等出仕 倉 良 町 重
-任少觧部 十二等出仕 昌 並 木 伯
-同　同 木 靜 高 三
-補十四等出仕 山 震 牧 郞 太</div>
+    <div class="item-body text-base leading-relaxed">任大觧部　權大觧部　田尻彥太郞</div>
     
   </div>
 </section>
@@ -619,9 +636,9 @@
 ヲ以テ私ヲ打殺ス迚擊掛リシ故私モ有合フ山刀ヲ以テ
 立向ヒ勢ニ乘シテ數ケ所ヘ切付ケ遂ニ落命致サセ候
 指令
-改定律例第二百二十八條 子孫祖父母父母ヲ毆チ死ニ
+改定律例第二百二十八條　子孫祖父母父母ヲ毆チ死ニ
 至ル者
-斬罪 福 田 福 松</div>
+斬罪　福田福松</div>
     
   </div>
 </section>
@@ -695,10 +712,10 @@
 ノ通ニ付改定律例第三百三條ニ擬シ自首ス
 ルヲ以テ潜出ノ罪ヲ免シ仍ホ原犯ノ年限ヲ新ニ拘役可
 申付哉相伺候也
-指 令
-改定律例第二百九十七條 責付内逃走シテ自首ス ル 者
+指令
+改定律例第二百九十七條　責付内逃走シテ自首スル者
 ハ止タ本罪ヲ科ストアルヲ以テ論シ已ニ役過スル月日
-ヲ扣除シ殘ル月日ヲ使役スヘシ 幾 本 橋 次
+ヲ扣除シ殘ル月日ヲ使役スヘシ　橋本幾次
 懲役日數ノ算計ハ例第四十四條及ヒ五十條ニ依テ處
 分ス可シ</div>
     
@@ -743,7 +760,7 @@
     </div>
     <div class="font-semibold text-base mb-1">〔千葉裁判所伺〕 七年三月 二十七日</div>
     <div class="item-body text-base leading-relaxed">下總國結城郡結城町農吉藏
-養子盲人 邊 吉 渡 元
+養子盲人　渡邊元吉
 右ハ罪案
 ノ通鬭毆律毆傷妻妾條ニ照シ絞罪可申付哉
 奉伺候也
@@ -858,12 +875,12 @@
 候
 指令
 改定律例百二十七條 持兇噐强盜財ヲ得ル者
-斬罪 吉 若 新 井
+斬罪　新井若吉
 强盜ノ暸望及ヒ姦罪等ハ都テ輕ニ依テ論セス
 繼父カ無道ノ姦淫ヲ避ントスレハ實母毆打ノ酷虐ヲ受
 ケ正理ヲ陳テ諫爭スレ共暴威ヲ以テ逼リ姦セラル皆勢
 ヒ〓ヲヲササニニ出ルヲ以テ罪ヲ問ハス
-マ ツ
+マツ
 無罪</div>
     
   </div>
@@ -928,6 +945,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月四日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-032" data-type-base="article" data-pid="1366797" data-frame="19">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -950,6 +970,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月七日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-033" data-type-base="article" data-pid="1366797" data-frame="20">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -1030,14 +1053,14 @@
     <div class="font-semibold text-base mb-1">〔山形縣伺〕七年三月廿日</div>
     <div class="item-body text-base leading-relaxed">米金貸借ノ儀ニ付人民相互ニ約束ノ堅固ナラン爲メ證
 書面利子ノ外ニ何程ノ罰金亦ハ償金差出スヘク等ノ明
-文ヲ揭ケ約條ヲナセシ證劵ハ罰金償金共ニ取揚ヶ及裁
+文ヲ揭ケ約條ヲナセシ證劵ハ罰金償金共ニ取揚ケ及裁
 判可然哉
 商法上ニ於テ假令ハ米千俵甲ヨリ乙ヘ賣渡シノ約條ヲ
 ナシ先ツ現米三百俵ヲ相渡シ千俵ノ全價ヲ受取置キ殘
 米七百俵ハ秋實ノ時何月幾日ヲ期限トシテ悉皆相渡ス
 ク若シ違約致シタル節ハ幾許ノ償金亦ハ罰金差出ス ヘ
 ク等ノ明文アル證書ヲ以テ訴出候ハヽ償金罰金ハ却 ヘ
-テ本紙證文ノ金高ヨリ幾倍多クトモ取揚ヶ及裁判可然
+テ本紙證文ノ金高ヨリ幾倍多クトモ取揚ケ及裁判可然
 哉奉伺候也
 指令
 兩條トモ伺ノ通</div>
@@ -1063,6 +1086,11 @@
     
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-3">
+<h2 class="card-issue-head">司法省日誌明治七年第六十六號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月七日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-038" data-type-base="人事" data-pid="1366797" data-frame="22">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -1074,13 +1102,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/22" target="_blank" rel="noopener">原本 コマ22 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1"></div>
-    <div class="item-body text-base leading-relaxed">任少撿事 權少撿事 吉 田 義 正
-補十等出仕 十一等出仕 中 貞 田 靖
-任權中解部 同 儀 國 河 野
-同　吉 安 同 原 政
-同　少解部 葉 秋 益 朋
-補十一等出仕
-吉 藏 田 六</div>
+    <div class="item-body text-base leading-relaxed">任少撿事　權少撿事　吉田正義</div>
     
   </div>
 </section>
@@ -1119,11 +1141,11 @@
     <div class="font-semibold text-base mb-1">〔乙第四十二號布達〕</div>
     <div class="item-body text-base leading-relaxed">羽後國雄勝郡杉澤村管原由
 兵衞方同居舊岩崎縣卒
-田 善 織 郞 五
+織田善五郞
 同郡成澤村七平藏長男
-平 橋 藏 高
+高橋平藏
 同村七總左衞門長男
-鶴 松 橋 高
+高橋鶴松
 右ノ者共儀昨明治六年六月中秋田縣於テ同縣雄勝郡岩
 崎町居住士族河井保養母マキヲ殺害致シ金圓奪取放火
 ニ及逃走候條各地方</div>
@@ -1177,6 +1199,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月八日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-043" data-type-base="伺" data-pid="1366797" data-frame="24">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -1208,8 +1233,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/25" target="_blank" rel="noopener">原本 コマ25 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">補八等出仕 志 藤 井 正
-補十二等出仕 冀 天 野 隆</div>
+    <div class="item-body text-base leading-relaxed">補八等出仕　藤井正志</div>
     
   </div>
 </section>
@@ -1340,7 +1364,7 @@
 從テ論シ可然哉
 右科規則ト律トノ輕重ハ如何比較致シ可然哉相伺候也
 指令
-第 一條 詐僞脅迫ノ舉動ノミニ限ラス人ヲ殺傷スル等
+第一條　詐僞脅迫ノ舉動ノミニ限ラス人ヲ殺傷スル等
 ノ類律ニ正條アル者ハ律ニ依リ處斷スヘキ事
 第二條　諸規則ノ罰例ハ律ノ權衡ニ比較シ難シ故ニ第
 條伺犯罪ノ如キ律ニ該ルハ律ニ仍リ其罰例ニ該ル
@@ -1367,6 +1391,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月九日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-051" data-type-base="伺" data-pid="1366797" data-frame="28">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -1458,10 +1485,10 @@
     <div class="font-semibold text-base mb-1">〔乙第四十三號布達〕</div>
     <div class="item-body text-base leading-relaxed">羽前國田川郡鶴ケ岡南町商
 佐藤貞七同居古手賣渡世
-大 瀧 平 八
+大瀧平八
 同郡鶴ケ岡七日町舊神官小
 野一雄同居古着取次商渡世
-佐 藤善 郞 五
+佐藤善五郞
 右ノ者共儀酒田縣於テ寳貨僞造候見込ノ處平八儀ハ明
 治六年十一月中善五郞儀ハ同年十二月中逃走候條各地</div>
     
@@ -1521,6 +1548,11 @@
     
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-4">
+<h2 class="card-issue-head">司法省日誌明治七年第六十七號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月九日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-057" data-type-base="article" data-pid="1366797" data-frame="32">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -1534,7 +1566,7 @@
     <div class="font-semibold text-base mb-1"></div>
     <div class="item-body text-base leading-relaxed">白川縣伺 二十五 七年三 日月 
 元久留米縣土族
-山 岩 之 本 承
+本山岩之丞
 右ハ同縣士族島田莊太郞ニ與シ山口縣脫徒ヲ暗殺致シ
 候科ニ依リ辛未十二月三日庶人ニ下シ禁獄七年ノ刑ニ
 處セラレ其末右莊太郞列十二人ノ者同月廿三日熊本縣
@@ -1545,8 +1577,8 @@
 置課業仕覺ヘ放免後生產ニ基度旨願出旣ニ庶人ニ下サ
 レ候者ニ付願ノ通申付不苦哉
 元熊本縣士族當時大分縣管
-下平民到長男 利 毛 登
-同人四男 熊 毛 利
+下平民到長男　毛利登
+同人四男　毛利羆
 右ハ豐後國霍崎ヘ居住致シ同所ノ儀熊本縣管轄ノ節御
 布告ノ旨ニ悖リ父毛利到申聞ニ從ヒ山口縣脫徒潜伏ノ
 周旋致候ニ付伺ノ上壬申十月五日除族禁錮三年ノ刑被
@@ -1554,7 +1586,7 @@
 殘ル年限禁獄被仰付度右御聞濟ニ相成候ハヽ受取方ノ
 儀同縣ヘ御達可有之樣致度此段相伺候也
 指令
-第 一條 該犯不逞ニ係ル者ハ常律ニ依ラス特典ヲ以テ
+第一條　該犯不逞ニ係ル者ハ常律ニ依ラス特典ヲ以テ
 禁獄ニ處セラレ候儀ニ付懲役ニ換候儀難相成事
 第二條　右同斷ノ者元來鎭臺所在ノ各縣ヘ御引渡禁獄
 被仰付候儀ニ付管轄內外ニ可抅儀無之依テ滿限迄其
@@ -1645,6 +1677,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-061" data-type-base="伺" data-pid="1366797" data-frame="35">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -1728,7 +1763,7 @@
 致ス者ト相似タルヲ以 庸醫殺傷人條 庸醫鍼藥ヲ用
 ヒ誤テ本方ニ依ラス因テ死ニ致スト云ニ比照シ過失殺
 ヲ以テ論シ収贖シテ其家ニ給ス
-藤 井 金 藏
+藤井金藏
 収贖金四十圓
 妻ノ長病ヲ憂ヒ祈禳ヲ依賴シ遂ニ死ニ至ルモ罪ノ問フ
 可キナシ
@@ -1798,7 +1833,7 @@
     </div>
     <div class="font-semibold text-base mb-1">〔筑摩縣伺〕七年三月二十四日</div>
     <div class="item-body text-base leading-relaxed">飛驒國吉城郡杉崎村農長助
-原 弟 砂 甚 三 郞
+弟　砂原甚三郞
 右ハ慶應二年九月中家出兵隊中ニ入明治元年三月元會
 津藩逆徒ニ隨從箱舘ニ脫シ遂ニ外國ニ逃亡同五年十一
 月橫濱ニ皈着尙又所々漂泊罷在當 一月喚問中鄕宿預ケ
@@ -1808,7 +1843,7 @@
 該犯明治五年十二月歸朝スト雖モ其後管廳ニ陳告セ ス
 久シク擅ニ各所ニ流寓スルヲ以テ 違令條 違令重キ
 一問 ヒ
-懲役四十日 原 甚 砂 郞 三
+懲役四十日　砂原甚三郞
 逆徒ニ隨從及ヒ外國逃亡ノ罪ハ當省壬申第十號布
 達以前ニ在リ不論其私ニ歸村スルノ罪ハ責付內逃
 走ヲ以テ論スルノ限ニアラス</div>
@@ -1858,7 +1893,7 @@
     </div>
     <div class="font-semibold text-base mb-1">〔埼玉裁判所伺〕七年三月二十九日</div>
     <div class="item-body text-base leading-relaxed">武藏國足立郡鴻巢宿
-戶 藏 神 仙
+神戶仙藏
 右ハ罪案畧ノ通見惡キ楮幣ヲ以テ遣試方伊三郞ニ托ト
 雖モ到底眞幣ニシテ只手摺レ等ノ爲メ人ノ嫌フト誤認
 スルノミナレハ改定律例二百五十八條僞造ニ係ルヲ知
@@ -1869,7 +1904,7 @@
 指令
 人ノ拒ム所ノ紙幣ヲ仍ホ行使セントスルモ僞貨タルヲ
 知ルニ非サレハ
-無罪 神 戶 仙 藏</div>
+無罪　神戶仙藏</div>
     
   </div>
 </section>
@@ -1902,6 +1937,11 @@
     
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-5">
+<h2 class="card-issue-head">司法省日誌明治七年第六十八號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-070" data-type-base="伺" data-pid="1366797" data-frame="42">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -2041,7 +2081,7 @@
 最初持出セシ金子ハ盡ク遣ヒ拂ヒ養育方ニ差支ヘ候ニ
 付策ヲ搆ヒ一旦金圓取出シ談判ノ上貰ヒ受ント存シ駒
 之助ヲ欺テ申聞ケ候ハ橫濱ノ實兄卯助ヘ母ノ養育金多
-分預ヶ置キ取戾サント欲レトモ輙ク相渡サス夫安兵衛モ
+分預ケ置キ取戾サント欲レトモ輙ク相渡サス夫安兵衛モ
 右ニ同意シ彼是相拒ムニ付幸ヒ同人ハ兩替渡世ニ候間
 買求ル体ニ仕成シ洋銀千枚引出シ吳レ候ハヽ其後ハ私
 ヨリ掛合ニ及フト跡形モナキ虛言ヲ以テ相頼ミ候所同
@@ -2057,17 +2097,20 @@
 長ヘ云々届出ルモ未タ送籍ニ至ラス且ツ該犯離緣セヲ
 ルヲ知ラス故ニ戶婚律子弟私擅用財條ニ比照シ懲役一
 百日婦女例ニ依リ
-収贖金二圓五十錢 ワ カ
+収贖金二圓五十錢　ワカ
 預ケ金取立ノ周旋ヲ依賴セラレ深ク其虛實ヲ質タサ ス
 輙ク其事ニ應スルノ無念ヲ責メ
-富 士 隆
+富士隆
 呵責
 妻ヲ離緣セハ速カニ云々ヲ屆ケ送籍等順序ヲ盡ス可 キ
 ヲ其事ナク時日遷延ニ及フノ〓漏ヲ責メ
-同　安 兵 本 橋 衛</div>
+同　橋本安兵衛</div>
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十二日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-074" data-type-base="伺" data-pid="1366797" data-frame="47">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -2147,7 +2190,7 @@
 覺候儀ニ付除族ノミ申付収祿ニハ不及候哉相伺候也
 指令
 竊盜條 竊盜一圓以上懲役六十日ノ處破廉耻甚ヲ以テ
-除族〔賍金五圓餘 岡 本 寛
+除族〔賍金五圓餘〕　岡本寛
 犯時家督中ニ係ルト雖モ其發覺隱居後ニアルヲ以テ収
 祿ノ限ニアラス</div>
     
@@ -2166,7 +2209,7 @@
     <div class="font-semibold text-base mb-1">〔乙第四十六號布達〕</div>
     <div class="item-body text-base leading-relaxed">肥前國彼杵郡大村川棚村士
 族溝上久市持船久吉丸沖船
-頭同村三ツ越浦 助 久
+頭同村三ツ越浦　久助
 同船雇水夫彼杵郡彼杵村字
 音琴 藏太郞
 同船水夫同郡川棚村小串浦
@@ -2220,7 +2263,7 @@
 ハ尋常處女ノ賣淫ト異ナリ其夫ヲ輕侮シ倫理ヲ破ルノ
 甚シキ私娼ヲ街賣スル條ニ因リ難ク仍テ犯姦律和姦夫
 アル者ヲ以テ論シ懲役一年申付可然哉
-同小川町 井 カ ウ 村
+同小川町　村井カウ
 右ハ人ノ妻タルヲ承知致シナカヲ利ヲ圖リ賣淫爲致候
 ハ犯姦律和姦條媒合及ヒ容止シテ通姦セシムル者ヲ以
 テ論シ犯人ノ罪ニ三等ヲ減シ収贖シテ可然哉奉伺候也
@@ -2229,13 +2272,16 @@
 賣淫スル者私娼街賣ヲ以テ論シ 改定律第二百六十七
 條 凡私娼ヲ街賣スル窩主ハ懲役四十日婦女ハ一等ヲ
 減スト云ニ依リ懲役三十日贖ヲ聽ス
-ト コ
+コト
 収贖金七十五錢
 同條 凡私娼ヲ街賣スル窩主ハ懲役四十日贖ヲ聽ス
-同　圓 井 ウ 村 カ</div>
+同一圓　村井カウ</div>
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十三日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-080" data-type-base="article" data-pid="1366797" data-frame="51">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -2290,6 +2336,11 @@
     
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-6">
+<h2 class="card-issue-head">司法省日誌明治七年第六十九號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十三日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-083" data-type-base="article" data-pid="1366797" data-frame="52">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -2301,7 +2352,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/52" target="_blank" rel="noopener">原本 コマ52 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">九等出仕 島 事 雅 村
+    <div class="item-body text-base leading-relaxed">九等出仕島村雅事
 京都裁判所在勤申付候事</div>
     
   </div>
@@ -2318,7 +2369,7 @@
     </div>
     <div class="font-semibold text-base mb-1">○</div>
     <div class="item-body text-base leading-relaxed">任司法權中屬
-少属 中 氏 就 尾</div>
+少属　中尾氏就</div>
     
   </div>
 </section>
@@ -2359,7 +2410,7 @@
 ノ情狀ヲ酌量シ 改定律例百七十二條 姦夫姦婦姦所
 ニ撞見セラレ直ニ脫逃スルニ本夫即時ニ逐テ門外ニ至
 リ殺ス者ハ論スル勿レト云フヲ以テ論シ
-達 嘉 安 重
+安達嘉重
 無罪
 改定律例二百六十條 和姦夫アル者
 懲役一年</div>
@@ -2389,6 +2440,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十四日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-087" data-type-base="伺" data-pid="1366797" data-frame="54">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -2419,7 +2473,7 @@
     </div>
     <div class="font-semibold text-base mb-1">〔乙第四十七號布達〕</div>
     <div class="item-body text-base leading-relaxed">豐後國大分郡迫村出生
-無籍 首 藤 千 之 助
+無籍　首藤千之助
 右ノ者於白川縣盜罪有之當三月處刑濟宿村送リ途中逃
 七三月十六日同縣下府内町一丸伍平方ヘ止宿中同宿ノ
 者所持金四百圓餘盜取捕縛ノ上右吟味中同廿二日囚人
@@ -2628,8 +2682,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/58" target="_blank" rel="noopener">原本 コマ58 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">任大解部 權大解部 高 鹽 又 四 郞
-任少解部 少属 秋 長 小 川</div>
+    <div class="item-body text-base leading-relaxed">任大解部　權大解部　高鹽又四郞</div>
     
   </div>
 </section>
@@ -2657,6 +2710,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○三月五日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-099" data-type-base="article" data-pid="1366797" data-frame="59">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -2668,12 +2724,15 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/59" target="_blank" rel="noopener">原本 コマ59 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">權中判事 早 川 景 矩
+    <div class="item-body text-base leading-relaxed">權中判事早川景矩
 河野權大判事ヘ兼テ被仰付置候事務同人臨時出張中代
 理被仰付候事</div>
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○三月十日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-100" data-type-base="article" data-pid="1366797" data-frame="59">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -2689,6 +2748,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○三月廿三日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-101" data-type-base="article" data-pid="1366797" data-frame="60">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -2700,10 +2762,13 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/60" target="_blank" rel="noopener">原本 コマ60 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">長崎裁判所在勤申付候事 十二等出仕 林 尙 古</div>
+    <div class="item-body text-base leading-relaxed">長崎裁判所在勤申付候事　十二等出仕林尙古</div>
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○三月廿九日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-102" data-type-base="article" data-pid="1366797" data-frame="60">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -2715,11 +2780,14 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/60" target="_blank" rel="noopener">原本 コマ60 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">權少判事 井 上 好 武
+    <div class="item-body text-base leading-relaxed">權少判事井上好武
 箱館裁判所在勤被仰付候事</div>
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月五日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-103" data-type-base="article" data-pid="1366797" data-frame="60">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -2732,32 +2800,32 @@
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
     <div class="item-body text-base leading-relaxed">佐賀縣出張被仰付候事
-權少判事 太 郞 彌 瀧
-大解部 田 尻 彥 郞 太
-中解部 曾 藏 誠 根
+權少判事瀧彌太郞
+大解部田尻彥太郞
+中解部曾根誠藏
 佐賀縣出張申付候事 熊谷 各通 在京 勤都
-中 安 井 讓 錄
-權中解部 林 遠 重 小
-權中属 川 好 信 石
-十四等出仕 牧 山 震 太 郞
+中錄安井讓
+權中解部小林重遠
+權中属石川信好
+十四等出仕牧山震太郞
 在勤 權大解部 吉 祐 雄 本
 倉町中解部交代歸京申付候事
-熊谷裁判所在勤申付候事 中解部 倉 町 良 重
-同　明 窪 田 盛
-十三等出仕 大 眞 坪 種
+熊谷裁判所在勤申付候事　中解部倉町良重
+同　窪田盛明
+十三等出仕大坪眞種
 神奈川裁判所在勤申付候事〔各通
-權中解部 長 崎 彊
-同　吉 田 正 功
+權中解部長崎彊
+同　吉田正功
 埼玉裁判所在勤申付候事〔各通〕
 少解部 宮 畏 有 原 三
 濵中十二等出仕交代歸京申付候事
-箱館裁判所在勤申付候事 同 昌 並 木 伯
-山梨裁判所在勤申付候事 十二等出仕濱 中 義 郞
-權少撿事 勇 益 田
+箱館裁判所在勤申付候事　同　並木昌伯
+山梨裁判所在勤申付候事　十二等出仕濱中義郞
+權少撿事益田勇
 佐賀裁判所在勤申付候事
-權中解部 明 益 葉 秋
+權中解部秋葉益明
 更ニ足柄裁判所在勤申付候事
-少撿事 貞 剛 庭 伊
+少撿事伊庭貞剛
 兼テ大坂裁判所在勤申付置候處御用都合有之更ニ箱館
 裁判所在勤申付候事</div>
     
@@ -2774,11 +2842,15 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/61" target="_blank" rel="noopener">原本 コマ61 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">補十二等出仕 十三等出仕島 田 烈 彌
-補十四等出仕 十五等出仕 小 光 信 澤</div>
+    <div class="item-body text-base leading-relaxed">補十二等出仕　十三等出仕　島田烈彌</div>
     
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-7">
+<h2 class="card-issue-head">司法省日誌明治七年第七十號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十四日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-105" data-type-base="伺" data-pid="1366797" data-frame="62">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -2914,7 +2986,7 @@
 稱官條官司ノ差遣ト詐稱シ犯ス處輕キ者懲役七十日兵
 藏勘五郞三左衛門ハ又藏カ差遣人ニ模擬スル席ニ臨ム
 ト雖モ其情ヲ知ラサルヲ以テ呵責榮三郞ハ瘋癲人々ヲ
-殺ス者ニ比照シ鎖錮終身喜六ハ曾テ幼兒無知ノ〓レヲ
+殺ス者ニ比照シ鎖錮終身喜六ハ曾テ幼兒無知ノ戲レヲ
 怒リ過激ノ言ヲ以テ威迫シ恐怖セシムルヨリ榮三郞ノ
 病源ヲ濫觴スルニ至 ル者雜犯律不應爲輕ニ擬シ閏刑ニ
 換ヘ禁錮三十日等ノ指令アリ</div>
@@ -2987,6 +3059,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月四日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-112" data-type-base="article" data-pid="1366797" data-frame="68">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -2999,22 +3074,22 @@
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
     <div class="item-body text-base leading-relaxed">杤木 在勤
-大觧部 吉 則 竹 好
+大觧部吉竹好則
 座光寺權大觧部交代歸京申付候事
 京都裁判所在勤申付候事 同 澤 中 重 業
-素 同 草 野 允
+同　草野允素
 中澤大觧部交代歸京申付候事
-權大觧部 通 河 野 故
+權大觧部河野通故
 御用都合有之候條早々歸京申付候事
 杤木裁判所在勤 座光寺 同 糺
 中觧部
 源 之 助 同 橋 本
 同　草 鹿 〓
 橋本中觧部交代歸京申付候事
-中 興 哉 澤 同
+同　中澤興哉
 吉田權中觧部交代歸京申付候事
 歸京申付候事
-政 治 鎌 田
+鎌田政治
 同　權中觧部 子 忠 寳 松 同
 同　中觧部 筧 吉 島 忠 章 元 保 邦 永 成 田 同 同
 長崎權中觧部交代歸京申付候事
@@ -3025,26 +3100,29 @@
 茨城裁判所在勤申付候 事
 實 勤城 政 同 〓 東
 小野權中觧部交代歸京申付候事
-杤木裁判所在勤申付候事 十一等出仕山 豐 躬 本
-權中觧部 鶴 見 直 常
+杤木裁判所在勤申付候事　十一等出仕山本豐躬
+權中觧部鶴見直常
 山本十一等出仕交代歸京申付候事
-大坂裁判所在勤申付候事 十三等出仕 原 祐 田
-權中属 安 昇 藤 行
+大坂裁判所在勤申付候事　十三等出仕原田祐
+權中属安藤昇行
 原田十三等出仕交代歸京申付候事
-茨城裁判所在勤申付候事 權少觧部 山 路 忠 利
-權中解部 日 置 貫
+茨城裁判所在勤申付候事　權少觧部山路利忠
+權中解部日置貫
 山路權少解部交代歸京申付候事
 歸京申付候事 在勤
-權少属 岩 性 三 原
-中解部 駿 浦 正 松
-十等出仕 道 大 根 白
-少解部 忠 國 田 原
-少属 綱 方 佐 野
-十二等出仕高 靜 三 木
+權少属岩原性三
+中解部松浦正駿
+十等出仕白根大道
+少解部原田忠國
+少属佐野綱方
+十二等出仕高木靜三
 箱舘裁判所在勤申付候事 各 通</div>
     <div class="xref"><div><span class="xref-caption">正誤:</span> <a href="#a08-260" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a08-260 ○正誤</a></div></div>
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月八日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-113" data-type-base="article" data-pid="1366797" data-frame="70">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -3079,23 +3157,23 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/70" target="_blank" rel="noopener">原本 コマ70 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1"></div>
-    <div class="item-body text-base leading-relaxed">任少撿事 權少撿事 近 藤 民 之 助
-任大解部 權大解部 山 昌 行 本
-任權大解部 中解部 別 府 景 通
-同　吉 利 邊 渡 同
-同　岡 孝 康 松
-權中解部 吾 謙 藤 齋
+    <div class="item-body text-base leading-relaxed">任少撿事　權少撿事　近藤民之助
+任大解部　權大解部　山本昌行
+任權大解部　中解部　別府景通
+同　同　渡邊吉利
+同　松岡康孝
+權中解部　齋藤謙吾
 補十等出仕
-十一等出仕川 郞 上 三
+十一等出仕　川上三郞
 補十二等出仕
-十三等出仕 岡 爲 藏 村
-同　居 之 和 土 同
-權少解部 久 保 村 活 三
+十三等出仕　岡村爲藏
+同　同　土居和之
+權少解部　久保村活三
 任權少解部 十四等出仕水 遜 村
 同　下 州 郞 太
-補十四等出仕 十五等出仕澤 廉 崎 二
-同　同 川 永 圖 松
-同　岩 信 達 同 村
+補十四等出仕　十五等出仕　澤崎廉二
+同　同　松川永圖
+同　同　岩村信達
 權中解部 少解部 宮 島 幸 廉 小 平 下 立
 免本官
 依願免本官</div>
@@ -3113,31 +3191,36 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/71" target="_blank" rel="noopener">原本 コマ71 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">權少判事 瀧 彌 太 郞
+    <div class="item-body text-base leading-relaxed">權少判事瀧彌太郞
 佐賀縣出張兼テ被仰付置候處同縣裁判所被置候ニ付更
 ニ在勤被仰付候事
-大解部 田 尻 彥 太 郞
-中錄 安 井 讓
-中解部 曾 根 誠 藏
-權中属 川 好 信 石
+大解部田尻彥太郞
+中錄安井讓
+中解部曾根誠藏
+權中属石川信好
 在京
-權中解部 林 遠 重 小
-十四等出仕 牧 山 震 郞 太
+權中解部小林重遠
+十四等出仕牧山震太郞
 同前文　但シ被仰付ヲ 通各
-少撿事 藤 民 之 助 近
+少撿事近藤民之助
 更ニ橡木裁判所在勤申付候事
-八等出仕 井 志 藤 正
-十三等出仕戶 原 之 祐
+八等出仕藤井正志
+十三等出仕戶原祐之
 佐賀裁判所在勤申付候事 各
-權大解部 邊 吉 利 渡
+權大解部渡邊吉利
 更ニ埼玉裁判所在勤申付候事
 在勤 大解部 昌 山 本 行
-同　權大解部 岡 松 康 孝
-同　同 景 別 府 通
+同　權大解部松岡康孝
+同　同　別府景通
 更ニ山梨裁判所在勤申付候事</div>
     
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-8">
+<h2 class="card-issue-head">司法省日誌明治七年第七十一號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十五日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-116" data-type-base="article" data-pid="1366797" data-frame="72">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -3191,7 +3274,7 @@
 舊惡ハ月ヲ以テ算スル方其減免ヲ速ニスルノ譯ニテ兩
 岐ニ跨リ何ンニ適從可然哉奉伺候也
 指令
-第 一條 一月ハ三十日ヲ以テ算ス一箇年ノ內六箇月前
+第一條　一月ハ三十日ヲ以テ算ス一箇年ノ內六箇月前
 後ニ日數ノ差ヒアルモ妨ケナシ
 第二條　懲役ノ年月日限ハ律例第四條幷ニ昨明治六年
 第四十五號御布告ニ照シテ計算ス老幼ノ年ハ第九十
@@ -3211,7 +3294,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/74" target="_blank" rel="noopener">原本 コマ74 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">任司法權少属 十三等出仕 原 田 祐</div>
+    <div class="item-body text-base leading-relaxed">任司法權少属　十三等出仕　原田祐</div>
     
   </div>
 </section>
@@ -3230,9 +3313,9 @@
 中解部 田 身 太 屋
 在勤
 歸京申付候事
-同　權少解部 永 山 直 正
+同　權少解部永山正直
 出京申付候事
-十一等出仕 直 植 松 久
+十一等出仕植松直久
 箱舘裁判所在勤申付候事</div>
     
   </div>
@@ -3299,7 +3382,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/75" target="_blank" rel="noopener">原本 コマ75 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔濵田縣伺〕 七年三月二十四日</div>
-    <div class="item-body text-base leading-relaxed">生國不詳無籍 熊 吉
+    <div class="item-body text-base leading-relaxed">生國不詳無籍　熊吉
 右罪案
 略 之 ノ通賊盜律竊盜賍金一圓以下其人ニ脅誘セラ
 レテ窘蹙ノ餘リ隨行シ外ニ在テ瞭望スル者從ニシテ情
@@ -3310,7 +3393,7 @@
 盜品ヲ携ヘ來リ强逼シテ該犯所持ノ金錢ト交換シ去ル
 ヨリ其品ノ處置ヲ如何セント躊躇スルノ際直チニ捕 ニ
 獲ニ就ク素ヨリ盜心アルニアラス罪ノ譴ム可キナシ
-無罪 熊 吉</div>
+無罪　熊吉</div>
     
   </div>
 </section>
@@ -3353,7 +3436,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/76" target="_blank" rel="noopener">原本 コマ76 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔司法省裁判所申渡〕</div>
-    <div class="item-body text-base leading-relaxed">畠 九 十 九 大
+    <div class="item-body text-base leading-relaxed">大畠九十九
 其方儀元明石藩大属ニテ坂邸在勤中廢藩置縣續テ廢藩
 爾後殘用取扱罷在候內元少參事爲田健司發意ニ同シ自
 專相成ルヨリ舊藩邸茶室幷疊建具等欺取ル賍金五十圓
@@ -3370,7 +3453,7 @@
 借等致ス科ハ應申不申律從ヲ以テ論シ何レモ輕ニ依
 リ不論其欺キ取ル所ノ賍物ハ追徵ス
 華族松平直致家令飾磨縣士
-乙 部 族 鼎
+族　乙部鼎
 其方儀舊主松平直致手許儲蓄金ヲ以從來藩用ニ立替有
 之候所元少參事爲田健司ニ同意シ用達商人共名目ノ證
 書取拵公債ニ書出ス科不應爲重從ヲ以テ論シ一等ヲ減
@@ -3435,7 +3518,7 @@
 乎又ハ已ニ放免セシ者ナレハ其罪ヲ論セス可然哉
 右ノ件々相伺候以上
 指令
-第 條 獄司ノ名稱ナシト雖モ監獄ノ事務ヲ總掌ス ル
+第一條　獄司ノ名稱ナシト雖モ監獄ノ事務ヲ總掌スル
 者之ヲ專决スルヿヲ得ヘシ
 第二條　伺ノ通
 第三條　刑限ヲ過キ放還ノ後發覺スル者ハ其罪ヲ論セ
@@ -3462,11 +3545,14 @@
 指令
 自首スル者ハ律例ニ照準シ放免スヘシ尤モ人ノ告ント
 欲スルヲ知テ首スルノ類ハ減等例ニ照シ其罰ヲ輕減ス
-ヘ シ
+ヘシ
 但首免ヲ與フト雖モ其密造過造ノ品ハ沒取スヘシ</div>
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月八日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-128" data-type-base="article" data-pid="1366797" data-frame="80">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -3494,6 +3580,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月九日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-129" data-type-base="人事" data-pid="1366797" data-frame="81">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -3505,22 +3594,25 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/81" target="_blank" rel="noopener">原本 コマ81 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">補十一等出仕 十二等出仕 直 野 田 幹
-任少解部 權少解部 〓 居 土 誠
+    <div class="item-body text-base leading-relaxed">補十一等出仕　十二等出仕　野田直幹
+任少解部　權少解部　土居淸誠
 同　同 神 崎 稅
-補十二等出仕 十三等出仕 岡 太 師 郞
-補十三等出仕 十四等出仕 田 中 玄 文
-關 同 同 信 小 國
-補十五等出仕 等外一等出仕 小 野 良 穆
+補十二等出仕　十三等出仕　師岡太郞
+補十三等出仕　十四等出仕　田中玄文
+同　同　小關信國
+補十五等出仕　等外一等出仕　小野良穆
 少解部 土 生 淸 誠
-稅 稔 崎 同 神 同
+同　同　神崎稅稔
 更ニ茨城裁判所在勤申付候事略
-十二等出仕 縣 昌 山 雄
-十三等出仕 島 寛 五
+十二等出仕　山縣昌雄
+十三等出仕　五島寛
 箱館裁判所在勤申付候事</div>
     <div class="xref"><div><span class="xref-caption">正誤:</span> <a href="#a08-279" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a08-279 ○正誤</a></div></div>
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-130" data-type-base="article" data-pid="1366797" data-frame="81">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -3532,9 +3624,9 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/81" target="_blank" rel="noopener">原本 コマ81 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">權少判事 義 河 定 口
+    <div class="item-body text-base leading-relaxed">權少判事河口定義
 神奈川縣裁判所副所長被仰付候事
-十三等出仕 鶴 田 實
+十三等出仕鶴田實
 藹
 同　中 岡
 佐賀裁判所在勤申付候事 通</div>
@@ -3557,6 +3649,11 @@
     
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-9">
+<h2 class="card-issue-head">司法省日誌明治七年第七十二號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十五日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-132" data-type-base="伺" data-pid="1366797" data-frame="82">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -3597,7 +3694,7 @@
     </div>
     <div class="font-semibold text-base mb-1">〔筑摩縣伺〕七年三月三十一日</div>
     <div class="item-body text-base leading-relaxed">區長戶長自分取扱ノ儀自今官吏ニ準シ追テ一定ノ規則
-相立候迄區長副區長ハ十二等ョリ十五等迄云〻本年第
+相立候迄區長副區長ハ十二等ヨリ十五等迄云〻本年第
 二十八號ヲ以テ御布告相成候付テハ自今區長副區長一
 切ノ犯罪判任官ノ例ニ準シ處分可然存候得共爲念相伺
 候以上
@@ -3697,9 +3794,9 @@
     </div>
     <div class="font-semibold text-base mb-1">〔乙第四十八號布達〕</div>
     <div class="item-body text-base leading-relaxed">武藏國多摩郡野口村農田村
-五郞藏弟 田 宮 市 次 郞
+五郞藏弟田宮市次郞
 信濃國佐久郡上櫻井村農
-中 喜 之 助 田
+田中喜之助
 右ノ者共儀長野縣ニ於テ懲役終身處刑中當四月一日夜</div>
     
   </div>
@@ -3716,7 +3813,7 @@
     </div>
     <div class="font-semibold text-base mb-1">〔司法省裁判所申渡〕</div>
     <div class="item-body text-base leading-relaxed">故山城屋和介召仕
-澤 光 次 郞 深
+深澤光次郞
 其方儀本日午前第九時可罷出旨兼テ相達置候處遲參致
 ス科改定律第二百八十八條式ニ違フ輕キ者ニ擬シ贖罪
 金七十五錢申付候事</div>
@@ -3751,6 +3848,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十一日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-140" data-type-base="人事" data-pid="1366797" data-frame="86">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -3762,14 +3862,13 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/86" target="_blank" rel="noopener">原本 コマ86 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">任權中解部 少解部 道 羽 貫 田
-任司法少属 權少属 佐 敬 久 野
-任權少解部 十五等出仕宇 忠 美 佐 正
-補十三等出仕 十四等出仕 杉 美 綿 本
-補十五出仕 等外 一等出仕大山 篤行</div>
+    <div class="item-body text-base leading-relaxed">任權中解部　少解部　羽田道貫</div>
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十二日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-141" data-type-base="人事" data-pid="1366797" data-frame="87">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -3781,21 +3880,21 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/87" target="_blank" rel="noopener">原本 コマ87 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1"></div>
-    <div class="item-body text-base leading-relaxed">任大解部 權大解部 河 野 故 通
-任權大解部 中解部 森 造 可
-同　同 松 弘 小 隆
-任中解部 權中解部 佐 々 木 立 重
+    <div class="item-body text-base leading-relaxed">任大解部　權大解部　河野通故
+任權大解部　中解部　森可造
+同　同　小松弘隆
+任中解部　權中解部　佐々木玄重
 同　權少解部 十四等出仕 吉 野 憲 貞 武 義 同 浦 利 木 村 章 牧 命 順
 同
 任少解部
 同
 任司法權少属
-任權小解部 同 岩 鼻 克
+任權小解部　同　岩鼻克
 補十四等出仕
-十五等出仕 邊 茂 松 渡
-筧 武 文 同 同
-同　貞 長 尾 夫 同
-茂 松 林 同 同
+十五等出仕　渡邊松茂
+同　同　筧武文
+同　同　長尾貞夫
+同　同　林松茂
 等外一等出仕 同 同 倉 井 吾 愼 谷 鎌 郞 愿 田 - 衡 山 深 正 同 保 佑 大
 同
 同
@@ -3814,13 +3913,16 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/87" target="_blank" rel="noopener">原本 コマ87 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">佐賀裁判所在勤申付候事 大解部 河 通 故 野
+    <div class="item-body text-base leading-relaxed">佐賀裁判所在勤申付候事　大解部河野通故
 大坂 在勤
 權大解部 小 松 隆 弘
 更ニ大坂裁判所在勤申付候事</div>
     <div class="xref"><div><span class="xref-caption">正誤:</span> <a href="#a08-279" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a08-279 ○正誤</a></div></div>
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十七日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-143" data-type-base="伺" data-pid="1366797" data-frame="88">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -3860,8 +3962,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/88" target="_blank" rel="noopener">原本 コマ88 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">任司法權少錄 十四等出仕市 川 友 正
-補十四等出仕 腰 高 禮 司</div>
+    <div class="item-body text-base leading-relaxed">任司法權少錄　十四等出仕　市川友正</div>
     
   </div>
 </section>
@@ -3878,7 +3979,7 @@
     <div class="font-semibold text-base mb-1">○</div>
     <div class="item-body text-base leading-relaxed">同縣權大属吉江精疑義ノ擬斷ヲ不經伺シ
 テ處斷セシ進退伺ニ擬律允當ナルヲ以テ罪ノ間フ可 キ
-ナ シ</div>
+ナシ</div>
     <div class="xref"><div><span class="xref-caption">正誤:</span> <a href="#a08-293" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a08-293 ○正誤</a></div></div>
   </div>
 </section>
@@ -3893,12 +3994,12 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/89" target="_blank" rel="noopener">原本 コマ89 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">中解部 見 尙 立 文
+    <div class="item-body text-base leading-relaxed">中解部立見尙文
 御用都合有之歸京申付候事
-同　同 豐 原 基 臣
+同　同　豐原基臣
 高橋十一等出仕交代歸京申付候事
-新治裁判所在勤申付候事十一等出仕 高 橋 次 敬 郞
-属 里 光 吉 小
+新治裁判所在勤申付候事十一等出仕高橋敬次郞
+属小里光吉
 長崎裁判所在勤申付候事</div>
     <div class="xref"><div><span class="xref-caption">正誤:</span> <a href="#a08-293" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a08-293 ○正誤</a></div></div>
   </div>
@@ -3920,6 +4021,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十八日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-148" data-type-base="伺" data-pid="1366797" data-frame="89">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -3977,6 +4081,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十九日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-150" data-type-base="伺" data-pid="1366797" data-frame="91">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -4004,7 +4111,7 @@
 該犯怒ニ乘シ拳ヲ以テ他ヲ一毆シ頃ラクシテ餘病ヲ發
 シ死ニ至ルト雖モ諸醫ノ診證アルヲ以テ鬭毆條手ヲ以
 テ人ヲ毆チ傷ヲ成サヽル者
-懲役二十日 中 吉 村 常</div>
+懲役二十日　中村常吉</div>
     
   </div>
 </section>
@@ -4031,6 +4138,11 @@
     
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-10">
+<h2 class="card-issue-head">司法省日誌明治七年第七十三號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十九日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-152" data-type-base="伺" data-pid="1366797" data-frame="92">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -4092,6 +4204,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十五日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-154" data-type-base="伺" data-pid="1366797" data-frame="94">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -4118,6 +4233,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月二十日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-155" data-type-base="伺" data-pid="1366797" data-frame="94">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -4275,8 +4393,8 @@
     </div>
     <div class="font-semibold text-base mb-1">〔司法省裁判所申渡〕</div>
     <div class="item-body text-base leading-relaxed">龜井町半三郞店金太郞召仕
-馬士 辰 郞 五
-人 六 外
+馬士　辰五郞
+外六人
 其方共儀先年流罪申付置候所今般律例改正相成ニ付一
 同放免申付候事　但夫々其筋ノ者ヘ引渡シ遣ス</div>
     
@@ -4431,6 +4549,11 @@
     <div class="xref"><div><span class="xref-caption">正誤:</span> <a href="#a08-293" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a08-293 ○正誤</a></div></div>
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-11">
+<h2 class="card-issue-head">司法省日誌明治七年第七十四號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月二十日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-166" data-type-base="伺" data-pid="1366797" data-frame="102">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -4532,7 +4655,7 @@
     </div>
     <div class="font-semibold text-base mb-1">〔新治裁判所伺〕六年十月二十九日</div>
     <div class="item-body text-base leading-relaxed">常陸國新治郡眞家村農
-穗 治 助 坂
+穗坂治助
 妻ヨテ外五名供狀ノ通ニ付人命律瘋癲殺人
 舊條例其父ヲ傷スルハ止タ鎖錮セシムトアルニ依リ其
 子ヲ傷スル者モ鎖錮終身可申付哉奉伺候也
@@ -4574,9 +4697,9 @@
 セ ント欲シ分娩ノ後之レヲ鞫育スル既ニ十箇月ニシテ
 故アリ其妻ヲ離婚スル後其子ヲ沈殺スルニ依リ 毆祖
 父母父母條 子孫ヲ故殺スル者ニ擬シ
-懲役三年 上 藏 耘 村
+懲役三年　村上耘藏
 嬰兒ヲ沈殺スルノ情ヲ知ラサレハ罪ノ間フヘキナ シ
-無罪 ト メ</div>
+無罪　トメ</div>
     
   </div>
 </section>
@@ -4632,7 +4755,7 @@
 傷ヲ以テ論シ収贖スルヿヲ聽スト云ニ依リ収贖金四十
 圓ヲ給スヘキ處同居ニ係ルヲ以テ
 免罪 田茂左衛門 西
-収贖金ハ同居ニ係ルヲ以テ給スヘキノ家ナキ 官 毛
+収贖金ハ同居ニ係ルヲ以テ給スヘキノ家ナキモ官
 沒ノ限ニ非ス</div>
     
   </div>
@@ -4653,7 +4776,7 @@
 ノ通リ諏訪下社奉仕五官祝ト唱從前何事モ
 重立取扱來候處六七箇年以還社中舞家其他頽敗相成候
 折柄修覆ノ爲先前ヨリ社頭貯蓄ノ金ヲ以テ買入置候山
-林田畑其他所々ヨリ寄進ノ品等賣拂社費ニ仕向ヶ可申
+林田畑其他所々ヨリ寄進ノ品等賣拂社費ニ仕向ケ可申
 筈决定致スト雖社中一統ノ公論ヲ不經右等ノ者共限ニ
 テ取計追々金策モ相整候處戊辰十一月以還復飾神職ノ
 者ト座席爭論相發シ彌以諸入費相嵩ミ他借等不少ヨリ
@@ -4667,25 +4790,25 @@
 スル所ノモノヲ擅ニ賣却シ私費ニ充ツ其狀情ヲ酌量シ
 費用受寄財產條ニ比照シテ論シ一等赦後ノ首賍二百圓
 餘坐賍ニ一 等ヲ減シ懲役百日閏刑條ニ依リ
-禁錮百日〔賍金二百五十七圓餘 今 井 麻 須 美
+禁錮百日〔賍金二百五十七圓餘〕　今井麻須美
 一等赦前後ノ從賍ヘ併スレハ罪輕キニ依リ一ノ首
 賍ヲ以テ科ス 未タ接受セサル賍金十五圓及ヒ社
 費ニ充ツルハ除棄ス
 罪名今井麻須美ト同シ止タ赦後首從ノ賍ヲ併セ二百圓
 餘改定律例第七十二條ニ依リ一等ヲ減シ坐賍ニ又一等
 ヲ減シ懲役九十日閏刑條ニ依リ
-同　九十日〔賍金三百六十五圓餘〕 山 田 功
+同　九十日〔賍金三百六十五圓餘〕山田功
 一等赦前首從ノ賍ハ併賍スルモ罪等シ故ニ止タ赦
 後首從ノ賍ヲ以テ科ス 未タ接受セサル云々今井
 麻須美ニ同シ
 同上賍金六十圓以上坐賍ニ一等ヲ減シ禁錮四十日ノ處
 七十年以上ナルヲ以テ例ニ照シ
-収贖金一圓〔贓金七十圓餘〕 山 多 宮 田
+収贖金一圓〔贓金七十圓餘〕　山田多宮
 未タ接受セサル贓金十圓及ヒ社費ニ充ルハ除棄ス
 同上贓金二十圓以上從タルヲ以テ一等ヲ減シ坐贓ニ又
 等ヲ減ス
-禁錮十日〔贓金三十一 圓餘〕 保 之 井 桃
-同　〔同二十八圓餘 原 眞 名 井 上</div>
+禁錮十日〔贓金三十一圓餘〕　桃井保之
+同　〔同二十八圓餘〕　上原眞名井</div>
     
   </div>
 </section>
@@ -4713,7 +4836,7 @@
 至ルモ燒死ハ祖父ノ自ヲ取ルヲ以テ唯タ自家燒毀ノ罪
 ヲ責メ失火條火ヲ失シテ自己ノ宅舍ヲ燒ク者懲役二十
 日ノ處婦女タルヲ以テ例ニ依リ収贖ヲ聽ス
-収贖金五十錢 カ ノ</div>
+収贖金五十錢　カノ</div>
     
   </div>
 </section>
@@ -4767,14 +4890,14 @@
 九男一女ヲ輪姦スルハ姦婦ノ自ラ許スニ係ルト雖モ其
 猥褻ノ行ヒ風俗ヲ紊亂スルニ依リ情ヲ量リ雜犯律不應
 重ニ問擬シ
-懲役七十日宛 吉 光 小平 治
-下 八 人 以
+懲役七十日宛　吉光小平治
+以下八人
 同律不應重ニ問擬シ懲役七十日収贖ヲ聽ス
 収贖金一圓七十五錢
 同伴ノ輸奸スルヲ傍觀シテ勸解セサルヲ以テ
-呵責 安 光 石 次 郞
+呵責　石光安次郞
 其罪ノ問可キナシ
-柳 梅 田 藏
+梅田柳藏
 無罪</div>
     
   </div>
@@ -4795,6 +4918,11 @@
     <div class="xref"><div><span class="xref-caption">訂正対象:</span> <a href="#a08-052" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a08-052 〔兵庫裁判所伺〕 七年三月 十七日</a></div></div>
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-12">
+<h2 class="card-issue-head">司法省日誌明治七年第七十五號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月廿三日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-177" data-type-base="伺" data-pid="1366797" data-frame="112">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -4916,7 +5044,7 @@
 三郞左衞門ノ銃丸ヲ受ルヤ自ラ顚蹶スルニ由テ火門火
 ヲ發シ遂ニ死ニ至ルヲ以テ彈者ノ失ニ係ラス罪ノ論ス
 可キナシ
-無罪 石 黑 儀 衞 兵</div>
+無罪　石黑儀兵衞</div>
     
   </div>
 </section>
@@ -4936,33 +5064,33 @@
 照シ皆除族絞罪可申付哉奉伺候也
 指令
 該犯會計ノ任ニ在リテ本藩製造ノ紙幣三萬圓ヲ私借ス
-ト雖モ悉皆竊カニ償還斷裁ス且ッ千圓ヲ轉借スルモ亦
+ト雖モ悉皆竊カニ償還斷裁ス且ツ千圓ヲ轉借スルモ亦
 完納スルヲ以テ更ニ官金ニ虧欠スル所ナシ因テ例第百
 六條監臨主守監守スル所ノ錢糧ヲ私ニ借用シ若クハ人
 ニ轉借シ云々事未タ發覺セスシテ完備スル者ハ止タ犯
 情ヲ量リテ不應爲ニ問シ輕重ヲ分ツトアルヲ以テ論シ
 雜犯律不應爲重ニ問擬シ懲役七十日士族タルヲ以テ閏
 刑 ニ換ヘ
-禁錮七十日 川 吉 利 小
+禁錮七十日　小川吉利
 餘罪ハ等シク或ハ輕シ並ニ論セス但配分ヲ受ケ及
 ヒ巳レニ入ルヽ利金ハ追シテ官ニ沒ス
 該犯
 シ因テ小川吉利ト同ク擬シ
-同　大 島 武 重
+同　大島武重
 餘罪云々同上但シ配分ヲ受ル利金ハ追シテ官ニ沒
 ス
 大島武重ト同ク擬シ
-白 吉 次 石 郞
+白石吉次郞
 同
 同
-島 與 川 三 郞
+川島與三郞
 但書同上
 該犯等會計主任ニ在リテ小川吉利等本藩製造ノ紙幣三
 萬圓ヲ私借セル情由ヲ知テ共ニ容隱スト雖モ悉皆償還
 斷裁スルヲ以テ更ニ官金ニ虧欠スル所ナシ因テ小川吉
 利等ト同ク擬シ
-同　牧 道 利 西
-同　笠 重 親 原 小
+同　西牧利道
+同　小笠原重親
 但書同上</div>
     
   </div>
@@ -5027,7 +5155,7 @@
 ニ係ル本文ノ如キ區長戶長等ノ實印ヲ僞造スル者ハ ル
 僞造私印本律ニ依ル可シ出稼劵送籍狀財物借貸等ノ文
 書 ニ僞印スル者ハ改定律例第二百四十六條ニ依テ科斷
-シ ス ヘ</div>
+スヘシ</div>
     
   </div>
 </section>
@@ -5115,7 +5243,7 @@
 凡ソ寺職ノ者火ヲ失シ其寺ヲ燒キ或ハ他ノ宅舍ハ延燒
 ス ル者如何處斷可然哉相伺候也
 指令
-第 一條 本文ノ如キハ初犯ヲ以テ論ス
+第一條　本文ノ如キハ初犯ヲ以テ論ス
 第二條　準盜トイヘトモ恐喝取財ノ如キ加等スル者ハ財
 ヲ得ストイヘトモ 一等ヲ加ヘ懲役五十日加等セサル者
 ハ伺ノ通
@@ -5162,7 +5290,7 @@
 指令
 故サラニ棄毀スル者ハ不應爲重ニ問ヒ實决シ誤テスル
 者ハ同シク輕ニ問ヒ贖ヲ聽ス　但開業式ノ成否ニ區別
-ナ シ</div>
+ナシ</div>
     
   </div>
 </section>
@@ -5201,7 +5329,7 @@
 官幣國幣大中小社及ヒ府縣鄕社ノ賽錢ヲ盜ム者 ハ各如
 何處斷可致哉相伺候也
 指令
-第 條 大祀大社神前ノ賽錢ヲ盜ム者ハ各盜罪ヲ以テ
+第一條　大祀大社神前ノ賽錢ヲ盜ム者ハ各盜罪ヲ以テ
 論シ罪懲役終身ニ止ル
 第二條　官幣國常大中小社及ヒ府縣鄕村社神前ノ賽錢
 ヲ盜ム者ハ各盜罪ニ準シテ論ス</div>
@@ -5247,6 +5375,11 @@
     
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-13">
+<h2 class="card-issue-head">司法省日誌明治七年第七十六號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月廿三日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-195" data-type-base="伺" data-pid="1366797" data-frame="122">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -5330,7 +5463,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/124" target="_blank" rel="noopener">原本 コマ124 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">補十五等出仕 潴縣十 等出仕 井 尙 五 潔 永 三</div>
+    <div class="item-body text-base leading-relaxed">補十五等出仕　三潴縣十五等出仕　永井尙潔</div>
     
   </div>
 </section>
@@ -5375,6 +5508,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十五日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-200" data-type-base="人事" data-pid="1366797" data-frame="125">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -5386,10 +5522,13 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/125" target="_blank" rel="noopener">原本 コマ125 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">補十等出仕 十一等出仕西 讓 村</div>
+    <div class="item-body text-base leading-relaxed">補十等出仕　十一等出仕　西村讓</div>
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十七日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-201" data-type-base="人事" data-pid="1366797" data-frame="125">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -5402,10 +5541,13 @@
     </div>
     <div class="font-semibold text-base mb-1">○</div>
     <div class="item-body text-base leading-relaxed">補十一等出仕
-岡 之 武 利</div>
+利岡武之</div>
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十八日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-202" data-type-base="人事" data-pid="1366797" data-frame="126">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -5417,10 +5559,13 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/126" target="_blank" rel="noopener">原本 コマ126 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">任司法權少属 十四等出仕 代 松 雅 長</div>
+    <div class="item-body text-base leading-relaxed">任司法權少属　十四等出仕　松代雅長</div>
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十九日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-203" data-type-base="article" data-pid="1366797" data-frame="126">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -5432,12 +5577,15 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/126" target="_blank" rel="noopener">原本 コマ126 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">大解部 板 倉 勝 達
+    <div class="item-body text-base leading-relaxed">大解部板倉勝達
 堤權少判事外務省出張中兼テ同人取扱ノ事務當分代理
 申付候事</div>
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月二十四日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-204" data-type-base="伺" data-pid="1366797" data-frame="126">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -5546,7 +5694,7 @@
 絶命ニ及ホシ候
 指令
 鬪毆及故殺條人ヲ故殺スル者
-吉 野 庄 小
+小野庄吉
 姦罪ハ輕シ論セス</div>
     
   </div>
@@ -5591,7 +5739,7 @@
     </div>
     <div class="font-semibold text-base mb-1">〔東京裁判所伺〕七年四月五日</div>
     <div class="item-body text-base leading-relaxed">東京品川步行新宿商
-住 吉 淸 二 郞
+住吉淸二郞
 右者强盜瞭望スル者ニ付改定律例第百二十八條ニ照シ
 處斷ノ儀相伺候所瞭望二次以上ニ及フヲ以テ本刑ヲ加
 トアツテ斬罪ト本日御指令有之瞭望二次以上ニ及フ者
@@ -5625,12 +5773,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/131" target="_blank" rel="noopener">原本 コマ131 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1"></div>
-    <div class="item-body text-base leading-relaxed">任少法官 權大解部 位 正 楠
-任權大解部 九等出仕 讓 神 山
-任少解部 權少解部 間 實 野
-補十二等出仕 十三等出仕鎌 田 冲 太
-任權少解部 十四等出仕 松 貫 義 野
-補十五等出仕 等外一等出仕原 頴</div>
+    <div class="item-body text-base leading-relaxed">任少法官　權大解部　楠正位</div>
     
   </div>
 </section>
@@ -5651,6 +5794,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月二十日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-211" data-type-base="人事" data-pid="1366797" data-frame="132">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -5664,10 +5810,15 @@
     <div class="font-semibold text-base mb-1"></div>
     <div class="item-body text-base leading-relaxed">達書 〕
 御用都合有之歸京申付候事
-埼玉裁判所在勤申付候事十等出仕 大河平 隆</div>
+埼玉裁判所在勤申付候事　十等出仕　大河平隆</div>
     
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-14">
+<h2 class="card-issue-head">司法省日誌明治七年第七十七號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月廿四日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-212" data-type-base="伺" data-pid="1366797" data-frame="132">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -5783,6 +5934,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月廿二日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-215" data-type-base="人事" data-pid="1366797" data-frame="136">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -5795,10 +5949,13 @@
     </div>
     <div class="font-semibold text-base mb-1">○</div>
     <div class="item-body text-base leading-relaxed">補十四等出仕
-岸 眞一郞</div>
+岸眞一郞</div>
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月廿三日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-216" data-type-base="人事" data-pid="1366797" data-frame="136">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -5812,14 +5969,17 @@
     <div class="font-semibold text-base mb-1"></div>
     <div class="item-body text-base leading-relaxed">乙第五十二號布達
 陸前國宮城郡高城驛農
-甚 吉 三 浦
+三浦甚吉
 同國黑川郡大松驛柏木村士
-族祐安弟 伊 藤 辰 三 郞
+族祐安弟伊藤辰三郞
 右之者共儀於宮城縣懲役終身處刑中本月八日致逃亡候
 條各地方</div>
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月廿五日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-217" data-type-base="伺" data-pid="1366797" data-frame="136">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -5977,7 +6137,7 @@
 百日ニ科ス後項囚ト同罪ナル者ハ罪囚本罪ノ輕重
 從フテ捕吏ノ罪ヲ定擬スルカ故ニ懲役百日ヨリ輕キ
 モ之レ有ル可シ權衡不安ナルニ似タリト雖モ前項ハ
-贖ヲ聽シ後項ハ實斷ニ該リ且該犯ノ死ニ入ルャ懲役
+贖ヲ聽シ後項ハ實斷ニ該リ且該犯ノ死ニ入ルヤ懲役
 終身ノ重ニ至ル故ニ前後ノ兩項自ヲ輕重アリト知 ル
 可シ
 第四條　故出人罪ヲ以テ論ス故サラニ推鞫ヲ盡サス放
@@ -6072,6 +6232,11 @@
     
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-15">
+<h2 class="card-issue-head">司法省日誌明治七年第七十八號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月廿五日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-227" data-type-base="布達" data-pid="1366797" data-frame="142">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -6180,7 +6345,7 @@
     <div class="font-semibold text-base mb-1">○</div>
     <div class="item-body text-base leading-relaxed">愛知縣ヨリ 七年 四月 同縣士族須賀銀十郞處置伺ニ鬪毆人ヲ
 殺ス者懲役終身ノ處士族タルヲ以テ閏刑ニ換ユト指令
-ア リ</div>
+アリ</div>
     
   </div>
 </section>
@@ -6215,7 +6380,7 @@
 右相伺候也
 別紙 〕
 都濃郡須萬村法華宗榮昌寺
-住職 谷 日 隨 片
+住職　片谷日隨
 其方儀得度証據物遺失スル科職制律ニ依リ金一圓五十
 錢贖罪申付ル
 指令
@@ -6227,6 +6392,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○三月廿二日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-233" data-type-base="裁判所申渡" data-pid="1366797" data-frame="146">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -6239,15 +6407,15 @@
     </div>
     <div class="font-semibold text-base mb-1">〔臨時裁判所申渡〕</div>
     <div class="item-body text-base leading-relaxed">酒田縣貫属士族
-水 次 野 年
-外 廿 人 八
+水野年次
+外廿八人
 其方共儀當裁判所ニ出訴スル始末ハ明治六年當省第二
 十三號布達ニ照シ無搆
 但自今他管地寄留移住等ヲ欲スル節ハ各其管轄廳
 願出可申事
 同縣士族
-守 前 倉 小
-親 中 胤 追
+小倉守前
+中追胤親
 其方共儀桂田寛吾屠服ノ際其席末ニ列スト雖モ其身之
 ヲ阻當スルノ權ナク唯伍長等ノ所爲ヲ徒視シテ事ニ與
 ラス仍テ其罪ヲ問ハス且當裁判所ニ越訴スル始末ハ明
@@ -6277,8 +6445,8 @@
     </div>
     <div class="font-semibold text-base mb-1">〔申渡書〕 〓</div>
     <div class="item-body text-base leading-relaxed">酒田縣貫属士族
-林 若 守 信
-外 三 名
+若林守信
+外三名
 其方共儀後田山開墾中桂田寛吾盟約ニ背ク廉有之トテ
 萩谷彌太郞ノ發意ニテ寛吾ニ差逼リ自殺セシムル砌傍
 觀致ス科人命律同行知有謀害條ニ擬シ禁錮九十日宛可
@@ -6304,6 +6472,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○三月三十一日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-236" data-type-base="article" data-pid="1366797" data-frame="148">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -6340,13 +6511,13 @@
     </div>
     <div class="font-semibold text-base mb-1">〔申渡書〕</div>
     <div class="item-body text-base leading-relaxed">酒田縣貫属士族
-萩 谷 彌 太 郞
+萩谷彌太郞
 其方儀後田山開墾中桂田寛吾盟約ニ背ク廉有之トテ中
 山四郞等ニ申含メ寛吾ニ差逼リ自殺セシムル科圖毆律
 威力制縛條ヲ以テ論シ事情風習ヲ量リ二等ヲ減シ該犯
 三流一減ノ時ニ在ルヲ以テ依新頒律條ニ依リ禁錮三年
 申付候事
-同縣士族 山 口 昇 兵 衛
+同縣士族　山口昇兵衛
 其方儀後田山開墾中尾崎恭造稻田隼雄脫走ノ砌其筋ノ
 申付ヲ受ケ追捕ニ差遣セラルヽ節隼雄ハ兒器ヲ持シ拒
 捕スルニ依リ刃傷ニ及ヒ終ニ自殺スルニ至 ル恭造ハ捕
@@ -6354,7 +6525,7 @@
 ハ桂田寛吾盟約ニ背クトテ萩谷彌太郞ノ發意ニ從ヒ寛
 吾ニ差逼リ自殺セシムル等ノ科圖毆律威力制縛條ヲ以
 テ論シ彌太郞ノ從トナシ禁錮二年半申付候事
-同　長 屋 藏 玄
+同　長屋玄藏
 其方儀天野靜一郞ヲ看守スル中同人申出ニ任セ介錯致
 シ自殺セシメ靜一郞看守人ノ隙ヲ伺ヒ自殺ニ及フ抔詐
 テ申告シ謹慎七日ニ處セラレ又ハ後田山開墾中桂田寛
@@ -6368,6 +6539,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月廿七日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-238" data-type-base="伺" data-pid="1366797" data-frame="149">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -6453,10 +6627,13 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/151" target="_blank" rel="noopener">原本 コマ151 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">箱館裁判所在勤申付候事 少解部 田 敬 和 正</div>
+    <div class="item-body text-base leading-relaxed">箱館裁判所在勤申付候事　少解部和田正敬</div>
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十四日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-242" data-type-base="伺" data-pid="1366797" data-frame="151">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -6481,6 +6658,11 @@
     
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-16">
+<h2 class="card-issue-head">司法省日誌明治七年第七十九號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月廿七日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-243" data-type-base="伺" data-pid="1366797" data-frame="153">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -6590,14 +6772,14 @@
     </div>
     <div class="font-semibold text-base mb-1">〔足柄裁判所伺〕六年九月四日</div>
     <div class="item-body text-base leading-relaxed">相模國足柄下郡矢作村農高
-橋惣之助娘 キ マ
+橋惣之助娘　マキ
 ノ通ニ付律ニ正條無之仍テ擬律奉伺候也
 右ハ罪案之
 指令
 瘋癲ヲ發シ人ノ宅舍ヘ放火スルハ鎖錮終身ニ當ルト雖
 モ 其病已ニ痊愈スルヲ以テ不問ニ置キ止タ痊愈後犯ス
 所ノ竊盜罪ヲ科ス竊盜條竊盜一圓以上
-懲役六十日〔賍金一圓餘〕 キ マ</div>
+懲役六十日〔賍金一圓餘〕　マキ</div>
     
   </div>
 </section>
@@ -6743,10 +6925,13 @@
 非ス唯依頼スル事件ヲ等閑リ遷延スルヲ以テ某人ヲ困
 却セシメハ速ニ事ノ處置アラントノ意ニ出ルヲ以テ雜
 犯律不應爲ノ輕キニ擬シ
-懲役三十日 吉 進 平</div>
+懲役三十日　進吉平</div>
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月廿八日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-252" data-type-base="article" data-pid="1366797" data-frame="160">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -6758,7 +6943,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/160" target="_blank" rel="noopener">原本 コマ160 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">十四等出仕 野 兼 崎 愛
+    <div class="item-body text-base leading-relaxed">十四等出仕野崎兼愛
 箱館裁判所在勤申付候事</div>
     
   </div>
@@ -6774,11 +6959,14 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/160" target="_blank" rel="noopener">原本 コマ160 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">十三等出仕藤 井 齋 助
+    <div class="item-body text-base leading-relaxed">十三等出仕藤井齋助
 補十二等出仕</div>
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十六日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-254" data-type-base="article" data-pid="1366797" data-frame="160">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -6790,11 +6978,14 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/160" target="_blank" rel="noopener">原本 コマ160 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">林 光 雄 伴
+    <div class="item-body text-base leading-relaxed">伴林光雄
 補十四等出仕</div>
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月十七日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-255" data-type-base="人事" data-pid="1366797" data-frame="160">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -6807,10 +6998,13 @@
     </div>
     <div class="font-semibold text-base mb-1">○</div>
     <div class="item-body text-base leading-relaxed">補十四等出仕
-吉 左 平 太 松</div>
+吉松左平太</div>
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月廿三日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-256" data-type-base="人事" data-pid="1366797" data-frame="160">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -6822,10 +7016,13 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/160" target="_blank" rel="noopener">原本 コマ160 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">依願免出仕 十五等出仕 山 本 雅 考</div>
+    <div class="item-body text-base leading-relaxed">依願免出仕　十五等出仕　山本雅考</div>
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月廿四日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-257" data-type-base="人事" data-pid="1366797" data-frame="161">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -6837,10 +7034,13 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/161" target="_blank" rel="noopener">原本 コマ161 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">免出仕 十五等出仕 岸 義 本 正</div>
+    <div class="item-body text-base leading-relaxed">免出仕　十五等出仕　岸本義正</div>
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月廿九日分</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-258" data-type-base="伺" data-pid="1366797" data-frame="161">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -6926,6 +7126,11 @@
     <div class="xref"><div><span class="xref-caption">訂正対象:</span> <a href="#a08-112" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a08-112 〔達書〕</a></div></div>
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-17">
+<h2 class="card-issue-head">司法省日誌明治七年第八十號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月廿九日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-261" data-type-base="伺" data-pid="1366797" data-frame="164">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -6986,17 +7191,17 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/165" target="_blank" rel="noopener">原本 コマ165 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔申渡書〕</div>
-    <div class="item-body text-base leading-relaxed">酒田縣大属長 澤 光 久
+    <div class="item-body text-base leading-relaxed">酒田縣大属長澤光久
 其方儀大赦ノ令ヲ奉シ罪囚酒井權七郞外一人放免致ス
 キ處復タ犯スヿアランヲ畏レ仍ホ囚禁シテ經過スル ヘ
 科懲役三年ヲ入ルヽト做シ斷獄律出入人罪條罪ヲ斷シ
 テ入ルヽニ失スルト云ヲ以テ論シ其懲役三年ヨリ三等
 ヲ减シ一年半所由ヲ首トナシ公罪例ニ依リ罰俸一月半
 申付候事
-同縣權大属山 岸 貞 文
+同縣權大属山岸貞文
 同前文　但シ酒井權七郞ヲ池田讓輔ニ作ル
-區長 久 厚 松 本
-口 同 矢 親 敬
+區長　松本久厚
+同　矢口親敬
 其方儀元大泉藩ノ節久厚ハ大參事親敬ハ權大參事奉職
 中士族卒ノ舊祿ヲ改革シテ上申スルノ后チ其届高ノ內
 ヨリ有餘ヲ生シ專斷ヲ以テ多員ノ分家ヲ許シ各多少ノ
@@ -7007,10 +7212,10 @@
 但親敬ハ士族ノ戶主太田資祇ヲシテ中村家ノ養子ト
 ナシ其家ヲ襲カシムルハ舊藩制ニ沿因スルヲ以テ其
 罪ヲ不問
-酒田縣士族水 剛 重 野
+酒田縣士族水野重剛
 同前文　但シ各多少ヨリ救恤迄ノ廿六字ナリ末段ノ區
 長ヲ非職ニ作ル
-戶長 安 吉 藤 武
+戶長　安藤武吉
 其方儀元大泉藩少參事奉職東京誥合中士族ノ子弟ヲシ
 テ新ニ分家セシムルモノモ各從前戶主素祿ノ体裁ニ取
 調タル届書大參事ヨリ廻シ來ル迪事實ヲ陳述セス其儘
@@ -7020,7 +7225,7 @@
 リ贖罪金三十圓申付候事
 但天野講一郞自刃一件ニ付吟味遂ル處不束ノ筋無之
 ニ付無搆
-酒田縣中属春 安 山 均
+酒田縣中属春山安均
 其方儀元大泉藩出納掛在勤以來元同藩大參事等ノ差圖
 ヲ受士族卒祿制改革一件ニ與ルヲ以テ松平久厚等免官
 後モ尙同人等ノ依頼ニ任セ公務ノ餘暇士族卒子弟分家
@@ -7095,13 +7300,13 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/168" target="_blank" rel="noopener">原本 コマ168 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">任權大解部 中解部 信 柳 元
-任權中解部 少解部 卷 淸 隆 石
-任少解部 權少解部 藤 郞 進 郁
+    <div class="item-body text-base leading-relaxed">任權大解部　中解部　柳元信
+任權中解部　少解部　石卷淸隆
+任少解部　權少解部　進藤郁郞
 同　權少屬 繁 山 高 成 橫 山 高 正
 同
 同
-補十四等出仕 十五等出仕 小 林 枝 一
+補十四等出仕　十五等出仕　小林一枝
 等外一等出仕今泉 丘之
 補十五等出仕</div>
     
@@ -7118,9 +7323,9 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/169" target="_blank" rel="noopener">原本 コマ169 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">大解部 忠 本 松 正
+    <div class="item-body text-base leading-relaxed">大解部松本正忠
 歸京申付候事
-十五等出仕 岡 吉 村 正
+十五等出仕岡村正吉
 同
 大坂裁判所在勤申付候事 少屬 井 富 荒 淑</div>
     <div class="xref"><div><span class="xref-caption">正誤:</span> <a href="09.html#a09-106" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a09-106 ○正誤</a></div></div>
@@ -7166,6 +7371,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月三十日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-270" data-type-base="伺" data-pid="1366797" data-frame="170">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -7361,7 +7569,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/174" target="_blank" rel="noopener">原本 コマ174 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">補十等出仕 十一等出仕 則 藤 勝 工</div>
+    <div class="item-body text-base leading-relaxed">補十等出仕　十一等出仕　工藤則勝</div>
     
   </div>
 </section>
@@ -7376,7 +7584,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/174" target="_blank" rel="noopener">原本 コマ174 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">埼玉裁判所在勤申付候事 十二等出仕石 井 信 義</div>
+    <div class="item-body text-base leading-relaxed">埼玉裁判所在勤申付候事　十二等出仕石井信義</div>
     <div class="xref"><div><span class="xref-caption">正誤:</span> <a href="09.html#a09-106" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a09-106 ○正誤</a></div></div>
   </div>
 </section>
@@ -7398,6 +7606,11 @@
     <div class="xref"><div><span class="xref-caption">訂正対象:</span> <a href="#a08-129" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a08-129 ○</a>、<a href="#a08-130" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a08-130 〔達書〕</a>、<a href="#a08-136" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a08-136 〔京都裁判所伺〕七年四月二日</a>、<a href="#a08-142" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a08-142 〔達書〕</a></div></div>
   </div>
 </section>
+</div></div>
+<div class="card-issue filter-group" id="issue-18">
+<h2 class="card-issue-head">司法省日誌明治七年第八十一號</h2>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○四月三十日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-280" data-type-base="伺" data-pid="1366797" data-frame="175">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -7431,6 +7644,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">五月二日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-281" data-type-base="伺" data-pid="1366797" data-frame="176">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -7548,7 +7764,7 @@
 ニ非スシテ姦夫ヲ殺傷スル者云々圖殺傷ニ二等ヲ減ス
 トアルニ依リ本罪懲役終身ヨリ二等ヲ減シ
 懲役七年
-藤 井 太 郞 藏
+藤井太郞藏
 姦婦ヲ殺死スルノ罪ハ輕シ論セス</div>
     
   </div>
@@ -7631,12 +7847,12 @@
 御裁判所ヘ被召捕御吟味中病死致シ候趣今般初テ承知
 致シ候
 指令
-甲兄無賴財產ヲ傾ヶ家ノ覆亡セントスルヲ見テ母之ヲ
+甲兄無賴財產ヲ傾ケ家ノ覆亡セントスルヲ見テ母之ヲ
 悲ミ親族亦之ヲ憂フルニヨリ乙兄坐ナカラ視ルニ忍ヒ
 ス之ヲ暗殺シテ禍源ヲ絶チ家ヲ保護セント謀リ傷シテ
 遂ニ死ニ至ラス本人其事ヲ官ニ告クト雖モ干名犯義ニ
 涉ラス兄弟ノ容隱亦法律ノ許ス所ナルヲ以テ
-無罪 村 田 種 五 郞</div>
+無罪　村田種五郞</div>
     
   </div>
 </section>
@@ -7661,6 +7877,9 @@
     
   </div>
 </section>
+</div>
+<div class="card-dategroup filter-group">
+<h3 class="card-dategroup-head">○五月三日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a08-289" data-type-base="伺" data-pid="1366797" data-frame="182">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -7796,11 +8015,12 @@
     <div class="xref"><div><span class="xref-caption">訂正対象:</span> <a href="#a08-145" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a08-145 ○</a>、<a href="#a08-146" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a08-146 〔達書〕</a>、<a href="#a08-156" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a08-156 〔埼玉裁判所伺〕 七年四 月九日</a>、<a href="#a08-165" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a08-165 〔京都裁判所伺〕七年四月</a></div></div>
   </div>
 </section>
+</div></div>
 </div>
 <div id="view-outline" style="display:none">
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治七年第六十四號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月二日</div>
 <div class="ol-article" data-src-id="a08-001" data-type-base="伺" data-pid="1366797" data-frame="2"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔兵庫裁判所伺〕七年三月廿日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/2" target="_blank" rel="noopener">原本 コマ2 →</a></div><div class="ol-body">懲役限內老疾者ノ収贖例ハ十年ニ止リ終身者ノ儀ハ不
 相見未タ御確定無之儀ニ候哉將タ懲役終身ハ死刑ノ一
@@ -7882,12 +8102,12 @@
 所豈圖ン夫勝二郞何レニ潜伏致セシ哉俄ニ臥內ヘ蹈込
 ミ來リ取押ヘラレ事遂ニ露顯ニ及ヒ候
 指令
-養母養子ト通姦スル者 改定律例第二百六十一條 伯
+養母養子ト通姦スル者 改定律例第二百六十一條　伯
 叔姑ヲ姦スル者ヲ以テ論シ
 各懲役三年宛 銀
-樓 本 甚 太 郞</div></div>
+樓本甚太郞</div></div>
 <div class="ol-article" data-src-id="a08-009" data-type-base="裁判所申渡" data-pid="1366797" data-frame="6"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔司法省裁判所申渡〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/6" target="_blank" rel="noopener">原本 コマ6 →</a></div><div class="ol-body">東京新右衞門町太田惣吉部
-原告 理代人 萬 吉 太 田
+原告　理代人　太田萬吉
 太田惣吉儀明治五年八月中佐賀縣貫属士族深町長藏外
 一人ヲ相手取東京裁判所ヘ出訴及ヒ候貸金淹滯一件當
 裁判所於テ被告深町長藏等取調候所右ハ舊小城縣ノ負
@@ -7901,23 +8121,23 @@
 科ノ指令アリ</div></div>
 <div class="ol-article" data-src-id="a08-011" data-type-base="布達" data-pid="1366797" data-frame="7"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔乙第四十號布達〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/7" target="_blank" rel="noopener">原本 コマ7 →</a></div><div class="ol-body">遠江國豐田郡東平松村農肥
 田德太郞附籍舊名肥田松藏
-鈴 木 松 太 郞
+鈴木松太郞
 同郡上野部村農
-同　太 郞 輝
+同　輝太郞
 右之者共儀濱松縣ニ於テ懲役終身處刑中當三月廿二日
 午後四時過致逃七候條各地方</div></div>
 <div class="ol-article" data-src-id="a08-012" data-type-base="布達" data-pid="1366797" data-frame="7"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔乙第四十一號布達〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/7" target="_blank" rel="noopener">原本 コマ7 →</a></div><div class="ol-body">遠江國佐野郡掛川宿七濱平
-長男 愛 之助 磯 野
+長男　磯野愛之助
 右之者儀於演松縣懲役十年處刑中去月廿四日午後五時</div></div>
-<div class="ol-article" data-src-id="a08-013" data-type-base="布達" data-pid="1366797" data-frame="7"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔第六號布達〕 輪廓附</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/7" target="_blank" rel="noopener">原本 コマ7 →</a></div><div class="ol-body">各 裁 判 所
-府 各 縣
+<div class="ol-article" data-src-id="a08-013" data-type-base="布達" data-pid="1366797" data-frame="7"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔第六號布達〕 輪廓附</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/7" target="_blank" rel="noopener">原本 コマ7 →</a></div><div class="ol-body">各裁判所
+各府縣
 從前諸向ヨリ之伺書中擬律並諸罰則或ハ聽訟事件等往
 々混淆シ一綴ニテ差出候向モ有之候所右ハ當省各課之
 都合ニ寄自然指令淹滯ニ及ビ候儀モ有之候間自今右件
 々同時ニ伺出候向ハ各別紙ヲ以差出候樣可致此旨相達
 候事</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月四日</div>
 <div class="ol-article" data-src-id="a08-014" data-type-base="伺" data-pid="1366797" data-frame="8"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔北條縣伺〕七年一月二十七日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/8" target="_blank" rel="noopener">原本 コマ8 →</a></div><div class="ol-body">懲役人使役方ノ儀ニ付去明治五年四月中役囚五人ニ付
 使役方一人ヲ置キ月金一人ニ付三圓使役方取締一人ニ
@@ -7942,8 +8162,8 @@
 ハ左ノ割合ノ通增給料御採用相成歟兩件ノ內御評議或
 ハ御取計被下度相願候也
 增給料
-使役方取締一人給料一箇月五圓ノ所 七 圓
-使役方一人給料一箇月三圓ノ所 圓 五
+使役方取締一人給料一箇月五圓ノ所　七圓
+使役方一人給料一箇月三圓ノ所　五圓
 右相伺候也
 指令
 囚ヲ外役ニ處スルノ間其逃走ヲ制御スルニ於テハ必シ
@@ -8001,15 +8221,11 @@
 漸次ニ施行スヘシ</div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治七年第六十五號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月五日</div>
-<div class="ol-article" data-src-id="a08-018" data-type-base="人事" data-pid="1366797" data-frame="12"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/12" target="_blank" rel="noopener">原本 コマ12 →</a></div><div class="ol-body">任大觧部 權大觧部 尻 彥 田 郞 太
-任中觧部 十等出仕 倉 良 町 重
-任少觧部 十二等出仕 昌 並 木 伯
-同　同 木 靜 高 三
-補十四等出仕 山 震 牧 郞 太</div></div>
+<div class="ol-article" data-src-id="a08-018" data-type-base="人事" data-pid="1366797" data-frame="12"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/12" target="_blank" rel="noopener">原本 コマ12 →</a></div><div class="ol-body">任大觧部　權大觧部　田尻彥太郞</div></div>
 <div class="ol-article" data-src-id="a08-019" data-type-base="伺" data-pid="1366797" data-frame="12"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔埼玉裁判所伺罪案節録〕七年三月五日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/12" target="_blank" rel="noopener">原本 コマ12 →</a></div><div class="ol-body">武藏國足立郡上靑木村農福田福松供 當戌二月十七日
 妹ハナ病氣ノ節父淸八隣村迄藥取リニ能越シ甚タ酩酊
 ノ上歸宅セシニ付病苦モ察セス遲ク立歸ルハ等閑ナリ
@@ -8017,9 +8233,9 @@
 ヲ以テ私ヲ打殺ス迚擊掛リシ故私モ有合フ山刀ヲ以テ
 立向ヒ勢ニ乘シテ數ケ所ヘ切付ケ遂ニ落命致サセ候
 指令
-改定律例第二百二十八條 子孫祖父母父母ヲ毆チ死ニ
+改定律例第二百二十八條　子孫祖父母父母ヲ毆チ死ニ
 至ル者
-斬罪 福 田 福 松</div></div>
+斬罪　福田福松</div></div>
 <div class="ol-article" data-src-id="a08-020" data-type-base="article" data-pid="1366797" data-frame="13"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/13" target="_blank" rel="noopener">原本 コマ13 →</a></div><div class="ol-body">本年三月廿九日上申スル東京戶越村善兵衛二男鈴木長
 兵衛以下斷刑伺書本日裁下アリ</div></div>
 <div class="ol-article" data-src-id="a08-021" data-type-base="伺" data-pid="1366797" data-frame="13"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔濱松縣伺〕 七年三月十三日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/13" target="_blank" rel="noopener">原本 コマ13 →</a></div><div class="ol-body">遠江國敷知郡寺脇村農七五
@@ -8037,10 +8253,10 @@
 ノ通ニ付改定律例第三百三條ニ擬シ自首ス
 ルヲ以テ潜出ノ罪ヲ免シ仍ホ原犯ノ年限ヲ新ニ拘役可
 申付哉相伺候也
-指 令
-改定律例第二百九十七條 責付内逃走シテ自首ス ル 者
+指令
+改定律例第二百九十七條　責付内逃走シテ自首スル者
 ハ止タ本罪ヲ科ストアルヲ以テ論シ已ニ役過スル月日
-ヲ扣除シ殘ル月日ヲ使役スヘシ 幾 本 橋 次
+ヲ扣除シ殘ル月日ヲ使役スヘシ　橋本幾次
 懲役日數ノ算計ハ例第四十四條及ヒ五十條ニ依テ處
 分ス可シ</div></div>
 <div class="ol-article" data-src-id="a08-024" data-type-base="article" data-pid="1366797" data-frame="14"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/14" target="_blank" rel="noopener">原本 コマ14 →</a></div><div class="ol-body">橡木裁判所ヨリ
@@ -8057,7 +8273,7 @@
 ル者ニ付皆斬罪峯吉ハ同上賍金五圓以上犯時頒例前ニ
 在ヲ以テ舊律ニ依リ絞罪等ノ指令アリ</div></div>
 <div class="ol-article" data-src-id="a08-025" data-type-base="伺" data-pid="1366797" data-frame="15"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔千葉裁判所伺〕 七年三月 二十七日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/15" target="_blank" rel="noopener">原本 コマ15 →</a></div><div class="ol-body">下總國結城郡結城町農吉藏
-養子盲人 邊 吉 渡 元
+養子盲人　渡邊元吉
 右ハ罪案
 ノ通鬭毆律毆傷妻妾條ニ照シ絞罪可申付哉
 奉伺候也
@@ -8116,12 +8332,12 @@
 候
 指令
 改定律例百二十七條 持兇噐强盜財ヲ得ル者
-斬罪 吉 若 新 井
+斬罪　新井若吉
 强盜ノ暸望及ヒ姦罪等ハ都テ輕ニ依テ論セス
 繼父カ無道ノ姦淫ヲ避ントスレハ實母毆打ノ酷虐ヲ受
 ケ正理ヲ陳テ諫爭スレ共暴威ヲ以テ逼リ姦セラル皆勢
 ヒ〓ヲヲササニニ出ルヲ以テ罪ヲ問ハス
-マ ツ
+マツ
 無罪</div></div>
 <div class="ol-article" data-src-id="a08-030" data-type-base="article" data-pid="1366797" data-frame="18"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/18" target="_blank" rel="noopener">原本 コマ18 →</a></div><div class="ol-body">正院廻
 三月 五等議官橫山由淸通行印鑑遺失セシ件福島
@@ -8156,7 +8372,7 @@
 等ヲ減スト云ニ依リ
 懲役五年 野田 四郞兵衛</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月四日分</div>
 <div class="ol-article" data-src-id="a08-032" data-type-base="article" data-pid="1366797" data-frame="19"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/19" target="_blank" rel="noopener">原本 コマ19 →</a></div><div class="ol-body">當省十三等出仕久保成学紀元節ニ同僚ノ不參届ヲ領置
 シ官廳ニ申達セサリシ件
@@ -8167,7 +8383,7 @@
 奏不奏條ニ依リ共ニ懲役三十日ノ贖罪シ光伸以下ハ出
 入人罪條ニ依リ無科等ノ指令アリ</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月七日</div>
 <div class="ol-article" data-src-id="a08-033" data-type-base="article" data-pid="1366797" data-frame="20"><div class="ol-article-headrow"><div class="ol-head ol-article-head"></div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/20" target="_blank" rel="noopener">原本 コマ20 →</a></div><div class="ol-body">水澤縣伺 二十四日
 山野ノ樹木ヲ斫伐竊取スルハ其材存スト雖モ賠償ス可
@@ -8196,14 +8412,14 @@
 ニ改メ候上訴出タル者ハ裁判可及事</div></div>
 <div class="ol-article" data-src-id="a08-036" data-type-base="伺" data-pid="1366797" data-frame="21"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔山形縣伺〕七年三月廿日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/21" target="_blank" rel="noopener">原本 コマ21 →</a></div><div class="ol-body">米金貸借ノ儀ニ付人民相互ニ約束ノ堅固ナラン爲メ證
 書面利子ノ外ニ何程ノ罰金亦ハ償金差出スヘク等ノ明
-文ヲ揭ケ約條ヲナセシ證劵ハ罰金償金共ニ取揚ヶ及裁
+文ヲ揭ケ約條ヲナセシ證劵ハ罰金償金共ニ取揚ケ及裁
 判可然哉
 商法上ニ於テ假令ハ米千俵甲ヨリ乙ヘ賣渡シノ約條ヲ
 ナシ先ツ現米三百俵ヲ相渡シ千俵ノ全價ヲ受取置キ殘
 米七百俵ハ秋實ノ時何月幾日ヲ期限トシテ悉皆相渡ス
 ク若シ違約致シタル節ハ幾許ノ償金亦ハ罰金差出ス ヘ
 ク等ノ明文アル證書ヲ以テ訴出候ハヽ償金罰金ハ却 ヘ
-テ本紙證文ノ金高ヨリ幾倍多クトモ取揚ヶ及裁判可然
+テ本紙證文ノ金高ヨリ幾倍多クトモ取揚ケ及裁判可然
 哉奉伺候也
 指令
 兩條トモ伺ノ通</div></div>
@@ -8214,17 +8430,11 @@
 燒ク者ニ付皆斬罪ノ指令アリ</div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治七年第六十六號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月七日</div>
-<div class="ol-article" data-src-id="a08-038" data-type-base="人事" data-pid="1366797" data-frame="22"><div class="ol-article-headrow"><div class="ol-head ol-article-head"></div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/22" target="_blank" rel="noopener">原本 コマ22 →</a></div><div class="ol-body">任少撿事 權少撿事 吉 田 義 正
-補十等出仕 十一等出仕 中 貞 田 靖
-任權中解部 同 儀 國 河 野
-同　吉 安 同 原 政
-同　少解部 葉 秋 益 朋
-補十一等出仕
-吉 藏 田 六</div></div>
+<div class="ol-article" data-src-id="a08-038" data-type-base="人事" data-pid="1366797" data-frame="22"><div class="ol-article-headrow"><div class="ol-head ol-article-head"></div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/22" target="_blank" rel="noopener">原本 コマ22 →</a></div><div class="ol-body">任少撿事　權少撿事　吉田正義</div></div>
 <div class="ol-article" data-src-id="a08-039" data-type-base="伺" data-pid="1366797" data-frame="22"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔石川縣伺〕七年三月十二日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/22" target="_blank" rel="noopener">原本 コマ22 →</a></div><div class="ol-body">昨年第四百二十六號公布ノ趣ニ依リ士族家祿百石未滿
 ノ分奉還願出候上ハ資本金御下賜ニ可相成筈ニ付願人
 共便宜ニテ即今右ヲ引當ニ致シ他人ヨリ金錢ヲ借受置
@@ -8235,11 +8445,11 @@
 キ事 ヘ</div></div>
 <div class="ol-article" data-src-id="a08-040" data-type-base="布達" data-pid="1366797" data-frame="23"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔乙第四十二號布達〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/23" target="_blank" rel="noopener">原本 コマ23 →</a></div><div class="ol-body">羽後國雄勝郡杉澤村管原由
 兵衞方同居舊岩崎縣卒
-田 善 織 郞 五
+織田善五郞
 同郡成澤村七平藏長男
-平 橋 藏 高
+高橋平藏
 同村七總左衞門長男
-鶴 松 橋 高
+高橋鶴松
 右ノ者共儀昨明治六年六月中秋田縣於テ同縣雄勝郡岩
 崎町居住士族河井保養母マキヲ殺害致シ金圓奪取放火
 ニ及逃走候條各地方</div></div>
@@ -8263,7 +8473,7 @@
 裁判廳ニテ身代限ノ處分致ス可ク事
 ○</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月八日</div>
 <div class="ol-article" data-src-id="a08-043" data-type-base="伺" data-pid="1366797" data-frame="24"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔酒田縣伺〕七年三月廿日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/24" target="_blank" rel="noopener">原本 コマ24 →</a></div><div class="ol-body">賣酒切手ノ類切手面ヘ其品數ノミ有之本價ノ儀ハ記載
 無之右ヘ印紙貼用不致者ハ猶其本價ニ就キ之ヲ切手ノ
@@ -8271,8 +8481,7 @@
 相伺候也
 指令
 証劵印紙規則第十四條ニ照シ處分スヘシ</div></div>
-<div class="ol-article" data-src-id="a08-044" data-type-base="人事" data-pid="1366797" data-frame="25"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/25" target="_blank" rel="noopener">原本 コマ25 →</a></div><div class="ol-body">補八等出仕 志 藤 井 正
-補十二等出仕 冀 天 野 隆</div></div>
+<div class="ol-article" data-src-id="a08-044" data-type-base="人事" data-pid="1366797" data-frame="25"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/25" target="_blank" rel="noopener">原本 コマ25 →</a></div><div class="ol-body">補八等出仕　藤井正志</div></div>
 <div class="ol-article" data-src-id="a08-045" data-type-base="伺" data-pid="1366797" data-frame="25"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔高知縣伺〕七年三月十四日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/25" target="_blank" rel="noopener">原本 コマ25 →</a></div><div class="ol-body">當縣士族村上傳濵口親義土佐國吾川郡竹ノ谷村平民山
 內甚吾等昨九月十八日夜村上傳宅ニ於テ酒宴相催三人
 モ追々酩酊ニ及ヒ種々雜話ノ末午後第十一時項演口
@@ -8333,7 +8542,7 @@
 從テ論シ可然哉
 右科規則ト律トノ輕重ハ如何比較致シ可然哉相伺候也
 指令
-第 一條 詐僞脅迫ノ舉動ノミニ限ラス人ヲ殺傷スル等
+第一條　詐僞脅迫ノ舉動ノミニ限ラス人ヲ殺傷スル等
 ノ類律ニ正條アル者ハ律ニ依リ處斷スヘキ事
 第二條　諸規則ノ罰例ハ律ノ權衡ニ比較シ難シ故ニ第
 條伺犯罪ノ如キ律ニ該ルハ律ニ仍リ其罰例ニ該ル
@@ -8344,7 +8553,7 @@
 方郡高岡村農栗又政四郞以下五名覆審伺アリ其事多端
 ニ付指令共記載セス</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月九日</div>
 <div class="ol-article" data-src-id="a08-051" data-type-base="伺" data-pid="1366797" data-frame="28"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔熊谷裁判所伺〕七年三月七日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/28" target="_blank" rel="noopener">原本 コマ28 →</a></div><div class="ol-body">平民等內外官ニ在リ破廉耻甚ヲ犯ス者ハ奪官ノ上處斷
 可然哉但シ有位ノ士族破廉耻甚ヲ犯スキモ同樣相心得
@@ -8398,10 +8607,10 @@
 二百七十一條ニ明文アリ</div><div class="xref"><div><span class="xref-caption">正誤:</span> <a href="#a08-176" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a08-176 ○正誤</a></div></div></div>
 <div class="ol-article" data-src-id="a08-053" data-type-base="布達" data-pid="1366797" data-frame="31"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔乙第四十三號布達〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/31" target="_blank" rel="noopener">原本 コマ31 →</a></div><div class="ol-body">羽前國田川郡鶴ケ岡南町商
 佐藤貞七同居古手賣渡世
-大 瀧 平 八
+大瀧平八
 同郡鶴ケ岡七日町舊神官小
 野一雄同居古着取次商渡世
-佐 藤善 郞 五
+佐藤善五郞
 右ノ者共儀酒田縣於テ寳貨僞造候見込ノ處平八儀ハ明
 治六年十一月中善五郞儀ハ同年十二月中逃走候條各地</div></div>
 <div class="ol-article" data-src-id="a08-054" data-type-base="布達" data-pid="1366797" data-frame="31"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔乙第四十四號布達〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/31" target="_blank" rel="noopener">原本 コマ31 →</a></div><div class="ol-body">豐後國海部郡市濵村商
@@ -8418,13 +8627,13 @@
 呵責ニ處ス</div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治七年第六十七號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月九日</div>
 <div class="ol-article" data-src-id="a08-057" data-type-base="article" data-pid="1366797" data-frame="32"><div class="ol-article-headrow"><div class="ol-head ol-article-head"></div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/32" target="_blank" rel="noopener">原本 コマ32 →</a></div><div class="ol-body">白川縣伺 二十五 七年三 日月 
 元久留米縣土族
-山 岩 之 本 承
+本山岩之丞
 右ハ同縣士族島田莊太郞ニ與シ山口縣脫徒ヲ暗殺致シ
 候科ニ依リ辛未十二月三日庶人ニ下シ禁獄七年ノ刑ニ
 處セラレ其末右莊太郞列十二人ノ者同月廿三日熊本縣
@@ -8435,8 +8644,8 @@
 置課業仕覺ヘ放免後生產ニ基度旨願出旣ニ庶人ニ下サ
 レ候者ニ付願ノ通申付不苦哉
 元熊本縣士族當時大分縣管
-下平民到長男 利 毛 登
-同人四男 熊 毛 利
+下平民到長男　毛利登
+同人四男　毛利羆
 右ハ豐後國霍崎ヘ居住致シ同所ノ儀熊本縣管轄ノ節御
 布告ノ旨ニ悖リ父毛利到申聞ニ從ヒ山口縣脫徒潜伏ノ
 周旋致候ニ付伺ノ上壬申十月五日除族禁錮三年ノ刑被
@@ -8444,7 +8653,7 @@
 殘ル年限禁獄被仰付度右御聞濟ニ相成候ハヽ受取方ノ
 儀同縣ヘ御達可有之樣致度此段相伺候也
 指令
-第 一條 該犯不逞ニ係ル者ハ常律ニ依ラス特典ヲ以テ
+第一條　該犯不逞ニ係ル者ハ常律ニ依ラス特典ヲ以テ
 禁獄ニ處セラレ候儀ニ付懲役ニ換候儀難相成事
 第二條　右同斷ノ者元來鎭臺所在ノ各縣ヘ御引渡禁獄
 被仰付候儀ニ付管轄內外ニ可抅儀無之依テ滿限迄其
@@ -8491,7 +8700,7 @@
 第四條　改定律例第二百八十三條ニ明文アリ
 第五條　伺ノ通</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十日</div>
 <div class="ol-article" data-src-id="a08-061" data-type-base="伺" data-pid="1366797" data-frame="35"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔堺縣伺〕七年三月二十九日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/35" target="_blank" rel="noopener">原本 コマ35 →</a></div><div class="ol-body">改定律例强盜條若シ盜ニ因テ姦スル者ハ成否ヲ論セ ス
 絞ト云リ此ノ一節文體ヲ考レハ持不持兒器ニ通論ス ル
@@ -8537,7 +8746,7 @@
 致ス者ト相似タルヲ以 庸醫殺傷人條 庸醫鍼藥ヲ用
 ヒ誤テ本方ニ依ラス因テ死ニ致スト云ニ比照シ過失殺
 ヲ以テ論シ収贖シテ其家ニ給ス
-藤 井 金 藏
+藤井金藏
 収贖金四十圓
 妻ノ長病ヲ憂ヒ祈禳ヲ依賴シ遂ニ死ニ至ルモ罪ノ問フ
 可キナシ
@@ -8565,7 +8774,7 @@
 彥治ハ同三犯五十圓以下同十年善吉ハ不正ノ財ト心得
 倶ニ費用スル者坐賍ヲ以テ論シ同五十日等ノ指令アリ</div></div>
 <div class="ol-article" data-src-id="a08-066" data-type-base="伺" data-pid="1366797" data-frame="39"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔筑摩縣伺〕七年三月二十四日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/39" target="_blank" rel="noopener">原本 コマ39 →</a></div><div class="ol-body">飛驒國吉城郡杉崎村農長助
-原 弟 砂 甚 三 郞
+弟　砂原甚三郞
 右ハ慶應二年九月中家出兵隊中ニ入明治元年三月元會
 津藩逆徒ニ隨從箱舘ニ脫シ遂ニ外國ニ逃亡同五年十一
 月橫濱ニ皈着尙又所々漂泊罷在當 一月喚問中鄕宿預ケ
@@ -8575,7 +8784,7 @@
 該犯明治五年十二月歸朝スト雖モ其後管廳ニ陳告セ ス
 久シク擅ニ各所ニ流寓スルヲ以テ 違令條 違令重キ
 一問 ヒ
-懲役四十日 原 甚 砂 郞 三
+懲役四十日　砂原甚三郞
 逆徒ニ隨從及ヒ外國逃亡ノ罪ハ當省壬申第十號布
 達以前ニ在リ不論其私ニ歸村スルノ罪ハ責付內逃
 走ヲ以テ論スルノ限ニアラス</div></div>
@@ -8597,7 +8806,7 @@
 指令
 尋常貸金同樣ニ配賦スヘシ</div></div>
 <div class="ol-article" data-src-id="a08-068" data-type-base="伺" data-pid="1366797" data-frame="40"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔埼玉裁判所伺〕七年三月二十九日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/40" target="_blank" rel="noopener">原本 コマ40 →</a></div><div class="ol-body">武藏國足立郡鴻巢宿
-戶 藏 神 仙
+神戶仙藏
 右ハ罪案畧ノ通見惡キ楮幣ヲ以テ遣試方伊三郞ニ托ト
 雖モ到底眞幣ニシテ只手摺レ等ノ爲メ人ノ嫌フト誤認
 スルノミナレハ改定律例二百五十八條僞造ニ係ルヲ知
@@ -8608,7 +8817,7 @@
 指令
 人ノ拒ム所ノ紙幣ヲ仍ホ行使セントスルモ僞貨タルヲ
 知ルニ非サレハ
-無罪 神 戶 仙 藏</div></div>
+無罪　神戶仙藏</div></div>
 <div class="ol-article" data-src-id="a08-069" data-type-base="伺" data-pid="1366797" data-frame="41"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔三潴縣伺〕七年三月十九日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/41" target="_blank" rel="noopener">原本 コマ41 →</a></div><div class="ol-body">明治六年九月十九日附ヲ以テ伺候本年第二百六號正院
 御布告書內ニ從前單行頒布ノ律例及ヒ律案指令等モ 一
 切同日ヨリ援引不相成旨有之又改定律例第百條凡例 モ
@@ -8626,9 +8835,9 @@
 伺ノ通</div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治七年第六十八號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十日</div>
 <div class="ol-article" data-src-id="a08-070" data-type-base="伺" data-pid="1366797" data-frame="42"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔三潴縣伺〕七年三月十九日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/42" target="_blank" rel="noopener">原本 コマ42 →</a></div><div class="ol-body">明治六年第百九十號金穀ノ借主身代限リ云々證書中ニ
 其請人證人ヨリ辨濟可致旨ノ文言有之カ又ハ請人ト記
@@ -8716,7 +8925,7 @@
 最初持出セシ金子ハ盡ク遣ヒ拂ヒ養育方ニ差支ヘ候ニ
 付策ヲ搆ヒ一旦金圓取出シ談判ノ上貰ヒ受ント存シ駒
 之助ヲ欺テ申聞ケ候ハ橫濱ノ實兄卯助ヘ母ノ養育金多
-分預ヶ置キ取戾サント欲レトモ輙ク相渡サス夫安兵衛モ
+分預ケ置キ取戾サント欲レトモ輙ク相渡サス夫安兵衛モ
 右ニ同意シ彼是相拒ムニ付幸ヒ同人ハ兩替渡世ニ候間
 買求ル体ニ仕成シ洋銀千枚引出シ吳レ候ハヽ其後ハ私
 ヨリ掛合ニ及フト跡形モナキ虛言ヲ以テ相頼ミ候所同
@@ -8732,16 +8941,16 @@
 長ヘ云々届出ルモ未タ送籍ニ至ラス且ツ該犯離緣セヲ
 ルヲ知ラス故ニ戶婚律子弟私擅用財條ニ比照シ懲役一
 百日婦女例ニ依リ
-収贖金二圓五十錢 ワ カ
+収贖金二圓五十錢　ワカ
 預ケ金取立ノ周旋ヲ依賴セラレ深ク其虛實ヲ質タサ ス
 輙ク其事ニ應スルノ無念ヲ責メ
-富 士 隆
+富士隆
 呵責
 妻ヲ離緣セハ速カニ云々ヲ屆ケ送籍等順序ヲ盡ス可 キ
 ヲ其事ナク時日遷延ニ及フノ〓漏ヲ責メ
-同　安 兵 本 橋 衛</div></div>
+同　橋本安兵衛</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十二日</div>
 <div class="ol-article" data-src-id="a08-074" data-type-base="伺" data-pid="1366797" data-frame="47"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔滋賀縣伺〕六年十二月廿三日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/47" target="_blank" rel="noopener">原本 コマ47 →</a></div><div class="ol-body">本年第百七十四號ヲ以金穀貸借利足ノ儀被達候處右ハ
 身代限申付候上ハ早々動產不動產等取調揭示日限相滿
@@ -8783,12 +8992,12 @@
 覺候儀ニ付除族ノミ申付収祿ニハ不及候哉相伺候也
 指令
 竊盜條 竊盜一圓以上懲役六十日ノ處破廉耻甚ヲ以テ
-除族〔賍金五圓餘 岡 本 寛
+除族〔賍金五圓餘〕　岡本寛
 犯時家督中ニ係ルト雖モ其發覺隱居後ニアルヲ以テ収
 祿ノ限ニアラス</div></div>
 <div class="ol-article" data-src-id="a08-077" data-type-base="布達" data-pid="1366797" data-frame="49"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔乙第四十六號布達〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/49" target="_blank" rel="noopener">原本 コマ49 →</a></div><div class="ol-body">肥前國彼杵郡大村川棚村士
 族溝上久市持船久吉丸沖船
-頭同村三ツ越浦 助 久
+頭同村三ツ越浦　久助
 同船雇水夫彼杵郡彼杵村字
 音琴 藏太郞
 同船水夫同郡川棚村小串浦
@@ -8814,7 +9023,7 @@
 ハ尋常處女ノ賣淫ト異ナリ其夫ヲ輕侮シ倫理ヲ破ルノ
 甚シキ私娼ヲ街賣スル條ニ因リ難ク仍テ犯姦律和姦夫
 アル者ヲ以テ論シ懲役一年申付可然哉
-同小川町 井 カ ウ 村
+同小川町　村井カウ
 右ハ人ノ妻タルヲ承知致シナカヲ利ヲ圖リ賣淫爲致候
 ハ犯姦律和姦條媒合及ヒ容止シテ通姦セシムル者ヲ以
 テ論シ犯人ノ罪ニ三等ヲ減シ収贖シテ可然哉奉伺候也
@@ -8823,12 +9032,12 @@
 賣淫スル者私娼街賣ヲ以テ論シ 改定律第二百六十七
 條 凡私娼ヲ街賣スル窩主ハ懲役四十日婦女ハ一等ヲ
 減スト云ニ依リ懲役三十日贖ヲ聽ス
-ト コ
+コト
 収贖金七十五錢
 同條 凡私娼ヲ街賣スル窩主ハ懲役四十日贖ヲ聽ス
-同　圓 井 ウ 村 カ</div></div>
+同一圓　村井カウ</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十三日</div>
 <div class="ol-article" data-src-id="a08-080" data-type-base="article" data-pid="1366797" data-frame="51"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/51" target="_blank" rel="noopener">原本 コマ51 →</a></div><div class="ol-body">福島縣ヨリ
 三月 岩代國信夫郡上名倉村農阿部常藏東京
@@ -8844,14 +9053,14 @@
 及フヘシト改正ノ達アリ</div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治七年第六十九號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十三日</div>
-<div class="ol-article" data-src-id="a08-083" data-type-base="article" data-pid="1366797" data-frame="52"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/52" target="_blank" rel="noopener">原本 コマ52 →</a></div><div class="ol-body">九等出仕 島 事 雅 村
+<div class="ol-article" data-src-id="a08-083" data-type-base="article" data-pid="1366797" data-frame="52"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/52" target="_blank" rel="noopener">原本 コマ52 →</a></div><div class="ol-body">九等出仕島村雅事
 京都裁判所在勤申付候事</div></div>
 <div class="ol-article" data-src-id="a08-084" data-type-base="人事" data-pid="1366797" data-frame="52"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/52" target="_blank" rel="noopener">原本 コマ52 →</a></div><div class="ol-body">任司法權中屬
-少属 中 氏 就 尾</div></div>
+少属　中尾氏就</div></div>
 <div class="ol-article" data-src-id="a08-085" data-type-base="伺" data-pid="1366797" data-frame="52"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔鳥取縣伺〕七年二月二十四日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/52" target="_blank" rel="noopener">原本 コマ52 →</a></div><div class="ol-body">伯者國日野郡下菅村平民安達嘉重妻マツ儀嘉重從弟備
 中國無籍長兵衞ト姦通致シ候ヨリ事起去明治六年六月
 十八日嘉重儀鎌ヲ以長兵衞ヲ殺候儀ニ付兩人共捕縛候
@@ -8878,7 +9087,7 @@
 ノ情狀ヲ酌量シ 改定律例百七十二條 姦夫姦婦姦所
 ニ撞見セラレ直ニ脫逃スルニ本夫即時ニ逐テ門外ニ至
 リ殺ス者ハ論スル勿レト云フヲ以テ論シ
-達 嘉 安 重
+安達嘉重
 無罪
 改定律例二百六十條 和姦夫アル者
 懲役一年</div></div>
@@ -8892,14 +9101,14 @@
 ハ同上ノ第二從ニ付减シ盡シテ無科等ノ指
 令アリ</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十四日</div>
 <div class="ol-article" data-src-id="a08-087" data-type-base="伺" data-pid="1366797" data-frame="54"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔島根縣伺〕七年三月廿日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/54" target="_blank" rel="noopener">原本 コマ54 →</a></div><div class="ol-body">私娼衒賣スル窩主曁媒合容止スル者ハ贖ヲ聽シ可然哉
 右犯罪ノ者有之處分方差支候間此段相伺候也
 指令
 伺ノ通</div></div>
 <div class="ol-article" data-src-id="a08-088" data-type-base="布達" data-pid="1366797" data-frame="54"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔乙第四十七號布達〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/54" target="_blank" rel="noopener">原本 コマ54 →</a></div><div class="ol-body">豐後國大分郡迫村出生
-無籍 首 藤 千 之 助
+無籍　首藤千之助
 右ノ者於白川縣盜罪有之當三月處刑濟宿村送リ途中逃
 七三月十六日同縣下府内町一丸伍平方ヘ止宿中同宿ノ
 者所持金四百圓餘盜取捕縛ノ上右吟味中同廿二日囚人
@@ -8982,8 +9191,7 @@
 徵イタシ可然哉此段相伺候也
 指令
 略賣代價ハ追徵シ揚代ハ追スルニ及ハス</div></div>
-<div class="ol-article" data-src-id="a08-097" data-type-base="人事" data-pid="1366797" data-frame="58"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/58" target="_blank" rel="noopener">原本 コマ58 →</a></div><div class="ol-body">任大解部 權大解部 高 鹽 又 四 郞
-任少解部 少属 秋 長 小 川</div></div>
+<div class="ol-article" data-src-id="a08-097" data-type-base="人事" data-pid="1366797" data-frame="58"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/58" target="_blank" rel="noopener">原本 コマ58 →</a></div><div class="ol-body">任大解部　權大解部　高鹽又四郞</div></div>
 <div class="ol-article" data-src-id="a08-098" data-type-base="伺" data-pid="1366797" data-frame="59"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔若松縣伺〕 七年三月</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/59" target="_blank" rel="noopener">原本 コマ59 →</a></div><div class="ol-body">山林ヲ盜伐シ後チ悔悟自首スル者正賍現在シ若クハ追
 徵スルヲ得ル者自首ノ例ニ依リ盜罪ハ首免ニ從フト雖
 モ其伐木スル罪ハ陪償ス可カラサルヲ以テ自首ノ例ニ
@@ -8995,63 +9203,62 @@
 費ヤスト雖モ再ヒ得難キノ者ヲ謂フ本文樹木ノ如キ
 物ヲ指テ云フニ非ス</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○三月五日分</div>
-<div class="ol-article" data-src-id="a08-099" data-type-base="article" data-pid="1366797" data-frame="59"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/59" target="_blank" rel="noopener">原本 コマ59 →</a></div><div class="ol-body">權中判事 早 川 景 矩
+<div class="ol-article" data-src-id="a08-099" data-type-base="article" data-pid="1366797" data-frame="59"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/59" target="_blank" rel="noopener">原本 コマ59 →</a></div><div class="ol-body">權中判事早川景矩
 河野權大判事ヘ兼テ被仰付置候事務同人臨時出張中代
 理被仰付候事</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○三月十日分</div>
 <div class="ol-article" data-src-id="a08-100" data-type-base="article" data-pid="1366797" data-frame="59"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/59" target="_blank" rel="noopener">原本 コマ59 →</a></div><div class="ol-body">京都裁判所在勤被仰付候事</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○三月廿三日分</div>
-<div class="ol-article" data-src-id="a08-101" data-type-base="article" data-pid="1366797" data-frame="60"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/60" target="_blank" rel="noopener">原本 コマ60 →</a></div><div class="ol-body">長崎裁判所在勤申付候事 十二等出仕 林 尙 古</div></div>
+<div class="ol-article" data-src-id="a08-101" data-type-base="article" data-pid="1366797" data-frame="60"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/60" target="_blank" rel="noopener">原本 コマ60 →</a></div><div class="ol-body">長崎裁判所在勤申付候事　十二等出仕林尙古</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○三月廿九日分</div>
-<div class="ol-article" data-src-id="a08-102" data-type-base="article" data-pid="1366797" data-frame="60"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/60" target="_blank" rel="noopener">原本 コマ60 →</a></div><div class="ol-body">權少判事 井 上 好 武
+<div class="ol-article" data-src-id="a08-102" data-type-base="article" data-pid="1366797" data-frame="60"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/60" target="_blank" rel="noopener">原本 コマ60 →</a></div><div class="ol-body">權少判事井上好武
 箱館裁判所在勤被仰付候事</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月五日分</div>
 <div class="ol-article" data-src-id="a08-103" data-type-base="article" data-pid="1366797" data-frame="60"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/60" target="_blank" rel="noopener">原本 コマ60 →</a></div><div class="ol-body">佐賀縣出張被仰付候事
-權少判事 太 郞 彌 瀧
-大解部 田 尻 彥 郞 太
-中解部 曾 藏 誠 根
+權少判事瀧彌太郞
+大解部田尻彥太郞
+中解部曾根誠藏
 佐賀縣出張申付候事 熊谷 各通 在京 勤都
-中 安 井 讓 錄
-權中解部 林 遠 重 小
-權中属 川 好 信 石
-十四等出仕 牧 山 震 太 郞
+中錄安井讓
+權中解部小林重遠
+權中属石川信好
+十四等出仕牧山震太郞
 在勤 權大解部 吉 祐 雄 本
 倉町中解部交代歸京申付候事
-熊谷裁判所在勤申付候事 中解部 倉 町 良 重
-同　明 窪 田 盛
-十三等出仕 大 眞 坪 種
+熊谷裁判所在勤申付候事　中解部倉町良重
+同　窪田盛明
+十三等出仕大坪眞種
 神奈川裁判所在勤申付候事〔各通
-權中解部 長 崎 彊
-同　吉 田 正 功
+權中解部長崎彊
+同　吉田正功
 埼玉裁判所在勤申付候事〔各通〕
 少解部 宮 畏 有 原 三
 濵中十二等出仕交代歸京申付候事
-箱館裁判所在勤申付候事 同 昌 並 木 伯
-山梨裁判所在勤申付候事 十二等出仕濱 中 義 郞
-權少撿事 勇 益 田
+箱館裁判所在勤申付候事　同　並木昌伯
+山梨裁判所在勤申付候事　十二等出仕濱中義郞
+權少撿事益田勇
 佐賀裁判所在勤申付候事
-權中解部 明 益 葉 秋
+權中解部秋葉益明
 更ニ足柄裁判所在勤申付候事
-少撿事 貞 剛 庭 伊
+少撿事伊庭貞剛
 兼テ大坂裁判所在勤申付置候處御用都合有之更ニ箱館
 裁判所在勤申付候事</div></div>
-<div class="ol-article" data-src-id="a08-104" data-type-base="人事" data-pid="1366797" data-frame="61"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/61" target="_blank" rel="noopener">原本 コマ61 →</a></div><div class="ol-body">補十二等出仕 十三等出仕島 田 烈 彌
-補十四等出仕 十五等出仕 小 光 信 澤</div></div>
+<div class="ol-article" data-src-id="a08-104" data-type-base="人事" data-pid="1366797" data-frame="61"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/61" target="_blank" rel="noopener">原本 コマ61 →</a></div><div class="ol-body">補十二等出仕　十三等出仕　島田烈彌</div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治七年第七十號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十四日</div>
 <div class="ol-article" data-src-id="a08-105" data-type-base="伺" data-pid="1366797" data-frame="62"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔小田縣伺〕七年三月廿四日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/62" target="_blank" rel="noopener">原本 コマ62 →</a></div><div class="ol-body">懲役人外役中密カニ他ノ女ト和姦ヲ謀ルニ女ハ罪囚ト
 知ヲ通スル者ハ男女トモ不應爲ヲ以論シ可申哉但女ハ
@@ -9121,7 +9328,7 @@
 稱官條官司ノ差遣ト詐稱シ犯ス處輕キ者懲役七十日兵
 藏勘五郞三左衛門ハ又藏カ差遣人ニ模擬スル席ニ臨ム
 ト雖モ其情ヲ知ラサルヲ以テ呵責榮三郞ハ瘋癲人々ヲ
-殺ス者ニ比照シ鎖錮終身喜六ハ曾テ幼兒無知ノ〓レヲ
+殺ス者ニ比照シ鎖錮終身喜六ハ曾テ幼兒無知ノ戲レヲ
 怒リ過激ノ言ヲ以テ威迫シ恐怖セシムルヨリ榮三郞ノ
 病源ヲ濫觴スルニ至 ル者雜犯律不應爲輕ニ擬シ閏刑ニ
 換ヘ禁錮三十日等ノ指令アリ</div></div>
@@ -9164,25 +9371,25 @@
 第二條　限內逃走スル罪因ノ衣類ハ最前領置セシ其儘
 差置捕獲ノ後ヲ待テ處分ス可シ</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月四日分</div>
 <div class="ol-article" data-src-id="a08-112" data-type-base="article" data-pid="1366797" data-frame="68"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/68" target="_blank" rel="noopener">原本 コマ68 →</a></div><div class="ol-body">杤木 在勤
-大觧部 吉 則 竹 好
+大觧部吉竹好則
 座光寺權大觧部交代歸京申付候事
 京都裁判所在勤申付候事 同 澤 中 重 業
-素 同 草 野 允
+同　草野允素
 中澤大觧部交代歸京申付候事
-權大觧部 通 河 野 故
+權大觧部河野通故
 御用都合有之候條早々歸京申付候事
 杤木裁判所在勤 座光寺 同 糺
 中觧部
 源 之 助 同 橋 本
 同　草 鹿 〓
 橋本中觧部交代歸京申付候事
-中 興 哉 澤 同
+同　中澤興哉
 吉田權中觧部交代歸京申付候事
 歸京申付候事
-政 治 鎌 田
+鎌田政治
 同　權中觧部 子 忠 寳 松 同
 同　中觧部 筧 吉 島 忠 章 元 保 邦 永 成 田 同 同
 長崎權中觧部交代歸京申付候事
@@ -9193,25 +9400,25 @@
 茨城裁判所在勤申付候 事
 實 勤城 政 同 〓 東
 小野權中觧部交代歸京申付候事
-杤木裁判所在勤申付候事 十一等出仕山 豐 躬 本
-權中觧部 鶴 見 直 常
+杤木裁判所在勤申付候事　十一等出仕山本豐躬
+權中觧部鶴見直常
 山本十一等出仕交代歸京申付候事
-大坂裁判所在勤申付候事 十三等出仕 原 祐 田
-權中属 安 昇 藤 行
+大坂裁判所在勤申付候事　十三等出仕原田祐
+權中属安藤昇行
 原田十三等出仕交代歸京申付候事
-茨城裁判所在勤申付候事 權少觧部 山 路 忠 利
-權中解部 日 置 貫
+茨城裁判所在勤申付候事　權少觧部山路利忠
+權中解部日置貫
 山路權少解部交代歸京申付候事
 歸京申付候事 在勤
-權少属 岩 性 三 原
-中解部 駿 浦 正 松
-十等出仕 道 大 根 白
-少解部 忠 國 田 原
-少属 綱 方 佐 野
-十二等出仕高 靜 三 木
+權少属岩原性三
+中解部松浦正駿
+十等出仕白根大道
+少解部原田忠國
+少属佐野綱方
+十二等出仕高木靜三
 箱舘裁判所在勤申付候事 各 通</div><div class="xref"><div><span class="xref-caption">正誤:</span> <a href="#a08-260" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a08-260 ○正誤</a></div></div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月八日分</div>
 <div class="ol-article" data-src-id="a08-113" data-type-base="article" data-pid="1366797" data-frame="70"><div class="ol-article-headrow"><div class="ol-head ol-article-head"></div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/70" target="_blank" rel="noopener">原本 コマ70 →</a></div><div class="ol-body">納旨有之候ニ付官ニ還シ官ニ沒スル賍金共府縣ヨリ束
 テ當省ヘ上納致シ區別判然相立兼律上ニ於テモ不都合
@@ -9222,53 +9429,53 @@
 御指令
 伺ノ趣別紙
 之 第四十二號ノ通府縣幷裁判所ヘ相達候事</div></div>
-<div class="ol-article" data-src-id="a08-114" data-type-base="人事" data-pid="1366797" data-frame="70"><div class="ol-article-headrow"><div class="ol-head ol-article-head"></div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/70" target="_blank" rel="noopener">原本 コマ70 →</a></div><div class="ol-body">任少撿事 權少撿事 近 藤 民 之 助
-任大解部 權大解部 山 昌 行 本
-任權大解部 中解部 別 府 景 通
-同　吉 利 邊 渡 同
-同　岡 孝 康 松
-權中解部 吾 謙 藤 齋
+<div class="ol-article" data-src-id="a08-114" data-type-base="人事" data-pid="1366797" data-frame="70"><div class="ol-article-headrow"><div class="ol-head ol-article-head"></div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/70" target="_blank" rel="noopener">原本 コマ70 →</a></div><div class="ol-body">任少撿事　權少撿事　近藤民之助
+任大解部　權大解部　山本昌行
+任權大解部　中解部　別府景通
+同　同　渡邊吉利
+同　松岡康孝
+權中解部　齋藤謙吾
 補十等出仕
-十一等出仕川 郞 上 三
+十一等出仕　川上三郞
 補十二等出仕
-十三等出仕 岡 爲 藏 村
-同　居 之 和 土 同
-權少解部 久 保 村 活 三
+十三等出仕　岡村爲藏
+同　同　土居和之
+權少解部　久保村活三
 任權少解部 十四等出仕水 遜 村
 同　下 州 郞 太
-補十四等出仕 十五等出仕澤 廉 崎 二
-同　同 川 永 圖 松
-同　岩 信 達 同 村
+補十四等出仕　十五等出仕　澤崎廉二
+同　同　松川永圖
+同　同　岩村信達
 權中解部 少解部 宮 島 幸 廉 小 平 下 立
 免本官
 依願免本官</div></div>
-<div class="ol-article" data-src-id="a08-115" data-type-base="article" data-pid="1366797" data-frame="71"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/71" target="_blank" rel="noopener">原本 コマ71 →</a></div><div class="ol-body">權少判事 瀧 彌 太 郞
+<div class="ol-article" data-src-id="a08-115" data-type-base="article" data-pid="1366797" data-frame="71"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/71" target="_blank" rel="noopener">原本 コマ71 →</a></div><div class="ol-body">權少判事瀧彌太郞
 佐賀縣出張兼テ被仰付置候處同縣裁判所被置候ニ付更
 ニ在勤被仰付候事
-大解部 田 尻 彥 太 郞
-中錄 安 井 讓
-中解部 曾 根 誠 藏
-權中属 川 好 信 石
+大解部田尻彥太郞
+中錄安井讓
+中解部曾根誠藏
+權中属石川信好
 在京
-權中解部 林 遠 重 小
-十四等出仕 牧 山 震 郞 太
+權中解部小林重遠
+十四等出仕牧山震太郞
 同前文　但シ被仰付ヲ 通各
-少撿事 藤 民 之 助 近
+少撿事近藤民之助
 更ニ橡木裁判所在勤申付候事
-八等出仕 井 志 藤 正
-十三等出仕戶 原 之 祐
+八等出仕藤井正志
+十三等出仕戶原祐之
 佐賀裁判所在勤申付候事 各
-權大解部 邊 吉 利 渡
+權大解部渡邊吉利
 更ニ埼玉裁判所在勤申付候事
 在勤 大解部 昌 山 本 行
-同　權大解部 岡 松 康 孝
-同　同 景 別 府 通
+同　權大解部松岡康孝
+同　同　別府景通
 更ニ山梨裁判所在勤申付候事</div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治七年第七十一號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十五日</div>
 <div class="ol-article" data-src-id="a08-116" data-type-base="article" data-pid="1366797" data-frame="72"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔大坂裁判所ヘ達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/72" target="_blank" rel="noopener">原本 コマ72 →</a></div><div class="ol-body">本年一月二十八日附ヲ以伺出ニ相成候併賍云々
 ハ調違ニ付今般別紙ノ通改正候條此段及御
@@ -9298,20 +9505,20 @@
 舊惡ハ月ヲ以テ算スル方其減免ヲ速ニスルノ譯ニテ兩
 岐ニ跨リ何ンニ適從可然哉奉伺候也
 指令
-第 一條 一月ハ三十日ヲ以テ算ス一箇年ノ內六箇月前
+第一條　一月ハ三十日ヲ以テ算ス一箇年ノ內六箇月前
 後ニ日數ノ差ヒアルモ妨ケナシ
 第二條　懲役ノ年月日限ハ律例第四條幷ニ昨明治六年
 第四十五號御布告ニ照シテ計算ス老幼ノ年ハ第九十
 二條ニ依リ滿年ヲ以テ算ス
 第三條　逃亡及ヒ舊惡減免ノ如キハ年ヲ以テ算ス</div></div>
-<div class="ol-article" data-src-id="a08-118" data-type-base="人事" data-pid="1366797" data-frame="74"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/74" target="_blank" rel="noopener">原本 コマ74 →</a></div><div class="ol-body">任司法權少属 十三等出仕 原 田 祐</div></div>
+<div class="ol-article" data-src-id="a08-118" data-type-base="人事" data-pid="1366797" data-frame="74"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/74" target="_blank" rel="noopener">原本 コマ74 →</a></div><div class="ol-body">任司法權少属　十三等出仕　原田祐</div></div>
 <div class="ol-article" data-src-id="a08-119" data-type-base="article" data-pid="1366797" data-frame="74"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/74" target="_blank" rel="noopener">原本 コマ74 →</a></div><div class="ol-body">神奈川
 中解部 田 身 太 屋
 在勤
 歸京申付候事
-同　權少解部 永 山 直 正
+同　權少解部永山正直
 出京申付候事
-十一等出仕 直 植 松 久
+十一等出仕植松直久
 箱舘裁判所在勤申付候事</div></div>
 <div class="ol-article" data-src-id="a08-120" data-type-base="伺" data-pid="1366797" data-frame="74"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔滋賀縣伺〕七年三月二十七日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/74" target="_blank" rel="noopener">原本 コマ74 →</a></div><div class="ol-body">近江國高島郡岡村農七彥右
 衛門二女足 ナ ツ 立
@@ -9336,7 +9543,7 @@
 ル者絞罪寅之助ハ懲役人ノ逃走ヲ報シ因テ逃走ヲ致サ
 ヽルヲ得ル者本罪懲役終身ヨリ減一等同十年ニ處スル
 等ノ指令アリ</div></div>
-<div class="ol-article" data-src-id="a08-122" data-type-base="伺" data-pid="1366797" data-frame="75"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔濵田縣伺〕 七年三月二十四日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/75" target="_blank" rel="noopener">原本 コマ75 →</a></div><div class="ol-body">生國不詳無籍 熊 吉
+<div class="ol-article" data-src-id="a08-122" data-type-base="伺" data-pid="1366797" data-frame="75"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔濵田縣伺〕 七年三月二十四日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/75" target="_blank" rel="noopener">原本 コマ75 →</a></div><div class="ol-body">生國不詳無籍　熊吉
 右罪案
 略 之 ノ通賊盜律竊盜賍金一圓以下其人ニ脅誘セラ
 レテ窘蹙ノ餘リ隨行シ外ニ在テ瞭望スル者從ニシテ情
@@ -9347,7 +9554,7 @@
 盜品ヲ携ヘ來リ强逼シテ該犯所持ノ金錢ト交換シ去ル
 ヨリ其品ノ處置ヲ如何セント躊躇スルノ際直チニ捕 ニ
 獲ニ就ク素ヨリ盜心アルニアラス罪ノ譴ム可キナシ
-無罪 熊 吉</div></div>
+無罪　熊吉</div></div>
 <div class="ol-article" data-src-id="a08-123" data-type-base="article" data-pid="1366797" data-frame="76"><div class="ol-article-headrow"><div class="ol-head ol-article-head"></div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/76" target="_blank" rel="noopener">原本 コマ76 →</a></div><div class="ol-body">水澤縣ヨリ 二月 七年 陸前國志田郡本間塚村商太田專之助遠
 田郡北巷目村無籍荒川善七同榮作加美那新田材舊神官
 三浦玄蕃志田郡松山村無籍中村文治黑川郡今村吉岡驛
@@ -9362,7 +9569,7 @@
 サル者懲役八十日今治ハ竊盜賍金一圓以上ノ從ニ付同
 五十日定吉ハ盜賍ヲ知テ故ラニ買者賍金五圓以下同十
 日等ノ指令アリ</div></div>
-<div class="ol-article" data-src-id="a08-124" data-type-base="裁判所申渡" data-pid="1366797" data-frame="76"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔司法省裁判所申渡〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/76" target="_blank" rel="noopener">原本 コマ76 →</a></div><div class="ol-body">畠 九 十 九 大
+<div class="ol-article" data-src-id="a08-124" data-type-base="裁判所申渡" data-pid="1366797" data-frame="76"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔司法省裁判所申渡〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/76" target="_blank" rel="noopener">原本 コマ76 →</a></div><div class="ol-body">大畠九十九
 其方儀元明石藩大属ニテ坂邸在勤中廢藩置縣續テ廢藩
 爾後殘用取扱罷在候內元少參事爲田健司發意ニ同シ自
 專相成ルヨリ舊藩邸茶室幷疊建具等欺取ル賍金五十圓
@@ -9379,7 +9586,7 @@
 借等致ス科ハ應申不申律從ヲ以テ論シ何レモ輕ニ依
 リ不論其欺キ取ル所ノ賍物ハ追徵ス
 華族松平直致家令飾磨縣士
-乙 部 族 鼎
+族　乙部鼎
 其方儀舊主松平直致手許儲蓄金ヲ以從來藩用ニ立替有
 之候所元少參事爲田健司ニ同意シ用達商人共名目ノ證
 書取拵公債ニ書出ス科不應爲重從ヲ以テ論シ一等ヲ減
@@ -9416,7 +9623,7 @@
 乎又ハ已ニ放免セシ者ナレハ其罪ヲ論セス可然哉
 右ノ件々相伺候以上
 指令
-第 條 獄司ノ名稱ナシト雖モ監獄ノ事務ヲ總掌ス ル
+第一條　獄司ノ名稱ナシト雖モ監獄ノ事務ヲ總掌スル
 者之ヲ專决スルヿヲ得ヘシ
 第二條　伺ノ通
 第三條　刑限ヲ過キ放還ノ後發覺スル者ハ其罪ヲ論セ
@@ -9429,10 +9636,10 @@
 指令
 自首スル者ハ律例ニ照準シ放免スヘシ尤モ人ノ告ント
 欲スルヲ知テ首スルノ類ハ減等例ニ照シ其罰ヲ輕減ス
-ヘ シ
+ヘシ
 但首免ヲ與フト雖モ其密造過造ノ品ハ沒取スヘシ</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月八日分</div>
 <div class="ol-article" data-src-id="a08-128" data-type-base="article" data-pid="1366797" data-frame="80"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/80" target="_blank" rel="noopener">原本 コマ80 →</a></div><div class="ol-body">權少判事 井 上 好 武
 今般箱館裁判所ヘ出張ノ上開拓使ヨリ事務引請ノ際ニ
@@ -9448,27 +9655,27 @@
 十四等出仕 野 崎 兼 愛
 御用都合有之早々歸京申付候事</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月九日分</div>
-<div class="ol-article" data-src-id="a08-129" data-type-base="人事" data-pid="1366797" data-frame="81"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/81" target="_blank" rel="noopener">原本 コマ81 →</a></div><div class="ol-body">補十一等出仕 十二等出仕 直 野 田 幹
-任少解部 權少解部 〓 居 土 誠
+<div class="ol-article" data-src-id="a08-129" data-type-base="人事" data-pid="1366797" data-frame="81"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/81" target="_blank" rel="noopener">原本 コマ81 →</a></div><div class="ol-body">補十一等出仕　十二等出仕　野田直幹
+任少解部　權少解部　土居淸誠
 同　同 神 崎 稅
-補十二等出仕 十三等出仕 岡 太 師 郞
-補十三等出仕 十四等出仕 田 中 玄 文
-關 同 同 信 小 國
-補十五等出仕 等外一等出仕 小 野 良 穆
+補十二等出仕　十三等出仕　師岡太郞
+補十三等出仕　十四等出仕　田中玄文
+同　同　小關信國
+補十五等出仕　等外一等出仕　小野良穆
 少解部 土 生 淸 誠
-稅 稔 崎 同 神 同
+同　同　神崎稅稔
 更ニ茨城裁判所在勤申付候事略
-十二等出仕 縣 昌 山 雄
-十三等出仕 島 寛 五
+十二等出仕　山縣昌雄
+十三等出仕　五島寛
 箱館裁判所在勤申付候事</div><div class="xref"><div><span class="xref-caption">正誤:</span> <a href="#a08-279" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a08-279 ○正誤</a></div></div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十日分</div>
-<div class="ol-article" data-src-id="a08-130" data-type-base="article" data-pid="1366797" data-frame="81"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/81" target="_blank" rel="noopener">原本 コマ81 →</a></div><div class="ol-body">權少判事 義 河 定 口
+<div class="ol-article" data-src-id="a08-130" data-type-base="article" data-pid="1366797" data-frame="81"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/81" target="_blank" rel="noopener">原本 コマ81 →</a></div><div class="ol-body">權少判事河口定義
 神奈川縣裁判所副所長被仰付候事
-十三等出仕 鶴 田 實
+十三等出仕鶴田實
 藹
 同　中 岡
 佐賀裁判所在勤申付候事 通</div><div class="xref"><div><span class="xref-caption">正誤:</span> <a href="#a08-279" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a08-279 ○正誤</a></div></div></div>
@@ -9476,9 +9683,9 @@
 補十五等出仕</div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治七年第七十二號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十五日</div>
 <div class="ol-article" data-src-id="a08-132" data-type-base="伺" data-pid="1366797" data-frame="82"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔島根縣伺〕七年三月二十五日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/82" target="_blank" rel="noopener">原本 コマ82 →</a></div><div class="ol-body">銃砲規則ヲ犯シ自首スル者ハ自首ノ情狀ニ依リ自首律
 例ニ照シ免罪或ハ科料ヲ減等スト御指令相成候處譬ハ
@@ -9495,7 +9702,7 @@
 ス ル罰金高ノ內ニヲ適宜ニ減等スヘシ
 但郵便罰則モ亦同シ</div></div>
 <div class="ol-article" data-src-id="a08-133" data-type-base="伺" data-pid="1366797" data-frame="83"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔筑摩縣伺〕七年三月三十一日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/83" target="_blank" rel="noopener">原本 コマ83 →</a></div><div class="ol-body">區長戶長自分取扱ノ儀自今官吏ニ準シ追テ一定ノ規則
-相立候迄區長副區長ハ十二等ョリ十五等迄云〻本年第
+相立候迄區長副區長ハ十二等ヨリ十五等迄云〻本年第
 二十八號ヲ以テ御布告相成候付テハ自今區長副區長一
 切ノ犯罪判任官ノ例ニ準シ處分可然存候得共爲念相伺
 候以上
@@ -9539,12 +9746,12 @@
 數ニ就テ錢ニ止メ罪ニ擬ス
 第二條　全數ヲ迫ス可シ</div><div class="xref"><div><span class="xref-caption">正誤:</span> <a href="#a08-279" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a08-279 ○正誤</a></div></div></div>
 <div class="ol-article" data-src-id="a08-137" data-type-base="布達" data-pid="1366797" data-frame="85"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔乙第四十八號布達〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/85" target="_blank" rel="noopener">原本 コマ85 →</a></div><div class="ol-body">武藏國多摩郡野口村農田村
-五郞藏弟 田 宮 市 次 郞
+五郞藏弟田宮市次郞
 信濃國佐久郡上櫻井村農
-中 喜 之 助 田
+田中喜之助
 右ノ者共儀長野縣ニ於テ懲役終身處刑中當四月一日夜</div></div>
 <div class="ol-article" data-src-id="a08-138" data-type-base="裁判所申渡" data-pid="1366797" data-frame="85"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔司法省裁判所申渡〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/85" target="_blank" rel="noopener">原本 コマ85 →</a></div><div class="ol-body">故山城屋和介召仕
-澤 光 次 郞 深
+深澤光次郞
 其方儀本日午前第九時可罷出旨兼テ相達置候處遲參致
 ス科改定律第二百八十八條式ニ違フ輕キ者ニ擬シ贖罪
 金七十五錢申付候事</div></div>
@@ -9563,41 +9770,37 @@
 今田淸吉處刑指令ノ儀ハ當三月中改テ棒鎖ヲ加ヘ本刑
 ニ處スト議定候事</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十一日分</div>
-<div class="ol-article" data-src-id="a08-140" data-type-base="人事" data-pid="1366797" data-frame="86"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/86" target="_blank" rel="noopener">原本 コマ86 →</a></div><div class="ol-body">任權中解部 少解部 道 羽 貫 田
-任司法少属 權少属 佐 敬 久 野
-任權少解部 十五等出仕宇 忠 美 佐 正
-補十三等出仕 十四等出仕 杉 美 綿 本
-補十五出仕 等外 一等出仕大山 篤行</div></div>
+<div class="ol-article" data-src-id="a08-140" data-type-base="人事" data-pid="1366797" data-frame="86"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/86" target="_blank" rel="noopener">原本 コマ86 →</a></div><div class="ol-body">任權中解部　少解部　羽田道貫</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十二日分</div>
-<div class="ol-article" data-src-id="a08-141" data-type-base="人事" data-pid="1366797" data-frame="87"><div class="ol-article-headrow"><div class="ol-head ol-article-head"></div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/87" target="_blank" rel="noopener">原本 コマ87 →</a></div><div class="ol-body">任大解部 權大解部 河 野 故 通
-任權大解部 中解部 森 造 可
-同　同 松 弘 小 隆
-任中解部 權中解部 佐 々 木 立 重
+<div class="ol-article" data-src-id="a08-141" data-type-base="人事" data-pid="1366797" data-frame="87"><div class="ol-article-headrow"><div class="ol-head ol-article-head"></div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/87" target="_blank" rel="noopener">原本 コマ87 →</a></div><div class="ol-body">任大解部　權大解部　河野通故
+任權大解部　中解部　森可造
+同　同　小松弘隆
+任中解部　權中解部　佐々木玄重
 同　權少解部 十四等出仕 吉 野 憲 貞 武 義 同 浦 利 木 村 章 牧 命 順
 同
 任少解部
 同
 任司法權少属
-任權小解部 同 岩 鼻 克
+任權小解部　同　岩鼻克
 補十四等出仕
-十五等出仕 邊 茂 松 渡
-筧 武 文 同 同
-同　貞 長 尾 夫 同
-茂 松 林 同 同
+十五等出仕　渡邊松茂
+同　同　筧武文
+同　同　長尾貞夫
+同　同　林松茂
 等外一等出仕 同 同 倉 井 吾 愼 谷 鎌 郞 愿 田 - 衡 山 深 正 同 保 佑 大
 同
 同
 補十五等出仕</div></div>
-<div class="ol-article" data-src-id="a08-142" data-type-base="article" data-pid="1366797" data-frame="87"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/87" target="_blank" rel="noopener">原本 コマ87 →</a></div><div class="ol-body">佐賀裁判所在勤申付候事 大解部 河 通 故 野
+<div class="ol-article" data-src-id="a08-142" data-type-base="article" data-pid="1366797" data-frame="87"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/87" target="_blank" rel="noopener">原本 コマ87 →</a></div><div class="ol-body">佐賀裁判所在勤申付候事　大解部河野通故
 大坂 在勤
 權大解部 小 松 隆 弘
 更ニ大坂裁判所在勤申付候事</div><div class="xref"><div><span class="xref-caption">正誤:</span> <a href="#a08-279" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a08-279 ○正誤</a></div></div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十七日</div>
 <div class="ol-article" data-src-id="a08-143" data-type-base="伺" data-pid="1366797" data-frame="88"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔司法省裁判所伺〕七年四月</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/88" target="_blank" rel="noopener">原本 コマ88 →</a></div><div class="ol-body">壬申第二百九十五號御布告第四條
 娼妓藝妓等年季奉公人一切解放可致右ニ付テノ貸借
@@ -9613,23 +9816,22 @@
 解放ニ付亭主ト藝娼妓トノ間ニ起ル貸借ノ事ノミヲ指
 候事ト可相心得事　但藝娼妓ヲ書入ニシタル證書ヲ以
 テ 訴出者ノ如キ亦不及裁判事ト可心得事</div></div>
-<div class="ol-article" data-src-id="a08-144" data-type-base="人事" data-pid="1366797" data-frame="88"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/88" target="_blank" rel="noopener">原本 コマ88 →</a></div><div class="ol-body">任司法權少錄 十四等出仕市 川 友 正
-補十四等出仕 腰 高 禮 司</div></div>
+<div class="ol-article" data-src-id="a08-144" data-type-base="人事" data-pid="1366797" data-frame="88"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/88" target="_blank" rel="noopener">原本 コマ88 →</a></div><div class="ol-body">任司法權少錄　十四等出仕　市川友正</div></div>
 <div class="ol-article" data-src-id="a08-145" data-type-base="人事" data-pid="1366797" data-frame="89"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/89" target="_blank" rel="noopener">原本 コマ89 →</a></div><div class="ol-body">同縣權大属吉江精疑義ノ擬斷ヲ不經伺シ
 テ處斷セシ進退伺ニ擬律允當ナルヲ以テ罪ノ間フ可 キ
-ナ シ</div><div class="xref"><div><span class="xref-caption">正誤:</span> <a href="#a08-293" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a08-293 ○正誤</a></div></div></div>
-<div class="ol-article" data-src-id="a08-146" data-type-base="article" data-pid="1366797" data-frame="89"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/89" target="_blank" rel="noopener">原本 コマ89 →</a></div><div class="ol-body">中解部 見 尙 立 文
+ナシ</div><div class="xref"><div><span class="xref-caption">正誤:</span> <a href="#a08-293" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a08-293 ○正誤</a></div></div></div>
+<div class="ol-article" data-src-id="a08-146" data-type-base="article" data-pid="1366797" data-frame="89"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/89" target="_blank" rel="noopener">原本 コマ89 →</a></div><div class="ol-body">中解部立見尙文
 御用都合有之歸京申付候事
-同　同 豐 原 基 臣
+同　同　豐原基臣
 高橋十一等出仕交代歸京申付候事
-新治裁判所在勤申付候事十一等出仕 高 橋 次 敬 郞
-属 里 光 吉 小
+新治裁判所在勤申付候事十一等出仕高橋敬次郞
+属小里光吉
 長崎裁判所在勤申付候事</div><div class="xref"><div><span class="xref-caption">正誤:</span> <a href="#a08-293" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a08-293 ○正誤</a></div></div></div>
 <div class="ol-article" data-src-id="a08-147" data-type-base="article" data-pid="1366797" data-frame="89"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/89" target="_blank" rel="noopener">原本 コマ89 →</a></div><div class="ol-body">橡木裁判所ヨリ
 野州都賀郡壬生表町農七重兵衛跡
 相續一件裁判見込伺書多端ニ付指令共記載セス</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十八日</div>
 <div class="ol-article" data-src-id="a08-148" data-type-base="伺" data-pid="1366797" data-frame="89"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔鳥取縣伺〕七年三月十九日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/89" target="_blank" rel="noopener">原本 コマ89 →</a></div><div class="ol-body">明治六年大藏省第四十號布達生糸賣買規則第八條無鑑
 札ニテ賣買致シ候者ハ其品取上ケ鑑札料二十倍ノ科料
@@ -9661,7 +9863,7 @@
 ル右ニ同シ　但シ犯ス時知ラスシテ損傷ノ害ナキ者ハ
 尋常和姦ニ從フ可シ</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十九日</div>
 <div class="ol-article" data-src-id="a08-150" data-type-base="伺" data-pid="1366797" data-frame="91"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔岩手縣伺罪案節録〕七年三月二十八日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/91" target="_blank" rel="noopener">原本 コマ91 →</a></div><div class="ol-body">陸中國九戶郡葛卷村農中村常吉供 六年九月村内ニテ
 相撲興行ノ節私モ其中ニ加リ相撲塲ヘ罷出シ所妻タミ
@@ -9679,7 +9881,7 @@
 該犯怒ニ乘シ拳ヲ以テ他ヲ一毆シ頃ラクシテ餘病ヲ發
 シ死ニ至ルト雖モ諸醫ノ診證アルヲ以テ鬭毆條手ヲ以
 テ人ヲ毆チ傷ヲ成サヽル者
-懲役二十日 中 吉 村 常</div></div>
+懲役二十日　中村常吉</div></div>
 <div class="ol-article" data-src-id="a08-151" data-type-base="article" data-pid="1366797" data-frame="92"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/92" target="_blank" rel="noopener">原本 コマ92 →</a></div><div class="ol-body">飾磨縣ヨリ
 七年 三月
 播磨國多可郡東山村農勘七養子儀右衛
@@ -9691,9 +9893,9 @@
 ル者違式輕ニ擬シ贖罪スト指令アリ</div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治七年第七十三號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十九日</div>
 <div class="ol-article" data-src-id="a08-152" data-type-base="伺" data-pid="1366797" data-frame="92"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔濵松縣伺〕七年二月二十八日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/92" target="_blank" rel="noopener">原本 コマ92 →</a></div><div class="ol-body">本年 一月廿日附ヲ以テ相伺候尾張國愛知郡名古屋日置
 新道淺野榮次郞罪案頃日斬罪ノ御指令相成候所昨年六
@@ -9729,7 +9931,7 @@
 其處置ヲ得サルヲ以テ違式輕ノ贖罪彬等ハ被盜ニ係ル
 ヲ以テ兩名共無罪等ノ指令アリ</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十五日分</div>
 <div class="ol-article" data-src-id="a08-154" data-type-base="伺" data-pid="1366797" data-frame="94"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔伺書〕六年八月三日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/94" target="_blank" rel="noopener">原本 コマ94 →</a></div><div class="ol-body">先般御布告揭示規則ノ儀ニ付相伺候所第二百十三號御
 布告ヲ以到達ノ上三十日間揭示ノ後ハ管下一般之ヲ知
@@ -9744,7 +9946,7 @@
 伺ノ趣第四十八號ヲ以テ相達候條其省明治六年第十七七 十
 號布達ノ儀モ取消候樣可取計事</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月二十日</div>
 <div class="ol-article" data-src-id="a08-155" data-type-base="伺" data-pid="1366797" data-frame="94"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔滋賀縣伺〕 七年三月十四日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/94" target="_blank" rel="noopener">原本 コマ94 →</a></div><div class="ol-body">昨明治六年十二月二十八日附ヲ以テ司法省裁判所ヘ被
 告乾健造代言人野路吾一
@@ -9822,8 +10024,8 @@
 同縣中属銀林綱男刑名錯誤セシ進退伺
 ニ出入人罪律ニ依リ無科ノ指令アリ</div></div>
 <div class="ol-article" data-src-id="a08-160" data-type-base="裁判所申渡" data-pid="1366797" data-frame="98"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔司法省裁判所申渡〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/98" target="_blank" rel="noopener">原本 コマ98 →</a></div><div class="ol-body">龜井町半三郞店金太郞召仕
-馬士 辰 郞 五
-人 六 外
+馬士　辰五郞
+外六人
 其方共儀先年流罪申付置候所今般律例改正相成ニ付一
 同放免申付候事　但夫々其筋ノ者ヘ引渡シ遣ス</div></div>
 <div class="ol-article" data-src-id="a08-161" data-type-base="伺" data-pid="1366797" data-frame="98"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔濵田縣伺〕七年三月十二日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/98" target="_blank" rel="noopener">原本 コマ98 →</a></div><div class="ol-body">震災又ハ水災ノ變ニ乘シ里長利ヲ圖ンヿヲ欲シ其災害
@@ -9907,9 +10109,9 @@
 追伸ハ政府ニ献議スヘシ</div><div class="xref"><div><span class="xref-caption">正誤:</span> <a href="#a08-293" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a08-293 ○正誤</a></div></div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治七年第七十四號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月二十日</div>
 <div class="ol-article" data-src-id="a08-166" data-type-base="伺" data-pid="1366797" data-frame="102"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔京都裁判所伺〕六年十一月</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/102" target="_blank" rel="noopener">原本 コマ102 →</a></div><div class="ol-body">西京郵便役所ニ於テ當五月以來金子入信書遞送方發行
 ノ所同所等外一等出仕渡邊正直ナル者遞送致ス可キ信
@@ -9973,7 +10175,7 @@
 候也
 御追書ノ趣是又承知致シ候也</div></div>
 <div class="ol-article" data-src-id="a08-168" data-type-base="伺" data-pid="1366797" data-frame="105"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔新治裁判所伺〕六年十月二十九日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/105" target="_blank" rel="noopener">原本 コマ105 →</a></div><div class="ol-body">常陸國新治郡眞家村農
-穗 治 助 坂
+穗坂治助
 妻ヨテ外五名供狀ノ通ニ付人命律瘋癲殺人
 舊條例其父ヲ傷スルハ止タ鎖錮セシムトアルニ依リ其
 子ヲ傷スル者モ鎖錮終身可申付哉奉伺候也
@@ -10001,9 +10203,9 @@
 セ ント欲シ分娩ノ後之レヲ鞫育スル既ニ十箇月ニシテ
 故アリ其妻ヲ離婚スル後其子ヲ沈殺スルニ依リ 毆祖
 父母父母條 子孫ヲ故殺スル者ニ擬シ
-懲役三年 上 藏 耘 村
+懲役三年　村上耘藏
 嬰兒ヲ沈殺スルノ情ヲ知ラサレハ罪ノ間フヘキナ シ
-無罪 ト メ</div></div>
+無罪　トメ</div></div>
 <div class="ol-article" data-src-id="a08-170" data-type-base="article" data-pid="1366797" data-frame="106"><div class="ol-article-headrow"><div class="ol-head ol-article-head"></div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/106" target="_blank" rel="noopener">原本 コマ106 →</a></div><div class="ol-body">司法省裁判所ヨリ 四月 越後國蒲原郡堀越村外村々控訴
 件訴狀下ケ戾シ見込伺其書類多端ニ付達案共略之</div></div>
 <div class="ol-article" data-src-id="a08-171" data-type-base="伺" data-pid="1366797" data-frame="107"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔兵庫裁判所伺罪案節録〕六年十一月十二日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/107" target="_blank" rel="noopener">原本 コマ107 →</a></div><div class="ol-body">攝津國八部郡藍那村農故元次郞長男西田茂左衞門供
@@ -10031,14 +10233,14 @@
 傷ヲ以テ論シ収贖スルヿヲ聽スト云ニ依リ収贖金四十
 圓ヲ給スヘキ處同居ニ係ルヲ以テ
 免罪 田茂左衛門 西
-収贖金ハ同居ニ係ルヲ以テ給スヘキノ家ナキ 官 毛
+収贖金ハ同居ニ係ルヲ以テ給スヘキノ家ナキモ官
 沒ノ限ニ非ス</div></div>
 <div class="ol-article" data-src-id="a08-172" data-type-base="伺" data-pid="1366797" data-frame="108"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔筑摩縣伺〕六年十一月六日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/108" target="_blank" rel="noopener">原本 コマ108 →</a></div><div class="ol-body">同縣士族今井麻須美山田多宮桃井保之上原眞名井山田
 功等罪案
 ノ通リ諏訪下社奉仕五官祝ト唱從前何事モ
 重立取扱來候處六七箇年以還社中舞家其他頽敗相成候
 折柄修覆ノ爲先前ヨリ社頭貯蓄ノ金ヲ以テ買入置候山
-林田畑其他所々ヨリ寄進ノ品等賣拂社費ニ仕向ヶ可申
+林田畑其他所々ヨリ寄進ノ品等賣拂社費ニ仕向ケ可申
 筈决定致スト雖社中一統ノ公論ヲ不經右等ノ者共限ニ
 テ取計追々金策モ相整候處戊辰十一月以還復飾神職ノ
 者ト座席爭論相發シ彌以諸入費相嵩ミ他借等不少ヨリ
@@ -10052,25 +10254,25 @@
 スル所ノモノヲ擅ニ賣却シ私費ニ充ツ其狀情ヲ酌量シ
 費用受寄財產條ニ比照シテ論シ一等赦後ノ首賍二百圓
 餘坐賍ニ一 等ヲ減シ懲役百日閏刑條ニ依リ
-禁錮百日〔賍金二百五十七圓餘 今 井 麻 須 美
+禁錮百日〔賍金二百五十七圓餘〕　今井麻須美
 一等赦前後ノ從賍ヘ併スレハ罪輕キニ依リ一ノ首
 賍ヲ以テ科ス 未タ接受セサル賍金十五圓及ヒ社
 費ニ充ツルハ除棄ス
 罪名今井麻須美ト同シ止タ赦後首從ノ賍ヲ併セ二百圓
 餘改定律例第七十二條ニ依リ一等ヲ減シ坐賍ニ又一等
 ヲ減シ懲役九十日閏刑條ニ依リ
-同　九十日〔賍金三百六十五圓餘〕 山 田 功
+同　九十日〔賍金三百六十五圓餘〕山田功
 一等赦前首從ノ賍ハ併賍スルモ罪等シ故ニ止タ赦
 後首從ノ賍ヲ以テ科ス 未タ接受セサル云々今井
 麻須美ニ同シ
 同上賍金六十圓以上坐賍ニ一等ヲ減シ禁錮四十日ノ處
 七十年以上ナルヲ以テ例ニ照シ
-収贖金一圓〔贓金七十圓餘〕 山 多 宮 田
+収贖金一圓〔贓金七十圓餘〕　山田多宮
 未タ接受セサル贓金十圓及ヒ社費ニ充ルハ除棄ス
 同上贓金二十圓以上從タルヲ以テ一等ヲ減シ坐贓ニ又
 等ヲ減ス
-禁錮十日〔贓金三十一 圓餘〕 保 之 井 桃
-同　〔同二十八圓餘 原 眞 名 井 上</div></div>
+禁錮十日〔贓金三十一圓餘〕　桃井保之
+同　〔同二十八圓餘〕　上原眞名井</div></div>
 <div class="ol-article" data-src-id="a08-173" data-type-base="article" data-pid="1366797" data-frame="110"><div class="ol-article-headrow"><div class="ol-head ol-article-head"></div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/110" target="_blank" rel="noopener">原本 コマ110 →</a></div><div class="ol-body">新潟縣伺
 越後國蒲原郡赤塚村農石黑平次郞長女カノ供 私儀本
 年三月廿一日夜食ヲ炊キ火ノ取締惡シカリシヤ其夜二
@@ -10084,7 +10286,7 @@
 至ルモ燒死ハ祖父ノ自ヲ取ルヲ以テ唯タ自家燒毀ノ罪
 ヲ責メ失火條火ヲ失シテ自己ノ宅舍ヲ燒ク者懲役二十
 日ノ處婦女タルヲ以テ例ニ依リ収贖ヲ聽ス
-収贖金五十錢 カ ノ</div></div>
+収贖金五十錢　カノ</div></div>
 <div class="ol-article" data-src-id="a08-174" data-type-base="article" data-pid="1366797" data-frame="110"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/110" target="_blank" rel="noopener">原本 コマ110 →</a></div><div class="ol-body">杤木裁判所ヨリ 七〓下野國都賀郡木村用掛大出定平同 一月
 人雇人田島安藏同村農野口幸太等處置伺ニ安藏ハ竊盜
 ノ罪アレトモ自首スルヲ以テ免罪幸太ハ例百五十五條其
@@ -10110,22 +10312,22 @@
 九男一女ヲ輪姦スルハ姦婦ノ自ラ許スニ係ルト雖モ其
 猥褻ノ行ヒ風俗ヲ紊亂スルニ依リ情ヲ量リ雜犯律不應
 重ニ問擬シ
-懲役七十日宛 吉 光 小平 治
-下 八 人 以
+懲役七十日宛　吉光小平治
+以下八人
 同律不應重ニ問擬シ懲役七十日収贖ヲ聽ス
 収贖金一圓七十五錢
 同伴ノ輸奸スルヲ傍觀シテ勸解セサルヲ以テ
-呵責 安 光 石 次 郞
+呵責　石光安次郞
 其罪ノ問可キナシ
-柳 梅 田 藏
+梅田柳藏
 無罪</div></div>
 <div class="ol-article" data-src-id="a08-176" data-type-base="正誤" data-pid="1366797" data-frame="112"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○正誤</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/112" target="_blank" rel="noopener">原本 コマ112 →</a></div><div class="ol-body">六十六號第十五葉兵庫裁判所何中其塲ニ齋シトアル
 齎シノ誤リ</div><div class="xref"><div><span class="xref-caption">訂正対象:</span> <a href="#a08-052" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a08-052 〔兵庫裁判所伺〕 七年三月 十七日</a></div></div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治七年第七十五號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月廿三日</div>
 <div class="ol-article" data-src-id="a08-177" data-type-base="伺" data-pid="1366797" data-frame="112"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔伺書〕七年四月十二日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/112" target="_blank" rel="noopener">原本 コマ112 →</a></div><div class="ol-body">官吏公罪ヲ犯シ罰俸ニ該ル者未タ納完セサルノ內昇官
 又ハ降官スル者之アリ月俸収納之儀原官等ニ致比較候
@@ -10181,39 +10383,39 @@
 三郞左衞門ノ銃丸ヲ受ルヤ自ラ顚蹶スルニ由テ火門火
 ヲ發シ遂ニ死ニ至ルヲ以テ彈者ノ失ニ係ラス罪ノ論ス
 可キナシ
-無罪 石 黑 儀 衞 兵</div></div>
+無罪　石黑儀兵衞</div></div>
 <div class="ol-article" data-src-id="a08-182" data-type-base="伺" data-pid="1366797" data-frame="115"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔新潟縣伺〕七年二月二十日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/115" target="_blank" rel="noopener">原本 コマ115 →</a></div><div class="ol-body">當縣士族西牧利道小笠原重親小川吉利大島武重白石吉
 ノ通ニ付賊盜律監守自盜條ニ
 照シ皆除族絞罪可申付哉奉伺候也
 指令
 該犯會計ノ任ニ在リテ本藩製造ノ紙幣三萬圓ヲ私借ス
-ト雖モ悉皆竊カニ償還斷裁ス且ッ千圓ヲ轉借スルモ亦
+ト雖モ悉皆竊カニ償還斷裁ス且ツ千圓ヲ轉借スルモ亦
 完納スルヲ以テ更ニ官金ニ虧欠スル所ナシ因テ例第百
 六條監臨主守監守スル所ノ錢糧ヲ私ニ借用シ若クハ人
 ニ轉借シ云々事未タ發覺セスシテ完備スル者ハ止タ犯
 情ヲ量リテ不應爲ニ問シ輕重ヲ分ツトアルヲ以テ論シ
 雜犯律不應爲重ニ問擬シ懲役七十日士族タルヲ以テ閏
 刑 ニ換ヘ
-禁錮七十日 川 吉 利 小
+禁錮七十日　小川吉利
 餘罪ハ等シク或ハ輕シ並ニ論セス但配分ヲ受ケ及
 ヒ巳レニ入ルヽ利金ハ追シテ官ニ沒ス
 該犯
 シ因テ小川吉利ト同ク擬シ
-同　大 島 武 重
+同　大島武重
 餘罪云々同上但シ配分ヲ受ル利金ハ追シテ官ニ沒
 ス
 大島武重ト同ク擬シ
-白 吉 次 石 郞
+白石吉次郞
 同
 同
-島 與 川 三 郞
+川島與三郞
 但書同上
 該犯等會計主任ニ在リテ小川吉利等本藩製造ノ紙幣三
 萬圓ヲ私借セル情由ヲ知テ共ニ容隱スト雖モ悉皆償還
 斷裁スルヲ以テ更ニ官金ニ虧欠スル所ナシ因テ小川吉
 利等ト同ク擬シ
-同　牧 道 利 西
-同　笠 重 親 原 小
+同　西牧利道
+同　小笠原重親
 但書同上</div></div>
 <div class="ol-article" data-src-id="a08-183" data-type-base="article" data-pid="1366797" data-frame="116"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/116" target="_blank" rel="noopener">原本 コマ116 →</a></div><div class="ol-body">三重縣ヨリ 四月 伊勢國一志郡日置村雜業信太新八處斷
 伺ニ懲役五年以上ノ囚人限內逃走シ外ニ在テ竊盜四犯
@@ -10236,7 +10438,7 @@
 ニ係ル本文ノ如キ區長戶長等ノ實印ヲ僞造スル者ハ ル
 僞造私印本律ニ依ル可シ出稼劵送籍狀財物借貸等ノ文
 書 ニ僞印スル者ハ改定律例第二百四十六條ニ依テ科斷
-シ ス ヘ</div></div>
+スヘシ</div></div>
 <div class="ol-article" data-src-id="a08-186" data-type-base="article" data-pid="1366797" data-frame="117"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/117" target="_blank" rel="noopener">原本 コマ117 →</a></div><div class="ol-body">高知縣ヨリ
 土佐國吾川郡伊野村平民細川久次敦賀
 縣 ヨ 月 四 若狭國遠敷郡熊川村農藤左衛門長男平谷藤太
@@ -10282,7 +10484,7 @@
 凡ソ寺職ノ者火ヲ失シ其寺ヲ燒キ或ハ他ノ宅舍ハ延燒
 ス ル者如何處斷可然哉相伺候也
 指令
-第 一條 本文ノ如キハ初犯ヲ以テ論ス
+第一條　本文ノ如キハ初犯ヲ以テ論ス
 第二條　準盜トイヘトモ恐喝取財ノ如キ加等スル者ハ財
 ヲ得ストイヘトモ 一等ヲ加ヘ懲役五十日加等セサル者
 ハ伺ノ通
@@ -10301,7 +10503,7 @@
 指令
 故サラニ棄毀スル者ハ不應爲重ニ問ヒ實决シ誤テスル
 者ハ同シク輕ニ問ヒ贖ヲ聽ス　但開業式ノ成否ニ區別
-ナ シ</div></div>
+ナシ</div></div>
 <div class="ol-article" data-src-id="a08-191" data-type-base="article" data-pid="1366797" data-frame="120"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/120" target="_blank" rel="noopener">原本 コマ120 →</a></div><div class="ol-body">京都裁判所ヨリ 七年 四月 上京天秤町商安淸常次郞處置伺ニ
 瘋癲ヲ發シ子ヲ殺スノ疑ヒアル者殊ニ嚴鎖セシムヘシ
 但シ其言據ロアリト雖モ確證ナキヲ以テ未タ人ヲ殺ス
@@ -10312,7 +10514,7 @@
 官幣國幣大中小社及ヒ府縣鄕社ノ賽錢ヲ盜ム者 ハ各如
 何處斷可致哉相伺候也
 指令
-第 條 大祀大社神前ノ賽錢ヲ盜ム者ハ各盜罪ヲ以テ
+第一條　大祀大社神前ノ賽錢ヲ盜ム者ハ各盜罪ヲ以テ
 論シ罪懲役終身ニ止ル
 第二條　官幣國常大中小社及ヒ府縣鄕村社神前ノ賽錢
 ヲ盜ム者ハ各盜罪ニ準シテ論ス</div></div>
@@ -10329,9 +10531,9 @@
 百三十二圓三十一錢九厘八毛 罰金高四十三圓五十錢</div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治七年第七十六號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月廿三日</div>
 <div class="ol-article" data-src-id="a08-195" data-type-base="伺" data-pid="1366797" data-frame="122"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔滋賀縣伺〕七年四月七日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/122" target="_blank" rel="noopener">原本 コマ122 →</a></div><div class="ol-body">貢納ス可キ金穀未タ官納ノ期ニ至ラサル前各民ノ便宜
 ニ依リ戶長ヨリ豫メ取立手許ニ預リ置候ヲ自己ノ融通
@@ -10377,7 +10579,7 @@
 指令
 右ハ富時ノ該官失錯ニ係ルヲ以テ伺ノ通二罪倶發以重
 論條ニ依リ前罪十日ヲ除キ更 ニ贖罪金四圓ニ貼斷ス ヘ</div></div>
-<div class="ol-article" data-src-id="a08-197" data-type-base="人事" data-pid="1366797" data-frame="124"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/124" target="_blank" rel="noopener">原本 コマ124 →</a></div><div class="ol-body">補十五等出仕 潴縣十 等出仕 井 尙 五 潔 永 三</div></div>
+<div class="ol-article" data-src-id="a08-197" data-type-base="人事" data-pid="1366797" data-frame="124"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/124" target="_blank" rel="noopener">原本 コマ124 →</a></div><div class="ol-body">補十五等出仕　三潴縣十五等出仕　永井尙潔</div></div>
 <div class="ol-article" data-src-id="a08-198" data-type-base="article" data-pid="1366797" data-frame="124"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/124" target="_blank" rel="noopener">原本 コマ124 →</a></div><div class="ol-body">歸京申付候事 在 權少解部 操 村 松</div></div>
 <div class="ol-article" data-src-id="a08-199" data-type-base="伺" data-pid="1366797" data-frame="124"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔岐阜縣伺〕 七年四月四日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/124" target="_blank" rel="noopener">原本 コマ124 →</a></div><div class="ol-body">改定律第百二十三條官幣國幣大社ノ神御神寶ヲ盜ム者
 ハ云々鄕社ハ懲役九十日云々ト相見候村社ニ至リテハ
@@ -10392,26 +10594,26 @@
 第三條　官幣國幣大中小社及ヒ府縣鄕村社神前ノ賽錢
 ヲ盜ム者ハ各盜罪ニ準シテ論ス罪懲役十年ニ止ル</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十五日分</div>
-<div class="ol-article" data-src-id="a08-200" data-type-base="人事" data-pid="1366797" data-frame="125"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/125" target="_blank" rel="noopener">原本 コマ125 →</a></div><div class="ol-body">補十等出仕 十一等出仕西 讓 村</div></div>
+<div class="ol-article" data-src-id="a08-200" data-type-base="人事" data-pid="1366797" data-frame="125"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/125" target="_blank" rel="noopener">原本 コマ125 →</a></div><div class="ol-body">補十等出仕　十一等出仕　西村讓</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十七日分</div>
 <div class="ol-article" data-src-id="a08-201" data-type-base="人事" data-pid="1366797" data-frame="125"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/125" target="_blank" rel="noopener">原本 コマ125 →</a></div><div class="ol-body">補十一等出仕
-岡 之 武 利</div></div>
+利岡武之</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十八日分</div>
-<div class="ol-article" data-src-id="a08-202" data-type-base="人事" data-pid="1366797" data-frame="126"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/126" target="_blank" rel="noopener">原本 コマ126 →</a></div><div class="ol-body">任司法權少属 十四等出仕 代 松 雅 長</div></div>
+<div class="ol-article" data-src-id="a08-202" data-type-base="人事" data-pid="1366797" data-frame="126"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/126" target="_blank" rel="noopener">原本 コマ126 →</a></div><div class="ol-body">任司法權少属　十四等出仕　松代雅長</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十九日</div>
-<div class="ol-article" data-src-id="a08-203" data-type-base="article" data-pid="1366797" data-frame="126"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/126" target="_blank" rel="noopener">原本 コマ126 →</a></div><div class="ol-body">大解部 板 倉 勝 達
+<div class="ol-article" data-src-id="a08-203" data-type-base="article" data-pid="1366797" data-frame="126"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/126" target="_blank" rel="noopener">原本 コマ126 →</a></div><div class="ol-body">大解部板倉勝達
 堤權少判事外務省出張中兼テ同人取扱ノ事務當分代理
 申付候事</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月二十四日分</div>
 <div class="ol-article" data-src-id="a08-204" data-type-base="伺" data-pid="1366797" data-frame="126"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔島根縣伺〕七年四月八日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/126" target="_blank" rel="noopener">原本 コマ126 →</a></div><div class="ol-body">無證ノ爭訟ハ難及准理ニ付賣掛金等其時々附込帳ヘ借
 主ノ實印ヲ可取置ハ勿論ノ所僻陋ノ愚民兎角舊慣脫シ
@@ -10482,7 +10684,7 @@
 絶命ニ及ホシ候
 指令
 鬪毆及故殺條人ヲ故殺スル者
-吉 野 庄 小
+小野庄吉
 姦罪ハ輕シ論セス</div></div>
 <div class="ol-article" data-src-id="a08-207" data-type-base="article" data-pid="1366797" data-frame="129"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/129" target="_blank" rel="noopener">原本 コマ129 →</a></div><div class="ol-body">東京三田四丁目商安川鐵五郞熊
 谷裁判所ヨリ 月同
@@ -10499,7 +10701,7 @@
 五郞萬太郞良太郞忠次郞惣吉大作淸吉ハ持兒器强盜財
 ヲ得ル者ニ付九名共ニ皆斬罪ノ指令アリ</div></div>
 <div class="ol-article" data-src-id="a08-208" data-type-base="伺" data-pid="1366797" data-frame="130"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔東京裁判所伺〕七年四月五日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/130" target="_blank" rel="noopener">原本 コマ130 →</a></div><div class="ol-body">東京品川步行新宿商
-住 吉 淸 二 郞
+住吉淸二郞
 右者强盜瞭望スル者ニ付改定律例第百二十八條ニ照シ
 處斷ノ儀相伺候所瞭望二次以上ニ及フヲ以テ本刑ヲ加
 トアツテ斬罪ト本日御指令有之瞭望二次以上ニ及フ者
@@ -10519,26 +10721,21 @@
 强盜瞭望二次以上ニ及フ者ハ處犯ノ前後ヲ論セス本律
 ニ依テ科シ減等ノ例ヲ用ヒスト本年一月中更ニ議定相
 成候事</div></div>
-<div class="ol-article" data-src-id="a08-209" data-type-base="人事" data-pid="1366797" data-frame="131"><div class="ol-article-headrow"><div class="ol-head ol-article-head"></div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/131" target="_blank" rel="noopener">原本 コマ131 →</a></div><div class="ol-body">任少法官 權大解部 位 正 楠
-任權大解部 九等出仕 讓 神 山
-任少解部 權少解部 間 實 野
-補十二等出仕 十三等出仕鎌 田 冲 太
-任權少解部 十四等出仕 松 貫 義 野
-補十五等出仕 等外一等出仕原 頴</div></div>
+<div class="ol-article" data-src-id="a08-209" data-type-base="人事" data-pid="1366797" data-frame="131"><div class="ol-article-headrow"><div class="ol-head ol-article-head"></div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/131" target="_blank" rel="noopener">原本 コマ131 →</a></div><div class="ol-body">任少法官　權大解部　楠正位</div></div>
 <div class="ol-article" data-src-id="a08-210" data-type-base="人事" data-pid="1366797" data-frame="131"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/131" target="_blank" rel="noopener">原本 コマ131 →</a></div><div class="ol-body">杤木裁判所ヨリ
 七年質地出入裁判見込伺書等多端ニ付
 指令共記載セス</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月二十日分</div>
 <div class="ol-article" data-src-id="a08-211" data-type-base="人事" data-pid="1366797" data-frame="132"><div class="ol-article-headrow"><div class="ol-head ol-article-head"></div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/132" target="_blank" rel="noopener">原本 コマ132 →</a></div><div class="ol-body">達書 〕
 御用都合有之歸京申付候事
-埼玉裁判所在勤申付候事十等出仕 大河平 隆</div></div>
+埼玉裁判所在勤申付候事　十等出仕　大河平隆</div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治七年第七十七號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月廿四日</div>
 <div class="ol-article" data-src-id="a08-212" data-type-base="伺" data-pid="1366797" data-frame="132"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔伺書〕七年四月十三日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/132" target="_blank" rel="noopener">原本 コマ132 →</a></div><div class="ol-body">昨明治六年淸國ト御條約書中第九條ニ兩國ノ開港塲 ニ
 若シ未タ理事官ヲ置カサル時ハ其人民云々若シ罪科ヲ
@@ -10614,22 +10811,22 @@
 第七條　出訴ノ年月取調証書寫ヲ以テ可伺出事
 第八條　權利ノ儀ハ伺ノ通</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月廿二日分</div>
 <div class="ol-article" data-src-id="a08-215" data-type-base="人事" data-pid="1366797" data-frame="136"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/136" target="_blank" rel="noopener">原本 コマ136 →</a></div><div class="ol-body">補十四等出仕
-岸 眞一郞</div></div>
+岸眞一郞</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月廿三日分</div>
 <div class="ol-article" data-src-id="a08-216" data-type-base="人事" data-pid="1366797" data-frame="136"><div class="ol-article-headrow"><div class="ol-head ol-article-head"></div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/136" target="_blank" rel="noopener">原本 コマ136 →</a></div><div class="ol-body">乙第五十二號布達
 陸前國宮城郡高城驛農
-甚 吉 三 浦
+三浦甚吉
 同國黑川郡大松驛柏木村士
-族祐安弟 伊 藤 辰 三 郞
+族祐安弟伊藤辰三郞
 右之者共儀於宮城縣懲役終身處刑中本月八日致逃亡候
 條各地方</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月廿五日</div>
 <div class="ol-article" data-src-id="a08-217" data-type-base="伺" data-pid="1366797" data-frame="136"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔新治裁判所伺〕七年四月九日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/136" target="_blank" rel="noopener">原本 コマ136 →</a></div><div class="ol-body">本年御省日誌第八號小田縣伺ノ御指令ニ再從弟妹ノ再
 從兄姊ヲ毆ツハ四等親ノ尊長ヲ毆ツヲ以テ論スト有之
@@ -10707,7 +10904,7 @@
 百日ニ科ス後項囚ト同罪ナル者ハ罪囚本罪ノ輕重
 從フテ捕吏ノ罪ヲ定擬スルカ故ニ懲役百日ヨリ輕キ
 モ之レ有ル可シ權衡不安ナルニ似タリト雖モ前項ハ
-贖ヲ聽シ後項ハ實斷ニ該リ且該犯ノ死ニ入ルャ懲役
+贖ヲ聽シ後項ハ實斷ニ該リ且該犯ノ死ニ入ルヤ懲役
 終身ノ重ニ至ル故ニ前後ノ兩項自ヲ輕重アリト知 ル
 可シ
 第四條　故出人罪ヲ以テ論ス故サラニ推鞫ヲ盡サス放
@@ -10745,9 +10942,9 @@
 但シ犯時頒例前ニ在ヲ以テ舊減等法ニ依ル等ノ指令ア</div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治七年第七十八號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月廿五日</div>
 <div class="ol-article" data-src-id="a08-227" data-type-base="布達" data-pid="1366797" data-frame="142"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔第八號布達〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/142" target="_blank" rel="noopener">原本 コマ142 →</a></div><div class="ol-body">無籍無產ニシテ授產塲ニ在リ逃走スル者並ニ賭博ヲ企
 テ未タ行ハサル者及ヒ地劵狀ヲ遺失誤毀スル者等ノ刑
@@ -10790,7 +10987,7 @@
 差許可申事</div></div>
 <div class="ol-article" data-src-id="a08-231" data-type-base="article" data-pid="1366797" data-frame="144"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/144" target="_blank" rel="noopener">原本 コマ144 →</a></div><div class="ol-body">愛知縣ヨリ 七年 四月 同縣士族須賀銀十郞處置伺ニ鬪毆人ヲ
 殺ス者懲役終身ノ處士族タルヲ以テ閏刑ニ換ユト指令
-ア リ</div></div>
+アリ</div></div>
 <div class="ol-article" data-src-id="a08-232" data-type-base="伺" data-pid="1366797" data-frame="144"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔山口縣伺〕七年三月二十四日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/144" target="_blank" rel="noopener">原本 コマ144 →</a></div><div class="ol-body">新律綱領棄毀官文書ノ條ニ省臺寮司藩縣ノ文書ハ各二
 等ヲ減シ餘ノ文書ハ各五等ヲ減ス云々改定律例百一條
 ニ凡官廳ノ通行印鑑ヲ遺失シ及ヒ誤毀スル者ハ懲役十
@@ -10811,7 +11008,7 @@
 右相伺候也
 別紙 〕
 都濃郡須萬村法華宗榮昌寺
-住職 谷 日 隨 片
+住職　片谷日隨
 其方儀得度証據物遺失スル科職制律ニ依リ金一圓五十
 錢贖罪申付ル
 指令
@@ -10821,18 +11018,18 @@
 フ通行印鑑ト稱スル者ハ官廳諸門ノ出入ニ用ユルノ
 印鑑ヲ謂フ</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○三月廿二日分</div>
 <div class="ol-article" data-src-id="a08-233" data-type-base="裁判所申渡" data-pid="1366797" data-frame="146"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔臨時裁判所申渡〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/146" target="_blank" rel="noopener">原本 コマ146 →</a></div><div class="ol-body">酒田縣貫属士族
-水 次 野 年
-外 廿 人 八
+水野年次
+外廿八人
 其方共儀當裁判所ニ出訴スル始末ハ明治六年當省第二
 十三號布達ニ照シ無搆
 但自今他管地寄留移住等ヲ欲スル節ハ各其管轄廳
 願出可申事
 同縣士族
-守 前 倉 小
-親 中 胤 追
+小倉守前
+中追胤親
 其方共儀桂田寛吾屠服ノ際其席末ニ列スト雖モ其身之
 ヲ阻當スルノ權ナク唯伍長等ノ所爲ヲ徒視シテ事ニ與
 ラス仍テ其罪ヲ問ハス且當裁判所ニ越訴スル始末ハ明
@@ -10848,8 +11045,8 @@
 情實止ヲ得サルニ出ツ今之ニ逃七罪ヲ科ス可キニ非ス
 故ニ其祿ヲ復給可被致候也</div></div>
 <div class="ol-article" data-src-id="a08-234" data-type-base="article" data-pid="1366797" data-frame="147"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔申渡書〕 〓</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/147" target="_blank" rel="noopener">原本 コマ147 →</a></div><div class="ol-body">酒田縣貫属士族
-林 若 守 信
-外 三 名
+若林守信
+外三名
 其方共儀後田山開墾中桂田寛吾盟約ニ背ク廉有之トテ
 萩谷彌太郞ノ發意ニテ寛吾ニ差逼リ自殺セシムル砌傍
 觀致ス科人命律同行知有謀害條ニ擬シ禁錮九十日宛可
@@ -10859,7 +11056,7 @@
 <div class="ol-article" data-src-id="a08-235" data-type-base="article" data-pid="1366797" data-frame="147"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/147" target="_blank" rel="noopener">原本 コマ147 →</a></div><div class="ol-body">同縣士族今井左次馬外七十二名ハ皆無搆ノ罰文アレ トモ
 其文多數ニ付記載セス</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○三月三十一日</div>
 <div class="ol-article" data-src-id="a08-236" data-type-base="article" data-pid="1366797" data-frame="148"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔同達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/148" target="_blank" rel="noopener">原本 コマ148 →</a></div><div class="ol-body">其縣ヘ出張
 其縣ヘ預ケ置候舊新徴組中從前所有ノ金貳千圓ハ其縣
@@ -10872,13 +11069,13 @@
 尾崎恭造等所持ノ品物ハ家族或ハ親戚等ノ者ヘ下付可
 被致候也</div></div>
 <div class="ol-article" data-src-id="a08-237" data-type-base="article" data-pid="1366797" data-frame="148"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔申渡書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/148" target="_blank" rel="noopener">原本 コマ148 →</a></div><div class="ol-body">酒田縣貫属士族
-萩 谷 彌 太 郞
+萩谷彌太郞
 其方儀後田山開墾中桂田寛吾盟約ニ背ク廉有之トテ中
 山四郞等ニ申含メ寛吾ニ差逼リ自殺セシムル科圖毆律
 威力制縛條ヲ以テ論シ事情風習ヲ量リ二等ヲ減シ該犯
 三流一減ノ時ニ在ルヲ以テ依新頒律條ニ依リ禁錮三年
 申付候事
-同縣士族 山 口 昇 兵 衛
+同縣士族　山口昇兵衛
 其方儀後田山開墾中尾崎恭造稻田隼雄脫走ノ砌其筋ノ
 申付ヲ受ケ追捕ニ差遣セラルヽ節隼雄ハ兒器ヲ持シ拒
 捕スルニ依リ刃傷ニ及ヒ終ニ自殺スルニ至 ル恭造ハ捕
@@ -10886,7 +11083,7 @@
 ハ桂田寛吾盟約ニ背クトテ萩谷彌太郞ノ發意ニ從ヒ寛
 吾ニ差逼リ自殺セシムル等ノ科圖毆律威力制縛條ヲ以
 テ論シ彌太郞ノ從トナシ禁錮二年半申付候事
-同　長 屋 藏 玄
+同　長屋玄藏
 其方儀天野靜一郞ヲ看守スル中同人申出ニ任セ介錯致
 シ自殺セシメ靜一郞看守人ノ隙ヲ伺ヒ自殺ニ及フ抔詐
 テ申告シ謹慎七日ニ處セラレ又ハ後田山開墾中桂田寛
@@ -10898,7 +11095,7 @@
 同縣士族片平太郞外三十五名同上ノ事件ニ付禁錮二年
 半以下夫々申付ヲルヽ罰文ハ多端ニ付記載セス</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月廿七日</div>
 <div class="ol-article" data-src-id="a08-238" data-type-base="伺" data-pid="1366797" data-frame="149"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔濵田縣伺〕七年三月十三日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/149" target="_blank" rel="noopener">原本 コマ149 →</a></div><div class="ol-body">懲役人疾病ニ付親戚等ヘ責付中醫ノ差圖ニ由テ療用ノ
 爲外出步行ヲ願出候者ハ逃走ヲ防閑スルノ方ヲ盡シ萬
@@ -10932,9 +11129,9 @@
 壬申第三百號御布告ニ基キ己巳六月廿五日以前ノ分ハ
 裁判不及事　但シ己巳六月廿六日以後ノ分ハ證書寫並
 ニ事實取調書ヲ以テ可伺出事</div></div>
-<div class="ol-article" data-src-id="a08-241" data-type-base="article" data-pid="1366797" data-frame="151"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/151" target="_blank" rel="noopener">原本 コマ151 →</a></div><div class="ol-body">箱館裁判所在勤申付候事 少解部 田 敬 和 正</div></div>
+<div class="ol-article" data-src-id="a08-241" data-type-base="article" data-pid="1366797" data-frame="151"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/151" target="_blank" rel="noopener">原本 コマ151 →</a></div><div class="ol-body">箱館裁判所在勤申付候事　少解部和田正敬</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十四日</div>
 <div class="ol-article" data-src-id="a08-242" data-type-base="伺" data-pid="1366797" data-frame="151"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔廣島縣伺〕七年三月二十九日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/151" target="_blank" rel="noopener">原本 コマ151 →</a></div><div class="ol-body">改定律第二百三十七條邏卒ヲ罵ル者ハ凡人罵詈ニ二等
 ヲ加ヘ候明文有之候處茲ニ鎭臺病院在テ門前ニ番兵ア
@@ -10948,9 +11145,9 @@
 兩條共凡人罵詈ヲ以テ論ス加等スルノ限ニアヲス</div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治七年第七十九號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月廿七日</div>
 <div class="ol-article" data-src-id="a08-243" data-type-base="伺" data-pid="1366797" data-frame="153"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔兵庫裁判所伺〕七年四月八日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/153" target="_blank" rel="noopener">原本 コマ153 →</a></div><div class="ol-body">某村農ニ一娘アリ同村甲某ト姦私シ妊娠シテ夫婦ト成
 ラント欲ス其父許サス終ニ甲ノ引誘ニ從ヒ脫シテ其家
@@ -11008,14 +11205,14 @@
 指令
 伺ノ通</div></div>
 <div class="ol-article" data-src-id="a08-246" data-type-base="伺" data-pid="1366797" data-frame="156"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔足柄裁判所伺〕六年九月四日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/156" target="_blank" rel="noopener">原本 コマ156 →</a></div><div class="ol-body">相模國足柄下郡矢作村農高
-橋惣之助娘 キ マ
+橋惣之助娘　マキ
 ノ通ニ付律ニ正條無之仍テ擬律奉伺候也
 右ハ罪案之
 指令
 瘋癲ヲ發シ人ノ宅舍ヘ放火スルハ鎖錮終身ニ當ルト雖
 モ 其病已ニ痊愈スルヲ以テ不問ニ置キ止タ痊愈後犯ス
 所ノ竊盜罪ヲ科ス竊盜條竊盜一圓以上
-懲役六十日〔賍金一圓餘〕 キ マ</div></div>
+懲役六十日〔賍金一圓餘〕　マキ</div></div>
 <div class="ol-article" data-src-id="a08-247" data-type-base="伺" data-pid="1366797" data-frame="156"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔廣島縣伺〕七年四月四日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/156" target="_blank" rel="noopener">原本 コマ156 →</a></div><div class="ol-body">愛媛縣管下伊豫國温泉郡萱町二丁目商木村庸ヨリ當縣
 下備後國御調郡三原町小野鹿助外四名ヘ係ル貸金出入
 愛媛縣ヨリ掛合越候ニ付原告代言人共一應及承糺候所
@@ -11091,34 +11288,34 @@
 非ス唯依頼スル事件ヲ等閑リ遷延スルヲ以テ某人ヲ困
 却セシメハ速ニ事ノ處置アラントノ意ニ出ルヲ以テ雜
 犯律不應爲ノ輕キニ擬シ
-懲役三十日 吉 進 平</div></div>
+懲役三十日　進吉平</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月廿八日</div>
-<div class="ol-article" data-src-id="a08-252" data-type-base="article" data-pid="1366797" data-frame="160"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/160" target="_blank" rel="noopener">原本 コマ160 →</a></div><div class="ol-body">十四等出仕 野 兼 崎 愛
+<div class="ol-article" data-src-id="a08-252" data-type-base="article" data-pid="1366797" data-frame="160"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/160" target="_blank" rel="noopener">原本 コマ160 →</a></div><div class="ol-body">十四等出仕野崎兼愛
 箱館裁判所在勤申付候事</div></div>
-<div class="ol-article" data-src-id="a08-253" data-type-base="article" data-pid="1366797" data-frame="160"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/160" target="_blank" rel="noopener">原本 コマ160 →</a></div><div class="ol-body">十三等出仕藤 井 齋 助
+<div class="ol-article" data-src-id="a08-253" data-type-base="article" data-pid="1366797" data-frame="160"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/160" target="_blank" rel="noopener">原本 コマ160 →</a></div><div class="ol-body">十三等出仕藤井齋助
 補十二等出仕</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十六日分</div>
-<div class="ol-article" data-src-id="a08-254" data-type-base="article" data-pid="1366797" data-frame="160"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/160" target="_blank" rel="noopener">原本 コマ160 →</a></div><div class="ol-body">林 光 雄 伴
+<div class="ol-article" data-src-id="a08-254" data-type-base="article" data-pid="1366797" data-frame="160"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/160" target="_blank" rel="noopener">原本 コマ160 →</a></div><div class="ol-body">伴林光雄
 補十四等出仕</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月十七日分</div>
 <div class="ol-article" data-src-id="a08-255" data-type-base="人事" data-pid="1366797" data-frame="160"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/160" target="_blank" rel="noopener">原本 コマ160 →</a></div><div class="ol-body">補十四等出仕
-吉 左 平 太 松</div></div>
+吉松左平太</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月廿三日分</div>
-<div class="ol-article" data-src-id="a08-256" data-type-base="人事" data-pid="1366797" data-frame="160"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/160" target="_blank" rel="noopener">原本 コマ160 →</a></div><div class="ol-body">依願免出仕 十五等出仕 山 本 雅 考</div></div>
+<div class="ol-article" data-src-id="a08-256" data-type-base="人事" data-pid="1366797" data-frame="160"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/160" target="_blank" rel="noopener">原本 コマ160 →</a></div><div class="ol-body">依願免出仕　十五等出仕　山本雅考</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月廿四日分</div>
-<div class="ol-article" data-src-id="a08-257" data-type-base="人事" data-pid="1366797" data-frame="161"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/161" target="_blank" rel="noopener">原本 コマ161 →</a></div><div class="ol-body">免出仕 十五等出仕 岸 義 本 正</div></div>
+<div class="ol-article" data-src-id="a08-257" data-type-base="人事" data-pid="1366797" data-frame="161"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/161" target="_blank" rel="noopener">原本 コマ161 →</a></div><div class="ol-body">免出仕　十五等出仕　岸本義正</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月廿九日分</div>
 <div class="ol-article" data-src-id="a08-258" data-type-base="伺" data-pid="1366797" data-frame="161"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔京都裁判所伺〕七年四月十七日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/161" target="_blank" rel="noopener">原本 コマ161 →</a></div><div class="ol-body">明治六年第六十四號御省日誌中入間裁判所伺ニ墻壁毀
 盜賍ニ疑無キ物品
@@ -11165,9 +11362,9 @@
 四字ヲ脫ス</div><div class="xref"><div><span class="xref-caption">訂正対象:</span> <a href="#a08-112" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a08-112 〔達書〕</a></div></div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治七年第八十號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月廿九日</div>
 <div class="ol-article" data-src-id="a08-261" data-type-base="伺" data-pid="1366797" data-frame="164"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔伺書〕七年四月十九日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/164" target="_blank" rel="noopener">原本 コマ164 →</a></div><div class="ol-body">開拓使東京詰ノ分判任官以下犯罪ノ輩糺彈ハ勿論待罪
 書指出候分共於當省可致處决旨明治六年五月廿二日御
@@ -11190,17 +11387,17 @@
 候
 追テ當人共 ヘ下付致候罰案寫相添候尤處斷濟可被届
 出候也</div></div>
-<div class="ol-article" data-src-id="a08-263" data-type-base="article" data-pid="1366797" data-frame="165"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔申渡書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/165" target="_blank" rel="noopener">原本 コマ165 →</a></div><div class="ol-body">酒田縣大属長 澤 光 久
+<div class="ol-article" data-src-id="a08-263" data-type-base="article" data-pid="1366797" data-frame="165"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔申渡書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/165" target="_blank" rel="noopener">原本 コマ165 →</a></div><div class="ol-body">酒田縣大属長澤光久
 其方儀大赦ノ令ヲ奉シ罪囚酒井權七郞外一人放免致ス
 キ處復タ犯スヿアランヲ畏レ仍ホ囚禁シテ經過スル ヘ
 科懲役三年ヲ入ルヽト做シ斷獄律出入人罪條罪ヲ斷シ
 テ入ルヽニ失スルト云ヲ以テ論シ其懲役三年ヨリ三等
 ヲ减シ一年半所由ヲ首トナシ公罪例ニ依リ罰俸一月半
 申付候事
-同縣權大属山 岸 貞 文
+同縣權大属山岸貞文
 同前文　但シ酒井權七郞ヲ池田讓輔ニ作ル
-區長 久 厚 松 本
-口 同 矢 親 敬
+區長　松本久厚
+同　矢口親敬
 其方儀元大泉藩ノ節久厚ハ大參事親敬ハ權大參事奉職
 中士族卒ノ舊祿ヲ改革シテ上申スルノ后チ其届高ノ內
 ヨリ有餘ヲ生シ專斷ヲ以テ多員ノ分家ヲ許シ各多少ノ
@@ -11211,10 +11408,10 @@
 但親敬ハ士族ノ戶主太田資祇ヲシテ中村家ノ養子ト
 ナシ其家ヲ襲カシムルハ舊藩制ニ沿因スルヲ以テ其
 罪ヲ不問
-酒田縣士族水 剛 重 野
+酒田縣士族水野重剛
 同前文　但シ各多少ヨリ救恤迄ノ廿六字ナリ末段ノ區
 長ヲ非職ニ作ル
-戶長 安 吉 藤 武
+戶長　安藤武吉
 其方儀元大泉藩少參事奉職東京誥合中士族ノ子弟ヲシ
 テ新ニ分家セシムルモノモ各從前戶主素祿ノ体裁ニ取
 調タル届書大參事ヨリ廻シ來ル迪事實ヲ陳述セス其儘
@@ -11224,7 +11421,7 @@
 リ贖罪金三十圓申付候事
 但天野講一郞自刃一件ニ付吟味遂ル處不束ノ筋無之
 ニ付無搆
-酒田縣中属春 安 山 均
+酒田縣中属春山安均
 其方儀元大泉藩出納掛在勤以來元同藩大參事等ノ差圖
 ヲ受士族卒祿制改革一件ニ與ルヲ以テ松平久厚等免官
 後モ尙同人等ノ依頼ニ任セ公務ノ餘暇士族卒子弟分家
@@ -11257,18 +11454,18 @@
 婦人ノ逃亡ハ原罪收贖ノ處復歸シ及ヒ自首スルモ亦同
 シク收贖ニ處スレハ自首ノ區別ナシ因テ筑摩縣伺指令
 ノ通リ心得可シ</div></div>
-<div class="ol-article" data-src-id="a08-266" data-type-base="人事" data-pid="1366797" data-frame="168"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/168" target="_blank" rel="noopener">原本 コマ168 →</a></div><div class="ol-body">任權大解部 中解部 信 柳 元
-任權中解部 少解部 卷 淸 隆 石
-任少解部 權少解部 藤 郞 進 郁
+<div class="ol-article" data-src-id="a08-266" data-type-base="人事" data-pid="1366797" data-frame="168"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/168" target="_blank" rel="noopener">原本 コマ168 →</a></div><div class="ol-body">任權大解部　中解部　柳元信
+任權中解部　少解部　石卷淸隆
+任少解部　權少解部　進藤郁郞
 同　權少屬 繁 山 高 成 橫 山 高 正
 同
 同
-補十四等出仕 十五等出仕 小 林 枝 一
+補十四等出仕　十五等出仕　小林一枝
 等外一等出仕今泉 丘之
 補十五等出仕</div></div>
-<div class="ol-article" data-src-id="a08-267" data-type-base="article" data-pid="1366797" data-frame="169"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/169" target="_blank" rel="noopener">原本 コマ169 →</a></div><div class="ol-body">大解部 忠 本 松 正
+<div class="ol-article" data-src-id="a08-267" data-type-base="article" data-pid="1366797" data-frame="169"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/169" target="_blank" rel="noopener">原本 コマ169 →</a></div><div class="ol-body">大解部松本正忠
 歸京申付候事
-十五等出仕 岡 吉 村 正
+十五等出仕岡村正吉
 同
 大坂裁判所在勤申付候事 少屬 井 富 荒 淑</div><div class="xref"><div><span class="xref-caption">正誤:</span> <a href="09.html#a09-106" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a09-106 ○正誤</a></div></div></div>
 <div class="ol-article" data-src-id="a08-268" data-type-base="伺" data-pid="1366797" data-frame="169"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔杤木裁判所伺〕七年四月十九日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/169" target="_blank" rel="noopener">原本 コマ169 →</a></div><div class="ol-body">本省日誌本年第二十一號筑摩縣伺婦女逃亡シテ二年以
@@ -11284,7 +11481,7 @@
 處不參致シ候科改定律例第二百八十八條違式重ニ擬 シ
 贖罪金一圓五十錢申付候事</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月三十日</div>
 <div class="ol-article" data-src-id="a08-270" data-type-base="伺" data-pid="1366797" data-frame="170"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔伺書〕 七年四 月廿日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/170" target="_blank" rel="noopener">原本 コマ170 →</a></div><div class="ol-body">今般函舘ヘ裁判所被置候ニ付同所ヘ泒出ノ官員月給幷
 旅費共開拓使官員同樣支給致度此段相伺候也
@@ -11372,17 +11569,17 @@
 シテ自ラ覺舉シ攺正スヘキヲ以テ公事失錯條自首ト同
 ク罪ヲ免スノ例ニ依リ
 免罪 從三位 山 實 本 政</div></div>
-<div class="ol-article" data-src-id="a08-277" data-type-base="人事" data-pid="1366797" data-frame="174"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/174" target="_blank" rel="noopener">原本 コマ174 →</a></div><div class="ol-body">補十等出仕 十一等出仕 則 藤 勝 工</div></div>
-<div class="ol-article" data-src-id="a08-278" data-type-base="article" data-pid="1366797" data-frame="174"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/174" target="_blank" rel="noopener">原本 コマ174 →</a></div><div class="ol-body">埼玉裁判所在勤申付候事 十二等出仕石 井 信 義</div><div class="xref"><div><span class="xref-caption">正誤:</span> <a href="09.html#a09-106" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a09-106 ○正誤</a></div></div></div>
+<div class="ol-article" data-src-id="a08-277" data-type-base="人事" data-pid="1366797" data-frame="174"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/174" target="_blank" rel="noopener">原本 コマ174 →</a></div><div class="ol-body">補十等出仕　十一等出仕　工藤則勝</div></div>
+<div class="ol-article" data-src-id="a08-278" data-type-base="article" data-pid="1366797" data-frame="174"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔達書〕</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/174" target="_blank" rel="noopener">原本 コマ174 →</a></div><div class="ol-body">埼玉裁判所在勤申付候事　十二等出仕石井信義</div><div class="xref"><div><span class="xref-caption">正誤:</span> <a href="09.html#a09-106" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a09-106 ○正誤</a></div></div></div>
 <div class="ol-article" data-src-id="a08-279" data-type-base="正誤" data-pid="1366797" data-frame="174"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○正誤</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/174" target="_blank" rel="noopener">原本 コマ174 →</a></div><div class="ol-body">第七十一號十八葉土居淸誠ノ居ハ生ノ誤リ同十九葉神
 奈川縣裁判所トアル縣ハ衍ナリ第七十二號京都裁判所
 伺中七賍圓ハ七賍圖同號十一葉權小解部ノ小ハ少ノ誤
 リ</div><div class="xref"><div><span class="xref-caption">訂正対象:</span> <a href="#a08-129" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a08-129 ○</a>、<a href="#a08-130" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a08-130 〔達書〕</a>、<a href="#a08-136" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a08-136 〔京都裁判所伺〕七年四月二日</a>、<a href="#a08-142" class="text-blue-600 hover:underline xref-link" onclick="showView('card')">a08-142 〔達書〕</a></div></div></div>
 </div>
 </div>
-<div class="ol-issue">
+<div class="ol-issue filter-group">
 <div class="ol-head ol-issue-head">司法省日誌明治七年第八十一號</div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○四月三十日</div>
 <div class="ol-article" data-src-id="a08-280" data-type-base="伺" data-pid="1366797" data-frame="175"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔京都裁判所伺〕七年三月三十日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/175" target="_blank" rel="noopener">原本 コマ175 →</a></div><div class="ol-body">丁卯年前爲低償動不動產ヲ取置金子貸渡シ返濟相滯戊
 辰年以後ニ至リ及出訴審判中遂示談右滯金過半返却シ
@@ -11404,7 +11601,7 @@
 但附條モ戊辰以後ニ書攺メタルハ本條同樣タル可キ
 事</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">五月二日</div>
 <div class="ol-article" data-src-id="a08-281" data-type-base="伺" data-pid="1366797" data-frame="176"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔同所伺〕六年十一月廿四日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/176" target="_blank" rel="noopener">原本 コマ176 →</a></div><div class="ol-body">當三月中出版條例ヲ犯ス者罰金追徵方疑義云々奉伺候
 處御指令但書出版條例第七條ヲ犯ス者ハ罰金三圓販賣
@@ -11470,7 +11667,7 @@
 ニ非スシテ姦夫ヲ殺傷スル者云々圖殺傷ニ二等ヲ減ス
 トアルニ依リ本罪懲役終身ヨリ二等ヲ減シ
 懲役七年
-藤 井 太 郞 藏
+藤井太郞藏
 姦婦ヲ殺死スルノ罪ハ輕シ論セス</div></div>
 <div class="ol-article" data-src-id="a08-285" data-type-base="article" data-pid="1366797" data-frame="179"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/179" target="_blank" rel="noopener">原本 コマ179 →</a></div><div class="ol-body">千葉裁判所ヨリ 六〓十下總國相馬郡管生村農三郞平嫡
 男大瀧淺吉和歌山縣ヨリ 七年 四月 海部郡機脇浦副戶長尾玉
@@ -11511,12 +11708,12 @@
 御裁判所ヘ被召捕御吟味中病死致シ候趣今般初テ承知
 致シ候
 指令
-甲兄無賴財產ヲ傾ヶ家ノ覆亡セントスルヲ見テ母之ヲ
+甲兄無賴財產ヲ傾ケ家ノ覆亡セントスルヲ見テ母之ヲ
 悲ミ親族亦之ヲ憂フルニヨリ乙兄坐ナカラ視ルニ忍ヒ
 ス之ヲ暗殺シテ禍源ヲ絶チ家ヲ保護セント謀リ傷シテ
 遂ニ死ニ至ラス本人其事ヲ官ニ告クト雖モ干名犯義ニ
 涉ラス兄弟ノ容隱亦法律ノ許ス所ナルヲ以テ
-無罪 村 田 種 五 郞</div></div>
+無罪　村田種五郞</div></div>
 <div class="ol-article" data-src-id="a08-288" data-type-base="article" data-pid="1366797" data-frame="181"><div class="ol-article-headrow"><div class="ol-head ol-article-head">○</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/181" target="_blank" rel="noopener">原本 コマ181 →</a></div><div class="ol-body">恭以下廿八名舊藩札製造ノ員數ヲ届出ルニ錯誤セシ件
 同廻
 華族酒井忠道養父忠氏寄留所ニテ疾病ノ節戶
@@ -11525,7 +11722,7 @@
 情ヲ量リ懲役十日ノ贖罪シ其他ハ無科忠道ノ無願旅行
 ハ戶長ノ指圖ニ依ルヲ以テ罪ヲ問ハス等ノ指令アリ</div></div>
 </div>
-<div class="ol-dategroup">
+<div class="ol-dategroup filter-group">
 <div class="ol-head ol-dategroup-head">○五月三日</div>
 <div class="ol-article" data-src-id="a08-289" data-type-base="伺" data-pid="1366797" data-frame="182"><div class="ol-article-headrow"><div class="ol-head ol-article-head">〔山形縣伺〕 七年四月十九日</div><a class="source" href="https://dl.ndl.go.jp/pid/1366797/1/182" target="_blank" rel="noopener">原本 コマ182 →</a></div><div class="ol-body">昨年分ノ田畑小作米淹滯ハ他ノ貸借トモ替リ別段淹滯
 ノ證書等無之譯ニ付小作證文ヲ以訴出候分ハ取上及裁
@@ -11622,7 +11819,7 @@ window.addEventListener('hashchange', revealHashTarget);
 revealHashTarget();
 </script>
 <script src="../source_viewer.js?v=5a9dcb52" defer></script>
-<script src="../fulltext/fulltext.js?v=181251fe" defer></script>
+<script src="../fulltext/fulltext.js?v=4efff4a2" defer></script>
 <script>
 // 全文検索の結果から開かれたとき（?q=…）は、本文中の検索語を強調して該当箇所へ移る
 addEventListener('DOMContentLoaded', () => FullTextSearch.highlightFromQuery({ base: '../fulltext/', root: '#view-card, #view-outline' }));

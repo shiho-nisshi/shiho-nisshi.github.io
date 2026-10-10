@@ -10,7 +10,7 @@
  * 使い方（全文検索の検索欄。司法省日誌の索引ページ）:
  *   const fts = FullTextSearch.mount(要素, { base: 'fulltext/', hashKey: 'search', groupLabel: '巻',
  *                                            onChange: 検索中か => { … } });
- *   入力しながら検索し（打ち終わって0.4秒後、Enterで即時）、検索状態は #search?q=… に残す。
+ *   Enter・検索ボタンで検索し（入力中には検索しない）、検索状態は #search?q=… に残す。
  *   onChange で検索の開始・解除を受け取れる（司法省日誌は検索中だけ巻一覧を隠している）
  *   fts.restoreFromHash();   // URLが #search?q=… なら検索を復元して true を返す
  * 使い方（資料ページ）: 検索結果のリンクには ?q=… が付くので、開いた先で検索語を強調する
@@ -476,15 +476,10 @@ mark.fts-hl { background: #fef08a; color: inherit; padding: 0 1px; border-radius
       }
     }
 
-    let timer = null;
-    form.addEventListener('submit', e => { e.preventDefault(); clearTimeout(timer); search(input.value); });
-    // 入力しながら検索する（law-platform 議事録の一覧と同じく、打ち終わって 0.4 秒後）。
-    // 「×」で消したとき（search イベント）はすぐ反映する
-    input.addEventListener('input', () => {
-      clearTimeout(timer);
-      timer = setTimeout(() => { if (input.value.trim() !== state.q) search(input.value); }, 400);
-    });
-    input.addEventListener('search', () => { if (!input.value.trim()) { clearTimeout(timer); clear(); } });
+    // 検索は Enter・検索ボタンのときだけ（入力中には検索しない）。
+    // 「×」で消したとき（search イベント）は結果を消して元の表示に戻す
+    form.addEventListener('submit', e => { e.preventDefault(); search(input.value); });
+    input.addEventListener('search', () => { if (!input.value.trim()) clear(); });
 
     function restoreFromHash() {
       const h = location.hash;
