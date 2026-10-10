@@ -7,7 +7,7 @@
  *     （Ctrl/⌘/Shift クリックなどは通常どおり原本サイトを開く）
  *   - [data-viewer-toggle]（「原本画像を並べて表示 →」）で開閉する
  *   - 「本文に連動」が有効なら、スクロールに合わせて表示中のカードのコマに切り替える
- *   - 開いていたかどうかを覚えておき、次のページでも開く
+ *   - ページを開いた時点では常に閉じている（以前は開閉を localStorage に覚えて次のページでも開いていた）
  *
  * 原本サイトの違いは window.SOURCE_VIEWER で指定する（無ければ国立国会図書館）:
  *   国立国会図書館: 各カードの data-pid / data-frame から画像URLを組み立てる
@@ -19,7 +19,6 @@
  */
 (() => {
   const OSD_URL = 'https://cdnjs.cloudflare.com/ajax/libs/openseadragon/5.0.1/openseadragon.min.js';
-  const STORE_KEY = 'source-viewer-open';
   const cfg = window.SOURCE_VIEWER || {};
   const parts = [...document.querySelectorAll('[data-frame]')];
   if (!parts.length) return;
@@ -31,10 +30,6 @@
     ? (pid, frame) => cfg.page.replace('{frame}', frame)
     : (pid, frame) => `https://dl.ndl.go.jp/pid/${pid}/1/${frame}`;
   const maxFrame = cfg.images ? cfg.images.length : Infinity;
-  const store = {
-    get() { try { return localStorage.getItem(STORE_KEY) === '1'; } catch { return false; } },
-    set(v) { try { localStorage.setItem(STORE_KEY, v ? '1' : '0'); } catch { /* 保存できなくても動作には影響しない */ } },
-  };
 
   const style = document.createElement('style');
   style.textContent = `
@@ -169,14 +164,12 @@
   function open(card) {
     panel.hidden = false;
     document.body.classList.add('viewer-open');
-    store.set(true);
     showCard(card || currentCard());
   }
 
   function close() {
     panel.hidden = true;
     document.body.classList.remove('viewer-open');
-    store.set(false);
     markCard(null);
   }
 
@@ -230,6 +223,4 @@
     requestAnimationFrame(() => { ticking = false; showCard(currentCard()); });
   }, { passive: true });
 
-  // 前のページで開いていたら、このページでも開く
-  if (store.get()) open();
 })();
