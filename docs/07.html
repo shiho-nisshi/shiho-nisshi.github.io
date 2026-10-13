@@ -23,7 +23,7 @@
   }
   .xref-caption { color: #6b7280; }
   .xref-list { margin: .2em 0 0; padding-left: 1.5em; list-style: disc; }
-  section[id], .card-issue { scroll-margin-top: 1rem; }
+  section[id], .card-issue { scroll-margin-top: 3.5rem; }
   .card-issue { margin-top: 2rem; }
   .card-issue-head { font-size: 1.125rem; font-weight: 700; border-bottom: 2px solid #e5e7eb; padding-bottom: .25em; margin-bottom: .75rem; }
   .card-dategroup-head { font-weight: 500; color: #4b5563; margin: 1rem 0 .5rem; }
@@ -31,16 +31,17 @@
 </style>
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans">
+<!-- 巻一覧（全文検索の結果から開いたときは検索結果）へのリンクはスクロールしても画面上端に残す -->
+<nav class="sticky top-0 z-40 bg-gray-50/95 backdrop-blur border-b border-gray-200">
+  <div class="max-w-4xl mx-auto px-4 py-2">
+    <a id="back-link" href="../index.html" class="text-sm text-blue-600 hover:underline">← 巻一覧</a>
+  </div>
+</nav>
 <div class="max-w-4xl mx-auto p-4 pb-24">
 
-<div class="mb-2">
-  <a href="../index.html" class="text-sm text-blue-600 hover:underline">← 巻一覧</a>
-</div>
-
-<h1 id="top" class="text-2xl font-bold border-b-4 border-gray-200 pb-2 mb-1">
+<h1 id="top" class="text-2xl font-bold border-b-4 border-gray-200 pb-2 mb-4">
 司法省日誌 七
 </h1>
-<div class="mb-4 text-sm text-gray-500">七巻 <a class="text-blue-600 hover:underline" href="https://dl.ndl.go.jp/pid/1366796" target="_blank" rel="noopener">国立国会図書館デジタルコレクションで見る →</a>　<button type="button" class="viewer-toggle" data-viewer-toggle>原本画像を並べて表示 →</button></div>
 
 <div class="grid grid-cols-1 sm:grid-cols-[1fr_1fr_2fr] bg-white rounded-lg border border-gray-200 shadow-sm mb-6 divide-y sm:divide-y-0 sm:divide-x divide-gray-200">
   <div class="px-6 py-4">
@@ -841,7 +842,7 @@
 年ト有之此權衡ニ依ハ前段放火ヲ謀ル者ハ即チ右强盜
 顯跡アル者ニ比較シ處斷スル方ニ可有之哉右相伺候也
 指令
-人ノ財物ヲ竊取セント放火ヲ企テ未タ行ハサル者 雜
+人ノ財物ヲ竊取セント放火ヲ企テ未タ行ハサル者　雜
 犯律不應爲重ニ擬シ
 懲役七十日　鈴木忠次郞
 余罪ハ輕シ論セス</div>
@@ -1331,8 +1332,8 @@
     <div class="item-body text-base leading-relaxed">飾摩縣ヨリ
 播磨國神西郡鶴居村農周助娘リキ但馬
 國養父郡難波村農新次郞弟梅藏敦賀縣ヨリ 七年 一月 越前國
-大野郡佐開村農大島四郞左衛門以下三十餘人三潴縣 ヨ
-七年 二月 筑後國御原郡古飯村農黑岩竹次郞以下十五人 高
+大野郡佐開村農大島四郞左衛門以下三十餘人三潴縣ヨ
+七年 二月 筑後國御原郡古飯村農黑岩竹次郞以下十五人高
 知縣ヨリ 胴土佐國高岡郡宇佐浦商助次郞俸門田芳太郞
 等各處刑伺ニリキハ瘋癲シ人ノ宅舍ニ放火スル者鎖錮
 終身果シテ痊癒セハ親属隣佑ノ保證ヲ取リ鎖錮ヲ全免
@@ -1578,7 +1579,7 @@
 任司法權中錄　少錄　長澤茂
 依願免本官　大解部　眞邊正心
 少撿事　本田親英</div>
-    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0363" class="text-blue-600 hover:underline xref-link">木村喬一郞　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/3693308.html#fuken_3693308-0003" class="text-blue-600 hover:underline xref-link">本田親英　官員履歴1（明治8‐13年）</a></li></ul></div>
+    
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a07-060" data-type-base="伺" data-pid="1366796" data-frame="32">
@@ -3025,7 +3026,7 @@
 ヲ貼用セサル證文ヲ受取置者後日故障難題差起リ右證
 文ヲ以テ公訴ニ及フキハ如何處置ス可哉右相伺候也
 指令
-一 橙黄色ノ印紙ヲ貼スヘキ者ニ淡墨色ノ印紙ヲ 第
+第一條　橙黄色ノ印紙ヲ貼スヘキ者ニ淡墨色ノ印紙ヲ
 貼スルノ類印稅相當ナル者ハ處罰ニ及ハサル事
 第二條　印稅過多ノ印紙ヲ貼スル者前條同斷處罰ニ及
 ハサル事
@@ -3728,7 +3729,7 @@
     <div class="font-semibold text-base mb-1">○</div>
     <div class="item-body text-base leading-relaxed">補十等出仕　地理寮十等出仕　西山員直
 免出仕　十五等出仕　矢島中</div>
-    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3692209.html#fuken_3692209-0028" class="text-blue-600 hover:underline xref-link">西山員直　豊岡県史 政治之部 官員履歴 (明治4‐8年)</a></li><li><a href="https://person-archive.github.io/docs/3691909.html#fuken_3691909-0077" class="text-blue-600 hover:underline xref-link">矢島中　杤木縣史附録 宇都宮県史 官員履歴 (明治4‐6年)</a></li></ul></div>
+    
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a07-139" data-type-base="布達" data-pid="1366796" data-frame="83">
@@ -4667,7 +4668,7 @@
     </div>
     <div class="font-semibold text-base mb-1"></div>
     <div class="item-body text-base leading-relaxed">免出仕　十三等出仕　佐久間盛謙</div>
-    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3691627.html#fuken_3691627-0201" class="text-blue-600 hover:underline xref-link">佐久間盛謙　県治摘要 県官任解部 (明治4‐17年)</a></li></ul></div>
+    
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a07-176" data-type-base="article" data-pid="1366796" data-frame="103">
@@ -5671,7 +5672,7 @@
     </div>
     <div class="font-semibold text-base mb-1">○</div>
     <div class="item-body text-base leading-relaxed">依願免出仕　十二等出仕　今村重正</div>
-    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3691230.html#fuken_3691230-0073" class="text-blue-600 hover:underline xref-link">今村重正　千葉県歴史 附録 官員履歴1（明治6‐18年）</a></li><li><a href="https://person-archive.github.io/docs/3691235.html#fuken_3691235-0013" class="text-blue-600 hover:underline xref-link">今村重正　花房県歴史 (明治元‐4年)</a></li></ul></div>
+    
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a07-209" data-type-base="article" data-pid="1366796" data-frame="129">
@@ -6669,7 +6670,7 @@
     <div class="font-semibold text-base mb-1">〔新治裁判所伺〕七年二月十五日</div>
     <div class="item-body text-base leading-relaxed">乞養ノ娘養父ノ貧窶ヲ見ルニ忍ヒス情願ヲ以テ娼妓渡
 世ノ官許ヲ得貸座敷某ノ家ニ寄留ス爰ニ於テ養父巧
-證文ヲ取拵ヘ娼妓稼代ヲ引當ニシテ其戶主ニ金二十 ニ
+ニ證文ヲ取拵ヘ娼妓稼代ヲ引當ニシテ其戶主ニ金二十
 圓ヲ借ル其娘ヲ陽ニ賣ラスト雖モ自由ノ權利ヲ束縛ス
 ハ其實賣ル者ニ異ナラス御趣意ニ犯觸スル者ニ付處ル
 分ノ儀相伺候處口書ヲ以テ可伺出旨ニ付別紙罪案 略 之 添
@@ -7054,7 +7055,7 @@
 同
 任權少解部
 補十四等出仕</div>
-    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0371" class="text-blue-600 hover:underline xref-link">床次正精　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0460" class="text-blue-600 hover:underline xref-link">一瀨直久　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0181" class="text-blue-600 hover:underline xref-link">萩貞　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0334" class="text-blue-600 hover:underline xref-link">中澤文治　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
+    
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a07-265" data-type-base="裁判所申渡" data-pid="1366796" data-frame="158">
@@ -7281,7 +7282,7 @@
     </div>
     <div class="font-semibold text-base mb-1">〔同所同月行刑表〕</div>
     <div class="item-body text-base leading-relaxed">懲役百日以下男二人　同十年以下男四人　贖罪男十二
-閏刑一人　呵責男一人　病囚男十二人　未决囚男 人
+人　閏刑一人　呵責男一人　病囚男十二人　未决囚男
 十七人女一人　贖金高二十七圓</div>
     
   </div>
@@ -7305,6 +7306,38 @@ function revealHashTarget() {
 }
 window.addEventListener('hashchange', revealHashTarget);
 revealHashTarget();
+
+// 全文検索の結果から開かれたとき（?q=…）は、上端のリンクを「← 検索結果に戻る」にする。
+// 検索結果ページから来た場合は、目次などで移動して増えた履歴もまとめて遡って戻る
+// （検索結果のページ番号・スクロール位置がそのまま戻る）。別タブで開いた等で戻る先が無いときは同じ検索語で開き直す
+(function () {
+  var q = new URLSearchParams(location.search).get('q');
+  if (!q) return;
+  var link = document.getElementById('back-link');
+  link.textContent = '← 検索結果に戻る';
+  link.href = '../index.html#search?' + new URLSearchParams({ q: q });
+  var indexUrl = new URL('../index.html', location.href);
+  var fromSearch = false;
+  try {
+    var ref = new URL(document.referrer);
+    fromSearch = ref.origin === indexUrl.origin &&
+      (ref.pathname === indexUrl.pathname || ref.pathname === indexUrl.pathname.slice(0, -'index.html'.length));
+  } catch (e) {}
+  if (!fromSearch) return;
+  // このページに来てから増えた履歴の数を、各履歴の state に記録しておく
+  var depth = (history.state && history.state.backDepth) || 0;
+  history.replaceState(Object.assign({}, history.state, { backDepth: depth }), '');
+  window.addEventListener('hashchange', function () {
+    if (history.state && typeof history.state.backDepth === 'number') depth = history.state.backDepth;
+    else history.replaceState({ backDepth: ++depth }, '');
+  });
+  link.addEventListener('click', function (e) {
+    if (e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+    if (history.length <= depth + 1) return;
+    e.preventDefault();
+    history.go(-(depth + 1));
+  });
+})();
 </script>
 <script src="../source_viewer.js?v=0575b9d0" defer></script>
 <script src="../fulltext/fulltext.js?v=4efff4a2" defer></script>

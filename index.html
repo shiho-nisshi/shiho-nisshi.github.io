@@ -82,7 +82,26 @@ const fulltext = FullTextSearch.mount(document.getElementById('fulltextRoot'), {
   base: 'fulltext/', hashKey: 'search', groupLabel: '巻',
   onChange: searching => { browse.hidden = searching; },
 });
-fulltext.restoreFromHash();
+
+// 検索結果から記事を開いて戻ってきたとき、結果一覧のスクロール位置を戻す
+// （結果は戻った後に描き直すので、ブラウザ任せだと先頭に戻ってしまう）
+const savedY = history.state && history.state.resultScrollY;
+addEventListener('pagehide', () => {
+  if (location.hash.startsWith('#search?')) history.replaceState(Object.assign({}, history.state, { resultScrollY: scrollY }), '');
+});
+if (fulltext.restoreFromHash() && savedY) {
+  history.scrollRestoration = 'manual';
+  const results = document.querySelector('#fulltextRoot .fts-results');
+  const restore = () => {
+    if (!results.querySelector('.fts-title')) return false;
+    scrollTo(0, savedY);
+    return true;
+  };
+  if (!restore()) {
+    const ob = new MutationObserver(() => { if (restore()) ob.disconnect(); });
+    ob.observe(results, { childList: true, subtree: true });
+  }
+}
 </script>
 </body>
 </html>

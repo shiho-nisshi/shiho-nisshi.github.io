@@ -23,7 +23,7 @@
   }
   .xref-caption { color: #6b7280; }
   .xref-list { margin: .2em 0 0; padding-left: 1.5em; list-style: disc; }
-  section[id], .card-issue { scroll-margin-top: 1rem; }
+  section[id], .card-issue { scroll-margin-top: 3.5rem; }
   .card-issue { margin-top: 2rem; }
   .card-issue-head { font-size: 1.125rem; font-weight: 700; border-bottom: 2px solid #e5e7eb; padding-bottom: .25em; margin-bottom: .75rem; }
   .card-dategroup-head { font-weight: 500; color: #4b5563; margin: 1rem 0 .5rem; }
@@ -31,16 +31,17 @@
 </style>
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans">
+<!-- 巻一覧（全文検索の結果から開いたときは検索結果）へのリンクはスクロールしても画面上端に残す -->
+<nav class="sticky top-0 z-40 bg-gray-50/95 backdrop-blur border-b border-gray-200">
+  <div class="max-w-4xl mx-auto px-4 py-2">
+    <a id="back-link" href="../index.html" class="text-sm text-blue-600 hover:underline">← 巻一覧</a>
+  </div>
+</nav>
 <div class="max-w-4xl mx-auto p-4 pb-24">
 
-<div class="mb-2">
-  <a href="../index.html" class="text-sm text-blue-600 hover:underline">← 巻一覧</a>
-</div>
-
-<h1 id="top" class="text-2xl font-bold border-b-4 border-gray-200 pb-2 mb-1">
+<h1 id="top" class="text-2xl font-bold border-b-4 border-gray-200 pb-2 mb-4">
 司法省日誌 二
 </h1>
-<div class="mb-4 text-sm text-gray-500">二巻 <a class="text-blue-600 hover:underline" href="https://dl.ndl.go.jp/pid/1366791" target="_blank" rel="noopener">国立国会図書館デジタルコレクションで見る →</a>　<button type="button" class="viewer-toggle" data-viewer-toggle>原本画像を並べて表示 →</button></div>
 
 <div class="grid grid-cols-1 sm:grid-cols-[1fr_1fr_2fr] bg-white rounded-lg border border-gray-200 shadow-sm mb-6 divide-y sm:divide-y-0 sm:divide-x divide-gray-200">
   <div class="px-6 py-4">
@@ -1080,7 +1081,7 @@
     <div class="item-body text-base leading-relaxed">任權少判事　司法省七等出仕　松岡康毅
 免本官　但位記返上　大法官　津田眞道
 右本日御沙汰相成候條此旨相達候也</div>
-    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0421" class="text-blue-600 hover:underline xref-link">松岡康毅　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0578" class="text-blue-600 hover:underline xref-link">津田眞道　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
+    
   </div>
 </section>
 </div>
@@ -1205,7 +1206,7 @@
     </div>
     <div class="font-semibold text-base mb-1">○達書</div>
     <div class="item-body text-base leading-relaxed">依願免出仕　十一等出仕　大迫元裕</div>
-    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3692105.html#fuken_3692105-0016" class="text-blue-600 hover:underline xref-link">大迫元裕　宮崎県史附録 官員履歴 (明治6・7年)</a></li></ul></div>
+    
   </div>
 </section>
 </div></div>
@@ -3456,7 +3457,7 @@
     <div class="item-body text-base leading-relaxed">任司法權大属　警保寮權大属　坂本寔
 同　同　原田良種
 補十等出仕　河田景雄</div>
-    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3692075.html#fuken_3692075-0105" class="text-blue-600 hover:underline xref-link">河田景雄　鳥取県歴史 官員任解1 (明治2‐5年)</a></li></ul></div>
+    
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a02-104" data-type-base="正誤" data-pid="1366791" data-frame="110">
@@ -5075,7 +5076,7 @@
 新治裁判所在勤申付候事 山梨裁判所在勤申付候事 同
 權少解部岡 本 知 尹
 十等出仕立 十一等出仕吉岡 弘 見 尙 文</div>
-    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3688580.html#fuken_3688580-0015" class="text-blue-600 hover:underline xref-link">堀內利貞　〔大坂府史〕制度部 官員進退 (明治元‐8年)</a></li></ul></div>
+    
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a02-161" data-type-base="正誤" data-pid="1366791" data-frame="158">
@@ -6817,7 +6818,7 @@
     <div class="font-semibold text-base mb-1">○</div>
     <div class="item-body text-base leading-relaxed">補十四等出仕　東京府十四等出仕　葛葉正道
 補十五等出仕　坂部量平</div>
-    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3692915.html#fuken_3692915-0066" class="text-blue-600 hover:underline xref-link">葛葉正道　東京府史料 附録之部 履歴4（明治元‐8年）</a></li></ul></div>
+    
   </div>
 </section>
 </div></div>
@@ -6863,7 +6864,7 @@
 權中撿事　園田弘
 神奈川裁判所在勤申達置候所御用都合有之不及其儀候
 事</div>
-    <div class="xref"><div><span class="xref-caption">正誤:</span> <a href="03.html#a03-019" class="text-blue-600 hover:underline xref-link">a03-019 ○正誤</a></div></div><div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3693308.html#fuken_3693308-0003" class="text-blue-600 hover:underline xref-link">本田親英　官員履歴1（明治8‐13年）</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0403" class="text-blue-600 hover:underline xref-link">野副勤有　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0387" class="text-blue-600 hover:underline xref-link">岡村爲藏　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0392" class="text-blue-600 hover:underline xref-link">園田弘　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
+    <div class="xref"><div><span class="xref-caption">正誤:</span> <a href="03.html#a03-019" class="text-blue-600 hover:underline xref-link">a03-019 ○正誤</a></div></div>
   </div>
 </section>
 </div>
@@ -7253,7 +7254,7 @@
 同　倉町良重
 補十二等出仕　鈴木忠良
 依願免出仕　十三等出仕　久松忠誨</div>
-    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3688629.html#fuken_3688629-0049" class="text-blue-600 hover:underline xref-link">倉町良重　旧佐賀県史稿　制度之部　禁令・官員履歴（明治8・9年）</a></li><li><a href="https://person-archive.github.io/docs/3691832.html#fuken_3691832-0105" class="text-blue-600 hover:underline xref-link">倉町良重　旧佐賀県史稿 附録 官員履歴 上（明治2‐8年）</a></li><li><a href="https://person-archive.github.io/docs/3693398.html#fuken_3693398-0020" class="text-blue-600 hover:underline xref-link">鈴木忠良　筑摩県史附録 旧県官員履歴 (明治元‐5年)</a></li></ul></div>
+    
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a02-238" data-type-base="裁判所申渡" data-pid="1366791" data-frame="222">
@@ -7493,7 +7494,7 @@
     </div>
     <div class="font-semibold text-base mb-1">○</div>
     <div class="item-body text-base leading-relaxed">依願免出仕　十一等出仕　植松直久</div>
-    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3692567.html#fuken_3692567-0040" class="text-blue-600 hover:underline xref-link">植松直久　三重県史稿 制度部 官員履歴（甲・乙）(明治4‐7年)</a></li></ul></div>
+    
   </div>
 </section>
 </div>
@@ -7542,7 +7543,7 @@
     </div>
     <div class="font-semibold text-base mb-1">○</div>
     <div class="item-body text-base leading-relaxed">任司法少属　少解部　木村邦光</div>
-    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3693306.html#fuken_3693306-0138" class="text-blue-600 hover:underline xref-link">木村邦光　旧新治県官員履歴 (明治4‐8年)</a></li></ul></div>
+    
   </div>
 </section>
 </div>
@@ -7943,7 +7944,7 @@
 前同文
 少解部　關田秒作
 栃木裁判所在勤申付候事</div>
-    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3692973.html#fuken_3692973-0033" class="text-blue-600 hover:underline xref-link">高尾玉敷明　駿河国史 第2輯 巻21 制度部 官員履歴（明治8‐10年）</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0334" class="text-blue-600 hover:underline xref-link">中澤文治　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0333" class="text-blue-600 hover:underline xref-link">岡本豐章　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/3692800.html#fuken_3692800-0136" class="text-blue-600 hover:underline xref-link">田尻彥太郞　熊本県国史 下 制度部・官員履歴 (明治14年)</a></li><li><a href="https://person-archive.github.io/docs/3692805.html#fuken_3692805-0159" class="text-blue-600 hover:underline xref-link">田尻彥太郞　熊本県国史 下 制度部・官員履歴 (明治16年)</a></li><li><a href="https://person-archive.github.io/docs/3689579.html#fuken_3689579-0011" class="text-blue-600 hover:underline xref-link">吉本知幾　元白河縣史 (明治2‐4年)</a></li></ul></div>
+    
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a02-264" data-type-base="伺" data-pid="1366791" data-frame="240">
@@ -8046,6 +8047,38 @@ function revealHashTarget() {
 }
 window.addEventListener('hashchange', revealHashTarget);
 revealHashTarget();
+
+// 全文検索の結果から開かれたとき（?q=…）は、上端のリンクを「← 検索結果に戻る」にする。
+// 検索結果ページから来た場合は、目次などで移動して増えた履歴もまとめて遡って戻る
+// （検索結果のページ番号・スクロール位置がそのまま戻る）。別タブで開いた等で戻る先が無いときは同じ検索語で開き直す
+(function () {
+  var q = new URLSearchParams(location.search).get('q');
+  if (!q) return;
+  var link = document.getElementById('back-link');
+  link.textContent = '← 検索結果に戻る';
+  link.href = '../index.html#search?' + new URLSearchParams({ q: q });
+  var indexUrl = new URL('../index.html', location.href);
+  var fromSearch = false;
+  try {
+    var ref = new URL(document.referrer);
+    fromSearch = ref.origin === indexUrl.origin &&
+      (ref.pathname === indexUrl.pathname || ref.pathname === indexUrl.pathname.slice(0, -'index.html'.length));
+  } catch (e) {}
+  if (!fromSearch) return;
+  // このページに来てから増えた履歴の数を、各履歴の state に記録しておく
+  var depth = (history.state && history.state.backDepth) || 0;
+  history.replaceState(Object.assign({}, history.state, { backDepth: depth }), '');
+  window.addEventListener('hashchange', function () {
+    if (history.state && typeof history.state.backDepth === 'number') depth = history.state.backDepth;
+    else history.replaceState({ backDepth: ++depth }, '');
+  });
+  link.addEventListener('click', function (e) {
+    if (e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+    if (history.length <= depth + 1) return;
+    e.preventDefault();
+    history.go(-(depth + 1));
+  });
+})();
 </script>
 <script src="../source_viewer.js?v=0575b9d0" defer></script>
 <script src="../fulltext/fulltext.js?v=4efff4a2" defer></script>

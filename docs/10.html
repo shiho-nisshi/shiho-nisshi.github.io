@@ -23,7 +23,7 @@
   }
   .xref-caption { color: #6b7280; }
   .xref-list { margin: .2em 0 0; padding-left: 1.5em; list-style: disc; }
-  section[id], .card-issue { scroll-margin-top: 1rem; }
+  section[id], .card-issue { scroll-margin-top: 3.5rem; }
   .card-issue { margin-top: 2rem; }
   .card-issue-head { font-size: 1.125rem; font-weight: 700; border-bottom: 2px solid #e5e7eb; padding-bottom: .25em; margin-bottom: .75rem; }
   .card-dategroup-head { font-weight: 500; color: #4b5563; margin: 1rem 0 .5rem; }
@@ -31,16 +31,17 @@
 </style>
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans">
+<!-- 巻一覧（全文検索の結果から開いたときは検索結果）へのリンクはスクロールしても画面上端に残す -->
+<nav class="sticky top-0 z-40 bg-gray-50/95 backdrop-blur border-b border-gray-200">
+  <div class="max-w-4xl mx-auto px-4 py-2">
+    <a id="back-link" href="../index.html" class="text-sm text-blue-600 hover:underline">← 巻一覧</a>
+  </div>
+</nav>
 <div class="max-w-4xl mx-auto p-4 pb-24">
 
-<div class="mb-2">
-  <a href="../index.html" class="text-sm text-blue-600 hover:underline">← 巻一覧</a>
-</div>
-
-<h1 id="top" class="text-2xl font-bold border-b-4 border-gray-200 pb-2 mb-1">
+<h1 id="top" class="text-2xl font-bold border-b-4 border-gray-200 pb-2 mb-4">
 司法省日誌 十
 </h1>
-<div class="mb-4 text-sm text-gray-500">十巻 <a class="text-blue-600 hover:underline" href="https://dl.ndl.go.jp/pid/1366799" target="_blank" rel="noopener">国立国会図書館デジタルコレクションで見る →</a>　<button type="button" class="viewer-toggle" data-viewer-toggle>原本画像を並べて表示 →</button></div>
 
 <div class="grid grid-cols-1 sm:grid-cols-[1fr_1fr_2fr] bg-white rounded-lg border border-gray-200 shadow-sm mb-6 divide-y sm:divide-y-0 sm:divide-x divide-gray-200">
   <div class="px-6 py-4">
@@ -141,11 +142,11 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/2" target="_blank" rel="noopener">原本 コマ2 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔大分縣伺〕七年五月十七日</div>
-    <div class="item-body text-base leading-relaxed">銃獵規則第二十一條免許ヲ得スシテ獵ス ル者ハ五圓 ヨ
-リ不少二十圓ョリ不多罰金ヲ出サシムト之アリ右犯則
+    <div class="item-body text-base leading-relaxed">銃獵規則第二十一條免許ヲ得スシテ獵スル者ハ五圓ヨ
+リ不少二十圓ヨリ不多罰金ヲ出サシムト之アリ右犯則
 ノ者ハ情ヲ量リ範圍中適宜ニ處分可仕ハ勿論ニ候所山
 村僻邑ノ小民鳥獸ノ害ヲ被ル不尠依依一時威ノ爲無願
-テ彈獲スル者間ニハ有之候ヘ共利ヲ營ム爲メ獵スル ニ
+ニテ彈獲スル者間ニハ有之候ヘ共利ヲ營ム爲メ獵スル
 者トハ天淵ノ情異有之然ルヲ槪シテ五圓以上ノ罰金ニ
 處シ候バ實ニ憫然ニ付右等ハ御省日誌六年第二十七號
 名東縣伺ニ鳥威ノ爲メ空砲ヲ發スル者云々違式ニ問フ
@@ -179,7 +180,7 @@
     </div>
     <div class="font-semibold text-base mb-1">〔司法省裁判所申渡〕</div>
     <div class="item-body text-base leading-relaxed">山口縣元士族歸商
-靑 裕 海 助
+靑海裕助
 其方儀外國負債ニ付テハ一旦歸縣シ償却埓明可申旨其
 筋ヨリ指令ヲ受歸鄕ノ際病氣療養且金策ノ目途モ有之
 迚私ニ西京ヘ立越滯留スルノ科違式輕ニ間ヒ情狀ヲ酌
@@ -202,7 +203,7 @@
 買又ハ典賣致ス者ハ壬申第二百八十二號御布告以前ニ
 係ルハ違令輕重ニ照シ處斷シ以後ハ其品取上更ニ五十
 錢ノ過料申付可然哉　但本文御布告以後ノ分自首スル
-牛 ハ犯禁ノ品取上過料ハ免除シ可然哉右相伺候也
+牛ハ犯禁ノ品取上過料ハ免除シ可然哉右相伺候也
 指令
 壬申第二百八十二號布告以前規則ヲ犯ス者ト雖モ尙其
 罰則ニ照シ處分可致事但書伺ノ通</div>
@@ -221,7 +222,7 @@
     </div>
     <div class="font-semibold text-base mb-1">〔東京府伺〕七年五月十五日</div>
     <div class="item-body text-base leading-relaxed">人民諸願筋之儀ニ付許否之指令書ヲ遺失候モノハ地劵
-書遺失ト同樣ニ看做シ可然哉 ニ候得共爲念相伺候條御
+書遺失ト同樣ニ看做シ可然哉　ニ候得共爲念相伺候條御
 指示有之度候也
 指令
 伺之通</div>
@@ -268,7 +269,7 @@
 ノ後資產金ヲ以テ賠償シ自首スル者自首律ニ正條無之
 ニ付處分ノ儀相伺候所同月十九日伺ノ通ト御指令相成
 右ハ犯罪自首條ニ照シ免罪ト相心得可然哉相伺候也
-指 令
+指令
 伺ノ通但自首ハ全ク賍ヲ償フ者ニ非レハ全免ヲ與ヘス
 資金ヲ携ルト追徵ニ係ルト差異アルヿナシ本犯ノ如
 キ即チ免罪</div>
@@ -333,18 +334,18 @@
 アルハ全ク其主ニ給シ主ナキハ遺失物ヲ得ルト同視シ
 家主ニ給スヘキ哉假令ハ混堂或ハ割烹店客塵等ニテ他
 客ノ品ヲ竊取シ跡ニ捨置ク品ハ其事主ニ給スヘキ乎塵
-主 ニ給ス可キ哉
+主ニ給ス可キ哉
 村町吏或ハ地守其他看守人等其管守スル所ニテ遺失物
-ヲ得ル者ハ改定律例第二百八十四條ニ照シ處分スヘ キ
+ヲ得ル者ハ改定律例第二百八十四條ニ照シ處分スヘキ
 哉右相伺候也
 指令
 第一條　律例第二百八十三條ニ依リ處分スヘシ
-第 二條 垣牆內ヲ邸內ト云フ林圃ハ垣牆內外ヲ以テ區
-分 ス
+第二條　垣牆內ヲ邸內ト云フ林圃ハ垣牆內外ヲ以テ區
+分ス
 第三四條　伺ノ通
 第五條　前項ハ伺ノ通後項モ亦事主ニ給ス事主ナケレ
 ハ廛主ニ給ス
-第六條　區長戶長ハ伺ノ通其他ハ凡人ト同ク處分ス ヘ</div>
+第六條　區長戶長ハ伺ノ通其他ハ凡人ト同ク處分スヘ</div>
     
   </div>
 </section>
@@ -420,7 +421,7 @@
 指令
 監守常人竊盜前後ニ相交ル再犯ノ者又竊盜窩主再犯以
 上罪ヲ犯スキハ竊盜三犯ヲ以テ論スヘシ蓋シ和歌山三
-潴兩縣指令ハ文異ナリト雖モ其加等スル所ハ同一ナ ル
+潴兩縣指令ハ文異ナリト雖モ其加等スル所ハ同一ナル
 ヿト心得可シ　但監守常人竊盜相交ル三犯ハ竊盜三犯
 ヲ以テ論ス若三犯ノ罪重キ者ハ重キニ從テ論ス</div>
     
@@ -447,7 +448,7 @@
 僧鈴木惠常尾張國中島郡七軒町商兵介長男僧石田東英
 東京淺艸小島町無籍僧鈴木志敬等各處斷伺ニ利惣治ハ
 持兒器强盜人ヲ殺ス者幾之助保五郞ハ持兒噐强盜財ヲ
-得 ル者ニ付皆斬罪岩藏ハ同上賍五圓以上犯罪改定律前
+得ル者ニ付皆斬罪岩藏ハ同上賍五圓以上犯罪改定律前
 在ヲ以テ舊律ニ擬シ惠常ハ持兇器强盜財ヲ得サル
 首ニ付各絞罪東英志敬ハ同上ノ從各懲役終身多喜之助
 石五郞ハ例第百二十八條凡强盜云々本犯ニ一等ヲ减ス
@@ -467,10 +468,10 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/10" target="_blank" rel="noopener">原本 コマ10 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">茨城裁判所在勤申付候事 權大解部 牧 重 野 正
-同　家 種 永 恭
+    <div class="item-body text-base leading-relaxed">茨城裁判所在勤申付候事　權大解部　牧野重正
+同　家永恭種
 牧野權大解部交代歸京申付候事
-熊谷裁判所在勤申付候事 十等出仕 佐 久 間 間 恪</div>
+熊谷裁判所在勤申付候事　十等出仕　佐久間間恪</div>
     
   </div>
 </section>
@@ -529,8 +530,8 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/11" target="_blank" rel="noopener">原本 コマ11 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">任司法權大属 權大錄 野 頌 田 容
-任權大解部 權少法官 岡 村 弼 良</div>
+    <div class="item-body text-base leading-relaxed">任司法權大属　權大錄　野田頌容
+任權大解部　權少法官　村岡良弼</div>
     
   </div>
 </section>
@@ -545,8 +546,8 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/11" target="_blank" rel="noopener">原本 コマ11 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔司法省裁判所五月行刑表〕</div>
-    <div class="item-body text-base leading-relaxed">懲役百日以下男一人 同十年以下男二人 贖罪廿一人
-閏刑男七人 呵責男三人 病囚男十五人 未决囚男
+    <div class="item-body text-base leading-relaxed">懲役百日以下男一人　同十年以下男二人　贖罪廿一人
+閏刑男七人　呵責男三人　病囚男十五人　未决囚男
 十九人女二人</div>
     
   </div>
@@ -562,8 +563,8 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/12" target="_blank" rel="noopener">原本 コマ12 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔同所同月聽訟表〕</div>
-    <div class="item-body text-base leading-relaxed">裁許一件 濟口一件 願下ケ一件 訴狀下ケ三十四件
-各裁判所廻シ二件 斷獄廻シ一件 新訴五十三件
+    <div class="item-body text-base leading-relaxed">裁許一件　濟口一件　願下ケ一件　訴狀下ケ三十四件
+各裁判所廻シ二件　斷獄廻シ一件　新訴五十三件
 現在百件</div>
     
   </div>
@@ -604,13 +605,13 @@
     </div>
     <div class="font-semibold text-base mb-1">〔司法省裁判所申渡〕</div>
     <div class="item-body text-base leading-relaxed">東京本所緑町船大工
-原告人 曾根八郞右衛門
+原告人　曾根八郞右衛門
 同深川商增田マス代言人
-被告人 勢 重 三 郞 伊
+被告人　伊勢重三郞
 マス方寄雷岐阜縣貫属
-同　誠 野 原
+同　野原誠
 其方共訴訟遂吟味處原告人曾根八郞右衛門申立ル增田
-家 ヨリ借受ル百貳十五圓ノ金ハ豆州細代湊沈沒船爲浮
+家ヨリ借受ル百貳十五圓ノ金ハ豆州細代湊沈沒船爲浮
 方給分ノ内ヘ請取ル金子ニテ證書面トハ事實相違ノ旨
 毛利淸吉ヨリ取置書付ヲ以テ證據ト爲ス段蹤跡無之儀
 トハ聞ヘサルナレトモ右書付ハ淸吉儀增田家退身ノ後チ
@@ -621,18 +622,18 @@
 文受渡シ相濟事ニ付採用セス被告人ノ內增田マス代言
 人伊勢重三郞申立ル去明治六年十一月中取消シノ證書
 モ不心付一口貳拾五圓ノ證文ヲ以テ原告人八郞右衛
-門 ヘ懸リ及出訴段マスハ女儀ノ事故取調方不行届トハ
+門ヘ懸リ及出訴段マスハ女儀ノ事故取調方不行届トハ
 申ナカラ一旦二重ニ貸金ノ催促イタス廉不都合ノ至リ
 ナレトモ右廉ハ吟味前雙方示談ニ及ヒ事柄相濟儀ニ付裁
 判ニ及ハス又一口百二拾五圓ノ證文ハ傳馬船賣附ノ趣
-ニ認メ有之ト雖右金子取引ハ元來淸吉ヘ委任致シタ ル
+ニ認メ有之ト雖右金子取引ハ元來淸吉ヘ委任致シタル
 儀證文宛名ニテ判然タリ依テ同人取調候處全ク翔鶴船
 浮セ方費用ノ筋ニ有之段申立候ニオヒテハ所謂傳馬船
 買付ノ證ニハ不相立又原告申口ノ内翔鶴船浮セ方違約
 云々ノ儀ハ約定書無之ニ付採用セス抑右證又ト金子ハ
 翔鶴船爲浮方ニ係ル儀ニ付其内ヨリ原告人豆州行諸入
 費別紙計算書ノ通引去殘金ハ被告人ヘ請取可シ　但シ
-原告八郞右衛門ハ假初ニ モ本文ノ如ク名實相違ノ證文
+原告八郞右衛門ハ假初ニモ本文ノ如ク名實相違ノ證文
 淸吉宛ニ差入置候始末又被告マスニ於テハ右證文名宛
 ヲ切取書換候段雙方トモ不都合ニ有之依之訴訟入費ハ
 原被自費タル可キ事</div>
@@ -658,7 +659,7 @@
 年ト云ニ擬シ常人盜ヲ犯シ罪名異ナルヲ以テ刑輕ク却
 テ幸不幸アルニ似タリ此段相伺候也
 指令
-初犯再犯ノ竊盜三犯ニ 常人盜ヲ犯セハ竊盜三犯ヲ以テ
+初犯再犯ノ竊盜三犯ニ常人盜ヲ犯セハ竊盜三犯ヲ以テ
 論スヘシ</div>
     
   </div>
@@ -723,7 +724,7 @@
 セサル印紙ヲ貼用スル諸證文ニ證人ニ相立又ハ奥書等
 致候者ハ昨明治六年第百五十五號御布告中第九條第四
 項幷本年第十四號同第二十六號御布告ノ通相心得候處
-第一類受取證書類第二類諸證文等印紙ヲ貼用セサル 毛
+第一類受取證書類第二類諸證文等印紙ヲ貼用セサルモ
 ノニ證人ニ相立又ハ奥書等致候者罰則正條無之右ハ前
 條第百五十五號御布告第九條第四項罰則ニ照準シ二十
 五圓以下ノ罰金申付可然哉　但第一類證書印紙ヲ貼用
@@ -748,7 +749,7 @@
     <div class="font-semibold text-base mb-1">○</div>
     <div class="item-body text-base leading-relaxed">正院廻
 文部省兼宮内省五等出仕司馬盈之文部省六 月年
-等出仕長谷川泰等外國敎師雇入條約文誤譯セ シ各進退
+等出仕長谷川泰等外國敎師雇入條約文誤譯セシ各進退
 伺ニ盈之ハ詔書有違條ニ擬シ懲役四十日泰ハ同上撿査
 ニ失スル者情ヲ量リ一等ヲ減シ同三十日各贖ヲ聽スト
 指令アリ</div>
@@ -767,7 +768,7 @@
     </div>
     <div class="font-semibold text-base mb-1">〔大坂府伺〕七年四月十二日</div>
     <div class="item-body text-base leading-relaxed">監獄則賞罰條四則六則ノ罰ハ懲役塲規則ヲ犯シ侯重キ
-者 ニ該テ候テ可然候哉
+者ニ該テ候テ可然候哉
 當府懲役塲ニ末タ闇室取設無之候付右室ヘ入レ候儀ヲ
 犯シ候者ハ在來ノ圈ヘ入レ處分ニ於テハ罰則第五欵ニ
 從ヒ候テ可然候哉
@@ -815,7 +816,7 @@
 歸塲迄ノ處其儘ニ閣候テハ監護ノ者ヲ輕易シ其惡風外
 役囚ニ押移リ不取締ニ付爾來外役中幷內役共苦役ヲ怠
 リ或ハ疾病ト佯ル等塲則ニ違ヒ左候迚罰則ニ可該程ニ
-無之者幷前條ノ運ニテ歸塲迄猶豫難致等ノ節ハ監護 モ
+モ無之者幷前條ノ運ニテ歸塲迄猶豫難致等ノ節ハ監護
 ノ者携居候指揮ノ鞭ヲ以臨機打懲メ又ハ縛スルノ權ヲ
 授ケ置申度相伺候也
 指令
@@ -852,13 +853,13 @@
     <div class="font-semibold text-base mb-1">〔和歌山縣伺〕 七年五月十八日</div>
     <div class="item-body text-base leading-relaxed">淸律曰姦夫從夫嫁賣其夫願留者聽若嫁賣與姦夫者姦夫
 本夫各杖八十婦人離異歸宗財物入官云々妻妾孀婦ヲ論
-セ ス姦ヲ犯シ 旦官ノ斷决ヲ經タル者ハ滿刑後媒合者
+セス姦ヲ犯シ一旦官ノ斷决ヲ經タル者ハ滿刑後媒合者
 アリテ官ヘ奏スト雖モ再姦夫ト婚媾セシムルヿヲ許サ
-ヽ ル乎
+ヽル乎
 山村內ノ竹木ヲ竊取スル者ハ官私ヲ分タス竊盜ニ准シ
 處斷致シ可然哉相伺候也
 指令
-第 一條 妻妾ハ滿刑ノ後本夫ヘ下付シ本夫離異スレハ
+第一條　妻妾ハ滿刑ノ後本夫ヘ下付シ本夫離異スレハ
 結婚スルヿヲ聽ス孀婦ハ親属ヘ下付スル後ハ本人ノ
 情願ニ任ス但姦夫從夫嫁賣姦夫ノ夫ハ婦ノ誤トス
 第二條　官物ハ一等ヲ加フ</div>
@@ -960,7 +961,7 @@
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">17頁</span>
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/20" target="_blank" rel="noopener">原本 コマ20 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
-    <div class="font-semibold text-base mb-1">〔兵庫裁判所伺〕 七年五月 二十二日</div>
+    <div class="font-semibold text-base mb-1">〔兵庫裁判所伺〕 七年五月二十二日</div>
     <div class="item-body text-base leading-relaxed">茲ニ等外吏アリ警視所ニ宿直ス偶マ市中巡邏ノ番人ヨ
 リ違式輕ノ贖金七十五錢ニ處スヘキ犯人ヲ拘引遞附セ
 リ規則書ヲ閱スルニ處置ノ比例スヘキ者ナシ因テ臆斷
@@ -977,7 +978,7 @@
 等外吏違式ノ犯人ヲ處分スルハ權外ノ事ニ關涉スルフ
 以テ有心故造ニ似タリト雖モ他日課長ニ謀リ始テ失錯
 ナルヲ知ル情狀過誤ニ出ルヿ明ナリ仍テ違式重ニ問ヒ
-公罪贖例ニ依ル自首スト雖モ首免ヲ與ヘス 追書犯人
+公罪贖例ニ依ル自首スト雖モ首免ヲ與ヘス　追書犯人
 ハ例第三百十四條ノ末條ニ依リ貼斷ニ不及候事</div>
     
   </div>
@@ -995,7 +996,7 @@
     <div class="font-semibold text-base mb-1">〔筑摩縣伺〕七年五月二十三日</div>
     <div class="item-body text-base leading-relaxed">國幣中小社境内ノ樹木ヲ盜伐スル者ハ盜田野穀麥條ニ
 依リ處斷可然哉ニ相心得候ヘ共若シ盜園陵內草木ノ條
-有之尋常一樣ニ見成シ難キ乎相伺候也 モ
+モ有之尋常一樣ニ見成シ難キ乎相伺候也
 指令
 竊盜ニ准シテ論シ一等ヲ加フ</div>
     
@@ -1013,8 +1014,8 @@
     </div>
     <div class="font-semibold text-base mb-1">○</div>
     <div class="item-body text-base leading-relaxed">越後國頸城郡轟木村ト今善光寺新田ト川端附洲爭論一
-件 司法省裁判所ニ於テ裁斷申渡アリ其事多端ニ付記
-載 セ ス</div>
+件　司法省裁判所ニ於テ裁斷申渡アリ其事多端ニ付記
+載セス</div>
     
   </div>
 </section>
@@ -1036,7 +1037,7 @@
 ニ比例致シ候得ハ勿論取揚候方可然ト奉存候得共此段
 奉伺候也
 指令
-賣拂代金モ取揚ヶ可申事</div>
+賣拂代金モ取揚ケ可申事</div>
     
   </div>
 </section>
@@ -1058,7 +1059,7 @@
     <div class="font-semibold text-base mb-1">〔乙第六十七號布達〕</div>
     <div class="item-body text-base leading-relaxed">石見國那賀郡長濵村農槌藏
 兄淸藏事
-又 屋 龜 助
+龜屋又助
 右之者儀本年一月乙第十四號人相書ヲ以及布達置候所
 濵田縣ニ於テ捕縛相成候條 例 文 以下</div>
     
@@ -1075,8 +1076,8 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/22" target="_blank" rel="noopener">原本 コマ22 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">補十一等出仕 權中属 ロ 貞 堀 遵
-補十五等出仕 等外一等出仕 島 昌 太 郞 三</div>
+    <div class="item-body text-base leading-relaxed">補十一等出仕　權中属　堀口貞遵
+補十五等出仕　等外一等出仕　三島昌太郞</div>
     
   </div>
 </section>
@@ -1129,11 +1130,11 @@
     </div>
     <div class="font-semibold text-base mb-1">〔司法省裁判所申渡〕</div>
     <div class="item-body text-base leading-relaxed">寄合酒井舍人家來七郞左衛
-門体 幸 次 羽 太 郞
+門倅　羽太幸次郞
 駿州有渡郡丸子宿百姓圓藏
-倅 半 藏
+倅　半藏
 瀨戶物町平右衛門地借市五
-郞月雇 七 五 郞
+郞月雇　七五郞
 其方共儀先年流罪申付置候所今般律例攺正相成ニ付
 同放免申付候事</div>
     
@@ -1151,9 +1152,9 @@
     </div>
     <div class="font-semibold text-base mb-1">〔乙第六十八號布達〕</div>
     <div class="item-body text-base leading-relaxed">羽前國村山郡大久保村無籍
-鷹 稻 藏 川
+稻川鷹藏
 同國置賜郡河井小路町雜業
-越 細 長 七
+細越長七
 右之者共儀置賜縣ニ於テ懲役終身處刑中去月廿五日懲
 役塲ヨリ逃走候條各地方</div>
     
@@ -1171,7 +1172,7 @@
     </div>
     <div class="font-semibold text-base mb-1">〔乙第六十九號布達〕</div>
     <div class="item-body text-base leading-relaxed">武藏國都築郡奈良村農善兵
-衛俸 安五郞 野 川
+衛倅　野川安五郞
 右之者本年五月乙第六十五號人相書ヲ以及布達置候處
 同月神奈川縣ニ於テ捕縛相成候條</div>
     
@@ -1188,9 +1189,9 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/25" target="_blank" rel="noopener">原本 コマ25 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">任司法權少錄 十四等出仕 鈴 木 利 行
-補十四等出仕 十五等出仕 佐 野 廣 倍 小
-依願免出仕 十四等出仕 郡 盛 武 司</div>
+    <div class="item-body text-base leading-relaxed">任司法權少錄　十四等出仕　鈴木利行
+補十四等出仕　十五等出仕　小佐野廣倍
+依願免出仕　十四等出仕　郡司盛武</div>
     
   </div>
 </section>
@@ -1233,8 +1234,8 @@
 則中ニ無之ニ付其詐僞ノ罪ハ問ハストモ宜敷儀ニ候哉
 奉伺候也
 指令
-第 條 規則中印紙ト有之ハ大藏省租稅寮ノ印紙ノ
-ト可相心得事 會社改印並製造人封印等無之品ヲ賣
+第一條　規則中印紙ト有之ハ大藏省租稅寮ノ印紙ノ
+ト可相心得事　會社改印並製造人封印等無之品ヲ賣
 買スル者ハ本年第十七號御布告蠶種取締規則追加ノ
 條ニ照準シ五圓以內ノ罰金可申付事
 第二條　前條同様五圓以內ノ罰金可申付事　但二條ト
@@ -1281,7 +1282,7 @@
 レハ親属鄰佑ノ保證ヲ取リ放免ス可シ高美ハ出兵中瘋
 癲ヲ發シ人ヲ重傷スルモ元兵部省ノ指令ニ依リ本藩ニ
 於テ曾テ處分ヲ歴ル者ニ付更ニ改定律例ニヨリ収贖金
-ヲ追スルノ限ニアラス且本犯已ニ痊癒スレハ放免ス ヘ
+ヲ追スルノ限ニアラス且本犯已ニ痊癒スレハ放免スヘ
 シ等ノ指令アリ</div>
     
   </div>
@@ -1326,7 +1327,7 @@
     <div class="font-semibold text-base mb-1">○</div>
     <div class="item-body text-base leading-relaxed">愛媛縣ヨリ
 二月 土佐國高岡郡今成村農兼松長男矢野忠
-太郞豐岡縣ヨリ 同年 三月　但馬國養父郡土田村農久米三郞勇
+太郞豐岡縣ヨリ 同年三月　但馬國養父郡土田村農久米三郞勇
 三郞吉兵衛小倉縣ヨ 四月 同年 士族森次郞弟奥平恒藏千葉
 裁判所ヨリ
 安房國朝夷郡丸本郷村懲役人鈴木源助
@@ -1338,7 +1339,7 @@
 ニ照シ本罪ニ一等ヲ减シ各懲役十年吉兵衛ハ變死ニ係
 ル屍ヲ病死ト詐稱シ屍ヲ親ニ引渡スニ付情ヲ量リ不應
 爲輕ニ問ヒ同三十日久米三郞勇三郞ハ吉兵衞ノ從トナ
-シ 一等ヲ減ス等ノ指令アリ</div>
+シ一等ヲ減ス等ノ指令アリ</div>
     
   </div>
 </section>
@@ -1375,7 +1376,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/28" target="_blank" rel="noopener">原本 コマ28 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">免出仕 十三等出仕 富 村 山 長</div>
+    <div class="item-body text-base leading-relaxed">免出仕　十三等出仕　村山長富</div>
     
   </div>
 </section>
@@ -1390,9 +1391,9 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/28" target="_blank" rel="noopener">原本 コマ28 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">中解部 鎌 政 田 治
-少解部 井 義 方 村
-長崎裁判所在勤申付候事 各 通</div>
+    <div class="item-body text-base leading-relaxed">中解部　鎌田政治
+少解部　村井義方
+長崎裁判所在勤申付候事 各通</div>
     
   </div>
 </section>
@@ -1506,7 +1507,7 @@
     </div>
     <div class="font-semibold text-base mb-1">〔山形縣伺〕七年二月十九日</div>
     <div class="item-body text-base leading-relaxed">去々明治五年八月中强盜畏懼隨行ノ者二囚有リ甲ハ同
-六年三月中捕縛ニテ同五年十一 月中第三百七十六號御
+六年三月中捕縛ニテ同五年十一月中第三百七十六號御
 布告三流三減法ニ依リ伺ノ上懲役七年ニ處斷致シ乙ハ
 同六年七月十日以後捕縛スルヲ以テ改定律例第百條ニ
 依リ處犯三流三減法御頒布以前ニ有ヲ以テ原律ニ溯テ
@@ -1550,9 +1551,9 @@
     </div>
     <div class="font-semibold text-base mb-1">〔司法省裁判所申渡〕</div>
     <div class="item-body text-base leading-relaxed">橫濱姿見町
-原告 田 吉兵衛 飯
+原告　飯田吉兵衛
 同高島町
-被告 直次郞 近 藤
+被告　近藤直次郞
 其方共訴訟原告吉兵衛ヨリ被告直次郞ニ對シ衣服賣掛
 金六十四圓二十五錢及ヒ九十圓ノ高相滯ル旨申立ル
 付遂吟味處元來遊女共ノ爲ニ賣渡シタル衣服代金ニ有
@@ -1587,7 +1588,7 @@
     </div>
     <div class="font-semibold text-base mb-1">○</div>
     <div class="item-body text-base leading-relaxed">補十四等出仕
-中 野 勝 良</div>
+野中勝良</div>
     
   </div>
 </section>
@@ -1653,7 +1654,7 @@
 戶長其村人民ヨリ
 指令
 第一條　伺ノ通
-第二條　貢納金取徵幷ニ縣廳上納ノ手續及 ヒ訴狀答書
+第二條　貢納金取徵幷ニ縣廳上納ノ手續及ヒ訴狀答書
 其他ノ事實等明細取調ヘ更ニ可伺出事</div>
     
   </div>
@@ -1671,7 +1672,7 @@
     <div class="font-semibold text-base mb-1">〔廣島縣伺〕七年一月十三日</div>
     <div class="item-body text-base leading-relaxed">明治六年第三百六號御布告書入規則第二條動產不動產
 ヲ書入ニ爲シ金穀貸借シ濟方ノ期ニ臨ミ書入ノ動產不
-動產ノ相塲高下アツテ糶賣ノ價負債ノ高ヨリ餘分ア ル
+動產ノ相塲高下アツテ糶賣ノ價負債ノ高ヨリ餘分アル
 時ハ其餘分ハ借主ヘ與フヘシ若シ其價負債ヨリ不足ナ
 レハ身代限リ濟方可申付ト有之譬ハ戊辰年以來地所書
 入証文ヲ以金穀貸借明治六年七月以前期限過去リ當今
@@ -1689,7 +1690,7 @@
 布告ノ通地所賣買被差許候上ハ質地ハ貸借上ノ事柄ニ
 付翌十六日以後ノ証書ニテ質地ヨリ起ル訴訟ハ糶賣ノ
 手續キヲ以濟方可申付但壬申二月十五日以前取引ノ質
-ニテ年季明ケ不受戾時ハ從前ノ通流地タルヘキト有 地
+地ニテ年季明ケ不受戾時ハ從前ノ通流地タルヘキト有
 之右ニ就テハ動產質入ト雖モ年季明不受戾時ハ流質ト
 相心得可然哉相伺候也
 指令
@@ -1697,7 +1698,7 @@
 事
 第二三條　伺ノ通
 第四條　動產質入ノ分ハ壬申二月十五日前後ノ別ナク
-都テ糶賣ノ處分ニ及フ ヘキ 事</div>
+都テ糶賣ノ處分ニ及フヘキ事</div>
     
   </div>
 </section>
@@ -1832,7 +1833,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/38" target="_blank" rel="noopener">原本 コマ38 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1"></div>
-    <div class="item-body text-base leading-relaxed">補八等出仕 開拓大主典杉山 孝 治</div>
+    <div class="item-body text-base leading-relaxed">補八等出仕　開拓大主典　杉山孝治</div>
     
   </div>
 </section>
@@ -1861,7 +1862,7 @@
 候間此段相伺候也
 指令
 綱領姦所及ヒ即時ニ非スシテ止タ姦婦ヲ殺傷スル者ノ
-明文ナシ且三流三減法ノ如キハ其單行ノ日 壬申十一月 二十八日
+明文ナシ且三流三減法ノ如キハ其單行ノ日 壬申十一月二十八日
 ヲ以テ始トナス故ニ本擬ノ如シ</div>
     
   </div>
@@ -1886,7 +1887,7 @@
 内村無籍小谷田角次郞甲斐國巨摩郡三吹村無籍武藤幸
 八郞上條北村無籍淸水安太郞同國山梨郡下神内村無籍
 藤本庄作岩手村無籍萩原今八埼玉裁判所ヨリ 武藏國 月同
-埼玉郡水深村自性寺住職深谷龍海新治裁判所ヨリ 同 月 常
+埼玉郡水深村自性寺住職深谷龍海新治裁判所ヨリ 同月 常
 陸國行方郡玉造村農橋本八次郞兵庫裁判所ヨリ 月 同 生國
 不知忠藏茨城裁判所ヨリ 常陸國那珂郡湊村脫籍野上 月同
 半七等各處斷伺ニ菊藏ハ人ヲ謀殺スル者九八郞ハ人ヲ
@@ -1910,8 +1911,8 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/40" target="_blank" rel="noopener">原本 コマ40 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔第十一號布達〕</div>
-    <div class="item-body text-base leading-relaxed">各 裁 判 所
-府 各 縣
+    <div class="item-body text-base leading-relaxed">各裁判所
+各府縣
 今般熊谷裁判所新建本月十八日開廳幷同所入間區裁判
 所ヲ川越區裁判所ト攺稱シ本月十七日相開候條此旨爲
 心得相達候事</div>
@@ -1947,8 +1948,8 @@
     </div>
     <div class="font-semibold text-base mb-1">〔新潟縣伺〕七年四月二十七日</div>
     <div class="item-body text-base leading-relaxed">酒造稼ノ者免許ヲ受ル造高ノ内ヲ免許ヲ受ケサル者ニ
-分 チ釀造セシムル者及ヒ借受釀造スル者ハ如何處罰ス
-キ哉御伺申候也 ヘ
+分チ釀造セシムル者及ヒ借受釀造スル者ハ如何處罰ス
+ヘキ哉御伺申候也
 指令
 造高ノ內ヲ分チ貸渡候者ハ其貸ス處ノ石數ニ因テ免許
 料五倍ヲ科ス可シ又借受候者ハ本年第二號布告酒造規
@@ -1972,7 +1973,7 @@
 三滋賀縣ヨリ 近江國滋賀郡新在家村光川常次郞開拓 月同
 使ヨリ
 尾張國中島郡荻野驛商中松助次郞甲斐國巨
-摩郡並木村農藤田竹三郞上總國市原郡姊ヶ崎村農宇宗
+摩郡並木村農藤田竹三郞上總國市原郡姊ケ崎村農宇宗
 田竹松等各斷刑伺ニ七五三ハ例第百廿八條ニ依リ本犯
 等ヲ減シ懲役十年但所犯攺律以前ニ在ルヲ以テ舊
 減等法ニ依ル常次郞ハ例第百四十三條ニ依リ賍金二百
@@ -2057,7 +2058,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/43" target="_blank" rel="noopener">原本 コマ43 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔東京裁判所伺罪案節錄〕七年五月十七日</div>
-    <div class="item-body text-base leading-relaxed">淺草幡隨院地中大眼院住職中村信勵供 私儀六年十一
+    <div class="item-body text-base leading-relaxed">淺草幡隨院地中大眼院住職中村信勵供　私儀六年十一
 月初旬ヨリ下谷萬年町高橋與吉妻ナカト兩三度姦通シ
 尙同月下旬夜チカ儀拙寺ヘ罷越シ候節兩人倶々一間ヘ
 這入リ蒲團ヲ敷キ枕ヲ並ヘ私ハ蒲團ノ上ニ居リチカハ
@@ -2075,7 +2076,7 @@
 己カ所犯ヲ蔽ハン爲メ不實ヲ上告スルモノ改定律例第
 二百四十七條上ニ告ルニ詐テ實ヲ以テセサル事情輕キ
 者ニ擬シ懲役八十日ノ所寺職タルヲ以テ
-中 村 信 勵
+中村信勵
 禁錮八十日
 姦事ハ本夫私和ヲ容ルヽヲ以テ論セス</div>
     
@@ -2162,7 +2163,7 @@
 僞ノ所業ヲ覺ラサルヲ以テ只無念ノ罪ヲ責メ其情ヲ量
 リ違式輕重ヲ以論シ贖ヲ聽シ可然哉相伺候也
 指令
-第 一條 主守罪囚ノ逃走スルヲ卽時覺知シ追逐シテ捕
+第一條　主守罪囚ノ逃走スルヲ卽時覺知シ追逐シテ捕
 得スル者ハ役ノ内外ヲ論セス失囚ノ限ニ在ラス其逃
 走スルヲ卽時覺知セサル者ハ縱令卽日捕得スルモ攺
 定律例第三百九條ニ依ル畢竟當時ノ景况ニ依テ區處
@@ -2245,7 +2246,7 @@
     </div>
     <div class="font-semibold text-base mb-1">○</div>
     <div class="item-body text-base leading-relaxed">愛媛縣ヨリ 五月
-伊豫國温泉郡 一萬町商勇次長男渡部鐵
+伊豫國温泉郡一萬町商勇次長男渡部鐵
 次郞新潟縣ヨリ 胴越後國蒲原郡月岡村阿部六藏茨城裁
 判所ヨ 月 同 常陸國多賀郡助川村農長山開七開拓使ヨリ
 能登國羽喰郡大念寺村農彥左衛門三男高野重助佐賀 月同
@@ -2253,7 +2254,7 @@
 同　月 越前國吉田郡牧村淨樂寺知海弟牧村福壽兵庫裁判所
 リ胴攝津國兎原郡住吉村無籍金五郞等各斷刑伺ニ鐵
 次郞ハ懲役十年ノ因限內逃走シ外ニ在テ竊盜四犯財ヲ
-得ル者棒鎖二日ノ上懲役終身六藏開七乙松ハ圖毆人ヲ
+得ル者棒鎖二日ノ上懲役終身六藏開七乙松ハ鬪毆人ヲ
 殺ス者重助ハ竊盜三犯五十圓以上福壽金五郞ハ懲役一
 年以上ノ因人限內西ヒ逃走スル者ニ付六名共皆懲役終
 身等ノ指令アリ</div>
@@ -2272,23 +2273,23 @@
     </div>
     <div class="font-semibold text-base mb-1">〔熊谷裁判所伺罪案節錄〕</div>
     <div class="item-body text-base leading-relaxed">三月
-上野國吾妻郡河原湯村農篠原藤作供 自分儀同村温泉
-入湯中父助吉亂髪ニテ左ノ小指ヨリ出血セシ儘通行 ヘ
+上野國吾妻郡河原湯村農篠原藤作供　自分儀同村温泉
+ヘ入湯中父助吉亂髪ニテ左ノ小指ヨリ出血セシ儘通行
 スルヲ見受ケ驚キ相尋子候ヘハ用事之レアリ同村荻原
 太郞方ヘ參リ候所同村樋口豐松罷越シ酒狂ニ乘シ跡形
 モナキ次第ヲ申聞ル而巳ナラス飛付左ノ小指ヲ嚙付候
 聊渠ヘ對シ遺恨無之ニ斯ル暴行ニ遇ヒ遺憾ニ堪サル故
 役元ヘ相屆ル趣ニ付サテハ父ノ老体ヲ侮リ非道ノ振舞
 捨置ク可キニ非スト存シ直ニ太平方ヘ驅付候所尙ホ又
-其塲ニ居合セシ弟寅吉ヲモ頻リニ打擲中ニ付酒狂ト ハ
+其塲ニ居合セシ弟寅吉ヲモ頻リニ打擲中ニ付酒狂トハ
 申ナカラ無咎者ヲ毆打スルハ理不盡ノ所業ト遺恨ニ堪
-ス其塲ニ有合フ薪ヲ以テ四五度打擲シ立歸リ候所翌 ヘ
+ヘス其塲ニ有合フ薪ヲ以テ四五度打擲シ立歸リ候所翌
 日午前四時ニ至リ死去ノ旨承リ驚入候
 老父人ニ毆傷セラルヽヲ聞キ行兇人ヲ迫テ其所ニ至レ
 ハ弟亦毆タル於是忿激禁スル能ハス毆打シテ死ニ致ス
 改定律例二百十二條鬪毆人ヲ殺スニ後ニ手ヲ下シテ理
 直ナル仍ホ事情原諒スヘキ者ニ比擬シ通シテ二等ヲ減
-懲役七年 篠 原 藤 作</div>
+懲役七年　篠原藤作</div>
     
   </div>
 </section>
@@ -2315,12 +2316,12 @@
 流ヨリ三等ヲ減シ懲役二年可申付哉此段奉伺候也
 指令
 强盜ヲ爲スヘキヲ以テ强迫セラレ畏懼シテ之ニ應スト
-雖モ當時疾病强奪ノ塲ニ臨マス止タ其賍ヲ分ッ者攺定
+雖モ當時疾病强奪ノ塲ニ臨マス止タ其賍ヲ分ツ者攺定
 律例百二十九條外ニ在テ瞭望シ云々賍ヲ分ツ者ヲ以テ
 論シ情ヲ量テ一等ヲ減シ其兒器ヲ持スルノ情ヲ知ラサ
-ル ニ依リ不持兇器强盜ヨリ減等シ犯罪三流一減攺正前
+ルニ依リ不持兇器强盜ヨリ減等シ犯罪三流一減攺正前
 ナルヲ以テ舊律ノ減法ニ從ヒ
-懲役一年半〔賍金二十二圓餘〕 長 谷 川 瀨 吉
+懲役一年半〔賍金二十二圓餘〕　長谷川瀨吉
 餘罪ハ輕シ論セス</div>
     
   </div>
@@ -2345,7 +2346,7 @@
 メ相伺候也
 指令
 鑑札遺失ノ旨届出ルト雖モ其後見出シ上納スル者罪ノ
-論ス ヘキナシ
+論スヘキナシ
 牛馬賣買鑑札遺失ノ者處分ノ儀ハ當時伺中ニ付追テ指
 令ニ可及事</div>
     
@@ -2366,8 +2367,8 @@
     </div>
     <div class="font-semibold text-base mb-1">〔岡山縣伺〕七年五月十九日</div>
     <div class="item-body text-base leading-relaxed">御省日誌中茨城裁判所伺御指令ニ被告人逃亡ニ相違ナ
-キ中 ハ云々行衛知レサル者ヲ以テ過テ逃亡ト爲ス可ラ
-サ ル事ト有之右逃亡行衛知レサルハ其實際何ヲ以テ區
+キ中ハ云々行衛知レサル者ヲ以テ過テ逃亡ト爲ス可ラ
+サル事ト有之右逃亡行衛知レサルハ其實際何ヲ以テ區
 分相立候テ可然哉相伺候也
 指令
 逃亡トハ有心規避シテ其踪跡ヲ韜晦スル者ヲ云フ行衛
@@ -2391,7 +2392,7 @@
     <div class="font-semibold text-base mb-1">〔乙第七十號布達〕</div>
     <div class="item-body text-base leading-relaxed">肥後國飽田郡熊本射塲丁商
 源十二男舊名末八事
-吉 池 田 末
+池田末吉
 右之者儀臼川縣於テ懲役終身處刑中本年四月十五日午</div>
     
   </div>
@@ -2429,10 +2430,10 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/53" target="_blank" rel="noopener">原本 コマ53 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">任司法大属 大解部 保 高 益 見
-任權大解部 中解部 香 川 景 信
+    <div class="item-body text-base leading-relaxed">任司法大属　大解部　高見保益
+任權大解部　中解部　香川景信
 任少解部 任司法權中属 任權中解部
-少解部 海 野 勳
+少解部　海野勳
 權大解部土 權中解部大、竹 直 正 屋 正 直</div>
     
   </div>
@@ -2474,10 +2475,10 @@
 乙ノ間ハ素々貸金穀タルヿ判然タル上ハ裁判ニ及ハス
 ト雖モ丙ニ於ルヤ原由ハ毫モ知ヲス只質物証文ヲ目的
 トナシ金穀ヲ貸與ヘリ今日質物証文原由ニヨツテ功ナ
-キト雖モ乙ノ証文甲押印有之上ハ新ニ丙ニ入質セシ モ
+キト雖モ乙ノ証文甲押印有之上ハ新ニ丙ニ入質セシモ
 ノト見做シ准理ス可キヤ將タ原由貸金穀ヲ以テ論シ准
 理ス可カラサル儀哉
-但シ丁卯前ニシテ本文ノ如キニ甲承諾押印ナキ牛 ハ
+但シ丁卯前ニシテ本文ノ如キニ甲承諾押印ナキ牛ハ
 引當書入ト見做シ准理ス可カラサル儀哉
 明治六年第百九十五號公布ハ八月一日以後ノ借貸証書
 加印ノ分ノミノ處分ニ候哉若クハ又從前貸借証書加印
@@ -2556,11 +2557,11 @@
 候外國ニテモ典契賣契混淆不明ノ弊有之者ト被存淸律
 典賣田宅條例中嗣後如係典契務於契內註明回贖字樣如
 係賣契亦於契內註明絶賣永不回贖字樣ト有之本朝ニ於
-テ モ今後地所賣渡證文ニ年期無年期元金買戻ノ約ハ御
+テモ今後地所賣渡證文ニ年期無年期元金買戻ノ約ハ御
 禁止被爲在候テハ如何可有之哉
 質地年期至レハ前以地主ヨリ受戾ノ掛合可致筈ニ候ヘ
 共元來困窮ヨリ質入致ス身元ノ事故金子才覺遲延シ年
-期明ヶ候節始テ受戻ノ掛合ニ及フモノ十ノ八九ニテ金
+期明ケ候節始テ受戻ノ掛合ニ及フモノ十ノ八九ニテ金
 主無子細受戾ヲ許ス者モ有之候ヘ共往々地所ヲ貪ルノ
 心ヨリ半日一日ニテモ期限ニ後レタルヲ幸ニ受戾ヲ許
 サス或ハ期限前ヨリ掛合ニ及ヘトモ態ト返答遷延中ニ期
@@ -2598,7 +2599,7 @@
     <div class="item-body text-base leading-relaxed">証券印紙貼用方賣掛代金ハ第一類ニ屬シ金高ノ多少ニ
 不拘一錢印紙貼用シ可然存候處規則增加二十條第三項
 ニ若干ノ金高ニテ一時受取渡シ不致云々總金高ニ應シ
-員數貼用可致ト有之右ハ 一品一時取引致シ代價逐次償
+員數貼用可致ト有之右ハ一品一時取引致シ代價逐次償
 入スル証書ニ限リ金高相當ノ印紙ヲ貼シ尋常賣買ノ証
 劵ハ總テ一錢印紙ニテ可然哉
 同規則增加第二十三條ニ簿帳証印ノ儀附込合金高百圓
@@ -2660,7 +2661,7 @@
 明治六年第十號布告ノ本條ハ現存シ但書ハ取消トノ儀
 ハ伺ノ通タル可シト雖モ右布告ノ本條ハ金穀出來次第
 返却致ス可クトノ約定ニ之レアル時ノ處分ニテ別紙證
-書 ノ寫ノ如キ債主入用次第何時ニテモ返濟致ス可クト
+書ノ寫ノ如キ債主入用次第何時ニテモ返濟致ス可クト
 ノ約定ニ之レアル者ハ十二ヶ月ノ猶豫ヲ與ルニ及ハス
 直ニ濟方可申付ハ勿論タル可キ事</div>
     
@@ -2698,13 +2699,13 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/61" target="_blank" rel="noopener">原本 コマ61 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔福島縣伺〕七年五月</div>
-    <div class="item-body text-base leading-relaxed">岩代國岩瀨郡下小屋村農七常右衞門妻イシ供 自分儀
+    <div class="item-body text-base leading-relaxed">岩代國岩瀨郡下小屋村農七常右衞門妻イシ供　自分儀
 常右衛門ト夫婦ニ相成旣ニ四年二箇月ノ男子モ之アリ
 夫婦和合日ヲ送ル中明治五年十月中同村農班目廣吉ト
 不圖姦通致シ以來度々密會ノ末遂ニ偕老ノ契ヲ結ント
 欲スレトモ有夫ノ身詮方ナク且世間ノ風聞モアリ樂シキ
 中ニ心ヲ痛メ日ヲ送ル折節當七年三月途中ニテ廣吉ニ
-キ逢ヒ互ニ心痛談話ノ後夫常右衛門ヲ殺害シ末永ク 行
+行キ逢ヒ互ニ心痛談話ノ後夫常右衛門ヲ殺害シ末永ク
 夫婦タラント廣吉申聞ラレ其日ハ立別レ翌夜隣家ニテ
 出會セシ處今夜可行ト申スニ付竊ニ立歸リ夫ノ熟睡ヲ
 窺ヒ繩ハ私持參リ廣吉ハ其繩ヲ枕下ニ通シ引括リシ節
@@ -2713,9 +2714,9 @@
 安心致シ居候處今般御召捕ニ相成候
 指令
 殺死姦夫條妻姦ニ因リ同謀シテ本夫ヲ殺ス者
-梟 示 イ
+梟示　イシ
 同條姦ニ因リ同謀シテ本夫ヲ殺ス姦夫
-斬罪 廣 吉 班 目</div>
+斬罪　班目廣吉</div>
     
   </div>
 </section>
@@ -2749,13 +2750,13 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/62" target="_blank" rel="noopener">原本 コマ62 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔足柄裁判所伺罪案節錄〕七年二月二十三日</div>
-    <div class="item-body text-base leading-relaxed">伊豆國那賀郡仁科中村農鈴木淸次郞妻トク供 自分夫
-淸次郞儀昨六年商用ニテ他行セシ砌生所不知トクト 申
+    <div class="item-body text-base leading-relaxed">伊豆國那賀郡仁科中村農鈴木淸次郞妻トク供　自分夫
+淸次郞儀昨六年商用ニテ他行セシ砌生所不知トクト申
 女ト懇意相成候所引續キ夫淸次郞ヘ戀ヒ慕ヒ當五月近
 村迄參リ候風聞モ有之折柄淸次郞モ他行セシ故彼是氣
 掛リニ付探リ得テ連レ歸ルヘクト奔走中右トクヘ出會
 ヒ候ニ付淸次郞ハ自分夫ノ儀故執心ハ不相成段申聞ル
-ト雖モ 一圓不聞入ヲ以テ遺恨ニ堪ヘ兼子トクヲ打擲候
+ト雖モ一圓不聞入ヲ以テ遺恨ニ堪ヘ兼子トクヲ打擲候
 所窮所ニ中リ候哉遂ニ打斃レ候ニ相驚キ立去候
 指令
 我カ夫ト密通スル女ニ面會シ夫ニ執心ノ念ヲ絶ンヿヲ
@@ -2777,10 +2778,10 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/62" target="_blank" rel="noopener">原本 コマ62 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">石川縣ヨリ 六年十 二月 能登國鹿島郡土川村四平長男中谷喜
+    <div class="item-body text-base leading-relaxed">石川縣ヨリ 六年十二月 能登國鹿島郡土川村四平長男中谷喜
 三平江倉彌三右衞門外十五人同村副戶長岡田半平山梨
 裁判所ヨリ 五月 七年 甲斐國巨摩郡長澤村農善次郞弟大堀永
-太郞山形縣ヨリ 同年 三月
+太郞山形縣ヨリ 同年三月
 羽前國置賜郡宮内村商伊三郞長男
 村上新兵衛等各斷刑伺ニ喜三平ハ上ニ告ルニ詐テ實ヲ
 以テセサル者ニ擬シ懲役一年彌三右衛門外十五名ハ昏
@@ -2825,10 +2826,10 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/63" target="_blank" rel="noopener">原本 コマ63 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔第十二號布達〕</div>
-    <div class="item-body text-base leading-relaxed">裁 所 判 各
-縣 各 府
-諸上納金等収入ノ儀ニ付テハ本年第 五十號 四十九號 御達ノ趣
-モ 有之候ニ付自今當省ヘ相納候賍贖金等ノ儀モ右ニ準
+    <div class="item-body text-base leading-relaxed">各裁判所
+各府縣
+諸上納金等収入ノ儀ニ付テハ本年第五十號四十九號 御達ノ趣
+モ有之候ニ付自今當省ヘ相納候賍贖金等ノ儀モ右ニ準
 シ左ノ雛形ノ通納金內譯ヘ貨幣各種ノ名稱ヲ一種類每
 ニ詳細記載可致此旨相達候事
 贓贖金上納記
@@ -2880,12 +2881,12 @@
 シテ諸約ノ密ナラサル不俟論且ツ証劵印稅規則ノ嚴則
 スヲ尙且ツ第十五條ノ如キ變例アリ是ヲ以テ考フレハ
 年號月トアリテ一ノ日ノミヲ脫セシハ情實取糺ノ上取
-揚ヶ証據ニ相立候モ可然哉ニ存候ヘ共法令ノ不得已儀
+揚ケ証據ニ相立候モ可然哉ニ存候ヘ共法令ノ不得已儀
 ニ候哉
 本年二月十五日第五十一條御布告ニ壬申二月十六日以
 後ノ証書ニテ質地ヨリ起ル訴訟ハ糶賣但二月十五日以
 前取引ノ質地ニテ年季明不受戾候ハヽ從前ノ通リ流地
-タルヘキ云々又本省第四十六號御布達ニハ從前質地 ヨ
+タルヘキ云々又本省第四十六號御布達ニハ從前質地ヨ
 リ起ル訴訟ハ証文中ニ年季明不受戾候ハヽ流地可致旨
 ノ文言有之分ハ期限ヨリ二箇月右文言無之分ハ十年ノ
 內訴出候ハヽ受戾申付來候處當八月ヨリ以後ハ流地文
@@ -2915,7 +2916,7 @@
 ニ無之尋常金銀貸借証劵ニ商用印店判等相用候モ不取
 揚儀ニ候哉爲念伺置候也
 指令
-第 一條 來ル何月何日ヨリト定メタル布告布達ノ類ハ
+第一條　來ル何月何日ヨリト定メタル布告布達ノ類ハ
 格段ノ事ニ付其布告布達ノ通心得可キ事　但途中川
 支又ハ事故アリテ布告布達ノ日限過去リタル後到著
 シ人民於テ布告ヲ知ラサル証アルヰハ別段ノ事
@@ -2967,7 +2968,7 @@
 本籍何レタルヲ知ラスト答フルニヨリ竊盜罪ヲ科シ懲
 役塲ニ付シ置キシニ此頃歸思ノ切ナルヨリ本籍ヲ吐露
 ス然ルニ素ト逃亡竊盜二罪倶發ナルヲ籍ノ附スヘキナ
-キ ニヨリ竊盜罪ヲ科シ今又逃亡罪ヲ科スルハ重復ノ姿
+キニヨリ竊盜罪ヲ科シ今又逃亡罪ヲ科スルハ重復ノ姿
 ニテ其儘放免スレハ杖二十ヲ假シ依之如何處分可然哉
 右相伺候也
 指令
@@ -3057,12 +3058,12 @@
 指令
 第一條　取上裁判スヘシ其犯則ノ廉ハ斷獄課ニテ本年
 第十四號布告印紙規則第九條第四項添正ノ條ニ照シ
-罰ヲ科スヘ シ　但其受取主ハ處罰ニ及ハス
+罰ヲ科スヘシ　但其受取主ハ處罰ニ及ハス
 第二條　第一條ニ同シ
 第三條　第一條ニ同シ　但犯則ノ輕重ヲ酌量シ其罰金
 範圍中適宜ニ之ヲ科スヘシ
 第四條　條ニ同シ 第
-第五條　是マテ取上ケサル分ハ更ニ取上ケ裁判スヘ シ
+第五條　是マテ取上ケサル分ハ更ニ取上ケ裁判スヘシ
 旣ニ下方ニテ示談濟方致スモノト雖モ訴出ルニ於テ
 ハ取上ケ裁判スヘ</div>
     
@@ -3104,7 +3105,7 @@
 松山下宇吉本地福松笹川多藏篠山長吉直下佐吉嘉助長
 男山下夘之吉和吉長男桂川林藏外五名等斷刑伺ニ長吉
 米松福松多藏長吉ハ人ヲ謀殺スル從ニシテ加功スル者
-ニ付五名共皆絞罪字吉佐吉卯之吉林藏ハ人ヲ謀殺ス ル
+ニ付五名共皆絞罪字吉佐吉卯之吉林藏ハ人ヲ謀殺スル
 從ニシテ加功セサル者ニ付四名共皆懲役十年宛其他五
 名ハ同三十日以下ノ指令アレトモ多端ニ付記載セス</div>
     
@@ -3173,7 +3174,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/72" target="_blank" rel="noopener">原本 コマ72 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">補十四等出仕 眞 堅 大 川</div>
+    <div class="item-body text-base leading-relaxed">補十四等出仕　大川眞堅</div>
     
   </div>
 </section>
@@ -3191,7 +3192,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/72" target="_blank" rel="noopener">原本 コマ72 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">補十四等出仕 佐賀縣十四等出仕 林 完 三 小</div>
+    <div class="item-body text-base leading-relaxed">補十四等出仕　佐賀縣十四等出仕　小林完三</div>
     
   </div>
 </section>
@@ -3209,9 +3210,9 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/73" target="_blank" rel="noopener">原本 コマ73 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">補十五等出仕 等外一等出仕 路 安 山 美
+    <div class="item-body text-base leading-relaxed">補十五等出仕　等外一等出仕　山路安美
 同　同
-同　林 惟 晴
+同　林惟晴
 八
 同三等出仕 戶 大 石</div>
     
@@ -3258,7 +3259,7 @@
     </div>
     <div class="font-semibold text-base mb-1">○</div>
     <div class="item-body text-base leading-relaxed">山形縣ヨリ 北〓証劵印紙貼用方ノ伺アレトモ多端ニ付記
-載セ ス</div>
+載セス</div>
     
   </div>
 </section>
@@ -3304,7 +3305,7 @@
 シ若シ之ヲ再犯スル者ハ違式ノ輕重ニ問ヒ相當ノ罰
 金ヲ科ス可キ事
 但右譴責等ハ斷獄課ニ付スルニ及ハス其裁判官直
-チ ニ申渡ス可シ
+チニ申渡ス可シ
 第六條　譴責又ハ罰金ヲ科ス可キモノアル時ハ其裁判
 ヲ中止シテ其犯則ニ關係ナキ者ハ一且扣所ニ退カシ
 メ然後犯則ノ者ニ譴責又ハ罰金ヲ申渡ス可キ事
@@ -3339,7 +3340,7 @@
 至ル迄ハ外聞難差許塲合モ有之候間斷刑處决ノ節ノミ
 新聞紙上版人差入候樣致シ度云々ノ御指令ニ伺ノ通尤
 各府縣ヘ相達候儀ハ先見合可申ト之アリ然レハ斷獄ノ
-儀ハ容易外聞ヲ許スヘ キモノニ無之樣相見ヘ御省御建
+儀ハ容易外聞ヲ許スヘキモノニ無之樣相見ヘ御省御建
 議ト當縣ヘノ御指令聊抵觸致シ候樣有之右ハ斷獄タリ
 共御指令ノ通各民傍聽差許シ置不苦儀ニ候哉相伺候也
 指令
@@ -3415,13 +3416,13 @@
 〕右御指令ニ遵ヒ〓分ニ可
 及ハ勿論ノ儀ニ候ヘ共昨明治六年十月十三日太政官第
 三百四十一號御布告文ニ曰ク〔舊藩ニ於テ鄕印証文ヲ
-以金子借入候向有之候處証文面相對私借ノ体裁ナル ヨ
+以金子借入候向有之候處証文面相對私借ノ体裁ナルヨ
 リ金主其村方ヘ返濟ノ儀督促ノ末遂ニ相手取及出訴候
 共村方ヨリ舊藩ヘ轉貸致シタル証據有之分ハ直ニ金主
-ヘ 公債ノ處分可及〕云々ト有之右御布告前後文勢ヲ按
+ヘ公債ノ處分可及〕云々ト有之右御布告前後文勢ヲ按
 スルニ原告人ニ於テ其轉貸ノ事ヲ承知シタル確証無之
 モ被告人ト舊藩トノ間ニ轉貸ノ確証有之上ハ原告人
-直ニ公債ノ御處分ニ可相成儀ト相心得候果シテ然ハ ヘ
+ヘ直ニ公債ノ御處分ニ可相成儀ト相心得候果シテ然ハ
 右三百四十一號御布告面ト御指令上ト自然其區別有之
 候哉右邊了解難致儀ニ付再應相伺候也
 但本文三百四十一號御布告ト御指令ト區別有之ト云
@@ -3455,9 +3456,9 @@
 分可致筋ニ候哉
 地所ニ不限物品ト雖質入引當書入共証書文言ニ不拘前
 同樣處分可致儀ニ可有之哉
-壬申二月十五日以前ト雖引當書入迄ノ地所取引ハ 證書
+壬申二月十五日以前ト雖引當書入迄ノ地所取引ハ證書
 ノ文意ニ不拘第一條伺ニ準シ可然哉
-利足禮金ヲ不受預ヶ金ハ丁卯以前ト雖受理可致ハ勿論
+利足禮金ヲ不受預ケ金ハ丁卯以前ト雖受理可致ハ勿論
 ニ候得共中ニハ天保度ノ預ケ金ニテ一度モ不訴出者等
 ハ証書有之ノミ預ケ主預リ主トモ既ニ死亡又ハ一方死
 亡等ニテ事實推窮スル能ハサルモノアリ右ハ凡年數ヲ
@@ -3472,7 +3473,7 @@
 可立遣儀ニ候哉或ハ十里內外ヲ以區別致候儀ニ可有之
 哉右奉伺候也
 指令
-第一二三四五條共 伺ノ通
+第一二三四五條共　伺ノ通
 第六條　八里外ヨリ一里ニ付十錢ツヽノ割合ヲ以テ算
 計致サス可キ事</div>
     
@@ -3514,7 +3515,7 @@
 右令員ハ相渡シ證文ノミ殘リ居リシ乎又ハ費用セシモ
 ノカ何分死亡後ニテ其實際推糾難致モノハ費用ト見做
 シ當戶主ヨリ迫償可爲致儀ニ候哉或ハ當戶主於テ費用
-セサルノ廉判然スレハ預ヶ主取戾スヘキ權利無之者ト
+セサルノ廉判然スレハ預ケ主取戾スヘキ權利無之者ト
 看做シ可然哉
 民法裁判上ニ付證人其他引合人ノ內即今未决旣决ノ罪
 囚ニ係ルキハ自他管內ノ別ナク監獄掛ヘ達シ事情取斜
@@ -3574,7 +3575,7 @@
     <div class="font-semibold text-base mb-1">○</div>
     <div class="item-body text-base leading-relaxed">熊谷裁判所ヨ 七年 岩代國名波郡吉田村商近藤吉平處
 斷伺ニ官私ヲ詐欺シテ財物ヲ取ル者懲役一年半ト指令
-ア リ</div>
+アリ</div>
     
   </div>
 </section>
@@ -3593,7 +3594,7 @@
     </div>
     <div class="font-semibold text-base mb-1">○</div>
     <div class="item-body text-base leading-relaxed">補十三等出仕
-鷹 琢 磨 取</div>
+鷹取琢磨</div>
     
   </div>
 </section>
@@ -3615,8 +3616,8 @@
     <div class="font-semibold text-base mb-1">〔福岡縣伺〕六年四月八日</div>
     <div class="item-body text-base leading-relaxed">動產不動產ヲ書入レ金穀貸借シ期切レニ及ヒ書入物品
 貸主ヘ引取候節原價下落シ貸金ノ原數ヲ償フニ足ラサ
-者ハ借リ方假令不足金ヲ償辨スル資力アル者ト雖モ ル
-貸主ノ損失タル ヘキ　但書入證書ニ其物品低價ニ至
+ル者ハ借リ方假令不足金ヲ償辨スル資力アル者ト雖モ
+貸主ノ損失タルヘキ　但書入證書ニ其物品低價ニ至
 ル時ハ不足金ハ別金ヲ以償辨可致旨ノ明文有之分ハ身
 代限濟方可申付哉
 身代限御規則中學藝ヲ人ニ教ヘ又ハ農工商等ノ職業ニ
@@ -3706,7 +3707,7 @@
 失物律ニ照シテ處分シ可然哉相伺候也
 指令
 其物品三十日間揭示ノ後主アレハ全ク主ニ給シ主ナキ
-中 ハ金主ニ預ケ置ク可シ</div>
+中ハ金主ニ預ケ置ク可シ</div>
     
   </div>
 </section>
@@ -3760,8 +3761,8 @@
 候テ不苦候哉
 右ノ廉々在官中公私ノ禮式ニ於テ每々差支候ニ付心
 得罷在度候間御指揮被下度候也
-明治七年六月十日 司法大錄 中 田 憲 信
-二 人 外
+明治七年六月十日　司法大錄　中田憲信
+外二人
 〔回答書
 御省官員ノ內ヨリ別紙ノ通伺出ニ付云々御申越致承知
 候則
@@ -3786,7 +3787,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/87" target="_blank" rel="noopener">原本 コマ87 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">少判事 間 守 沼
+    <div class="item-body text-base leading-relaxed">少判事　沼間守一
 至急御用有之大坂出張被仰付候事</div>
     
   </div>
@@ -3805,7 +3806,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/88" target="_blank" rel="noopener">原本 コマ88 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">十四等出仕 大 八 常 木 正
+    <div class="item-body text-base leading-relaxed">十四等出仕　大八木常正
 依願免出仕</div>
     
   </div>
@@ -3836,7 +3837,7 @@
 スル者ハ免罪二年以外ハ逃亡律ニ科ス
 第三四條　他管地ニ出サレハ五十日以外ハ違式輕ニ問
 フ他管地ニ出ル者ハ改定律例第百二十條ニ依テ處分
-ス ヘシ復歸自首スル者ハ免罪二年以外ハ逃亡律ニ科
+スヘシ復歸自首スル者ハ免罪二年以外ハ逃亡律ニ科
 ス
 第五條　規避ノ情狀ヲ審ニセサレハ論定シ難シ口供ヲ
 以テ伺フヘ</div>
@@ -3875,11 +3876,11 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/89" target="_blank" rel="noopener">原本 コマ89 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">補十二等出仕 權少解部 萬 里 平 野
-長 谷 川 俊 章
+    <div class="item-body text-base leading-relaxed">補十二等出仕　權少解部　平野萬里
+長谷川俊章
 同
 任權少解部
-藤 新 正 佐</div>
+佐藤新正</div>
     
   </div>
 </section>
@@ -3956,7 +3957,7 @@
 見ニテ其家ニ居リ失火セシ者等稅居人トモ異リ候ヘ共
 自己ノ宅舍ヲ燒クト同シク論シ可然哉奉伺候也
 指令
-後見人火ヲ失スルハ自己ノ宅舍ヲ燒ヲ以テ論ス 一時留
+後見人火ヲ失スルハ自己ノ宅舍ヲ燒ヲ以テ論ス一時留
 守番ノ者ハ自己宅舍ヲ燒ニ一等ヲ加フ</div>
     
   </div>
@@ -3980,7 +3981,7 @@
 後病ヲ發シ即時處斷難致滯獄三十日以外ニ及フ者ト雖
 モ本罪內ニ算入セス全癒ノ後實斷仕可然哉奉伺候也
 指令
-伺ノ通 病ニ罹リ處刑ヲ延ス者ハ滯獄例ノ限ニアヲス</div>
+伺ノ通　病ニ罹リ處刑ヲ延ス者ハ滯獄例ノ限ニアヲス</div>
     
   </div>
 </section>
@@ -3998,7 +3999,7 @@
     <div class="item-body text-base leading-relaxed">中解部中澤興哉外一名區裁判所ニテ
 百圓以上ノ訴訟ヲ受理セシ件東京裁判所廻 五月 七年 當省十
 二等出仕波多野敬直刑名失出セシ件山梨裁判所廻 當 月同
-省等外 一等出仕郡山七之丞外一人宿直ノ夜官金紛失セ
+省等外一等出仕郡山七之丞外一人宿直ノ夜官金紛失セ
 シ件各進退伺ニ興哉ハ違式輕ノ贖罪外一名ハ無科敬直
 ハ故失出入圖ニ照シ懲役一年半ノ罰俸一月半七之丞外
 一人ハ不覺被盜條ニ依リ懲役四十日贖ヲ聽ス等ノ指令</div>
@@ -4050,7 +4051,7 @@
 丁卯十二月晦日以前動不動產云々
 奉伺候也
 指令
-第 一條 自己ノ宅舍ヲ燒クヲ以テ論ス
+第一條　自己ノ宅舍ヲ燒クヲ以テ論ス
 第二條　田畑山林等ハ地劵代價ヲ以テ罪ニ科セス當時
 中等ノ價ヲ以テ罪ニ科ス
 第三條　現實詳細ノ書類ヲ以テ伺出ヘシ</div>
@@ -4214,7 +4215,7 @@
 ヲ以テ伺出ヘシ
 第二條　平民ト同ク贖罪ヲ聽ス
 第三條　相當ノ取揚賃ヲ給與致サセ材木ハ事主ニ給ス
-但竊取スル者盜田野穀麥條ニ依リテ處斷ス可 シ</div>
+但竊取スル者盜田野穀麥條ニ依リテ處斷ス可シ</div>
     
   </div>
 </section>
@@ -4314,7 +4315,7 @@
 有之候得共主客ノ輕重不權衡ニハ有之間敷哉右ノ條々
 奉伺候也
 指令
-一條 雇人逃亡トハ雇主ノ家ヲ逃亡スル者ヲ云フ故 第
+第一條　雇人逃亡トハ雇主ノ家ヲ逃亡スル者ヲ云フ故
 ニ自他ノ管內ヲ論セス懲役三十日ニ科ス若シ他管ニ
 出五十日ヲ過レハ違令重ニ問ヒ二年以外ハ脫籍逃亡
 律ニ依ル
@@ -4337,7 +4338,7 @@
 </section>
 </div>
 <div class="card-dategroup filter-group">
-<h3 class="card-dategroup-head">〓六月十七日</h3>
+<h3 class="card-dategroup-head">○六月十七日</h3>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a10-155" data-type-base="article" data-pid="1366799" data-frame="102">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
@@ -4366,7 +4367,7 @@
     </div>
     <div class="font-semibold text-base mb-1">〔乙第七十一號布達〕</div>
     <div class="item-body text-base leading-relaxed">下野國足利郡川崎村區長甚
-五兵衛次男 中 山 逸 平
+五兵衛次男　中山逸平
 右ノ者儀去五月中於埼玉裁判所懲役終身處刑中本月八</div>
     
   </div>
@@ -4431,7 +4432,7 @@
     <div class="font-semibold text-base mb-1">○</div>
     <div class="item-body text-base leading-relaxed">白川縣ヨリ 七年 月 肥後國飽田郡熊本平民岡田玄敬同縣ヨ
 同年 同國阿蘇郡下色見村無籍片山又四郞狩尾村農新
-平俸中川又作東京裁判所ヨリ 同年 二月 本所吉田町商伊藤勘
+平俸中川又作東京裁判所ヨリ 同年二月 本所吉田町商伊藤勘
 次郞同人妻ヤス濵町商鈴木吉兵衞小石川平民村山太吉
 同人妻テツ築土八幡町商米山兼吉母フサ同人方同居七
 辰五郞後家クニ杤木裁判所ヨリ
@@ -4445,7 +4446,7 @@
 妻ノ身ニテ他ノ女ト奸シ容易ニ女家ニ到リ後見ト爲ル
 者不應爲重ニ問ヒ淸松ハ人ノ妻ヲ姦セント欲シ强テ挑
 ミ其事遂サル者不應輕ニ問ヒ各懲役ニ處シソノハ例第
-二百十四條ヲ以テ論シ懲役七十日サタハ本籍逃亡ス ル
+二百十四條ヲ以テ論シ懲役七十日サタハ本籍逃亡スル
 者同八十日各収贖ス勘次郞太吉ハ私娼ヲ街賣スル窩主
 ニ擬シ同四十日ノ贖罪フサハ同上ノ収贖吉兵衛ハ詐稱
 官條ヲ以テ論シ犯ス所輕キニ依リ懲役七十日ヤステツ
@@ -4486,8 +4487,8 @@
     </div>
     <div class="font-semibold text-base mb-1">〔司法省裁判所申渡〕</div>
     <div class="item-body text-base leading-relaxed">越後國蒲原郡東萱塲村農
-原告 藏 際 武 山
-被告 長太郞 山 際
+原告　山際武藏
+被告　山際長太郞
 其方共一件原告山際武藏申立ル趣私儀ハ七父山際長藏
 長男ニテ亡父存生中明治三申年本家相續人ト取極メ弟
 長太郞ヘハ田祿ノ內現石十四石五斗餘授與致シ同村七
@@ -4502,7 +4503,7 @@
 ニ付則父所有ノ動產悉皆持參同居罷在昨西五月廿九日
 病死致爾後兄武藏ヨリ亡父所有ノ財產差戾シ候様申越
 候ヘ共前顯ノ通亡父存生中右持參ノ品々ハ悉皆私ヘ授
-與可致筈ニ付差戾シ不申段相答候處武藏ヨリ新瀉縣 ヘ
+與可致筈ニ付差戾シ不申段相答候處武藏ヨリ新瀉縣ヘ
 訴上裁判ヲ蒙リ夫ヲモ顧ミサル始末難得其意段申之右
 雙方遂吟味處兄武藏儀從來父ノ存意ニ不叶儀ニ付遺物
 ハ長太郞ヘ授與致スヘキノ証トシテ武藏ヨリ七父長藏
@@ -4540,7 +4541,7 @@
     </div>
     <div class="font-semibold text-base mb-1">○</div>
     <div class="item-body text-base leading-relaxed">神奈川裁判所ヨリ 五月 七年 武藏國都筑郡農內田彥次郞長野
-縣 ヨリ 胴信濃國水內郡蕨野村農長右衛門長男靑木長次
+縣ヨリ 胴信濃國水內郡蕨野村農長右衛門長男靑木長次
 郞福島縣ヨリ 岩代國信夫郡福島町商齊藤虎松愛媛縣 月同
 同　月 伊豫國伊豫郡川井村農山本幸八東京裁判所ヨリ
 備前國岡山出生無籍大月寅吉度會縣ヨリ胴 月 伊豫國安 月同
@@ -4559,7 +4560,7 @@
 ニ依リ懲役三年ノ處其情ヲ酌量シ一等ヲ减シ傳之助ハ
 同上ノ從又一等ヲ减シ常吉ハ兄ノ兒暴ヲ逞シ母ニ迫ル
 ヲ阻當シ其兒器ヲ打落サントシ誤テ兄ニ輕傷ヲナサシ
-ム ルモ罪ノ問フヘキナシ等ノ指令アリ</div>
+ムルモ罪ノ問フヘキナシ等ノ指令アリ</div>
     
   </div>
 </section>
@@ -4574,7 +4575,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/107" target="_blank" rel="noopener">原本 コマ107 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔敦賀縣伺罪案節録〕七年四月二十七日</div>
-    <div class="item-body text-base leading-relaxed">越前國今立郡岩本村醫山田常平供 自分儀同醫業黑田
+    <div class="item-body text-base leading-relaxed">越前國今立郡岩本村醫山田常平供　自分儀同醫業黑田
 良齋方ヘ罷越候處同業今村仲造外二人居合セ右良齋近
 頃買入候迪人骨ヲ論シタル〓圖ヲ見セ候ニ付此上ハ現
 物ト比較シ試撿致シ度ト談合ノ末幸ヒ近村ニテ先頃非
@@ -4589,10 +4590,10 @@
 倒死ニ係リ已ニ埋葬スル屍ヲ醫業研究ノ爲メ骨體試撿
 セント欲シ發堀シテ水中ニ浸漬スル者雜犯律不應爲ノ
 重キヲ以テ論シ懲役七十日贖ヲ聽ス
-贖罪金五圓二十五錢 山 田 常 平
+贖罪金五圓二十五錢　山田常平
 山田常平ノ從ヲ以テ論シ懲役六十日贖ヲ聽ス
-贖金四圓五十錢ツヽ 黑 良 田 齋
-外 三 人</div>
+贖金四圓五十錢ツヽ　黑田良齋
+外三人</div>
     
   </div>
 </section>
@@ -4647,7 +4648,7 @@
     <div class="item-body text-base leading-relaxed">太政官本年第二十八號區長戶長云々ト御達有之右ハ平
 常身分取扱ノ体裁ノミニテ犯罪ノ節擬律上ニ關涉無之
 哉又ハ官吏公私罪贖例圖ニ依リ一切官吏ニ准シテ處斷
-ス ヘキ譯ニ候哉然中ハ平民ヨリ採用スル區長ノ父母子
+スヘキ譯ニ候哉然中ハ平民ヨリ採用スル區長ノ父母子
 孫等罪ヲ犯セハ律例第二十五條ニ依リ處斷スヘキ哉右
 相伺候也
 指令
@@ -4735,10 +4736,10 @@
 死スル造意者ヲ以テ論シ十五名共皆斬罪藤田辨藏ハ故
 殺ノ本罪ニ一等ヲ減シ犯時懲役終身ノ刑名ナキヲ以テ
 同十年等ノ指令アリ
-其他十餘名圖毆律ヲ以テ論シ懲役
+其他十餘名鬪毆律ヲ以テ論シ懲役
 二年以下ニ區處スト雖モ多端ニ付
 記載
-ス セ</div>
+セス</div>
     
   </div>
 </section>
@@ -4881,7 +4882,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/114" target="_blank" rel="noopener">原本 コマ114 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔戶籍寮ヨリ問合〕 七年六月九日</div>
-    <div class="item-body text-base leading-relaxed">凡華士族罪ヲ犯シ破廉恥甚ニ係リ廢シテ庶人ト爲ス モ
+    <div class="item-body text-base leading-relaxed">凡華士族罪ヲ犯シ破廉恥甚ニ係リ廢シテ庶人ト爲スモ
 ノ攺テ除族ト稱ス其除族ニ該ル者ハ祿ヲ収メ本犯一人
 ヲ除シ族ハ子孫ニ襲カシム右ハ犯由ノ輕重ニ依テ襲族
 ヲ許サヽルノ差別有之候哉譬ヘハ謀逆ヲ企テ國家ヲ擾
@@ -4920,7 +4921,7 @@
 セント欲スルヿヲ知自首スル者ハ本罪一等ヲ減スル律
 ヲ改メ減二等ニ從ヒ懲役二年半ニ處斷シ勿論ノ儀ト存
 候ヘ共又竊盜アリ同ク百圓ヲ盜ミ皆費用スルノ後眞實
-先非ヲ悔自首スル者攺定律第六十四條ニ據レハ徵ス ル
+先非ヲ悔自首スル者攺定律第六十四條ニ據レハ徵スル
 ヿ能ハサル賍ニ二等ヲ減シ罪ヲ科スト有之ニ付眞實悔
 悟ノ自首モ人ノ告ンヲ知リ自首スルモ賍徵スル能ハサ
 ル者ハ各其罪同シク科斷致候事ニ候哉
@@ -4935,7 +4936,7 @@
 論シ可然哉零數多ク除去致候儀難決ニ付及御問合候也
 囘答
 第一條　地金代價ヲ以テ計賍科斷ス
-第二條　律ノ通御心得之アル ヘキ事
+第二條　律ノ通御心得之アルヘキ事
 第三條　本議ノ通</div>
     
   </div>
@@ -5000,14 +5001,14 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/117" target="_blank" rel="noopener">原本 コマ117 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">埼玉裁判所ヨリ 七年 三月 武藏國埼玉郡七左衛門村農川上林
+    <div class="item-body text-base leading-relaxed">埼玉裁判所ヨリ 七年三月 武藏國埼玉郡七左衛門村農川上林
 右衛門藤田長次郞同人妻ミノ谷中村農野口平藏同人女
-カ 子足立郡浦寺村嘉平治後家松井カ子大坂裁判所ヨリ
-四月 常陸國眞壁郡出生無籍角藏山形縣ヨリ 同年 五月 羽前國
+カ子足立郡浦寺村嘉平治後家松井カ子大坂裁判所ヨリ
+四月 常陸國眞壁郡出生無籍角藏山形縣ヨリ 同年五月 羽前國
 村山郡江服村農黑沼久治長崎裁判所ヨリ 月 同 肥前國杵島
 郡山口西分村農廣吉名東縣ヨリ 月 同 讃岐國三野郡箱浦農
 尾二傳八鳥取縣ヨリ
-生所不知ハル滋賀縣ヨリ 同 月 近江 月同
+生所不知ハル滋賀縣ヨリ 同月 近江 月同
 國愛知郡東出村北川作兵衛同甚右衛門大分縣ヨリ詞 豐
 後國國東郡橫峯村商河野要平神奈川裁判所ヨリ 月 同 上總
 國佐位郡小柴村農堀込武平上植村農鵜生川利平常陸國
@@ -5107,7 +5108,7 @@
     <div class="item-body text-base leading-relaxed">舊岡縣元士族高山左膳儀元山口藩脫徒關係ノ罪ニ依リ
 庶人ニ被降居候所同人養子忠夫ヘ士族相續被仰付度段
 田邊新次郞外二名ヨリ先般歎願差出候ヘ共重キ御刑典
-ノ儀ニ付難聞届段及指令置候所尙又別紙 略 之 ノ通再歎願
+ノ儀ニ付難聞届段及指令置候所尙又別紙 略之 ノ通再歎願
 差出候如何心得可然哉相伺候也
 指令
 高山左膳處刑ノ儀ハ改定律例御頒布以前ニ付嗣子ニ族
@@ -5146,7 +5147,7 @@
     </div>
     <div class="font-semibold text-base mb-1">〔司法省裁判所申渡〕</div>
     <div class="item-body text-base leading-relaxed">岐阜縣士族
-司法權少錄市 川 友 正
+司法權少錄　市川友正
 其方儀淺草廣小路通行ノ砌人力車夫佐々木重藏儀車ヲ
 牽キ途上ニイ居通路差支ルニ付聲掛ルト雖モ不聞取ヨ
 リ遂ニ蝙蝠傘ヲ以テ打擲致シ傷負ハスル科鬪毆律ニ依
@@ -5199,7 +5200,7 @@
     </div>
     <div class="font-semibold text-base mb-1">〔乙第七十二號布達〕</div>
     <div class="item-body text-base leading-relaxed">羽前國置賜郡河井小路町雜
-長 七 越 細 業
+業　細越長七
 右之者儀本年六月乙第六十八號人相書ヲ以及布達置候
 所置賜縣ニ於テ捕縛相成候 例文 以下</div>
     
@@ -5217,12 +5218,12 @@
     </div>
     <div class="font-semibold text-base mb-1">〔筑摩縣伺〕六年十二月四日</div>
     <div class="item-body text-base leading-relaxed">當縣士族
-雪 原
+原雪
 信濃國筑摩郡宮越村蠶種世
-讓 筑 次 都
+都筑讓次
 同郡福島村農
-七 久 小 野
-古 畑 金 治
+小野久七
+古畑金治
 右久七金治ハ無極印ノ原紙ヲ雪ヘ賣渡雪儀ハ右原紙ニ
 夏蠶再出種ヲ仕付尙又久七外一人ヘ賣渡夫々賣買致シ
 讓治儀ハ世話役ノ身ヲ以製造人ノ名目ヲ貸渡候段銘々
@@ -5232,16 +5233,16 @@
 壬申第百七十九號蠶種製造攺正規則第二則第二節但書
 曰密々原紙ニ製造シ賣買致シ相顯ハルヽニ於テハ其品
 取上蠶種一枚ニ付新貨五十錢ノ科料取立云々ニ依
-科料金百五十四圓 原 雪
-同　金百九十四圓宛 久 七 小 野
-古 治 金 畑
+科料金百五十四圓　原雪
+同　金百九十四圓宛　小野久七
+古畑金治
 同第七節打込ノ印無之分ハ一切賣買不相成ノ則ヲ
 犯スハ輕キニ依テ除棄ス
 同第四則第六節但書曰世話役云々又ハ不正ノ者ヘ黨與
 イタシ候儀相顯ハルヽニ於テハ規定ノ年限ニ不拘役儀
 召放シ縱令勤年限未滿ニ候トモ二箇年以上ノ給料云々
 ニ依リ
-同給料二箇年分 次 讓 筑 都
+同給料二箇年分　都筑讓次
 犯罪明治六年三月攺正蠶種製造規則已前ニ在ルヲ
 以テ仍ホ舊規則ノ罰則法ニ依ル</div>
     
@@ -5282,7 +5283,7 @@
     </div>
     <div class="font-semibold text-base mb-1">〔司法省裁判所申渡〕</div>
     <div class="item-body text-base leading-relaxed">越中國射水郡新港伏木
-佛 田 甚 六
+佛田甚六
 其方儀山形縣ヨリ貢米廻漕ノ節按外ノ荷嵩ニテ迚モ積
 入難相成所ヨリ減石ノ儀ヲ申出ルト雖モ至急ニ指圖不
 相成赴ヲ承知致シ困却ノ餘リ道テ東京於テ上納可致ト
@@ -5290,10 +5291,10 @@
 ナラス右賣拂金ノ內ヲ以テ口錢又ハ直引トシテ勇助
 ヘ差遺シ或ハ船中破損ノ塲所有之迚修覆ニ費用致ス賍
 金三十圓餘ノ科二罪倶發一ノ重キ私借官物律ニ依リ懲
-一年可申付所紀州大浦ニ於テ難破及フ節右始末不包 役
+役一年可申付所紀州大浦ニ於テ難破及フ節右始末不包
 申出ルニ付自首ヲ以テ論シ賍完償スルニ付放免申付候
 事
-中 勇 助 川
+中川勇助
 其方儀甚六ヨリ貢米ノ內賣拂度賴聞候迚其意ニ應シ周
 旋致ス科不應爲輕ニ問ヒ懲役三十日可申付所本犯自首
 免罪スルニ付其罪ヲ差許ス但口錢直引トシテ甚六ヨリ
@@ -5342,7 +5343,7 @@
 各自役ヲ歇メ繩ヲ施シ監中ヘ警誠致シ置キ候處取調方
 三四箇月或ハ殆ト半年ニ及フ者有之長々繫獄ノ苦ハ勿
 論適期限ニ至リテモ差役多ク之ヲ償ハシメ實ニ矜憫ノ
-ニ付將來重犯ハ別段雞姦ヲ犯シ又ハ前科ヲ隱匿スル 至
+至ニ付將來重犯ハ別段雞姦ヲ犯シ又ハ前科ヲ隱匿スル
 属ヒ其外輕罪ハ掛裁判官ヘ掛合ノ上ハ使役致シ不苦候
 哉相伺候也
 指令
@@ -5385,9 +5386,9 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/125" target="_blank" rel="noopener">原本 コマ125 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">高知縣ヨリ 七年 五月 土佐國香美郡岩改村平民小松熊吉以下
+    <div class="item-body text-base leading-relaxed">高知縣ヨリ 七年五月 土佐國香美郡岩改村平民小松熊吉以下
 廿餘名新律綱領ニ依リ處斷セシ者改定律例ニ照シ攺正
-ス キ哉ノ伺ニ其儘ニ差置ヘシト指令アリ ヘ</div>
+スヘキ哉ノ伺ニ其儘ニ差置ヘシト指令アリ</div>
     
   </div>
 </section>
@@ -5617,8 +5618,8 @@
     </div>
     <div class="font-semibold text-base mb-1">〔司法省裁判所申渡〕</div>
     <div class="item-body text-base leading-relaxed">武藏國多摩郡柳窪村農
-原告 奥 住 庄之 助
-被告 野崎市郞右衛門
+原告　奥住庄之助
+被告　野崎市郞右衛門
 其方共訴訟ノ始末遂吟味所原告庄之助ニ於テ初メ神奈
 川縣ヘ訟フル所ノ槻四本ノ儀ハ固ヨリ其方持木ニ無之
 儀判然タル上ハ其樹ノ所有主ノ誰ナルヲ問ハス都テ原
@@ -5700,7 +5701,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/133" target="_blank" rel="noopener">原本 コマ133 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">千葉裁判所ヨリ 七年 六月 老小癈疾逃亡ノ伺ハ白川縣伺指令
+    <div class="item-body text-base leading-relaxed">千葉裁判所ヨリ 七年六月 老小癈疾逃亡ノ伺ハ白川縣伺指令
 十號見合 本年第百 同斷ニ付畧之</div>
     
   </div>
@@ -5716,9 +5717,9 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/133" target="_blank" rel="noopener">原本 コマ133 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔東京裁判所五月聽訟表〕</div>
-    <div class="item-body text-base leading-relaxed">席前濟口六百四十三件 席後濟口三百七件 裁許五件
-願下三百六十六件 各裁判所廻七十件 同濟口三十
-九件 斷獄廻四件 新訴千六百三十九件 現在二千三
+    <div class="item-body text-base leading-relaxed">席前濟口六百四十三件　席後濟口三百七件　裁許五件
+願下三百六十六件　各裁判所廻七十件　同濟口三十
+九件　斷獄廻四件　新訴千六百三十九件　現在二千三
 百十五件</div>
     
   </div>
@@ -5734,12 +5735,12 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/133" target="_blank" rel="noopener">原本 コマ133 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔同所同月行刑表〕</div>
-    <div class="item-body text-base leading-relaxed">懲役百日以下男百五十五人女四人 同十年以下男三十
-二人 同終身男三人 斬罪男七人 贖罪百八人 収贖
-男十八人女九人 除族男一人 呵責男五十八人女三人
-牢死男一人 病囚男百三人女一人 未决囚男四百三
-十八人女十人 刑限內死男四人 罰金男十三人 贖金
-高百九十七圓二十六錢二厘五毛 罰金高九十四圓五十
+    <div class="item-body text-base leading-relaxed">懲役百日以下男百五十五人女四人　同十年以下男三十
+二人　同終身男三人　斬罪男七人　贖罪百八人　収贖
+男十八人女九人　除族男一人　呵責男五十八人女三人
+牢死男一人　病囚男百三人女一人　未决囚男四百三
+十八人女十人　刑限內死男四人　罰金男十三人　贖金
+高百九十七圓二十六錢二厘五毛　罰金高九十四圓五十
 五錢</div>
     
   </div>
@@ -5760,7 +5761,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/134" target="_blank" rel="noopener">原本 コマ134 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔御達書〕</div>
-    <div class="item-body text-base leading-relaxed">司 法 省
+    <div class="item-body text-base leading-relaxed">司法省
 改正聞刑律中禁錮ヲ禁獄ニ被攺候條此旨相達候事</div>
     
   </div>
@@ -5816,7 +5817,7 @@
 フ者云々ノ伺ニ事實取調鑑札相渡可申別段罰金等申付
 ルニ不及旨御指令有之惣テ商業ノ鑑札モ通行印鑑同等
 ノ品ニ可有之ヲ無罪ノ御指令ハ全ク其事由ヲ訴出ルヲ
-以テ自首ト看做シ候儀ニモ可有之カ然ラハ地劵遺失 毛
+以テ自首ト看做シ候儀ニモ可有之カ然ラハ地劵遺失モ
 自首スレハ其罪ヲ免シテ可然哉
 同三十三號東京府ヘノ御指令ニ金錢ノ貸券ヲ拾ヒ得ハ
 得遺失物律ニ依リ證書面ニ記載スル金額ノ一半ヲ拾主
@@ -5827,7 +5828,7 @@
 指令
 第一條　牛馬賣買鑑札ヲ遺失スル者ハ本年第六十七號
 布告ノ通リ心得可シ
-第二條　金穀ノ證劵ハ金貨物品ト異ニシテ姓名住所 等
+第二條　金穀ノ證劵ハ金貨物品ト異ニシテ姓名住所等
 判然記載之レアル地劵同樣ノ書類ニ付尋常得遺失物
 律ニ處シ難シ因テ失主ヨリ拾得者ヘ相當ノ謝禮ス可
 シ東京府指令ハ已ニ攺正ニ及フ地劵證書或ハ爲替手
@@ -5890,7 +5891,7 @@
 人ヲ傷スル者以上ヲ申シ候儀ニテ其折傷以下ノ文ナキ
 ハ罪ニ問ハスシテ可然哉相伺候也
 指令
-第一條　誣告スル者反坐ノ法第一項ニ依テ處分スヘ シ
+第一條　誣告スル者反坐ノ法第一項ニ依テ處分スヘシ
 第五項上書シテ人ヲ告ル云々官吏ノ罪ニシテ本文ト
 異ナリ
 本文第六項上書云々トア
@@ -5901,7 +5902,7 @@
 シテ應身ノ業ニ就カシムヘシ若シ弊習ニ泥ミ証惑シ
 テ財ヲ貪ル者アレハ伺ノ通不應輕ニ科シ士族僧侶婦
 女ヲ分チ律ノ通區處シ謝金現在スレハ追シテ主ニ給
-スヘ シ
+スヘシ
 第五條　伺ノ通</div>
     
   </div>
@@ -5959,7 +5960,7 @@
 テ贖罪スルノ同刑ヲ婦女ニ至リ固ヨリ収贖スヘキ者ニ
 付過誤失錯連累等ハ如何處斷可致哉相伺候也
 指令
-第 條 兩項共五十日以外自首スレハ男女ヲ論セス其
+第一條　兩項共五十日以外自首スレハ男女ヲ論セス其
 罪ヲ免ス
 第二條　婦女ノ過誤失錯連累等ハ収贖ニ處ス</div>
     
@@ -6007,7 +6008,7 @@
     <div class="item-body text-base leading-relaxed">甲ナル者公商ニシテ自ラ盜ム所ノ物品ヲ盜賍タルヿヲ
 押隱シ乙ニ賣却ス乙モ亦公商ニシテ其買取スル所ノ物
 品ヲ丙丁ニ賣却ス丙丁已ニ費用シテ現在セサル中ハ乙
-ヨリ賣代金賣德共取上ヶ本主ニ給シ甲ヨリ乙ヘ初メ賣
+ヨリ賣代金賣德共取上ケ本主ニ給シ甲ヨリ乙ヘ初メ賣
 ル所ノ代金ヲ賠償セシメ甲賠償ス可キ資力ナケレハ乙
 ノ損失ト見做ス可キ哉
 前同斷乙甲ヨリ買取スル所ノ物ヲ費用シ現在セサル時
@@ -6039,7 +6040,7 @@
 限リヲ迫ス仍ホ不足シ若クハ盜犯資力無レハ乙丙ノ
 賣拂代價ヲ順次ニ迫徵シテ數ニ充ツ己ニ費用スル者
 ハ追徵スルヿ勿レ公商ヨリ買取スル丁戊ハ關係ニ及
-ハ ス
+ハス
 第四五條　伺ノ通</div>
     
   </div>
@@ -6058,7 +6059,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/143" target="_blank" rel="noopener">原本 コマ143 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">大分縣ヨリ 七年 三月 豐後國日田郡隈町商井上源平外七人同
+    <div class="item-body text-base leading-relaxed">大分縣ヨリ 七年三月 豐後國日田郡隈町商井上源平外七人同
 町佐藤芳三外一人處斷伺ニ源平外七人ハ賭博條ニ依リ
 懲役八十日芳三ハ賭博ヲ私和スル者ニ擬シ違式輕ニ問
 ヒ贖ヲ聽ス外一人ハ無罪等ノ指令アリ</div>
@@ -6142,12 +6143,12 @@
     <div class="item-body text-base leading-relaxed">改定律例第三十九條凡婦女不孝姦盜人命放火ノ徒罪以
 上ヲ犯ス者ハ各律ニ依テ斷決シ答杖ニ該ル者ハ日數ニ
 折シテ禁獄スル律ヲ改メ並ニ懲役ニ服ス云々ト有之當
-縣下相川五郞左衛門町若林喜太次妻トク放火致スヘ キ
+縣下相川五郞左衛門町若林喜太次妻トク放火致スヘキ
 ノ張札イタシタル科不應爲律ニ擬シ懲役三十日ノ所役
 塲未タ設立相成ラサルニ付六年六月第二百六號御布告
 ニ基キ禁獄ニ實決イタス所右ハ婦女犯罪律ニ依リ實斷
-ス ル者ヲ除ク外不應爲等ニ擬スル者實斷ノ限ニ非スト
-今般御指令コレアリ然レハ不孝姦盜人命放火モ 原情此
+スル者ヲ除ク外不應爲等ニ擬スル者實斷ノ限ニ非スト
+今般御指令コレアリ然レハ不孝姦盜人命放火モ原情此
 ニ出準據スヘキ者ト雖モ各律ニ依ラス不應爲等ヲ以テ
 擬スルモノ無論収贖ヲ準スヘキ儀ト奉存候然所御省日
 誌第四十二號豐岡縣伺但馬國七味郡長須村農榮右衛門
@@ -6240,7 +6241,7 @@
     </div>
     <div class="font-semibold text-base mb-1">〔伺書〕七年六月十四日</div>
     <div class="item-body text-base leading-relaxed">元柳川縣士族
-久 保 田 邦 彥
+久保田邦彥
 右ノ者嚴重ノ御布告ニ悖リ山口縣暴動ノ脫徒ニ面會情
 實乍存申立モ不致其上廣田彥麿等ヘノ文通ニ不容易巷
 說ヲ事實ノ樣文飾致候科ニ依リ去ル壬申九月廿八日除
@@ -6273,11 +6274,11 @@
     <div class="font-semibold text-base mb-1">○</div>
     <div class="item-body text-base leading-relaxed">濵田縣ヨリ
 四月 石見國那賀郡大坪村戶長三浦兼美同竹
-內文右衞門東京裁判所ヨリ 同年 五月 本所平民結城半兵衞女
+內文右衞門東京裁判所ヨリ 同年五月 本所平民結城半兵衞女
 フミ神奈川裁判所ヨリ 胴舊會津藩足輕當時無籍岩崎吉
 五郞奈良縣ヨリ 胴大和國十市郡笠神村雜業巽伊八高知
 縣ヨリ胴土佐國高岡郡波川村農片岡仲平妻キン愛媛縣
-ヨ リ胴伊豫國和氣郡典居島村船乘山本綱七等各斷刑伺
+ヨリ胴伊豫國和氣郡典居島村船乘山本綱七等各斷刑伺
 ニ伊八ハ例第三百一條ニ依リ
 懲役五年九十日吉
 五郞ハ本籍逃亡ヲ以テ論シ同八十日綱七ハ醉興ニ乘シ
@@ -6298,13 +6299,13 @@
     </div>
     <div class="font-semibold text-base mb-1">〔司法省裁判所申渡〕</div>
     <div class="item-body text-base leading-relaxed">橫濱北仲通
-藤 貞 次 佐 郞
+佐藤貞次郞
 其方儀去十二日當裁判所ヘ可罷出旨兼テ相達置候所病
 氣ニ付代人差出方不行届故ヲ以不參ニ歸スル科攺定律
 例第二百八十八條違式輕キニ問ヒ贖罪金七十五錢申付
 候事
 同所南仲通井上多一郞前同人ヘ付添出頭ス可キ所不參
-ス ルヲ以テ同上ノ科申付ラル</div>
+スルヲ以テ同上ノ科申付ラル</div>
     
   </div>
 </section>
@@ -6336,19 +6337,19 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/148" target="_blank" rel="noopener">原本 コマ148 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔置賜縣伺罪案節録〕七年四月二十九日</div>
-    <div class="item-body text-base leading-relaxed">羽前國置賜郡李山村農長右衛門体穴澤五郞次供 自分
+    <div class="item-body text-base leading-relaxed">羽前國置賜郡李山村農長右衛門体穴澤五郞次供　自分
 儀本年三月他行シ醉中ニテ深更ニヲヨヒ村内南松原ヲ
 通行ノ砌風ナキニ燈火消滅シ頻リニ物淋シク相成兼テ
 聞及フ野狐ノ所爲ト忽チ心氣取亂レ道ノ前後モ不相分
 ニ付暫ク畑道ニ休息ノ折リ後トヨリ提燈ヲ携ヒ來ル者
-アリ同行セント聲懸ケヲレ顔ヲ見レハ同村一 類梅澤淸
+アリ同行セント聲懸ケヲレ顔ヲ見レハ同村一類梅澤淸
 右衛門ノ様ナレトモ渠レ深更ニ通行ノ筈ナシ必狐狸ノ變
 化ト心付シ內同人又同行セント申シ且ツ自分ノ兩手ヲ
 引立シ故愈々狐ノ化身ト存シ直チニ組付短刀ニテ切リ
 付突立打斃シ稍安心シテ立歸ル途中夜明ニ至リ帽子短
 刀共取落セシヲ心付引返シ右塲所迄參リシ所狐ト存シ
 殺セシハ全ク淸右衛門ナレハ驚入父ヘ前段ノ始末相話
-シ自害ト決心セシ所父ヨリ差止ヲ レ翌日自首仕候
+シ自害ト決心セシ所父ヨリ差止ヲレ翌日自首仕候
 指令
 該犯深夜獨行シ忽然燈火ノ消ルヲ見テ狐狸ノ業ト疑ヒ
 恐懼スルノ際又知ル人來テ同行ヲ勸ムルヲ見愈々狐狸
@@ -6356,7 +6357,7 @@
 其所爲心氣錯亂朦朧前後ヲ辨セサルヲ以テ改定律例第
 百九十五條瘋癲人人ヲ殺ス者ハ鎖錮終身ニ處スト雖モ
 若シ果シテ痊愈スレハ云々トアルニ擬シ
-懲役五年 澤 穴 郞 五 次
+懲役五年　穴澤五郞次
 仍ホ埋葬金四十圓ヲ追シテ死者ノ家ニ給付ス</div>
     
   </div>
@@ -6388,13 +6389,13 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/149" target="_blank" rel="noopener">原本 コマ149 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔東京裁判所伺罪案節録〕七年六月二日</div>
-    <div class="item-body text-base leading-relaxed">東京櫻田町商高久已之助供 亡高久岩吉親属一同相談
+    <div class="item-body text-base leading-relaxed">東京櫻田町商高久已之助供　亡高久岩吉親属一同相談
 ノ上私ヲ其妻サトノ入夫ト定メ生國ヨリ送籍到來次第
 其筋ヘ届出ヘキ含ニテサト倶々相暮ス所同人怠惰ノ性
 質ニ付活計ノ目途無之ヲ以テ屢々教諭スレトモ採リ用ヒ
-ル故今一層訓戒セント欲シ彌不勉勵ナレハ離別シテ サ
+サル故今一層訓戒セント欲シ彌不勉勵ナレハ離別シテ
 舊里ニ立歸ル旨申聞ケ置シ其翌夜サト私ノ枕邊ヘ庖丁
-ヲ携ヒ來リ舊里 ヘ立歸ルヿ實事ナレハ自害スト申ニ付
+ヲ携ヒ來リ舊里ヘ立歸ルヿ實事ナレハ自害スト申ニ付
 全ク決心ノ旨答ヘシ所同人右刀物ヲ咽喉ニ突立テ倒レ
 故打驚キ急ニ刃物ヲ拔取候ヘハ苦痛ニ堪サル迪懇ニ
 介錯ヲ乞フニ付不便トハ存スレトモ不得己其意ニ任セ其
@@ -6403,11 +6404,11 @@
 震栗シ終ニ割腹仕損シ候
 指令
 妻懲誠ノ爲メニ離別ヲ唱ヘラルヽノ意ヲ知ヲス怨悲シ
-テ自殺セント告ルヲ阻抑セス其喉ヲ刺スニ及テ救助 セ
+テ自殺セント告ルヲ阻抑セス其喉ヲ刺スニ及テ救助セ
 ント欲スレトモ妻卻テ速死ヲ促シ苦痛ヲ脫センヿヲ乞フ
 ヨリ之ヲ殺死ス其事情原諒スヘキニヨリ不應爲條不
 應爲輕ニ問ヒ懲役三十日贖ヲ聽ス
-贖罪金二圓五十五錢 己之助 久 高</div>
+贖罪金二圓五十五錢　高久己之助</div>
     
   </div>
 </section>
@@ -6422,7 +6423,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/150" target="_blank" rel="noopener">原本 コマ150 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">任權大解部 中解部 暮 祐 順 木
+    <div class="item-body text-base leading-relaxed">任權大解部　中解部　木暮祐順
 川 貫 同 市
 同
 任中解部 權中解部 宇 義 鼎
@@ -6477,7 +6478,7 @@
 牛馬賣買鑑札等ヲ誤毀遺失スル者ハ本年第六十七號御
 布告ニ照シ處分スヘシ京都裁判所伺ノ如キハ改定律例
 第百一條ニ據ルヘシ　但鳥獸獵鑑札ハ其規則ニ照シ處
-斷ス ヘシ</div>
+斷スヘシ</div>
     
   </div>
 </section>
@@ -6534,13 +6535,13 @@
 前條規則等ノ內但タ相當ノ咎メトノミ有之ハ律例ニ照
 シ處分シ出版條例ノ如キハ但タ罰金ヲ出サシム或ハ罰
 ヲ議ストノミアツテ範圍ヲ設ケサルニ依リ適宜ニ處斷
-ス ル儀ト相心得可然哉　但罰ヲ議スルトアルハ本律ニ
+スル儀ト相心得可然哉　但罰ヲ議スルトアルハ本律ニ
 照ス可キ儀ト可心得哉
 前條等ノ規則ヲ犯ス者犯狀萬變素ヨリ僅ニ數條規則ノ
 得テ盡ス所ニ非ス因テ各規則ニ的當ナラサル犯者有之
 時ハ律例ニ照シ處分スル儀ト可心得哉奉伺候也
 指令
-第一條　絞油免許高ニ過ル分ハ之ヲ沒収ス可シ 淸濁
+第一條　絞油免許高ニ過ル分ハ之ヲ沒収ス可シ　淸濁
 酒醬油密釀ノ器械ハ之ヲ沒収ス可シ
 第二條　各規則ノ通リ處分ス可シ
 第三四條　其情狀取調ヘ伺出ツ可シ</div>
@@ -6558,9 +6559,9 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/154" target="_blank" rel="noopener">原本 コマ154 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">權中錄 髙 木 利 永
+    <div class="item-body text-base leading-relaxed">權中錄　髙木利永
 神奈川裁判所在勤申付候事
-十一等出仕石原 虎 雄
+十一等出仕　石原虎雄
 御用都合有之歸京申付候事</div>
     
   </div>
@@ -6599,21 +6600,21 @@
 心得罷在候然ル處御省日誌本年第八號筑摩縣ヨリ田畑
 書入ニ村役人ノ証印無之証文ヲ以訴出ルモノ云々ノ御
 指令書入証書ニ村役人ノ証印無之トモ明治六年七月三
-十一日以前ノ分ハ取上ヶ可及裁判事ト有之ハ同年八月
+十一日以前ノ分ハ取上ケ可及裁判事ト有之ハ同年八月
 以後訴出ルト雖右ノ類取上ケ候儀ニモ可有之右ハ何レ
-ニ 從ヒ候テ可然哉
+ニ從ヒ候テ可然哉
 田畑質入書入証書ニ村町戶長奥書割印無之者ハ明治六
 年七月三十一日以前ニ係ルト雖本年第六號公布ノ通リ
 心得可然哉相伺候也
 指令
 第一條　伺ノ通
-第二條　預ヶ金ノ處分可及事
+第二條　預ケ金ノ處分可及事
 第三條　明治六年十二月廿五日指令ノ旨趣ハ質入書入
 証文ノ奧書割印等ノ儀ハ八月一日以後ノ規則ナルヿ
 故ニ七月卅一日以前滿期ノ証文ニ付テノ訴訟ハ右規
 則ニ的當セサル共其訴訟ヲ採上ケ裁判可及トノ事ニ
 シテ筑摩縣指令ト抵觸ノ筋無之ニ付即今ト雖モ七月
-卅 一日以前滿期ノ証文ニ付テノ訴訟ハ裁判可及事
+卅一日以前滿期ノ証文ニ付テノ訴訟ハ裁判可及事
 第四條　明治六年第十八號御布告ニ依リ書改ム可キ者
 ハ本年第六號ニ準スト雖モ明治六年七月卅一日以前
 期限滿ノ分ハ即今ノ出訴ト雖モ質地ノ處分可及事</div>
@@ -6634,7 +6635,7 @@
     <div class="item-body text-base leading-relaxed">証書面金高十圓以上無利足ナレハ即第一類一錢印紙貼
 用和當ナルニ金高ニヨリ過剰印紙貼用アリト雖本年三
 月四日太政官第二十六號印紙貼用心得規則第九條但書
-增補御布告ニ依リ犯則ニハ關係無之故其儘取揚ヶ裁判
+增補御布告ニ依リ犯則ニハ關係無之故其儘取揚ケ裁判
 致シ候テモ妨碍無之候哉又ハ印紙貼用御規則ニ叶ハサ
 ル旨說諭致シ訴狀下戻シ更ニ御規則ニ準シ訴出候後可
 致裁判候哉
@@ -6646,7 +6647,7 @@
 可致處界紙ニ記載シ候分ハ犯則ニ正條ナク仍テ第八條
 第一類受取證書ニ一錢ノ印紙ヲ貼用セス相渡ス者カ又
 ハ不足ノ印紙ヲ貼用スル諸証文ヲ渡ス者或ハ其証人ニ
-相立奥書等致ス者ニ照準致シ處置濟ノ上取揚ヶ裁判可
+相立奥書等致ス者ニ照準致シ處置濟ノ上取揚ケ裁判可
 致候哉
 証券印紙ニ消印スル雛形ノ如クナラス或ハ印紙ノ上捺
 スルモアリ下ニ捺スルモアリ或ハ二枚ニ掛ケ捺スルモ
@@ -6684,7 +6685,7 @@
 指令
 第一條　金高十圓以上無利息トハ如何樣ノ種類ニ候哉
 若シ第一類ニ記シタル諸受取等ノ六種ノ類ニ候ハヽ
-採上ヶ裁判ス可キ事
+採上ケ裁判ス可キ事
 第二第三條　本年當省第六號布達ニ基キ民法刑法ノ區
 別ヲ立テ民法ノ伺又ハ刑法ノ伺ト別册ニ爲シ伺フ可
 キ事
@@ -6791,7 +6792,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/160" target="_blank" rel="noopener">原本 コマ160 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">依願免本官 少解部 原 田 忠 國</div>
+    <div class="item-body text-base leading-relaxed">依願免本官　少解部　原田忠國</div>
     
   </div>
 </section>
@@ -6843,7 +6844,7 @@
     </div>
     <div class="font-semibold text-base mb-1">〔司法省裁判所申渡〕</div>
     <div class="item-body text-base leading-relaxed">第十大區四小區詰四等巡査
-土 屋 虎 藏
+土屋虎藏
 其方儀四等巡査久島督之丞ヲ尋問シ皈途車夫永田正介
 荷車ヲ斜ニ置込速不取除ヲ以酒狂ノ餘リ怒氣ヲ生シ自
 ラ荷車ヲ牽去ル際正介家長ノ命ヲ受ケ受持邸ノ桑葉ヲ
@@ -6854,9 +6855,9 @@
 ヒ官吏私罪例ニ依リ贖罪金十圓五十錢申付候事　但打
 毀チ候品代價五十六錢七厘五毛ハ永田正介ヘ可賠償事
 大久保余丁町五番地木塲淸
-生邸守 田 正 介 永
+生邸守　永田正介
 其方儀右一件ニ付呼出相糺候處不束ノ筋モ無之間無搆
-但土屋虎藏ニ被打毀品〓代價五十六錢七釐五毛ハ 事
+事　但土屋虎藏ニ被打毀品〓代價五十六錢七釐五毛ハ
 同人ヨリ賠償受ヘキ事</div>
     
   </div>
@@ -6893,27 +6894,27 @@
     <div class="font-semibold text-base mb-1">〔宮城縣伺〕七年六月五日</div>
     <div class="item-body text-base leading-relaxed">大藏省蠶種取締規則第十五節ニ免許印紙無之蠶種紙內
 外賣買堅禁止若違犯密賣等致シ候ハヽ買受候者ヨリ其
-品取上ケ賣渡シ候者ハ賣代金取上ヶ雙方免許印紙料十
+品取上ケ賣渡シ候者ハ賣代金取上ケ雙方免許印紙料十
 倍ノ科料取立可申ト有之ニ付違犯ノ者賣代金取上ケ科
 料金可申付儀ニ候處若犯人賣代金已ニ費用スルカ又ハ
 暫時買受賣渡シ候ヨリ代金ハ原主ヘ相渡
 持無之其上科料金可取立資力無之時ハ身代限リヲ以テ
 可取立ハ勿論ニ可有之候ヘ共是亦財產可償無キ節ハ尙
 身代再興ノ期ヲ待テ其身生涯ニ償スルニ止ル可キ哉又
-ハ科料金ノ儀贖罪金ニ同敷モノニ付贖罪贖フ事能ハ サ
-ル者ニ照シ律ニ依リ實斷ス可キカ知情牙保ノ如キ モ本
+ハ科料金ノ儀贖罪金ニ同敷モノニ付贖罪贖フ事能ハサ
+ル者ニ照シ律ニ依リ實斷ス可キカ知情牙保ノ如キモ本
 犯同樣所置可仕哉
 右ノ外淸酒密造ヲ初メ都テ犯則有之節所置振如何哉奉
 伺候也
 指令
 第一條　蠶種ヲ密賣シ其代金費用スル者又ハ暫時買受
 直ニ賣渡シ其代金ハ原主ヘ渡シ自身所持致サストモ
-之ヲ取揚ヶ且密賣ノ罰ヲ科ス可シ 右等ノ者資力ナ
+之ヲ取揚ケ且密賣ノ罰ヲ科ス可シ　右等ノ者資力ナ
 キニ付身代限申付ル上取揚クヘキ物品無之候ハヽ其
 儘放免ス可シ且罰金ニ限リ爾後其者身代持直シ候ト
-モ再度取立ルニ及ハス 密賣ノ牙保ハ蠶種一枚ニ付
-五十錢ノ科料申付ヶ且手數料ヲ受取居ルモノハ之ヲ
-取楊ク可シ 其資力ナクシテ身代限リニ及フ時ハ本
+モ再度取立ルニ及ハス　密賣ノ牙保ハ蠶種一枚ニ付
+五十錢ノ科料申付ケ且手數料ヲ受取居ルモノハ之ヲ
+取楊ク可シ　其資力ナクシテ身代限リニ及フ時ハ本
 犯ノ處分ニ同シ
 第二條　右ノ外淸酒云々トハ何等ノ犯則有之モノカ更
 ニ詳細取調ヘ伺出可シ</div>
@@ -6931,13 +6932,13 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/163" target="_blank" rel="noopener">原本 コマ163 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">岩手縣ヨリ 七年四月 十七日 陸中國江刺郡野手崎村農太田永藏
+    <div class="item-body text-base leading-relaxed">岩手縣ヨリ 七年四月十七日 陸中國江刺郡野手崎村農太田永藏
 渡邊金左衛門同國和賀郡十二箇村平民菊池儀兵衛同郡
 東晴山村副戶長八重樫孫六同人長男孫左衛門等各處置
 伺ニ永藏ハ人ニ代テ貸金ノ延滯ヲ催促シ强テ物品ヲ携
 歸ル等ノ粗暴ヲ責メ不應爲重ニ問ヒ懲役七十日金左
 衛門儀兵衛ハ永藏ノ暴行ヲ阻當セス持歸ル物品ヲ接遞
-ス ル者孫六ハ唯推量ヲ以テ富藏ヲ借主ト疑ヒ告ルヨリ
+スル者孫六ハ唯推量ヲ以テ富藏ヲ借主ト疑ヒ告ルヨリ
 暴擧ニ至ルヲ以テ三名共不應輕ニ問ヒ贖ヲ聽シ孫左衛
 門ハ無罪等ノ指令アリ</div>
     
@@ -6975,8 +6976,8 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/164" target="_blank" rel="noopener">原本 コマ164 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">依願免出仕 十等出仕曾小川 久 〓
-同　十二等出仕石井 信 義</div>
+    <div class="item-body text-base leading-relaxed">依願免出仕　十等出仕　曾小川久鄕
+同　十二等出仕　石井信義</div>
     
   </div>
 </section>
@@ -7015,22 +7016,22 @@
     </div>
     <div class="font-semibold text-base mb-1">〔東京府伺〕七年六月</div>
     <div class="item-body text-base leading-relaxed">從來逃亡訴ノ儀ハ家出ノ日ヨリ三日ノ間相尋不見當候
-ハ届出候樣申達スル例ニ寄取扱來候所往々等閑告訴 ヘ
+ヘハ届出候樣申達スル例ニ寄取扱來候所往々等閑告訴
 方延引ニ及候者有之却テ不取締ニモ候間自今家出ノ者
 有之候ハヽ七日ノ內屹度届出候様一般致布達可然哉
 逃亡人遺留物ハ家族ノ所有タル物トシ舉家逃亡シテ他
 ニ所有スヘキ者無之節ハ親類身寄又ハ店請人等ニ預置
 三十六箇月ヲ過復歸スル者無之時ハ引續永預可申付哉
-又ハ官沒シテ可然哉尤右預人悉皆無之者ハ其通戶長 ヘ
+又ハ官沒シテ可然哉尤右預人悉皆無之者ハ其通戶長ヘ
 申付可然哉
 右遺留物戶長其外ニ預中貨財書入等ノ事由ヲ以財主其
-外ノ者請取度旨申立候者有之井ハ本人ヨリ裁判所 ヘ告
+外ノ者請取度旨申立候者有之井ハ本人ヨリ裁判所ヘ告
 訴爲致可然哉右相伺候也
 指令
 第一條　伺ノ通
 第二條　舉家逃亡シタルキハ親類身寄ノ者ヘ預ケ置キ
-三十六箇月ヲ過キテ歸ラサルキハ永預ヶ申付クヘシ
-若シ親類身寄無之キハ戶長役所ヘ預ヶ置キ可然事
+三十六箇月ヲ過キテ歸ラサルキハ永預ケ申付クヘシ
+若シ親類身寄無之キハ戶長役所ヘ預ケ置キ可然事
 第三條　伺ノ通</div>
     
   </div>
@@ -7183,8 +7184,8 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/168" target="_blank" rel="noopener">原本 コマ168 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔岡山縣伺〕七年四月九日</div>
-    <div class="item-body text-base leading-relaxed">第 二三條牛馬賣買淸酒釀造等ノ鑑札遺失者云々指令
-テ ニ
+    <div class="item-body text-base leading-relaxed">第二三條牛馬賣買淸酒釀造等ノ鑑札遺失者云々指令
+ニテ
 明了
 ナリ
 第四條請取諸證文印紙貼用心得方規則第二十五條ノ簿
@@ -7248,7 +7249,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/169" target="_blank" rel="noopener">原本 コマ169 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔司法省裁判所申渡〕</div>
-    <div class="item-body text-base leading-relaxed">陸軍中佐 川 浩 山
+    <div class="item-body text-base leading-relaxed">陸軍中佐　山川浩
 其方儀舊斗南藩權大參事奉職中各處移住人共ヘノ配賦
 預金ヲ以斗南移住人ノ飢患ヲ專斷ニテ救助スル科職制
 律事應奏不奏條不申例ニ依問擬スヘキ處右ハ開墾意ノ
@@ -7320,7 +7321,7 @@
     </div>
     <div class="font-semibold text-base mb-1">〔高知縣伺〕 七年六月五日</div>
     <div class="item-body text-base leading-relaxed">縣下公商所有スル彈藥被盜取候所賊右品數十人ヘ賣却
-ス ル内初買者甲情ヲ知ラス買取シ乙丙丁ニ轉賣ス丁丙
+スル内初買者甲情ヲ知ラス買取シ乙丙丁ニ轉賣ス丁丙
 ヨリ買取シタル品ハ終ニ住所姓名不知者ヘ賣却シ甲乙
 丙丁トモ賣却代價ハ悉皆費用ス然ルニ銃砲取締ノ規則
 ニ違ヒ銃砲彈藥類ヲ竊ニ所持シ且致取扱候者有之節ハ
@@ -7354,10 +7355,10 @@
 波國名東郡姥ケ島村農天羽伊勢吉大分縣ヨリ 同 豐後國 月
 大分郡杉原村農河野德次熊谷裁判所ヨリ 常陸國眞 六同
 壁郡白井村農鈴木林彌佐賀裁判所 筑前國早良郡 月同
-田島村農高田又吉神奈川裁判所ヨリ胴武藏國多摩郡 上
+田島村農高田又吉神奈川裁判所ヨリ胴武藏國多摩郡上
 川原村農指田金右衛門愛媛縣ヨリ 伊豫國越智郡大新 月同
 田村農越智傳次同國和氣郡古三津村雜業新田機五郞東
-京裁判所ヨリ 同 月 信濃國埴科郡杭瀨下村農小山萬作東京
+京裁判所ヨリ 同月 信濃國埴科郡杭瀨下村農小山萬作東京
 彌左衛門町商磯田安次郞等各處斷伺ニ源七ハ子孫祖父
 母父母ヲ毆チ傷スル者ヲ以テ論シ太藏ハ鬪毆人ヲ殺ス
 者林彌又吉金七ハ竊盜三犯五十圓以上傳次ハ懲役一年
@@ -7381,7 +7382,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/172" target="_blank" rel="noopener">原本 コマ172 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔甲第十號布達〕</div>
-    <div class="item-body text-base leading-relaxed">各 裁 判 所 方 地
+    <div class="item-body text-base leading-relaxed">各地方裁判所
 昨六年甲第三十六號ヲ以病囚賄料取計ノ儀相達置候所
 今般取消候條此旨更ニ相達候事</div>
     
@@ -7399,7 +7400,7 @@
     </div>
     <div class="font-semibold text-base mb-1">〔臨時裁判所申渡〕</div>
     <div class="item-body text-base leading-relaxed">元柳川縣士族
-久保田 彥 邦
+久保田邦彥
 其方儀禁獄期限中ノ所相牢ノ者共ヲ厚ク撫育シ之ヲ善
 良ノ道ニ勸メ病者ハ格別ニ勞リ囚徒ノ取締行届ク段神
 妙ノ至依之特典ヲ以テ殘日數差免ス　但滿限後ハ親族
@@ -7449,14 +7450,14 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/174" target="_blank" rel="noopener">原本 コマ174 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">教部中錄岩 切 實 敬
+    <div class="item-body text-base leading-relaxed">教部中錄　岩切實敬
 補十等出仕
-東京府十等出仕機 是愛
+東京府十等出仕機是愛
 同
-藤 忠 伊 雄
+伊藤忠雄
 同　補十二等出仕 補十一等出仕
-亨 井 手
-義 憲 鹽 田</div>
+井手亨
+鹽田義憲</div>
     
   </div>
 </section>
@@ -7513,7 +7514,7 @@
 右同斷ノ節證書中ニ請人證人等ノ類ヨリ若本人不慮ノ
 儀有之節ハ代償可致又ハ若本人差滯候ハヽ引請返濟可
 致抔ノ明文有之節ハ失踪或ハ逃亡ノ情狀取糾無相違且
-所在搜索中ト雖モ直ニ其證書中請人證人等 ヘ相係リ身
+所在搜索中ト雖モ直ニ其證書中請人證人等ヘ相係リ身
 代限迄ノ濟方可致哉
 右同斷出訴中負債主失踪又ハ逃亡等致シ候節ハ前三ケ
 條トモ如何心得可申哉相伺候也
@@ -7552,11 +7553,11 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/177" target="_blank" rel="noopener">原本 コマ177 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">補十二等出仕 謙三郞 泉
-補十三等出仕 井 淡 河
-井 貞 俊 淺 同
-補十五等出仕 定 興 藤 進
-免出仕 九等出仕 正 仲 幹</div>
+    <div class="item-body text-base leading-relaxed">補十二等出仕　泉謙三郞
+補十三等出仕　河井淡
+同　淺井俊貞
+補十五等出仕　進藤定興
+免出仕　九等出仕　仲正幹</div>
     
   </div>
 </section>
@@ -7571,13 +7572,13 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/177" target="_blank" rel="noopener">原本 コマ177 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">十等出仕 岩 實 敬 切
+    <div class="item-body text-base leading-relaxed">十等出仕　岩切實敬
 埼玉裁判所在勤申付候事
-忠 藤 伊 雄 同
-十三等出仕 井 淡 河
+同　伊藤忠雄
+十三等出仕　河井淡
 杤木裁判所在勤申付候事
-各 通
-十二等出仕泉 謙 三 郞
+各通
+十二等出仕　泉謙三郞
 熊谷裁判所在勤申付候事</div>
     
   </div>
@@ -7594,7 +7595,7 @@
     </div>
     <div class="font-semibold text-base mb-1">〔司法省裁判所申渡〕</div>
     <div class="item-body text-base leading-relaxed">故本鄕和介手代
-藤 生 衛 庄 兵
+藤生庄兵衛
 故本鄕和介儀橫濵元濵町一丁目三井八郞右衛門ヨリ明
 治四年十月十九日金五千圓借受右引當トシテテール綱
 四萬四百二十三斤三百三十束差入期限過去候テモ返濟
@@ -7645,14 +7646,14 @@
 此金何百圓ト記載有之分ハ右記載ヲ証トシ比較表ニ不
 關濟方申付可然哉右相伺候也
 指令
-第一條　伺ノ通 第二條　伺ノ通
+第一條　伺ノ通　第二條　伺ノ通
 第三條　第二條ノ通可心得事
 第四條　貸金穀ノ証書ニ攺メタル分ハ伺ノ通タルヘシ
 ト雖モ預ケ金穀或ハ賣掛代ノ名目ニテ年賦或ハ延拂
 ノ証書ニ改メタルハ丁卯以前ノ分モ採上ケ可及裁判
 事
 第五條　伺ノ通
-第六條　証文並ニ原被ノ訴答書類ヲ副ヘ伺ヒ出 キ事</div>
+第六條　証文並ニ原被ノ訴答書類ヲ副ヘ伺ヒ出ヘキ事</div>
     
   </div>
 </section>
@@ -7690,9 +7691,9 @@
 疵負スル科人命律車馬殺傷人條ニ依リ過失ヲ以テ論シ
 例圖ニ照シ懲役百日ノ収贖金五圓申付候事
 東京南鍛治町武井安右衛門
-妻 ヒ ヱ
+妻　ヱヒ
 其方儀土居在久過失ニテ疵受候ニ付醫藥料トシテ同人
-ヨ リ取立候収贖金五圓下ヶ遣候事</div>
+ヨリ取立候収贖金五圓下ケ遣候事</div>
     
   </div>
 </section>
@@ -7710,19 +7711,19 @@
     <div class="item-body text-base leading-relaxed">當管下世羅郡伊尾村門藤久四郞儀小田縣下備後國神石
 郡高蓋村今井卯衛ヨリ買取品物不渡儀ニ付公裁願出及
 糾明候處明治四未年九月原告人久四郞儀被告人卯衛ナ
-ル者ニ煙草買取ノ約定致シ別紙寫 畧 之 ノ通証書取置候ヘ
+ル者ニ煙草買取ノ約定致シ別紙寫 畧之 ノ通証書取置候ヘ
 共他國於テ相認候儀ニ付自筆無印又ハ旅中故印形所持
 不致抔認有之儘請取爾來四ヶ年ノ星霜無間斷夘衞其外
 續々及驅合罷在候ヘ共今以品物不相渡何共悲憤ノ次
 第不得止及公訴候儀ノ旨申立然ル處同年九月諸品賣買
 取引ノ儀ニ付御布告ノ趣ニテハ右取引心得方定書御布
 告ノ日ヨリ百里以內ハ三十日目百里以外ハ九十日目ヲ
-限リ其翌日ヨリ 一般取行候樣御達有之久四郞儀ハ右限
+限リ其翌日ヨリ一般取行候樣御達有之久四郞儀ハ右限
 日內ノ取引ニテ証書ニ捺印ハ無之候ヘ共其譯記載モ致
 シ有之上ハ事實判然タル儀ニ付有印同様ノ証書ニ見做
 シ取上可及審判筋ニ可有之候哉訴狀相添此段相伺候也
 指令
-証書面借主押印無之ニ付採上ヶ裁判不及事</div>
+証書面借主押印無之ニ付採上ケ裁判不及事</div>
     
   </div>
 </section>
@@ -7793,8 +7794,8 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/182" target="_blank" rel="noopener">原本 コマ182 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔司法省裁判所申渡〕</div>
-    <div class="item-body text-base leading-relaxed">樋口 登久二郞
-外 人 五
+    <div class="item-body text-base leading-relaxed">樋口登久二郞
+外五人
 本鄕和介儀明治五年十一月中變死ノ始末吟味ノ上存生
 中多分ノ負債有之償却ノ爲メ身代限處分及ヒ候ニ付右
 負債ノ內和介ヨリ橫濱元爲換會社當時第二國立銀行ヘ
@@ -7803,9 +7804,9 @@
 處晒蠟三百四十三箱ハ三浦友七ヨリ水町久兵衛ヘ相預
 ケ候三百四十四箱ノ內ニテ同人召仕川村榮介一己ニ和
 介金融ノ爲メ同人召仕本鄕泉介ヘ貸渡シ和介本人泉介
-受人ニテ弘明商會藏入ノ儘羅紗テール綱一 同引當ニ差
-入候段相違無之ニ就テハ久兵衛幷同人弟武富與介ト モ
-其節橫濱表ニ不居合右晒蠟取引ノ情狀不相心得候ト モ
+受人ニテ弘明商會藏入ノ儘羅紗テール綱一同引當ニ差
+入候段相違無之ニ就テハ久兵衛幷同人弟武富與介トモ
+其節橫濱表ニ不居合右晒蠟取引ノ情狀不相心得候トモ
 榮介泉介ノ間品物貸借ノ儀ハ熟談ヲ遂ケ殊ニ銀行頭取
 代前原友七儀引當品見届トシテ罷越候節無異儀右榮介
 泉介立會友七品々見届濟土藏封印致シ候上ハ久兵衛儀
@@ -7839,7 +7840,7 @@
     </div>
     <div class="font-semibold text-base mb-1">〔長崎縣伺罪案節録〕明治五年十一月六日</div>
     <div class="item-body text-base leading-relaxed">三潴縣士族春益五男
-足達下枝供 私儀辛未三月中
+足達下枝供　私儀辛未三月中
 魯學修業致サント存シ越後路迄脫走セシ科ニ依リ舊柳
 河縣於テ庶人ニ降サル其後父ト相談ノ上長崎ニ罷越シ
 學僕ノ口等相尋ル折同所丸瀨兵太郞ト懇意相成同家ニ
@@ -7847,9 +7848,9 @@
 ニ面會シ給金仕著セニモ不及ニ付召仕ヘ語學教授ヲ致
 シ吳レ候様倚賴シ同年九月廿五日ヨリ同氏ノ寄食人ト
 ナリ英語ヲ習ヒ候所同日午前十時頃シヨンソン和語ニ
-テ婦人ノ情話ヲ致シ其末同枕セント再三申聞ヶ出入口
+テ婦人ノ情話ヲ致シ其末同枕セント再三申聞ケ出入口
 ノ戶ヲメ切リ巳ノ靴ト上著ヲ脫シ私ノ手ヲ取リ無体ニ
-寢室ニ引揚ヶ俯伏ニ致シ脊ニ乘掛リ私ノ編絆股引ヲ脫
+寢室ニ引揚ケ俯伏ニ致シ脊ニ乘掛リ私ノ編絆股引ヲ脫
 却セシニ付初テ男色ト心付只管相否ム折已ニ私ノ內股
 ヘ陰莖ヲ押當テ頻ニ交合ノ樣ヲ爲シ不圖押付シ手ヲ放
 セシ隙ニ起上リ候然ルニ其日暮ニ至テ又々同枕ヲ促ス
@@ -7880,16 +7881,16 @@
 役十年其汚辱ニ堪ヘス羞惡ノ義忿ニ出ツル亦原諒ス可
 キニ因テ又一等ヲ減シ
 懲役三年
-達 枝 足 下
+足達下枝
 犯罪三流一減ノ時ニ在ヲ以テ舊滅等法ニ從フ
 該犯下枝ノ人ヲ重傷スルヿヲ聞テ殺スヿヲ知ヲサルニ
-ヨ リ重傷ヲ癈疾ニ當テ下枝ヲ以ラ人ヲ毆チ癈疾ニ致ス
+ヨリ重傷ヲ癈疾ニ當テ下枝ヲ以ラ人ヲ毆チ癈疾ニ致ス
 者トシ本罪懲役三年後ニ手ヲ下シ理直ナルヲ以テ二等
 ヲ減シ懲役二年トナシ二年ノ罪人ヲ藏匿隱避セシムル
 者トス例第三百十一條凡官司人ヲ差ハシ追喚スル罪人
 タルヿヲ知テ爲メニ藏匿隱避セシムル者ニ擬シ罪人ノ
 罪ニ二等ヲ减シ他人捕得スト云ニ依リ又一等ヲ减シ
-懲役百日 瀨 兵 太 郞 丸</div>
+懲役百日　丸瀨兵太郞</div>
     
   </div>
 </section>
@@ -7939,7 +7940,7 @@
 地所ヲ小作宛ニナシタル故ニ全質物ト見做シ右期日以
 前ニ係ル分ト雖モ取上裁判ニ及ヒ可然哉相伺候也
 指令
-當質地證文ニハ必ス年貢諸役共其許ニ於テ御勤可被 正
+正當質地證文ニハ必ス年貢諸役共其許ニ於テ御勤可被
 成等ノ文言之レアル可シ然ルニ小作証文ヲ差入レタル
 迄ニテ年貢諸役ノヿ別段約定証書モ之レナクシテ地主
 ニ於テ之レヲ勤メタル時ハ其實地所ヲ渡サヽルノ証據
@@ -7976,7 +7977,7 @@
 言ヲ狹ミ金ヲ受ル者枉法ニ準シテ論シ五名共懲役七十
 日宛熊次郞ハ本籍ヲ逃亡スル者同八十日鶴吉ハ逃亡二
 年以外復歸及ヒ自首スル者同上ノ贖罪等ノ指令アリ
-二十四 日</div>
+二十四日</div>
     
   </div>
 </section>
@@ -8001,10 +8002,10 @@
 期ニアラサレハ地所ヲ受取タル乙之レヲ培養シ収獲ノ
 上一半ヲ分ツテ甲ノ根附シタル勞ニ酬ヒ當年貢租ハ乙
 ヨリ上納致スヘキ哉又ハ甲ナル者地所引渡ノ申渡ヲ受
-クルト雖モ 一旦根付シタル作毛アレハ収獲ノ後實地ヲ
+クルト雖モ一旦根付シタル作毛アレハ収獲ノ後實地ヲ
 乙ニ渡シ其年ノ貢租ハ甲ヨリ上納致スヘキ哉相伺候也
 指令
-第 一條 小作証書ヲ差入之レアル正當ノ質地ナル時ハ
+第一條　小作証書ヲ差入之レアル正當ノ質地ナル時ハ
 其地所ヲ質取主ヘ返還スル年迄ノ小作米ハ無論小作
 人ヨリ差出サス可キ事
 第二條　事實口書ヲ以テ可伺出事</div>
@@ -8026,7 +8027,6 @@
 ニ係リ滯留中巳ニ金穀返濟ノ期限ニ及候共他ノ逃亡者
 同樣三十六箇月迄ハ相續人等ヘ掛リ債主ヨリ致出訴候
 儀難叶哉又ハ代言人相立サセ决答ニ至リ更ニ本人差出
-±
 候書面ニヨリ致裁許身代限迄ノ處分ニ及ヒ可然哉
 右ノ塲合ニ於テ負債主方ヨリ可差出代言人無之旨申立
 候節ハ如何處分可然哉奉伺候也
@@ -8055,7 +8055,7 @@
     </div>
     <div class="font-semibold text-base mb-1">〔同縣伺〕七年六月九日</div>
     <div class="item-body text-base leading-relaxed">地主ヨリ小作人ヘ掛リ小作滯リヲ訴出ルハ辰年以前ト
-雖モ取揚裁判及フ ヘキ哉奉伺候也
+雖モ取揚裁判及フヘキ哉奉伺候也
 指令
 伺ノ通</div>
     
@@ -8124,9 +8124,9 @@
 同年限小作米金滯ノ儀モ無証據ナレハ不及裁判可然哉
 相伺候也
 指令
-第 一條 貢米金ハ旣ニ村吏ニ於テ立替タル上ハ貢米金
+第一條　貢米金ハ旣ニ村吏ニ於テ立替タル上ハ貢米金
 ノ滯ハ素ヨリ之レナキ筈就テハ立替米金滞ノ訴ナル
-可シ若シ其立替ノ証據之レナ キ 時ハ伺之通
+可シ若シ其立替ノ証據之レナキ時ハ伺之通
 第二條　同年限リトハ前條ニ揭ケタル明治三庚午ヨリ
 同五年迄ト云フノ意カ右ハ何ノ規則ニ因此ノ限ヲ立
 ルヤ解シ難キヿナリ總テ小作證書之レナクシテ小作
@@ -8173,7 +8173,7 @@
 第二三條　伺ノ通
 第四條　境界論地無証跡トハ何樣ノモノニ有之哉伺ノ
 趣詳悉ナラサルニ付水帳撿地帳及村方役元帳等取調
-ノ上訴答書類並ニ原被口書ニ裁判見込書案ヲ添可 ヘ
+ヘノ上訴答書類並ニ原被口書ニ裁判見込書案ヲ添可
 伺出事</div>
     
   </div>
@@ -8189,12 +8189,12 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366799/1/193" target="_blank" rel="noopener">原本 コマ193 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔愛媛縣伺〕七年五月十五日</div>
-    <div class="item-body text-base leading-relaxed">當縣士族 大井上 前 博
+    <div class="item-body text-base leading-relaxed">當縣士族　大井上前博
 右ノ者昨六年二月以來不審筋ヲ以及糾彈候處今ニ斷了
 無之ヨリ同人親戚櫻井照德ヨリ御省ヘ出訴仕候ニ付テ
 ハ如何ノ見込ニ有之哉外確証ト可相成廉モ有之候ハヽ
 始末書ヲ以テ御回答可仕段拜承候抑前博不審ノ箇條ト
-云 ハ舊大洲藩軍務寮々長在職中於同寮金千三百圓餘金
+云ハ舊大洲藩軍務寮々長在職中於同寮金千三百圓餘金
 子紛失致シ爾來百方捜索スレトモ更ニ賊跡ヲ不得而シテ
 前博多分ノ儲音金有之原因ヲ尋ヌルニ益不審相立且ツ
 同里近傍ヲ捜知スルニ人々疑ヒ容サルヿナク加之先年
@@ -8228,8 +8228,6 @@
     <div class="font-semibold text-base mb-1">〔山形縣伺〕七年五月二十三日</div>
     <div class="item-body text-base leading-relaxed">本年三月四日太政官第二十七號ノ御布告ニ預ケ金穀云
 々ト有之候得共鋼銕食鹽生糸等其他百種ノ品預リモ此
-廿一
-第1910號
 御布告ニ依裁判可致哉此段奉伺候以上
 指令
 太政官第二十七號御布告ハ預ケ金穀ノ事ニ限ル可シ他
@@ -8273,6 +8271,38 @@ function revealHashTarget() {
 }
 window.addEventListener('hashchange', revealHashTarget);
 revealHashTarget();
+
+// 全文検索の結果から開かれたとき（?q=…）は、上端のリンクを「← 検索結果に戻る」にする。
+// 検索結果ページから来た場合は、目次などで移動して増えた履歴もまとめて遡って戻る
+// （検索結果のページ番号・スクロール位置がそのまま戻る）。別タブで開いた等で戻る先が無いときは同じ検索語で開き直す
+(function () {
+  var q = new URLSearchParams(location.search).get('q');
+  if (!q) return;
+  var link = document.getElementById('back-link');
+  link.textContent = '← 検索結果に戻る';
+  link.href = '../index.html#search?' + new URLSearchParams({ q: q });
+  var indexUrl = new URL('../index.html', location.href);
+  var fromSearch = false;
+  try {
+    var ref = new URL(document.referrer);
+    fromSearch = ref.origin === indexUrl.origin &&
+      (ref.pathname === indexUrl.pathname || ref.pathname === indexUrl.pathname.slice(0, -'index.html'.length));
+  } catch (e) {}
+  if (!fromSearch) return;
+  // このページに来てから増えた履歴の数を、各履歴の state に記録しておく
+  var depth = (history.state && history.state.backDepth) || 0;
+  history.replaceState(Object.assign({}, history.state, { backDepth: depth }), '');
+  window.addEventListener('hashchange', function () {
+    if (history.state && typeof history.state.backDepth === 'number') depth = history.state.backDepth;
+    else history.replaceState({ backDepth: ++depth }, '');
+  });
+  link.addEventListener('click', function (e) {
+    if (e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+    if (history.length <= depth + 1) return;
+    e.preventDefault();
+    history.go(-(depth + 1));
+  });
+})();
 </script>
 <script src="../source_viewer.js?v=0575b9d0" defer></script>
 <script src="../fulltext/fulltext.js?v=4efff4a2" defer></script>

@@ -23,7 +23,7 @@
   }
   .xref-caption { color: #6b7280; }
   .xref-list { margin: .2em 0 0; padding-left: 1.5em; list-style: disc; }
-  section[id], .card-issue { scroll-margin-top: 1rem; }
+  section[id], .card-issue { scroll-margin-top: 3.5rem; }
   .card-issue { margin-top: 2rem; }
   .card-issue-head { font-size: 1.125rem; font-weight: 700; border-bottom: 2px solid #e5e7eb; padding-bottom: .25em; margin-bottom: .75rem; }
   .card-dategroup-head { font-weight: 500; color: #4b5563; margin: 1rem 0 .5rem; }
@@ -31,16 +31,17 @@
 </style>
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans">
+<!-- 巻一覧（全文検索の結果から開いたときは検索結果）へのリンクはスクロールしても画面上端に残す -->
+<nav class="sticky top-0 z-40 bg-gray-50/95 backdrop-blur border-b border-gray-200">
+  <div class="max-w-4xl mx-auto px-4 py-2">
+    <a id="back-link" href="../index.html" class="text-sm text-blue-600 hover:underline">← 巻一覧</a>
+  </div>
+</nav>
 <div class="max-w-4xl mx-auto p-4 pb-24">
 
-<div class="mb-2">
-  <a href="../index.html" class="text-sm text-blue-600 hover:underline">← 巻一覧</a>
-</div>
-
-<h1 id="top" class="text-2xl font-bold border-b-4 border-gray-200 pb-2 mb-1">
+<h1 id="top" class="text-2xl font-bold border-b-4 border-gray-200 pb-2 mb-4">
 司法省日誌 五
 </h1>
-<div class="mb-4 text-sm text-gray-500">五巻 <a class="text-blue-600 hover:underline" href="https://dl.ndl.go.jp/pid/1366794" target="_blank" rel="noopener">国立国会図書館デジタルコレクションで見る →</a>　<button type="button" class="viewer-toggle" data-viewer-toggle>原本画像を並べて表示 →</button></div>
 
 <div class="grid grid-cols-1 sm:grid-cols-[1fr_1fr_2fr] bg-white rounded-lg border border-gray-200 shadow-sm mb-6 divide-y sm:divide-y-0 sm:divide-x divide-gray-200">
   <div class="px-6 py-4">
@@ -202,7 +203,7 @@
 任權大解部
 任中撿部
 任司法權少属</div>
-    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3693030.html#fuken_3693030-0108" class="text-blue-600 hover:underline xref-link">平川楨　国史稿本 立庁以来官員任解進退辞令書1 (明治4‐7年)</a></li><li><a href="https://person-archive.github.io/docs/3693306.html#fuken_3693306-0062" class="text-blue-600 hover:underline xref-link">中原正道　旧新治県官員履歴 (明治4‐8年)</a></li><li><a href="https://person-archive.github.io/docs/3693306.html#fuken_3693306-0051" class="text-blue-600 hover:underline xref-link">唐木一精　旧新治県官員履歴 (明治4‐8年)</a></li></ul></div>
+    
   </div>
 </section>
 </div>
@@ -257,7 +258,7 @@
     <div class="font-semibold text-base mb-1">○</div>
     <div class="item-body text-base leading-relaxed">任大撿部　十一等出仕　前島道基
 任權中解部　少解部　兒玉親廣</div>
-    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3691238.html#fuken_3691238-0049" class="text-blue-600 hover:underline xref-link">兒玉親廣　官員履歴（第2輯）(明治8‐12年)</a></li></ul></div>
+    
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a05-008" data-type-base="伺" data-pid="1366794" data-frame="3">
@@ -285,7 +286,7 @@
 ヲ略書ス
 處斷伺ノ律ニ正條アツテ判然疑惑ナキ者或ハ進退伺
 ノ如キハ之ヲ略書ス其畧シ難キハ臨時全錄ス
-罰文裁許文從及ヒ連累者ハ之ヲ略書ス ー
+一罰文裁許文從及ヒ連累者ハ之ヲ略書ス
 罪犯ノ夥多ナル或ハ訴訟裁判見込書ノ多端ナル等ハ
 之ヲ畧書ス
 子父ヲ弑シ或ハ父子相姦スル如キ又ハ犯罪ノ奇異ナ
@@ -676,7 +677,7 @@
     <div class="font-semibold text-base mb-1">〔神奈川裁判所伺罪按節録〕六年十一月</div>
     <div class="item-body text-base leading-relaxed">相模國三浦郡林村農長野淺右衛門妹ユキ曰私儀甞テ雇
 置シ竹次郞ト姦通シ夫平藏ヨリ離別セラレ謝罪スト雖
-同人聽サス且後妻ヲ娶シニ付遺恨ニ存シ當五月夜半 モ
+モ同人聽サス且後妻ヲ娶シニ付遺恨ニ存シ當五月夜半
 平藏宅ヘ忍入拔刀ニテ夫婦ニ疵負ハセ平藏ハ其ノ爲メ
 落命シ妻トヨハ癈者ニ相成候
 指令
@@ -735,9 +736,9 @@
 盜〓罪〓博等加等ス可キ者再犯ノ後又同罪ヲ犯スキハ例
 三犯ヲ以テ處斷可致ノ處其初犯犯時ノ年齡ヲ更算スレ
 ハ十五以下ニ係ル者ハ初犯實决ナルモ取贖ト看做シ仍
-再犯ヲ以テ論シ可然哉 ホ
+ホ再犯ヲ以テ論シ可然哉
 同上例御頒布以前収贖スル再次ニ及フノ類有之右ハ仍
-三犯加等ノ罪ヲ宥メ本罪ヲ實斷シ四犯以上ハ凡人再 ホ
+ホ三犯加等ノ罪ヲ宥メ本罪ヲ實斷シ四犯以上ハ凡人再
 犯以上ノ例ニ照シ加等シ可然哉
 名例律稱等內人條ニ土族ハ等內人ニ准スト有之依テ士
 族枉法不枉法ヲ以テ論シ及ヒ准シテ論スル罪ハ等內人
@@ -794,7 +795,7 @@
     </div>
     <div class="font-semibold text-base mb-1"></div>
     <div class="item-body text-base leading-relaxed">任權大解部　中解部　田尻彥太郞</div>
-    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3692800.html#fuken_3692800-0136" class="text-blue-600 hover:underline xref-link">田尻彥太郞　熊本県国史 下 制度部・官員履歴 (明治14年)</a></li><li><a href="https://person-archive.github.io/docs/3692805.html#fuken_3692805-0159" class="text-blue-600 hover:underline xref-link">田尻彥太郞　熊本県国史 下 制度部・官員履歴 (明治16年)</a></li></ul></div>
+    
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a05-024" data-type-base="伺" data-pid="1366794" data-frame="18">
@@ -809,7 +810,7 @@
     </div>
     <div class="font-semibold text-base mb-1">〔豐岡縣伺罪按節録〕六年十一月</div>
     <div class="item-body text-base leading-relaxed">但馬國養父郡伊佐村農篠岡政本曰ク自分儀母ト平常不
-ニテ當十月十九日爭論ノ末母ヨリ火吹竹ニテ私ヲ擊 和
+和ニテ當十月十九日爭論ノ末母ヨリ火吹竹ニテ私ヲ擊
 チシ故憤怒ノ餘リ即チ其竹ヲ奪ヒ母ノ首ヲ突戾セシ所
 其儘絶倒セシニ付此上ハ蘇生致サセ間敷ト右火吹竹ヲ
 咽ニ橫タヘ壓ヘ殺シ候
@@ -837,7 +838,7 @@
 余ヲ以テ折杖シ三犯滿流ノ上ニ加役ス可キ云々口供ヲ
 以テ相伺候處賊盜律竊盜條三犯五十圓以下懲役十年但
 初犯供認不盡ノ賍云々二罪倶發ヲ以論シ三犯ノ上ニ加
-セスト御指令之アリ右ハ二罪倶發以重論條例後發ノ 等
+等セスト御指令之アリ右ハ二罪倶發以重論條例後發ノ
 賍ヲ以テ前賍ニ併セテ重キ者ハ更ニ加ヘテ全科スト云
 ニ照セハ滿流十年ノ上供認不盡ノ賍ヲ以テ加重ス可キ
 ニ似タレトモ竊盜三犯ハ獨リ賍數ノミヲ以テセス犯數ヲ
@@ -1060,7 +1061,7 @@
 權少解部　足立隆則
 任司法權少属　十四等出仕　鴻巢盛雄
 補十四等出仕　十五等出仕　正田爲重</div>
-    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3691153.html#fuken_3691153-0071" class="text-blue-600 hover:underline xref-link">足立隆則　栃木県史附録 日光県史 附録 官員履歴 (明治元‐4年)</a></li><li><a href="https://person-archive.github.io/docs/3691542.html#fuken_3691542-0053" class="text-blue-600 hover:underline xref-link">足立隆則　栃木県史材料 制度部 官員履歴 (明治5‐7年)</a></li><li><a href="https://person-archive.github.io/docs/3691909.html#fuken_3691909-0074" class="text-blue-600 hover:underline xref-link">正田爲重　杤木縣史附録 宇都宮県史 官員履歴 (明治4‐6年)</a></li></ul></div>
+    
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a05-035" data-type-base="人事" data-pid="1366794" data-frame="24">
@@ -1601,7 +1602,7 @@
 ケサセシム可クニ付何卒生前一杯ノ酒ヲ與ヘ吳度ト云
 ニ任セ酒肴ヲ與ヘ且遺言等無之哉ト相尋ヌレハ懷中ヨ
 リ紙筆並ニ金十一兩三步取出シ爲追福高田寺町光榮寺
-送リ吳ルヘクト書付ヲ副ヘ兄弟ヘ附托西向低首致ス ヘ
+ヘ送リ吳ルヘクト書付ヲ副ヘ兄弟ヘ附托西向低首致ス
 ニ付兄弟兩脇ヨリ立向ヒ復讐素志相遂ケ傍ノ小松ヲ伐
 取リ首ヲ貫キ兼テ懷中ノ七十郞初三人ノ位牌ニ手向ケ
 畢リテ其槩略ヲ所役人ヘ相達シ兄弟並ニ遠藤轉一同奉
@@ -1670,7 +1671,7 @@
 〔常人以下六十日迄同上〕長左衛門ノ發言ニ和同スル
 ニ依リ從トナシ一等ヲ減シ
 懲役五十日宛　石橋惣左衞門
-與左衞門 椿
+椿與左衞門
 私和ノ爲ニ出ス所ノ金ヲ貸與ルノ罪ハ輕シ論セス
 戶長ナルニ依リ等外吏ニ准シ官吏私罪贖罪例ニ照シ
 贖罪金七圓五十錢宛　佐藤金左衞門
@@ -1752,7 +1753,7 @@
 坪內長藏
 懲役七十日
 同上ノ從トナシテ論シ一等ヲ减シ
-六十日　黑川善右衞門 同
+同　六十日　黑川善右衞門
 彈藥暴發シテ人ヲ殺傷スルハ過失ヲ以テ論セス依テ醫
 藥理葬ノ資ヲ追給シ及ヒ破損ノ船隻家屋賠補セシムル
 等ノ儀ニ及ハス</div>
@@ -2157,7 +2158,7 @@
 明法中属 小倉縣中属長 菅 井 榮 明 高 小 脩
 任大撿部
 補十等出仕</div>
-    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3688629.html#fuken_3688629-0018" class="text-blue-600 hover:underline xref-link">今泉利春　旧佐賀県史稿　制度之部　禁令・官員履歴（明治8・9年）</a></li><li><a href="https://person-archive.github.io/docs/3691832.html#fuken_3691832-0018" class="text-blue-600 hover:underline xref-link">今泉利春　旧佐賀県史稿 附録 官員履歴 上（明治2‐8年）</a></li></ul></div>
+    
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a05-070" data-type-base="人事" data-pid="1366794" data-frame="53">
@@ -2414,7 +2415,7 @@
     <div class="item-body text-base leading-relaxed">肥後國飽田郡野出村農七圓
 右衞門二男　伊藏
 右罪案〔畧之〕ノ通父圓右衛門四十年前母召連レ熊本
-寄留中同所於テ出生其後圓右衞門相果十年前母ト八 ヘ
+ヘ寄留中同所於テ出生其後圓右衞門相果十年前母ト八
 代新町ヘ轉居當時迄無籍罷在ル科他管ニ出スト雖モ數
 十年本籍ヘ歸ラス明治二己巳四月脫籍云々寛典ノ御趣
 意モ奉体セサル者ニ付違令重ニ可問哉ノ所御省日誌後
@@ -2565,7 +2566,7 @@
     <div class="font-semibold text-base mb-1"></div>
     <div class="item-body text-base leading-relaxed">免兼官
 少警視兼逮部長　林三介</div>
-    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3692990.html#fuken_3692990-0011" class="text-blue-600 hover:underline xref-link">林三介　飾磨県史 政治之部 官員履歴 (明治4‐9年)</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0353" class="text-blue-600 hover:underline xref-link">林三介　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
+    
   </div>
 </section>
 </div></div>
@@ -2977,7 +2978,7 @@
 任少撿事　權少撿事　人見恒民
 任權大撿部　中撿部　工藤則勝
 十三等出仕彭 權中撿部 同 吉 資 莊 倫 有 〓 直 城 種 弘</div>
-    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3692567.html#fuken_3692567-0031" class="text-blue-600 hover:underline xref-link">立見尙文　三重県史稿 制度部 官員履歴（甲・乙）(明治4‐7年)</a></li><li><a href="https://person-archive.github.io/docs/3692569.html#fuken_3692569-0004" class="text-blue-600 hover:underline xref-link">立見尙文　三重県史稿 旧県部 桑名県 (明治2‐4年)</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-3101" class="text-blue-600 hover:underline xref-link">立見尙文　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0609" class="text-blue-600 hover:underline xref-link">人見恒民　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0416" class="text-blue-600 hover:underline xref-link">工藤則勝　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
+    
   </div>
 </section>
 </div>
@@ -3002,7 +3003,7 @@
 補十三等出仕 外 雅 田 明
 任少撿部　十五等出仕　中村義行
 任少解部　權少解部　中山有應</div>
-    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3691153.html#fuken_3691153-0031" class="text-blue-600 hover:underline xref-link">中山有應　栃木県史附録 日光県史 附録 官員履歴 (明治元‐4年)</a></li><li><a href="https://person-archive.github.io/docs/3691542.html#fuken_3691542-0034" class="text-blue-600 hover:underline xref-link">中山有應　栃木県史材料 制度部 官員履歴 (明治5‐7年)</a></li></ul></div>
+    
   </div>
 </section>
 </div>
@@ -3051,7 +3052,7 @@
 免兼官 同
 少警視兼逮部長　綿貫吉直
 同　渥美友成</div>
-    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-3938" class="text-blue-600 hover:underline xref-link">比企福造　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-3896" class="text-blue-600 hover:underline xref-link">綿貫吉直　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0170" class="text-blue-600 hover:underline xref-link">渥美友成　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
+    
   </div>
 </section>
 </div></div>
@@ -3119,7 +3120,7 @@
 逃亡候條各地方ニ於テ嚴密遂搜索捕縛之上ハ同縣ヘ引
 渡其段可届出此旨布達候事
 但裁判所被置候府縣ハ見當次第捕縛致シ其地撿事局
-引渡其旨可届出候事 ヘ</div>
+ヘ引渡其旨可届出候事</div>
     
   </div>
 </section>
@@ -3425,7 +3426,7 @@
 律ヲ按シテ其父ヲ坐スルニ父ノ病羸ヲ哀ミ其子代ンヿ
 ヲ願フ者ハ之ヲ許シテ可然哉奉伺候也
 指令
-條　伺ノ通 第
+第一條　伺ノ通
 第二條　父子共ニ罪ヲ犯スニ父篤疾ニ罹ルキハ其子ヲ
 坐スルニ首タルノ罪ヲ以テス可シト雖モ本文ノ如キ
 ハ代罪ヲ聽スノ限ニアラス律ニ依テ科斷ス可シ</div>
@@ -3902,7 +3903,7 @@
 同　貞 橫 山
 同　白 上 貫
 同　東 〓 實</div>
-    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0185" class="text-blue-600 hover:underline xref-link">山下房親　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
+    
   </div>
 </section>
 </div></div>
@@ -3922,7 +3923,7 @@
     </div>
     <div class="font-semibold text-base mb-1">○</div>
     <div class="item-body text-base leading-relaxed">依願免出仕　十一等出仕　持永義方</div>
-    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3688629.html#fuken_3688629-0040" class="text-blue-600 hover:underline xref-link">持永義方　旧佐賀県史稿　制度之部　禁令・官員履歴（明治8・9年）</a></li><li><a href="https://person-archive.github.io/docs/3691832.html#fuken_3691832-0026" class="text-blue-600 hover:underline xref-link">持永義方　旧佐賀県史稿 附録 官員履歴 上（明治2‐8年）</a></li><li><a href="https://person-archive.github.io/docs/3692672.html#fuken_3692672-0129" class="text-blue-600 hover:underline xref-link">持永義方　熊本県国史 下 制度部・官員履歴（明治10年）</a></li><li><a href="https://person-archive.github.io/docs/3692800.html#fuken_3692800-0142" class="text-blue-600 hover:underline xref-link">持永義方　熊本県国史 下 制度部・官員履歴 (明治14年)</a></li><li><a href="https://person-archive.github.io/docs/3692805.html#fuken_3692805-0088" class="text-blue-600 hover:underline xref-link">持永義方　熊本県国史 下 制度部・官員履歴 (明治16年)</a></li><li><a href="https://person-archive.github.io/docs/3692810.html#fuken_3692810-0103" class="text-blue-600 hover:underline xref-link">持永義方　熊本県史 官員履歴 (明治17年)</a></li></ul></div>
+    
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a05-136" data-type-base="伺" data-pid="1366794" data-frame="94">
@@ -3988,7 +3989,7 @@
 免出仕　十三等出仕　大塚雄顯
 任中解部　十等出仕　橋本源之助
 中撿部 少撿事 權少撿事益 山 田 田 小太郞 勇 崎 强 八</div>
-    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0433" class="text-blue-600 hover:underline xref-link">益田勇　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
+    
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a05-139" data-type-base="article" data-pid="1366794" data-frame="95">
@@ -4062,7 +4063,7 @@
 免出仕
 補十四等出仕
 同</div>
-    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3688580.html#fuken_3688580-0092" class="text-blue-600 hover:underline xref-link">三和國雄　〔大坂府史〕制度部 官員進退 (明治元‐8年)</a></li><li><a href="https://person-archive.github.io/docs/3689124.html#fuken_3689124-0028" class="text-blue-600 hover:underline xref-link">三和國雄　大阪府政治編輯稿本 (明治11年)</a></li><li><a href="https://person-archive.github.io/docs/3688580.html#fuken_3688580-0039" class="text-blue-600 hover:underline xref-link">中井守純　〔大坂府史〕制度部 官員進退 (明治元‐8年)</a></li><li><a href="https://person-archive.github.io/docs/3688580.html#fuken_3688580-0056" class="text-blue-600 hover:underline xref-link">山本義隆　〔大坂府史〕制度部 官員進退 (明治元‐8年)</a></li></ul></div>
+    
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a05-142" data-type-base="article" data-pid="1366794" data-frame="97">
@@ -4476,7 +4477,7 @@
 上
 指令
 受賍律　枉法ノ事ニ因テ財ヲ受ル者ニ準シテ論シ賍金
-圓以上士族等內人ニ準スルヲ以テ禁錮七十日ノ處一 一
+一圓以上士族等內人ニ準スルヲ以テ禁錮七十日ノ處一
 罪先キニ發シ巳ニ論决ヲ經テ餘罪後ニ發シ輕キヲ以テ
 更ニ論セス
 百瀨吉江
@@ -4998,7 +4999,7 @@
 者竊盜三犯五十圓以下ノ權衡ニ依リ處斷致シ可然哉相
 伺候也
 指令
-條　貼斷シテ族祿ヲ復ス可シ更ニ禁錮申付ルニ及 第
+第一條　貼斷シテ族祿ヲ復ス可シ更ニ禁錮申付ルニ及
 ハス
 第二條　伺ノ通
 第三條　初犯强盜ニシテ再犯竊盜ナル者及ヒ初犯竊盜
@@ -5244,7 +5245,7 @@
     </div>
     <div class="font-semibold text-base mb-1">〔伺書〕六年十二月四日</div>
     <div class="item-body text-base leading-relaxed">違式第六十四條第六十五條詿違第六十六條別紙〔略之
-ノ通追加致度此段相伺候也 一
+〕ノ通追加致度此段相伺候也
 御指令
 詿違罪目追加第六十六條ヲ除キ其他伺ノ通</div>
     
@@ -5458,7 +5459,7 @@
 二五十 安藝國豐田郡御手洗驛商甚五郞長男長野伸二郞同
 ニー 所
 龜島町商佐藤源次郞附籍乙吉寅吉等各處斷伺
-五名共ニ持兒器强盜財ヲ得ル者皆斬罪ノ指令アリ ニ</div>
+ニ五名共ニ持兒器强盜財ヲ得ル者皆斬罪ノ指令アリ</div>
     
   </div>
 </section>
@@ -5965,7 +5966,7 @@
 指令
 斷刑伺ノ囘報アルヲ式ニ違テ處决ヲ遷延スルノ一罪先
 ニ發シ已ニ懲役四十日贖罪ノ論决ヲ經テ八十日収贖ス
-キヲ禁獄ニ失入スルノ餘罪後ニ發スル者　斷獄律 ヘ
+ヘキヲ禁獄ニ失入スルノ餘罪後ニ發スル者　斷獄律
 罪ヲ斷シテ収贖ス可キヲ决配スト云ニ依リ失入人罪律
 ニ依テ通シテ四等ヲ減シ懲役四十日名例二罪倶發以重
 論條ニ依リ先發ノ罪ニ等キヲ以テ論セス</div>
@@ -6123,7 +6124,7 @@
     </div>
     <div class="font-semibold text-base mb-1">〔大分縣伺〕六年十二月二十日</div>
     <div class="item-body text-base leading-relaxed">金銀貸借ニ付元利共相滯リ出訴ニ及候節其滯リノ利足
-ハ重テ御規則ノ通百分六ノ利足ヲ加ヘ濟方申付ル儀 ヘ
+ヘハ重テ御規則ノ通百分六ノ利足ヲ加ヘ濟方申付ル儀
 ニ候哉又ハ利足ニ利足ヲ加ヘスシテ可然哉
 從來地所ヲ書入金錢貸借致候節地主ヨリ古證文ト稱シ
 兼テ他人ヨリ地所買入ノ節受取居候永代讓渡ノ證書ヲ
@@ -6140,7 +6141,7 @@
 但シ利息ニ利息ヲ加算スルハ素ヨリ之レ無キ事
 第二條　讓渡證文モ則沽劵狀ト見做シ質入ノ處分ニ可
 及事
-但シ明治六年第十八號御布告證書改正期限以前 ノ
+但シ明治六年第十八號御布告證書改正期限以前ノ
 分ト可心得事</div>
     
   </div>
@@ -6263,7 +6264,7 @@
 ニ懲役終身可申付哉此段奉伺候也
 指令
 竊盜ヲ犯シ官司ノ斷决ヲ經テ遂ニ四犯ニ至リ仍ホ前犯
-ヲ押隱シ懲役七十日ニ處セラルヽ者今之ヲ貼斷ス 賊
+ヲ押隱シ懲役七十日ニ處セラルヽ者今之ヲ貼斷ス　賊
 盜律竊盜條例　竊盜四犯財ヲ得ル者賍ノ多寡ヲ論セス
 懲役終身
 山 本 銕 郞 五
@@ -6655,7 +6656,7 @@
 少警視兼逮部長　檜部直枝
 足 勘 十 神 同 郞
 兼逮部長 川 藏 津 顯</div>
-    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-3940" class="text-blue-600 hover:underline xref-link">山本正幹　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-3922" class="text-blue-600 hover:underline xref-link">川畑種長　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
+    
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a05-244" data-type-base="正誤" data-pid="1366794" data-frame="154">
@@ -6876,7 +6877,7 @@
     </div>
     <div class="font-semibold text-base mb-1">○</div>
     <div class="item-body text-base leading-relaxed">任權大解部　權大錄　村田保</div>
-    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0047" class="text-blue-600 hover:underline xref-link">村田保　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
+    
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a05-254" data-type-base="伺" data-pid="1366794" data-frame="158">
@@ -6916,7 +6917,7 @@
 般ノ獄ノ如キハ別テ他因ト混同ハ難相成從前右等ノ節
 ハ無餘儀東京府中監倉ヘ相賴ミ差置候儀モ有之候ヘ共
 同府ノ監倉ハ最早取拂候ニ付目下甚以差支候聞別紙繪
-圖面幷仕樣書ヲ以テ當省中長屋ヲ補理シ假リニ監倉 ニ
+圖面幷仕樣書ヲ以テ當省中長屋ヲ補理シ假リニ監倉ニ
 相用申度存候右ハ片時モ難捨置御裁可相成候ハヽ夜ヲ
 日ニ繼キ營繕取掛申度候間今日中御裁可相成度別紙繪
 圖面幷仕樣書〔略之〕相添此段相伺候也
@@ -7084,7 +7085,7 @@
 右罪案〔略之〕ノ通曩ニ懲役塲ヲ逃走シ再ヒ寛役塲ヲ
 逃走スル者ニ付再犯ヲ以テ論シ候乎併寛役塲逃走ハ處
 刑中逃走ノ者ト差別モ有之儀ニ付不應爲ノ輕ニ擬シ竊
-一圓以下ノ從二罪倶發律ニ照シ一ノ竊盜ニ仍リ懲役 盜
+盜一圓以下ノ從二罪倶發律ニ照シ一ノ竊盜ニ仍リ懲役
 四十日ニ處シ可然乎此段相伺候也
 指令
 脫籍無產ノ者授產塲ヲ逃走シ外ニ在テ竊盜從賍一圓以
@@ -7214,7 +7215,7 @@
 指令
 船中粮食ノ盡ルニ依テ衆ヲ結ヒ刀ヲ携ヘ洋中ノ通船ヲ
 勒要シ粮米ヲ强借セントシテ事主ニ反毆セラレ事成ヲ
-サル者名ヲ借ルニ託スト雖モ其跡畢竟强盜ニ同シ 賊
+サル者名ヲ借ルニ託スト雖モ其跡畢竟强盜ニ同シ　賊
 盜律　持兒器强盜財ヲ得サル者ヲ以テ論シ
 懲役七年　荒谷左善吾
 事犯頒例以前ニ在テ原律罪名輕キニ付仍ホ原律ニ
@@ -7293,7 +7294,7 @@
 同
 任權大解部
 任司法權少属</div>
-    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3688580.html#fuken_3688580-0117" class="text-blue-600 hover:underline xref-link">磯野恒德　〔大坂府史〕制度部 官員進退 (明治元‐8年)</a></li><li><a href="https://person-archive.github.io/docs/3688977.html#fuken_3688977-0076" class="text-blue-600 hover:underline xref-link">工藤助作　神奈川県史 附録 官員履歴1 (明治元‐11年)</a></li><li><a href="https://person-archive.github.io/docs/3688977.html#fuken_3688977-0194" class="text-blue-600 hover:underline xref-link">佐藤信發　神奈川県史 附録 官員履歴1 (明治元‐11年)</a></li></ul></div>
+    
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a05-270" data-type-base="裁判所申渡" data-pid="1366794" data-frame="168">
@@ -8249,7 +8250,7 @@
 辻耕造
 補十三等出仕
 二宮眞通</div>
-    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0047" class="text-blue-600 hover:underline xref-link">村田保　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/3688662.html#fuken_3688662-0070" class="text-blue-600 hover:underline xref-link">高橋敬次郞　島根県歴史附録 附録（島根県官員履歴）(明治8年)</a></li><li><a href="https://person-archive.github.io/docs/3692668.html#fuken_3692668-0061" class="text-blue-600 hover:underline xref-link">高木靜三　白川県国史2 制度部・官員履歴 (明治8年)</a></li><li><a href="https://person-archive.github.io/docs/3692669.html#fuken_3692669-0231" class="text-blue-600 hover:underline xref-link">高木靜三　白川県国史5 附録（官員履歴）(明治4‐7年)</a></li><li><a href="https://person-archive.github.io/docs/3692672.html#fuken_3692672-0040" class="text-blue-600 hover:underline xref-link">高木靜三　熊本県国史 下 制度部・官員履歴（明治10年）</a></li><li><a href="https://person-archive.github.io/docs/3692673.html#fuken_3692673-0052" class="text-blue-600 hover:underline xref-link">高木靜三　熊本県国史 下 制度部・官員履歴 (明治9年)</a></li><li><a href="https://person-archive.github.io/docs/3692798.html#fuken_3692798-0031" class="text-blue-600 hover:underline xref-link">高木靜三　白川県国史 附録（八代県国史）（明治4‐6年）</a></li></ul></div>
+    
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a05-306" data-type-base="布達" data-pid="1366794" data-frame="189">
@@ -8871,7 +8872,7 @@
     <div class="font-semibold text-base mb-1">〔敦賀縣伺〕六年十二月廿四日</div>
     <div class="item-body text-base leading-relaxed">當縣下若狭國遠敷郡北鹽谷村松源寺住職惠眞儀士族ト
 賭博連及ニ付壬申十一月中破廉恥甚ヲ以テ還俗申付候
-所士族ノ賭博犯罪ハ先般伺ノ上貼斷及ヒ寺職ノ者モ 士
+所士族ノ賭博犯罪ハ先般伺ノ上貼斷及ヒ寺職ノ者モ士
 族ニ準スル故貼斷可仕哉相伺候所改正ニ不及旨御指令
 承知仕候然所惠眞再ヒ出家得度仕度申出候間御指揮ノ
 次第申達候得共再應出願仕事情無餘儀相聞候間別紙願
@@ -8916,6 +8917,38 @@ function revealHashTarget() {
 }
 window.addEventListener('hashchange', revealHashTarget);
 revealHashTarget();
+
+// 全文検索の結果から開かれたとき（?q=…）は、上端のリンクを「← 検索結果に戻る」にする。
+// 検索結果ページから来た場合は、目次などで移動して増えた履歴もまとめて遡って戻る
+// （検索結果のページ番号・スクロール位置がそのまま戻る）。別タブで開いた等で戻る先が無いときは同じ検索語で開き直す
+(function () {
+  var q = new URLSearchParams(location.search).get('q');
+  if (!q) return;
+  var link = document.getElementById('back-link');
+  link.textContent = '← 検索結果に戻る';
+  link.href = '../index.html#search?' + new URLSearchParams({ q: q });
+  var indexUrl = new URL('../index.html', location.href);
+  var fromSearch = false;
+  try {
+    var ref = new URL(document.referrer);
+    fromSearch = ref.origin === indexUrl.origin &&
+      (ref.pathname === indexUrl.pathname || ref.pathname === indexUrl.pathname.slice(0, -'index.html'.length));
+  } catch (e) {}
+  if (!fromSearch) return;
+  // このページに来てから増えた履歴の数を、各履歴の state に記録しておく
+  var depth = (history.state && history.state.backDepth) || 0;
+  history.replaceState(Object.assign({}, history.state, { backDepth: depth }), '');
+  window.addEventListener('hashchange', function () {
+    if (history.state && typeof history.state.backDepth === 'number') depth = history.state.backDepth;
+    else history.replaceState({ backDepth: ++depth }, '');
+  });
+  link.addEventListener('click', function (e) {
+    if (e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+    if (history.length <= depth + 1) return;
+    e.preventDefault();
+    history.go(-(depth + 1));
+  });
+})();
 </script>
 <script src="../source_viewer.js?v=0575b9d0" defer></script>
 <script src="../fulltext/fulltext.js?v=4efff4a2" defer></script>

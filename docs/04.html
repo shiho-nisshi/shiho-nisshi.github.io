@@ -23,7 +23,7 @@
   }
   .xref-caption { color: #6b7280; }
   .xref-list { margin: .2em 0 0; padding-left: 1.5em; list-style: disc; }
-  section[id], .card-issue { scroll-margin-top: 1rem; }
+  section[id], .card-issue { scroll-margin-top: 3.5rem; }
   .card-issue { margin-top: 2rem; }
   .card-issue-head { font-size: 1.125rem; font-weight: 700; border-bottom: 2px solid #e5e7eb; padding-bottom: .25em; margin-bottom: .75rem; }
   .card-dategroup-head { font-weight: 500; color: #4b5563; margin: 1rem 0 .5rem; }
@@ -31,16 +31,17 @@
 </style>
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans">
+<!-- 巻一覧（全文検索の結果から開いたときは検索結果）へのリンクはスクロールしても画面上端に残す -->
+<nav class="sticky top-0 z-40 bg-gray-50/95 backdrop-blur border-b border-gray-200">
+  <div class="max-w-4xl mx-auto px-4 py-2">
+    <a id="back-link" href="../index.html" class="text-sm text-blue-600 hover:underline">← 巻一覧</a>
+  </div>
+</nav>
 <div class="max-w-4xl mx-auto p-4 pb-24">
 
-<div class="mb-2">
-  <a href="../index.html" class="text-sm text-blue-600 hover:underline">← 巻一覧</a>
-</div>
-
-<h1 id="top" class="text-2xl font-bold border-b-4 border-gray-200 pb-2 mb-1">
+<h1 id="top" class="text-2xl font-bold border-b-4 border-gray-200 pb-2 mb-4">
 司法省日誌 四
 </h1>
-<div class="mb-4 text-sm text-gray-500">四巻 <a class="text-blue-600 hover:underline" href="https://dl.ndl.go.jp/pid/1366793" target="_blank" rel="noopener">国立国会図書館デジタルコレクションで見る →</a>　<button type="button" class="viewer-toggle" data-viewer-toggle>原本画像を並べて表示 →</button></div>
 
 <div class="grid grid-cols-1 sm:grid-cols-[1fr_1fr_2fr] bg-white rounded-lg border border-gray-200 shadow-sm mb-6 divide-y sm:divide-y-0 sm:divide-x divide-gray-200">
   <div class="px-6 py-4">
@@ -685,7 +686,7 @@
 明治六年七月八日
 擬律
 該犯ノ官金ヲ操替ヘ其費用スルハ官物私借ノ律ニ擬ス
-キ如シ然ルニ當時驛遞事務ノ職ニ在リ深ク上司ノ意 ヘ
+ヘキ如シ然ルニ當時驛遞事務ノ職ニ在リ深ク上司ノ意
 ヲ體認シ民ノ爲メニ便利ヲ覺ラシメ國益ヲ開カントノ
 意急ナルヲ以テ專斷シテ罪此ニ至リ其費用ノ金モ亦完
 償シテ始メヨリ自巳ノ利慾ニ涉ラサルヲ以テ　職制律
@@ -756,7 +757,7 @@
 ト誤認シ同察ニ行移シテ遂ニ之ヲ攺ムルニ至ル素ト當
 省書類ヲ點撿スルニ悉皆義轍ト誤寫シアルニ因ルト雖
 モ仍ホ如此疑件ハ之ヲ本人ニ質スヘキヲ質サヽルヲ以
-雜犯律條例　違式ノ輕ニ間擬シ懲役十日贖ヲ聽ス テ
+テ雜犯律條例　違式ノ輕ニ間擬シ懲役十日贖ヲ聽ス
 贖金一圓　中田憲信</div>
     
   </div>
@@ -1260,8 +1261,8 @@
 文餘　同上衣服二百二十二　同上雜品二百七十八
 捕縛セシ盜三十六人
 第五大區押込ニ遇九戶　火ヲ附燒カル二戶　疵ヲ受二
-奪ハル金三十三圓餘　同上衣服九　同上雜品十 人
-捕縛セシ强盜二人　窃盜ニ遇二百四十六　盜マ 二
+人奪ハル金三十三圓餘　同上衣服九　同上雜品十
+二捕縛セシ强盜二人　窃盜ニ遇二百四十六　盜マ
 ル金五百八十二圓餘　同上錢百九十七貫文餘　同上
 穀八斗　同上衣服四百二十七　同上雜品七百　捕縛
 セシ盜六十三人
@@ -1806,7 +1807,7 @@
 置相願度云々ノ書面差出ス所自分ニ於テ聊カ了解致シ
 難キ廉有之トテ其儘手元ニ留置ク科事上司ニ申スヘク
 シテ申セサル律ニ依リ懲役三十日ノ所官吏公罪贖罪例
-照シ贖罪金三圓申付ル 二
+ニ照シ贖罪金三圓申付ル
 第六大區六小區邏卒小頭助
 國分信房
 外四十人
@@ -2237,7 +2238,7 @@
 解部申合可相勤候猶難决事件ハ大坂裁判所長ノ指圖ヲ
 受可申事　大解部　犬塚重遠
 前同文〔但草野大解部申合ニ作ル〕</div>
-    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3691707.html#fuken_3691707-0041" class="text-blue-600 hover:underline xref-link">服部明　鳥取県史（鳥取県歴史）鳥取県官員履歴 (明治8・9年)</a></li><li><a href="https://person-archive.github.io/docs/3692209.html#fuken_3692209-0036" class="text-blue-600 hover:underline xref-link">服部明　豊岡県史 政治之部 官員履歴 (明治4‐8年)</a></li><li><a href="https://person-archive.github.io/docs/3693033.html#fuken_3693033-0013" class="text-blue-600 hover:underline xref-link">服部明　国史稿本 立庁以来官員任解進退辞令書2 (明治4‐7年)</a></li><li><a href="https://person-archive.github.io/docs/3691930.html#fuken_3691930-0162" class="text-blue-600 hover:underline xref-link">三羽明良　旧新川県誌稿 附録（旧富山県官員履歴）2 (明治2‐4年)</a></li><li><a href="https://person-archive.github.io/docs/3689135.html#fuken_3689135-0461" class="text-blue-600 hover:underline xref-link">野田直幹　長崎県史稿　政治部　履歴2（慶応4－明治13年）</a></li><li><a href="https://person-archive.github.io/docs/3691399.html#fuken_3691399-0011" class="text-blue-600 hover:underline xref-link">野田直幹　国史第四稿 石鉄県紀2 (明治4‐6年)</a></li><li><a href="https://person-archive.github.io/docs/3692669.html#fuken_3692669-0013" class="text-blue-600 hover:underline xref-link">草野允素　白川県国史5 附録（官員履歴）(明治4‐7年)</a></li><li><a href="https://person-archive.github.io/docs/3692798.html#fuken_3692798-0010" class="text-blue-600 hover:underline xref-link">草野允素　白川県国史 附録（八代県国史）（明治4‐6年）</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0316" class="text-blue-600 hover:underline xref-link">草野允素　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0346" class="text-blue-600 hover:underline xref-link">犬塚重遠　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
+    
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a04-074" data-type-base="裁判所申渡" data-pid="1366793" data-frame="66">
@@ -3439,7 +3440,7 @@
 贖金二圓廿五錢宛　長谷川國三郞
 外六人
 世三郞等ノ囑ニ應シ預切手ニ押印スルヲ以テ從ト爲シ
-等ラ減シ懲役二十日贖ヲ聽ス 一
+一等ラ減シ懲役二十日贖ヲ聽ス
 贖金一圓五十錢宛　德原彥六
 山名勘七</div>
     
@@ -3776,7 +3777,7 @@
 ヲ乞ハシムル者違式輕ニ擬シ懲役十日ノ所特典ニ依リ
 免罪
 正龍寺　圓備
-家共犯ノ罪卑幼ハ論セサル例ニ依リ 一
+一家共犯ノ罪卑幼ハ論セサル例ニ依リ
 免罪　圓精
 暴徒ヲ止宿セシムルト雖モ加茂百十ノ添書アリ路費金
 ヲ贈レトモ兇情ヲ知ラス
@@ -4305,7 +4306,7 @@
     <div class="font-semibold text-base mb-1">○</div>
     <div class="item-body text-base leading-relaxed">補警保寮十三等出仕　田中義郞
 補警保寮十四等出仕 〓 補 田</div>
-    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3692567.html#fuken_3692567-0145" class="text-blue-600 hover:underline xref-link">田中義郞　三重県史稿 制度部 官員履歴（甲・乙）(明治4‐7年)</a></li></ul></div>
+    
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a04-141" data-type-base="伺" data-pid="1366793" data-frame="130">
@@ -4995,7 +4996,7 @@
     <div class="font-semibold text-base mb-1">○第百四十二號布達</div>
     <div class="item-body text-base leading-relaxed">當省第九十九號布達人相書ノ內
 備中國下道郡陶村農
-森重右衞門 高
+高森重右衞門
 右ノ者儀於飾磨縣捕縛相成候段小田縣ヨリ屆出候條此
 旨及布達候事</div>
     
@@ -5233,7 +5234,7 @@
 喜兵衞ニ於ルカ如キ是ナリ監部撿事ヲシテ此事ヲ爲サ
 シメハ正院司法罰スルニ必ス至當ノ罪ヲ以テセン現ン
 ヤ人民便利ノ爲メニ設ル者ニシテ之ヲ爲ス驛遞寮罰ス
-ニ至當ノ罪ヲ以テセサルヲ得ス然ルニ却テ喜兵衛ノ ル
+ルニ至當ノ罪ヲ以テセサルヲ得ス然ルニ却テ喜兵衛ノ
 罪ヲ司法ニ聞フ其事ノ顚倒背馳將タ如何ソヤ朝廷民ノ
 爲メニ一事ヲ興スハ一害ヲ除ント欲シテナリ民ノ爲メ
 ニ利ヲ興サントシテ却テ民ヲ害ニ陷入スルカ如キハ豈
@@ -5346,7 +5347,7 @@
 捕縛セラル　雜犯律不應爲輕ニ間擬シ
 懲役三十日　若松準之助
 坐賍ヲ以テ論シ一等ヲ减スルノ罪ハ輕ニヨリ除棄
-酒食ノ代價ハ追シテ事主ニ給付ス ス</div>
+ス酒食ノ代價ハ追シテ事主ニ給付ス</div>
     
   </div>
 </section>
@@ -5517,7 +5518,7 @@
 ヲ經テ一次後ニ發シ及ヒ先キニ審結シテ賍ヲ盡サヽル
 者論决ノ後發覺スレハ倶ニ後發ノ賍ヲ以テ前賍ニ併セ
 罪加フヘキナケレハ論セス若シ併セテ重キ者ハ更ニ加
-テ全科スト有之首賍ノ本罪者一圓以下ニ付從賍ニ併 ヘ
+ヘテ全科スト有之首賍ノ本罪者一圓以下ニ付從賍ニ併
 セテ右ノ通九十一圓餘窃盗九十圓以上懲役三年然所首
 從ノ賍並發スルハ併セテ罪一等ヲ减スト云ニ依一等ヲ
 减シ懲役二年半ニ可處所前顯ノ賍ヲ以杖一百旣ニ明治
@@ -6273,7 +6274,7 @@
 待遇スヘシ然ルニ自巳他人ト說話アルヲ以テ强テ藤七
 ニ去ルヲ勸ム因テ相承壞シ傍人ノ勸阻ヲ聽カス剩サヘ
 追趕毆打シテ死ニ致ス理直ヲ以テ論スヘカラス　人命
-鬪毆及故殺條例　凡鬪毆人ヲ殺ス者ハ 律
+律鬪毆及故殺條例　凡鬪毆人ヲ殺ス者ハ
 懲役終身　門地龜吉</div>
     
   </div>
@@ -6838,7 +6839,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366793/1/209" target="_blank" rel="noopener">原本 コマ209 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○筑摩縣伺</div>
-    <div class="item-body text-base leading-relaxed">種規則違犯ノ者處分ノ儀譬ヘハ甲不正ノ原紙百枚ヲ 蠶
+    <div class="item-body text-base leading-relaxed">蠶種規則違犯ノ者處分ノ儀譬ヘハ甲不正ノ原紙百枚ヲ
 乙ヘ賣リ乙其紙ヘ濫製種ヲ仕付ケ又甲ヘ賣ル甲ハ其品
 丙ヘ賣リ後發覺スル時甲ハ不正ノ原紙ヲ賣ルノ科ニ濫
 製種買取ルノ科二罪倶ニ發スルヲ以一ノ科料多キ方ニ
@@ -7300,7 +7301,7 @@
 司法少丞兼權大撿事
 任司法大丞兼大撿事　河野敏鎌
 右本日　宣下相成候條此旨爲御心得申入候也</div>
-    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3692635.html#fuken_3692635-0027" class="text-blue-600 hover:underline xref-link">島本仲道　東京府史料 附録之部 履歴1（明治元‐8年）</a></li><li><a href="https://person-archive.github.io/docs/3693030.html#fuken_3693030-0011" class="text-blue-600 hover:underline xref-link">河野敏鎌　国史稿本 立庁以来官員任解進退辞令書1 (明治4‐7年)</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0029" class="text-blue-600 hover:underline xref-link">河野敏鎌　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
+    
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a04-236" data-type-base="article" data-pid="1366793" data-frame="225">
@@ -7812,7 +7813,7 @@
 右ノ者儀前書亂暴ノ節沼隈郡山手村戶長三谷儀三郞方
 ヘ放火燒燬ニ至ラスト雖モ始末不屆ニ付流三等可申付
 哉〔中畧〕御仕置之儀別帳口書幷始末書相添奉伺候以
-〔別帳等畧之〕 上
+上〔別帳等畧之〕
 明治五年壬申九月
 指令
 舊知事ノ出京ヲ抑留センカ爲メ多衆ヲ教唆シ官ニ强逼
@@ -7844,7 +7845,7 @@
 罪ヲ以テ　雜犯律　不應爲重ニ擬シ
 懲役七十日　河野才助
 兒徒衆ヲ聚メ村市ヲ毀壞燒亡スル者　賊盜律兒徒聚衆
-見徒ノ從ニシテ手ヲ下シ火ヲ放ツ者 條
+條　見徒ノ從ニシテ手ヲ下シ火ヲ放ツ者
 懲役十年宛　村上周平
 以下五人
 該犯附和隨行シ脅誘セラレテ火ヲ放ツト雖モ燒燬ニ至
@@ -7903,7 +7904,7 @@
     <div class="font-semibold text-base mb-1">○</div>
     <div class="item-body text-base leading-relaxed">補九等出仕
 後藤廣貞</div>
-    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3692631.html#fuken_3692631-0005" class="text-blue-600 hover:underline xref-link">後藤廣貞　北条県転免職員履歴書 (明治2‐6年)・旧津山藩職員履歴書・鶴田藩官員録・旧真島藩職員履歴書</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0329" class="text-blue-600 hover:underline xref-link">後藤廣貞　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
+    
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a04-255" data-type-base="伺" data-pid="1366793" data-frame="245">
@@ -8022,7 +8023,7 @@
 指令
 諸規則ヲ違犯シ科料金申付候節無力ニシテ上納難出來
 者ハ罰身代限ノ處分ニ止ル尤科料罰金等ハ尋常貸借ト
-事替リ候間一度身代限申付候上取上ヘキ身代無之者 モ
+モ事替リ候間一度身代限申付候上取上ヘキ身代無之者
 ハ其儘放免スヘシ以後身代持直シ候トモ再度取上ルニ
 不及事</div>
     
@@ -8319,7 +8320,7 @@
 スル科贓金二百四十圓ナルヲ以テ論シ懲役十年申付ル
 但シ二棟ノ長屋ハ先質入主吉川新太郞ヘ渡セ二重賣
 金二百四十圓ハ福島嘉兵衛ヘ償ヘ
-十棟ノ長屋ハ賣渡期限切ニ付吉川新太郞ヘ渡スヘシ 一
+一十棟ノ長屋ハ賣渡期限切ニ付吉川新太郞ヘ渡スヘシ
 東京本芝入橫町佐藤菊藏同
 居　佐々木朗
 神奈川縣管下戶部町海老塚
@@ -8659,7 +8660,7 @@
     <div class="font-semibold text-base mb-1">○三重縣伺</div>
     <div class="item-body text-base leading-relaxed">愛知縣管下尾張國中島郡丸淵村農總右衞門倅和十郞ナ
 ル者窃盜ノ科ニ依明治五年七月准流十年申付置候然ル
-元來黴毒有之本年三月頃ヨリハ一層相惱兩眼腐敗ニ ニ
+ニ元來黴毒有之本年三月頃ヨリハ一層相惱兩眼腐敗ニ
 至リ判然不愈ノ症ニ相見候ニ付徒限內老疾収贖例ニ依
 リ収贖可申付處父總右衛門貧窶無力ノ者ニテ納贖致シ
 兼候趣愛知縣ヨリ報知有之右ニ付改定律第三十一條ヲ
@@ -8783,7 +8784,7 @@
 其方共儀同村戶長木内佐兵衛外二人ヘ掛ル减租米不割
 戾出入新治縣小見川支廳於テ吟味受ル節其筋官員ヘ音
 物可差贈ト同縣貫属士族藤城幸利ヘ取續相賴金子差遣
-一件新治裁判所於テ可遂吟味間同所ヘ引渡シ遺ス ス
+ス一件新治裁判所於テ可遂吟味間同所ヘ引渡シ遺ス
 但差出置出入濟口證文ハ一件落着ノ上沙汰ニ及フ</div>
     
   </div>
@@ -9325,7 +9326,7 @@
 明治六年六月九日
 指令
 叔父ノ婦及ヒ從父弟ヲ謀殺ス　人命律謀殺祖父母父母
-三等親以下ノ尊長ヲ謀殺スル者 條
+條　三等親以下ノ尊長ヲ謀殺スル者
 淸水關十
 從父弟ヲ殺スハ罪輕キニ依テ論セス　該犯猾念ヲ
 逞シ前供ヲ翻異シ死ヲ訊杖下ニ决シテ招承ニ服セ
@@ -9498,7 +9499,7 @@
 吉長男　鈴木惣七
 右ハ別紙罪案ノ通窃盜三犯親属盜一犯併テ四犯ノ者ニ
 付賊盜律窃盜條例ニ照シ懲役終身可申付哉此段奉伺候
-罪案畧之〕 也
+也〔罪案畧之〕
 明治六年八月廿九日
 指令
 賊盜律　窃盜三犯五十圓以下
@@ -9971,8 +9972,8 @@
 仕候然ル所黨民共寓居留主中ヘ關八從者相撑候ヘ共何
 分多勢如何共難致書類並衣類家具扯裂粉韲或ハ燒却兼
 テ奉拜戴候別紙位記並任官宣旨共其節紛失色ヽ遂吟味
-候トモ所在難相分候間何卒情狀御洞察被成下今一通ツ ヘ
-下賜候樣奉願候就テハ倉卒間トハ乍申無申上譯次苐 ヽ
+ヘ候トモ所在難相分候間何卒情狀御洞察被成下今一通ツ
+ヽ下賜候樣奉願候就テハ倉卒間トハ乍申無申上譯次苐
 深重奉恐入候仍之如何相心得可申哉此段謹テ奉仰御裁
 下候以上
 明治六年六月廿五日　大分縣權令森下景端
@@ -10008,7 +10009,7 @@
 サレハ其罪ヲ論セス
 無罪　丹羽貫
 主典罪名ヲ誤寫スルヲ檢査ニ失シ遂ニ人罪ヲ失出スル
-罪原答ニ至ラサルヲ以テ其罪ヲ論セス モ
+モ罪原答ニ至ラサルヲ以テ其罪ヲ論セス
 無罪　籠手田安定
 榊原豐</div>
     
@@ -10038,7 +10039,7 @@
 致シ甚以粗漏之至何共奉恐縮候依テ進退之儀奉伺候也
 明治六年八月九日　大警視國分友諒
 擬律
-職制律　寮ノ文書ヲ施行スルニ失錯スル者ヲ以テ論 シ
+シ職制律　寮ノ文書ヲ施行スルニ失錯スル者ヲ以テ論
 懲役四十日例ニ依リ
 贖罪金六圓　國分友諒</div>
     
@@ -10084,7 +10085,7 @@
     <div class="font-semibold text-base mb-1">○若松縣伺</div>
     <div class="item-body text-base leading-relaxed">新紙幣見本廻達ノ際戶長手ニテ遺失スル者アリ右ハ戶
 婚律棄毀器物稼穡條官物ヲ遺失スル者ニ擬シ相當ト存
-候 共未ダ具備セズシテ行使相成リ難キ見本紙幣ナレ ヘ
+候ヘ共未ダ具備セズシテ行使相成リ難キ見本紙幣ナレ
 ハ流通紙幣ノ金位ヲ以テ賍ニ計ヘ難クト存候間右見本
 製造入費ヲ量リ賍ニ計ヘ可申儀ニ候哉此段相伺候也
 明治六年八月廿三日
@@ -10288,7 +10289,7 @@
     <div class="font-semibold text-base mb-1">○正誤</div>
     <div class="item-body text-base leading-relaxed">後第三十九號東京裁判所伺ノ指令第一條第二條ハ左ノ
 通改定ス
-苐 條　脫籍逃亡二年ヲ過ル者ハ除族ノ上祿ヲ收メ族 一
+苐一條　脫籍逃亡二年ヲ過ル者ハ除族ノ上祿ヲ收メ族
 ハ子孫ニ襲カシム故ニ二年外ノ犯罪ハ平民ト同シク
 處分ス可シ二罪倶發ヲ以テ論スル限ニアラス
 第二條　華士族若シ無祿ノ者ナレハ族ヲ復シテ贖罪セ
@@ -10458,7 +10459,7 @@
 戶主宗吉幼少ニシテ仍ホ家業ノ番人ヲ勤ムルヲ以テ池
 田繁次郎ヲ後見トシ同居シテ專ラ事務ヲ扱ハシムルニ
 依　名例律共犯罪分首從條　婦人ノ尊長ハ首タリト雖
-仍ホ卑幼ノ男夫ヲ坐スルノ例ニ依 モ
+モ仍ホ卑幼ノ男夫ヲ坐スルノ例ニ依
 靑木イト
 唯タ罪四納凉ニ夜行センコヲ請フニ一已ニ承諾セ
 シハ責ム可キニ似タリト雖モ主守既ニ檻ヲ出シ自
@@ -10556,7 +10557,7 @@
 右ノ者別紙罪案ノ通餘人ヨリ賴レ質入致シ置銀螢二分
 判窃ニ受戾シ賣拂フニ付其時價ヲ賍ニ計ヘ詐僞取財ノ
 條ニ依リ三百圓以上准流十年ニ機ス可キノ處原價二百
-十圓ニ五圓六十二錢五厘ノ利息ヲ添ヘ受出シ二百七 五
+五十圓ニ五圓六十二錢五厘ノ利息ヲ添ヘ受出シ二百七
 十五圓ニ賣拂フニ付其所得ノ剩利ハ十九圓三十七錢五
 厘ト相成原金ノ時價ヲ以テ全抵致シ滿流ニ處シ候テハ
 重二過キ候樣有之候ニ付違合律附例凡僞造ヲ以テ正眞
@@ -10673,7 +10674,7 @@
 﨑開農　小宮淸六
 右ノ者儀三潴縣ニ於テ懲役終身處刑中八月三十一日懲
 役塲致逃亡候條各地方ニ於テ嚴密遂搜索捕縛ノ上ハ同
-縣引渡其段可届出候此旨布達候事〔人相書畧之〕 ヘ
+縣ヘ引渡其段可届出候此旨布達候事〔人相書畧之〕
 但裁判所被置候府縣ハ見當次第致捕縛其地撿事局ヘ
 引渡其旨可届出候事</div>
     
@@ -10762,7 +10763,7 @@
 町商藤川榮次郎育
 藤川多三郎
 右ハ別紙罪案ノ通窃盜三犯賍五十圓以上ニ付改定窃盜
-ニヨリ懲役終身可申付哉此段奉伺候也〔罪案畧之〕 律
+律ニヨリ懲役終身可申付哉此段奉伺候也〔罪案畧之〕
 明治六年八月
 指令
 改定律例百三十五條　窃盜三犯五十圓以上
@@ -11051,6 +11052,38 @@ function revealHashTarget() {
 }
 window.addEventListener('hashchange', revealHashTarget);
 revealHashTarget();
+
+// 全文検索の結果から開かれたとき（?q=…）は、上端のリンクを「← 検索結果に戻る」にする。
+// 検索結果ページから来た場合は、目次などで移動して増えた履歴もまとめて遡って戻る
+// （検索結果のページ番号・スクロール位置がそのまま戻る）。別タブで開いた等で戻る先が無いときは同じ検索語で開き直す
+(function () {
+  var q = new URLSearchParams(location.search).get('q');
+  if (!q) return;
+  var link = document.getElementById('back-link');
+  link.textContent = '← 検索結果に戻る';
+  link.href = '../index.html#search?' + new URLSearchParams({ q: q });
+  var indexUrl = new URL('../index.html', location.href);
+  var fromSearch = false;
+  try {
+    var ref = new URL(document.referrer);
+    fromSearch = ref.origin === indexUrl.origin &&
+      (ref.pathname === indexUrl.pathname || ref.pathname === indexUrl.pathname.slice(0, -'index.html'.length));
+  } catch (e) {}
+  if (!fromSearch) return;
+  // このページに来てから増えた履歴の数を、各履歴の state に記録しておく
+  var depth = (history.state && history.state.backDepth) || 0;
+  history.replaceState(Object.assign({}, history.state, { backDepth: depth }), '');
+  window.addEventListener('hashchange', function () {
+    if (history.state && typeof history.state.backDepth === 'number') depth = history.state.backDepth;
+    else history.replaceState({ backDepth: ++depth }, '');
+  });
+  link.addEventListener('click', function (e) {
+    if (e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+    if (history.length <= depth + 1) return;
+    e.preventDefault();
+    history.go(-(depth + 1));
+  });
+})();
 </script>
 <script src="../source_viewer.js?v=0575b9d0" defer></script>
 <script src="../fulltext/fulltext.js?v=4efff4a2" defer></script>
