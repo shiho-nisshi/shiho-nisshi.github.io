@@ -52,6 +52,16 @@
 
 .browse-row-unavailable td { color: var(--muted); }
 
+/* スマホの幅では、巻の列（タイトルと同じ内容）を隠し、期間を「開始 〜」「終了」の2行にする
+   （そのままだと固定幅の列だけで画面が埋まり、タイトルの列が1文字幅になって縦長になる） */
+@media (max-width: 640px) {
+  .browse-table { font-size: 0.875rem; }
+  .browse-table th, .browse-table td { padding: 8px 6px; }
+  .browse-table .col-vol { display: none; }
+  .browse-table .col-count { width: 52px; }
+  .browse-table .col-period { width: 112px; }
+}
+
 /* ── 統計ページ（stats.html） ── */
 .stats-section { margin-bottom: 40px; }
 
