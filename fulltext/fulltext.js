@@ -15,7 +15,8 @@
  *   fts.restoreFromHash();   // URLが #search?q=… なら検索を復元して true を返す
  * 使い方（資料ページ）: 検索結果のリンクには ?q=… が付くので、開いた先で検索語を強調する
  *   FullTextSearch.highlightFromQuery({ base: '../fulltext/', root: '.doc-body' });
- * 人名アーカイブスの人物検索は openIndex / queryTerms / markHtml を使う（index.html 参照）。
+ * 人名アーカイブスの人物検索は openIndex / queryTerms / markHtml / snippetsHtml / injectStyle を使い、
+ * 検索欄・結果の見た目は司法省日誌の全文検索と同じ fts-* のクラスにしている（index.html 参照）。
  */
 (function () {
   'use strict';
@@ -551,9 +552,11 @@ mark.fts-hl { background: #fef08a; color: inherit; padding: 0 1px; border-radius
   window.FullTextSearch = {
     mount,
     highlightFromQuery,
-    // 人名アーカイブスの人物検索が同じ索引形式・正規化を使うための部品
+    // 人名アーカイブスの人物検索が同じ索引形式・正規化・結果の見た目（fts-* のクラス）を使うための部品
     openIndex: base => new Index(base),
     queryTerms,
     markHtml,
+    snippetsHtml,
+    injectStyle,
   };
 })();
