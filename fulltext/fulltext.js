@@ -478,8 +478,15 @@ mark.fts-hl { background: #fef08a; color: inherit; padding: 0 1px; border-radius
     }
 
     // 検索は Enter・検索ボタンのときだけ（入力中には検索しない）。
-    // 「×」で消したとき（search イベント）は結果を消して元の表示に戻す
-    form.addEventListener('submit', e => { e.preventDefault(); search(input.value); });
+    // 「×」で消したとき（search イベント）は結果を消して元の表示に戻す。
+    // 検索語はページに Google アナリティクス（gtag）があれば search イベントとして送る
+    // （URL からの復元・絞り込み・ページ送りでは送らない）
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const q = input.value.trim();
+      if (q && typeof gtag === 'function') gtag('event', 'search', { search_term: q });
+      search(input.value);
+    });
     input.addEventListener('search', () => { if (!input.value.trim()) clear(); });
 
     function restoreFromHash() {
