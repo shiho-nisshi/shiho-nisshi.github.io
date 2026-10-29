@@ -21,6 +21,13 @@
 </script>
 <style>
   .item-body { white-space: pre-wrap; word-break: break-all; }
+  /* 人事記事の「辞令　官職　氏名」（罫線なしの表） */
+  .jinji { border-collapse: collapse; }
+  .jinji td { padding: 0 1.5em 0 0; vertical-align: top; }
+  .jinji td:last-child { padding-right: 0; }
+  .jinji td:nth-child(3) { white-space: nowrap; }  /* 氏名は途中で折り返さない */
+  .jinji td[colspan] { padding-left: 1em; }  /* 氏名の後ろの辞令の文は、上の行の人の分と分かるよう1字下げる */
+  @media (max-width: 640px) { .jinji td { padding-right: 1em; } }
   @media print { .item { break-inside: avoid; } }
 
   /* 正誤対応の相互リンク・リンク先記事の強調 */
@@ -114,15 +121,19 @@
 </div>
 </details>
 
-<div class="bg-white border border-gray-200 rounded-lg p-3 mb-4 flex flex-wrap gap-3 items-center text-sm" id="type-filter">
+<div class="bg-white border border-gray-200 rounded-lg p-3 mb-4 text-sm" id="type-filter">
+<div class="flex flex-wrap gap-3 items-center">
 <span class="font-medium">表示する種別:</span>
-<label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="article">未分類（53）</label>
+<label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="article">未分類（52）</label>
 <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="伺">伺（231）</label>
 <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="布達">布達（12）</label>
-<label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="正誤">正誤（2）</label>
+<label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="正誤">正誤（3）</label>
 <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="裁判所申渡">裁判所申渡（7）</label>
-<button type="button" class="px-2 py-0.5 rounded text-xs font-medium hover:bg-gray-100" id="type-filter-all">全選択</button>
-<button type="button" class="px-2 py-0.5 rounded text-xs font-medium hover:bg-gray-100" id="type-filter-none">全解除</button>
+</div>
+<div class="flex gap-2 mt-2">
+<button type="button" class="px-2 py-0.5 rounded text-xs font-medium hover:bg-gray-100 border border-gray-300" id="type-filter-all">全選択</button>
+<button type="button" class="px-2 py-0.5 rounded text-xs font-medium hover:bg-gray-100 border border-gray-300" id="type-filter-none">全解除</button>
+</div>
 </div>
 <script>
 (function () {
@@ -4964,11 +4975,11 @@
     
   </div>
 </section>
-<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a01-148" data-type-base="article" data-pid="1366790" data-frame="181">
+<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a01-148" data-type-base="正誤" data-pid="1366790" data-frame="181">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
       <a href="#a01-148" class="inline-block px-2 rounded-full bg-gray-800 text-xs leading-5 text-white hover:bg-gray-700" title="この記事へのリンク">a01-148</a>
-      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">article</span>
+      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">正誤</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">明治6年第17号</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1873-01-22</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">16頁</span>

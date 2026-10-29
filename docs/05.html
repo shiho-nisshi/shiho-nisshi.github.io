@@ -21,6 +21,13 @@
 </script>
 <style>
   .item-body { white-space: pre-wrap; word-break: break-all; }
+  /* 人事記事の「辞令　官職　氏名」（罫線なしの表） */
+  .jinji { border-collapse: collapse; }
+  .jinji td { padding: 0 1.5em 0 0; vertical-align: top; }
+  .jinji td:last-child { padding-right: 0; }
+  .jinji td:nth-child(3) { white-space: nowrap; }  /* 氏名は途中で折り返さない */
+  .jinji td[colspan] { padding-left: 1em; }  /* 氏名の後ろの辞令の文は、上の行の人の分と分かるよう1字下げる */
+  @media (max-width: 640px) { .jinji td { padding-right: 1em; } }
   @media print { .item { break-inside: avoid; } }
 
   /* 正誤対応の相互リンク・リンク先記事の強調 */
@@ -96,16 +103,20 @@
 </div>
 </details>
 
-<div class="bg-white border border-gray-200 rounded-lg p-3 mb-4 flex flex-wrap gap-3 items-center text-sm" id="type-filter">
+<div class="bg-white border border-gray-200 rounded-lg p-3 mb-4 text-sm" id="type-filter">
+<div class="flex flex-wrap gap-3 items-center">
 <span class="font-medium">表示する種別:</span>
 <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="article">未分類（87）</label>
-<label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="人事">人事（31）</label>
+<label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="人事">人事（30）</label>
 <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="伺">伺（186）</label>
 <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="布達">布達（17）</label>
-<label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="正誤">正誤（4）</label>
+<label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="正誤">正誤（5）</label>
 <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="裁判所申渡">裁判所申渡（4）</label>
-<button type="button" class="px-2 py-0.5 rounded text-xs font-medium hover:bg-gray-100" id="type-filter-all">全選択</button>
-<button type="button" class="px-2 py-0.5 rounded text-xs font-medium hover:bg-gray-100" id="type-filter-none">全解除</button>
+</div>
+<div class="flex gap-2 mt-2">
+<button type="button" class="px-2 py-0.5 rounded text-xs font-medium hover:bg-gray-100 border border-gray-300" id="type-filter-all">全選択</button>
+<button type="button" class="px-2 py-0.5 rounded text-xs font-medium hover:bg-gray-100 border border-gray-300" id="type-filter-none">全解除</button>
+</div>
 </div>
 <script>
 (function () {
@@ -168,8 +179,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366794/1/2" target="_blank" rel="noopener">原本 コマ2 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">任大撿部　十一等出仕　今井良一
-任司法權少属　十四等出仕　山內豁朗</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>任大撿部</td><td>十一等出仕</td><td>今井良一</td></tr><tr><td>任司法權少属</td><td>十四等出仕</td><td>山內豁朗</td></tr></table></div>
     
   </div>
 </section>
@@ -202,16 +212,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366794/1/2" target="_blank" rel="noopener">原本 コマ2 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">任權少撿事　大撿部　平川楨
-任中觧部　權中觧部　豐原基臣
-同　同　中原正道
-任司法少属　權少属　大塚尙
-任少觧部　權少解部　唐木一精
-任權少解部　十三等出仕　野間實
-任司法權少属　同　岩原性一
-任權大解部　中解部　家永恭種
-任中撿部　十三等出仕　金田淸次郞
-任司法權少属　十四等出仕　大村信三</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>任權少撿事</td><td>大撿部</td><td>平川楨</td></tr><tr><td>任中觧部</td><td>權中觧部</td><td>豐原基臣</td></tr><tr><td>同</td><td>同</td><td>中原正道</td></tr><tr><td>任司法少属</td><td>權少属</td><td>大塚尙</td></tr><tr><td>任少觧部</td><td>權少解部</td><td>唐木一精</td></tr><tr><td>任權少解部</td><td>十三等出仕</td><td>野間實</td></tr><tr><td>任司法權少属</td><td>同</td><td>岩原性一</td></tr><tr><td>任權大解部</td><td>中解部</td><td>家永恭種</td></tr><tr><td>任中撿部</td><td>十三等出仕</td><td>金田淸次郞</td></tr><tr><td>任司法權少属</td><td>十四等出仕</td><td>大村信三</td></tr></table></div>
     <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3693030.html#fuken_3693030-0108" class="text-blue-600 hover:underline xref-link">平川楨　国史稿本 立庁以来官員任解進退辞令書1 (明治4‐7年)</a></li><li><a href="https://person-archive.github.io/docs/3693306.html#fuken_3693306-0062" class="text-blue-600 hover:underline xref-link">中原正道　旧新治県官員履歴 (明治4‐8年)</a></li><li><a href="https://person-archive.github.io/docs/3693306.html#fuken_3693306-0051" class="text-blue-600 hover:underline xref-link">唐木一精　旧新治県官員履歴 (明治4‐8年)</a></li><li><a href="https://person-archive.github.io/docs/3691811.html#fuken_3691811-0180" class="text-blue-600 hover:underline xref-link">岩原性一　石川県誌稿 附録 旧金沢県官員履歴1 (明治2‐4年)</a></li><li><a href="https://person-archive.github.io/docs/3692946.html#fuken_3692946-0180" class="text-blue-600 hover:underline xref-link">岩原性一　石川県誌稿 附録 旧金沢県官員履歴1 (明治元‐4年)</a></li><li><a href="https://person-archive.github.io/docs/3691832.html#fuken_3691832-0019" class="text-blue-600 hover:underline xref-link">家永恭種　旧佐賀県史稿 附録 官員履歴 上（明治2‐8年）</a></li></ul></div>
   </div>
 </section>
@@ -265,8 +266,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366794/1/3" target="_blank" rel="noopener">原本 コマ3 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">任大撿部　十一等出仕　前島道基
-任權中解部　少解部　兒玉親廣</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>任大撿部</td><td>十一等出仕</td><td>前島道基</td></tr><tr><td>任權中解部</td><td>少解部</td><td>兒玉親廣</td></tr></table></div>
     <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3691247.html#fuken_3691247-0028" class="text-blue-600 hover:underline xref-link">前島道基　浦和県職員録 (明治2‐4年)</a></li><li><a href="https://person-archive.github.io/docs/3691238.html#fuken_3691238-0049" class="text-blue-600 hover:underline xref-link">兒玉親廣　官員履歴（第2輯）(明治8‐12年)</a></li></ul></div>
   </div>
 </section>
@@ -803,7 +803,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366794/1/18" target="_blank" rel="noopener">原本 コマ18 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1"></div>
-    <div class="item-body text-base leading-relaxed">任權大解部　中解部　田尻彥太郞</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>任權大解部</td><td>中解部</td><td>田尻彥太郞</td></tr></table></div>
     <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3692800.html#fuken_3692800-0136" class="text-blue-600 hover:underline xref-link">田尻彥太郞　熊本県国史 下 制度部・官員履歴 (明治14年)</a></li><li><a href="https://person-archive.github.io/docs/3692805.html#fuken_3692805-0159" class="text-blue-600 hover:underline xref-link">田尻彥太郞　熊本県国史 下 制度部・官員履歴 (明治16年)</a></li></ul></div>
   </div>
 </section>
@@ -1066,9 +1066,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366794/1/24" target="_blank" rel="noopener">原本 コマ24 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">任少解部　權少解部　足立隆則
-任司法權少属　十四等出仕　鴻巢盛雄
-補十四等出仕　十五等出仕　正田爲重</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>任少解部</td><td>權少解部</td><td>足立隆則</td></tr><tr><td>任司法權少属</td><td>十四等出仕</td><td>鴻巢盛雄</td></tr><tr><td>補十四等出仕</td><td>十五等出仕</td><td>正田爲重</td></tr></table></div>
     <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3691153.html#fuken_3691153-0071" class="text-blue-600 hover:underline xref-link">足立隆則　栃木県史附録 日光県史 附録 官員履歴 (明治元‐4年)</a></li><li><a href="https://person-archive.github.io/docs/3691542.html#fuken_3691542-0053" class="text-blue-600 hover:underline xref-link">足立隆則　栃木県史材料 制度部 官員履歴 (明治5‐7年)</a></li><li><a href="https://person-archive.github.io/docs/3691909.html#fuken_3691909-0074" class="text-blue-600 hover:underline xref-link">正田爲重　杤木縣史附録 宇都宮県史 官員履歴 (明治4‐6年)</a></li></ul></div>
   </div>
 </section>
@@ -1288,8 +1286,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366794/1/29" target="_blank" rel="noopener">原本 コマ29 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">任少警部　警保寮十四等出仕　柳田養拙
-任中解部　大撿部　窪田盛明</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>任少警部</td><td>警保寮十四等出仕</td><td>柳田養拙</td></tr><tr><td>任中解部</td><td>大撿部</td><td>窪田盛明</td></tr></table></div>
     
   </div>
 </section>
@@ -2159,20 +2156,15 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366794/1/53" target="_blank" rel="noopener">原本 コマ53 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">任大解部　大錄　高見保益
-依願免本官　少撿事　篠崎依眞
-明法權大属　今泉利春
-同
-任大撿部　明法中属　小菅榮脩
-補十等出仕　小倉縣中属　長井高明</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>任大解部</td><td>大錄</td><td>高見保益</td></tr><tr><td>依願免本官</td><td>少撿事</td><td>篠崎依眞</td></tr><tr><td>同</td><td>明法權大属</td><td>今泉利春</td></tr><tr><td>任大撿部</td><td>明法中属</td><td>小菅榮脩</td></tr><tr><td>補十等出仕</td><td>小倉縣中属</td><td>長井高明</td></tr></table></div>
     <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3688629.html#fuken_3688629-0018" class="text-blue-600 hover:underline xref-link">今泉利春　旧佐賀県史稿　制度之部　禁令・官員履歴（明治8・9年）</a></li><li><a href="https://person-archive.github.io/docs/3691832.html#fuken_3691832-0018" class="text-blue-600 hover:underline xref-link">今泉利春　旧佐賀県史稿 附録 官員履歴 上（明治2‐8年）</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0390" class="text-blue-600 hover:underline xref-link">小菅榮脩　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
   </div>
 </section>
-<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a05-070" data-type-base="人事" data-pid="1366794" data-frame="53">
+<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a05-070" data-type-base="正誤" data-pid="1366794" data-frame="53">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
       <a href="#a05-070" class="inline-block px-2 rounded-full bg-gray-800 text-xs leading-5 text-white hover:bg-gray-700" title="この記事へのリンク">a05-070</a>
-      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">人事</span>
+      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">正誤</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">明治7年第5号</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1874-01-13</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">20頁</span>
@@ -2571,7 +2563,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366794/1/63" target="_blank" rel="noopener">原本 コマ63 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1"></div>
-    <div class="item-body text-base leading-relaxed">免兼官　少警視兼逮部長　林三介</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>免兼官</td><td>少警視兼逮部長</td><td>林三介</td></tr></table></div>
     <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3692990.html#fuken_3692990-0011" class="text-blue-600 hover:underline xref-link">林三介　飾磨県史 政治之部 官員履歴 (明治4‐9年)</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0353" class="text-blue-600 hover:underline xref-link">林三介　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
   </div>
 </section>
@@ -2980,10 +2972,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366794/1/72" target="_blank" rel="noopener">原本 コマ72 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">任中解部　十等出仕　立見尙文
-任少撿事　權少撿事　人見恒民
-任權大撿部　中撿部　工藤則勝
-十三等出仕彭 權中撿部 同 吉 資 莊 倫 有 淸 直 城 種 弘</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>任中解部</td><td>十等出仕</td><td>立見尙文</td></tr><tr><td>任少撿事</td><td>權少撿事</td><td>人見恒民</td></tr><tr><td>任權大撿部</td><td>中撿部</td><td>工藤則勝</td></tr><tr><td colspan="3">十三等出仕彭 權中撿部 同 吉 資 莊 倫 有 淸 直 城 種 弘</td></tr></table></div>
     <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3692567.html#fuken_3692567-0031" class="text-blue-600 hover:underline xref-link">立見尙文　三重県史稿 制度部 官員履歴（甲・乙）(明治4‐7年)</a></li><li><a href="https://person-archive.github.io/docs/3692569.html#fuken_3692569-0004" class="text-blue-600 hover:underline xref-link">立見尙文　三重県史稿 旧県部 桑名県 (明治2‐4年)</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-3101" class="text-blue-600 hover:underline xref-link">立見尙文　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0609" class="text-blue-600 hover:underline xref-link">人見恒民　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0416" class="text-blue-600 hover:underline xref-link">工藤則勝　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
   </div>
 </section>
@@ -3001,13 +2990,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366794/1/72" target="_blank" rel="noopener">原本 コマ72 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">任司法少屬
-任中撿部
-同
-依願免本官　權中屬　關本寅
-補十三等出仕 外 雅 田 明
-任少撿部　十五等出仕　中村義行
-任少解部　權少解部　中山有應</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>任司法少屬</td><td></td><td></td></tr><tr><td>任中撿部</td><td></td><td></td></tr><tr><td>同</td><td></td><td></td></tr><tr><td>依願免本官</td><td>權中屬</td><td>關本寅</td></tr><tr><td colspan="3">補十三等出仕 外 雅 田 明</td></tr><tr><td>任少撿部</td><td>十五等出仕</td><td>中村義行</td></tr><tr><td>任少解部</td><td>權少解部</td><td>中山有應</td></tr></table></div>
     <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3691153.html#fuken_3691153-0031" class="text-blue-600 hover:underline xref-link">中山有應　栃木県史附録 日光県史 附録 官員履歴 (明治元‐4年)</a></li><li><a href="https://person-archive.github.io/docs/3691542.html#fuken_3691542-0034" class="text-blue-600 hover:underline xref-link">中山有應　栃木県史材料 制度部 官員履歴 (明治5‐7年)</a></li></ul></div>
   </div>
 </section>
@@ -3025,39 +3008,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366794/1/72" target="_blank" rel="noopener">原本 コマ72 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">小野田元熙
-任警保權大屬　司法中錄　佐和正
-任權少警部　警保寮十五等出仕　今井義元
-一等巡查　松本美凱
-同　同　比企福造
-同
-同　大庭知榮
-依願免本官　大警部　池端淸秀
-同幷兼官　同兼權大撿部　古川將信
-依願免本官　權大警部　竹下祐德
-同幷兼官　同兼中撿部　上田義巷
-同　同　中馬淸秋
-同　同　佐藤信義
-依願免本官　權大警部　帖佐惟精
-同　同　國分友實
-同　同　鈴木恭信
-同幷兼官　少警部兼權中撿部　森靜枝
-依願免本官　少警部　中原尙雄
-同　同　大津雄輔
-同　同　大浦兼武
-同　同　伊知地季明
-同　同　白石幸意
-同　上田義精
-同　同　山下義兼
-同　同　永田行義
-權少警部　山本長周
-同　池田吉左衛門
-同　宮內康寧
-同　權少撿部　藤井邦彥
-任少撿部
-免兼官 同
-少警視兼逮部長　綿貫吉直
-同　渥美友成</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td></td><td>小野田元熙</td></tr><tr><td>任警保權大屬</td><td>司法中錄</td><td>佐和正</td></tr><tr><td>任權少警部</td><td>警保寮十五等出仕</td><td>今井義元</td></tr><tr><td></td><td>一等巡查</td><td>松本美凱</td></tr><tr><td>同</td><td>同</td><td>比企福造</td></tr><tr><td>同</td><td></td><td></td></tr><tr><td>同</td><td></td><td>大庭知榮</td></tr><tr><td>依願免本官</td><td>大警部</td><td>池端淸秀</td></tr><tr><td>同幷兼官</td><td>同兼權大撿部</td><td>古川將信</td></tr><tr><td>依願免本官</td><td>權大警部</td><td>竹下祐德</td></tr><tr><td>同幷兼官</td><td>同兼中撿部</td><td>上田義巷</td></tr><tr><td>同</td><td>同</td><td>中馬淸秋</td></tr><tr><td>同</td><td>同</td><td>佐藤信義</td></tr><tr><td>依願免本官</td><td>權大警部</td><td>帖佐惟精</td></tr><tr><td>同</td><td>同</td><td>國分友實</td></tr><tr><td>同</td><td>同</td><td>鈴木恭信</td></tr><tr><td>同幷兼官</td><td>少警部兼權中撿部</td><td>森靜枝</td></tr><tr><td>依願免本官</td><td>少警部</td><td>中原尙雄</td></tr><tr><td>同</td><td>同</td><td>大津雄輔</td></tr><tr><td>同</td><td>同</td><td>大浦兼武</td></tr><tr><td>同</td><td>同</td><td>伊知地季明</td></tr><tr><td>同</td><td>同</td><td>白石幸意</td></tr><tr><td>同</td><td></td><td>上田義精</td></tr><tr><td>同</td><td>同</td><td>山下義兼</td></tr><tr><td>同</td><td>同</td><td>永田行義</td></tr><tr><td></td><td>權少警部</td><td>山本長周</td></tr><tr><td>同</td><td></td><td>池田吉左衛門</td></tr><tr><td>同</td><td></td><td>宮內康寧</td></tr><tr><td>同</td><td>權少撿部</td><td>藤井邦彥</td></tr><tr><td>任少撿部</td><td></td><td></td></tr><tr><td colspan="3">免兼官 同</td></tr><tr><td></td><td>少警視兼逮部長</td><td>綿貫吉直</td></tr><tr><td>同</td><td></td><td>渥美友成</td></tr></table></div>
     <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0168" class="text-blue-600 hover:underline xref-link">佐和正　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-3938" class="text-blue-600 hover:underline xref-link">比企福造　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/3691683.html#fuken_3691683-0025" class="text-blue-600 hover:underline xref-link">池端淸秀　石川県誌稿 附録 官員履歴7 (明治元‐17年)</a></li><li><a href="https://person-archive.github.io/docs/3692589.html#fuken_3692589-0404" class="text-blue-600 hover:underline xref-link">上田義巷　兵庫県史 政治之部 官員履歴 (明治元‐13年)</a></li><li><a href="https://person-archive.github.io/docs/3692589.html#fuken_3692589-0024" class="text-blue-600 hover:underline xref-link">佐藤信義　兵庫県史 政治之部 官員履歴 (明治元‐13年)</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-3961" class="text-blue-600 hover:underline xref-link">大浦兼武　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-3896" class="text-blue-600 hover:underline xref-link">綿貫吉直　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0170" class="text-blue-600 hover:underline xref-link">渥美友成　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
   </div>
 </section>
@@ -3098,8 +3049,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366794/1/74" target="_blank" rel="noopener">原本 コマ74 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">田中冬藏
-補十二等出仕　柴田熙一</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td></td><td>田中冬藏</td></tr><tr><td>補十二等出仕</td><td></td><td>柴田熙一</td></tr></table></div>
     
   </div>
 </section>
@@ -3496,7 +3446,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366794/1/84" target="_blank" rel="noopener">原本 コマ84 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">補十二等出仕　權大講義　鹽川廣平</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>補十二等出仕</td><td>權大講義</td><td>鹽川廣平</td></tr></table></div>
     
   </div>
 </section>
@@ -3897,15 +3847,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366794/1/93" target="_blank" rel="noopener">原本 コマ93 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">免兼官
-仕兼大撿部 眞倫
-同　山下房親
-同　同　村田義直
-同　同　林精政
-同　川上重行
-同　同　橫山貞固
-同　同　白上貫之
-同　同　東鄕實安</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>免兼官</td><td></td><td></td></tr><tr><td colspan="3">仕兼大撿部 眞倫</td></tr><tr><td>同</td><td></td><td>山下房親</td></tr><tr><td>同</td><td>同</td><td>村田義直</td></tr><tr><td>同</td><td>同</td><td>林精政</td></tr><tr><td>同</td><td></td><td>川上重行</td></tr><tr><td>同</td><td>同</td><td>橫山貞固</td></tr><tr><td>同</td><td>同</td><td>白上貫之</td></tr><tr><td>同</td><td>同</td><td>東鄕實安</td></tr></table></div>
     <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0185" class="text-blue-600 hover:underline xref-link">山下房親　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/3692047.html#fuken_3692047-0012" class="text-blue-600 hover:underline xref-link">川上重行　滋賀県史（2編）附録部 官員履歴7 (明治8‐10年)</a></li><li><a href="https://person-archive.github.io/docs/3692049.html#fuken_3692049-0011" class="text-blue-600 hover:underline xref-link">川上重行　滋賀県史（2編）附録部 官員履歴4 (明治8‐10年)</a></li></ul></div>
   </div>
 </section>
@@ -3925,7 +3867,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366794/1/94" target="_blank" rel="noopener">原本 コマ94 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">依願免出仕　十一等出仕　持永義方</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>依願免出仕</td><td>十一等出仕</td><td>持永義方</td></tr></table></div>
     <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3688629.html#fuken_3688629-0040" class="text-blue-600 hover:underline xref-link">持永義方　旧佐賀県史稿　制度之部　禁令・官員履歴（明治8・9年）</a></li><li><a href="https://person-archive.github.io/docs/3691832.html#fuken_3691832-0026" class="text-blue-600 hover:underline xref-link">持永義方　旧佐賀県史稿 附録 官員履歴 上（明治2‐8年）</a></li><li><a href="https://person-archive.github.io/docs/3692672.html#fuken_3692672-0129" class="text-blue-600 hover:underline xref-link">持永義方　熊本県国史 下 制度部・官員履歴（明治10年）</a></li><li><a href="https://person-archive.github.io/docs/3692800.html#fuken_3692800-0142" class="text-blue-600 hover:underline xref-link">持永義方　熊本県国史 下 制度部・官員履歴 (明治14年)</a></li><li><a href="https://person-archive.github.io/docs/3692805.html#fuken_3692805-0088" class="text-blue-600 hover:underline xref-link">持永義方　熊本県国史 下 制度部・官員履歴 (明治16年)</a></li><li><a href="https://person-archive.github.io/docs/3692810.html#fuken_3692810-0103" class="text-blue-600 hover:underline xref-link">持永義方　熊本県史 官員履歴 (明治17年)</a></li></ul></div>
   </div>
 </section>
@@ -3986,12 +3928,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366794/1/95" target="_blank" rel="noopener">原本 コマ95 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">任權少撿事　十等出仕　益田勇
-任中撿部　權大警部　池月眞澄
-任少撿部　權少撿部　山本守時
-免出仕　十三等出仕　大塚雄顯
-任中解部　十等出仕　橋本源之助
-中撿部 少撿事 權少撿事益 山 田 田 小太郞 勇 崎 强 八</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>任權少撿事</td><td>十等出仕</td><td>益田勇</td></tr><tr><td>任中撿部</td><td>權大警部</td><td>池月眞澄</td></tr><tr><td>任少撿部</td><td>權少撿部</td><td>山本守時</td></tr><tr><td>免出仕</td><td>十三等出仕</td><td>大塚雄顯</td></tr><tr><td>任中解部</td><td>十等出仕</td><td>橋本源之助</td></tr><tr><td colspan="3">中撿部 少撿事 權少撿事益 山 田 田 小太郞 勇 崎 强 八</td></tr></table></div>
     <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0433" class="text-blue-600 hover:underline xref-link">益田勇　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
   </div>
 </section>
@@ -4054,17 +3991,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366794/1/96" target="_blank" rel="noopener">原本 コマ96 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">任權中撿部　權少解部　古谷宜福
-任權中解部　少解部　永田知忠
-同　同　坂本祥明
-任少解部　十二等出仕　三和國雄
-任權中屬　少屬　中井守純
-免本官　權少觧部　山本義隆
-任權少觧部　十四等出仕　平野萬里
-補十四等出仕　十五等出仕　太田義抄
-免出仕　同　猪頭嘉德
-補十四等出仕　同　大八木常正
-同　同　岡崎繁</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>任權中撿部</td><td>權少解部</td><td>古谷宜福</td></tr><tr><td>任權中解部</td><td>少解部</td><td>永田知忠</td></tr><tr><td>同</td><td>同</td><td>坂本祥明</td></tr><tr><td>任少解部</td><td>十二等出仕</td><td>三和國雄</td></tr><tr><td>任權中屬</td><td>少屬</td><td>中井守純</td></tr><tr><td>免本官</td><td>權少觧部</td><td>山本義隆</td></tr><tr><td>任權少觧部</td><td>十四等出仕</td><td>平野萬里</td></tr><tr><td>補十四等出仕</td><td>十五等出仕</td><td>太田義抄</td></tr><tr><td>免出仕</td><td>同</td><td>猪頭嘉德</td></tr><tr><td>補十四等出仕</td><td>同</td><td>大八木常正</td></tr><tr><td>同</td><td>同</td><td>岡崎繁</td></tr></table></div>
     <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3692687.html#fuken_3692687-0234" class="text-blue-600 hover:underline xref-link">坂本祥明　秋田県史稿　附録　官員履歴（明治5‐7年）</a></li><li><a href="https://person-archive.github.io/docs/3688580.html#fuken_3688580-0092" class="text-blue-600 hover:underline xref-link">三和國雄　〔大坂府史〕制度部 官員進退 (明治元‐8年)</a></li><li><a href="https://person-archive.github.io/docs/3689124.html#fuken_3689124-0028" class="text-blue-600 hover:underline xref-link">三和國雄　大阪府政治編輯稿本 (明治11年)</a></li><li><a href="https://person-archive.github.io/docs/3688580.html#fuken_3688580-0039" class="text-blue-600 hover:underline xref-link">中井守純　〔大坂府史〕制度部 官員進退 (明治元‐8年)</a></li><li><a href="https://person-archive.github.io/docs/3688580.html#fuken_3688580-0056" class="text-blue-600 hover:underline xref-link">山本義隆　〔大坂府史〕制度部 官員進退 (明治元‐8年)</a></li><li><a href="https://person-archive.github.io/docs/3692219.html#fuken_3692219-0144" class="text-blue-600 hover:underline xref-link">山本義隆　和歌山県史案（第1編）　附録　県官履歴（明治4‐13年）</a></li><li><a href="https://person-archive.github.io/docs/3691266.html#fuken_3691266-0014" class="text-blue-600 hover:underline xref-link">岡崎繁　徳島県歴史 徳島県官吏履歴 (明治15年)</a></li></ul></div>
   </div>
 </section>
@@ -4506,7 +4433,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366794/1/107" target="_blank" rel="noopener">原本 コマ107 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">依願免本官　中撿部　池月眞澄</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>依願免本官</td><td>中撿部</td><td>池月眞澄</td></tr></table></div>
     
   </div>
 </section>
@@ -5858,10 +5785,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366794/1/136" target="_blank" rel="noopener">原本 コマ136 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">免本官專任權大撿部　大警部兼權大撿部　吉國祐恆
-免兼官　同　淺海誠一
-同　同　富澤僚
-同　同　永澤正常</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>免本官專任權大撿部</td><td>大警部兼權大撿部</td><td>吉國祐恆</td></tr><tr><td>免兼官</td><td>同</td><td>淺海誠一</td></tr><tr><td>同</td><td>同</td><td>富澤僚</td></tr><tr><td>同</td><td>同</td><td>永澤正常</td></tr></table></div>
     <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0179" class="text-blue-600 hover:underline xref-link">永澤正常　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
   </div>
 </section>
@@ -6417,8 +6341,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366794/1/149" target="_blank" rel="noopener">原本 コマ149 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1"></div>
-    <div class="item-body text-base leading-relaxed">任權少解部　十四等出仕　梅澤義道
-十五等出仕　石川重立</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>任權少解部</td><td>十四等出仕</td><td>梅澤義道</td></tr><tr><td></td><td>十五等出仕</td><td>石川重立</td></tr></table></div>
     
   </div>
 </section>
@@ -6642,16 +6565,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366794/1/153" target="_blank" rel="noopener">原本 コマ153 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">免兼官　中川祐順
-同　山本正幹
-同　同　毛利元一
-同　同　吉岡保道
-同　同　川畑種長
-同　同　大竹幹
-同　少警部兼權中撿部　吉田重郞
-同　少警視兼逮部長　檜部直枝
-同　同　神足勘十郞
-同　權少警視兼逮部長　津川顯藏</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>免兼官</td><td></td><td>中川祐順</td></tr><tr><td>同</td><td></td><td>山本正幹</td></tr><tr><td>同</td><td>同</td><td>毛利元一</td></tr><tr><td>同</td><td>同</td><td>吉岡保道</td></tr><tr><td>同</td><td>同</td><td>川畑種長</td></tr><tr><td>同</td><td>同</td><td>大竹幹</td></tr><tr><td>同</td><td>少警部兼權中撿部</td><td>吉田重郞</td></tr><tr><td>同</td><td>少警視兼逮部長</td><td>檜部直枝</td></tr><tr><td>同</td><td>同</td><td>神足勘十郞</td></tr><tr><td>同</td><td>權少警視兼逮部長</td><td>津川顯藏</td></tr></table></div>
     <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-3911" class="text-blue-600 hover:underline xref-link">中川祐順　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-3940" class="text-blue-600 hover:underline xref-link">山本正幹　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-3922" class="text-blue-600 hover:underline xref-link">川畑種長　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-3960" class="text-blue-600 hover:underline xref-link">津川顯藏　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
   </div>
 </section>
@@ -6872,7 +6786,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366794/1/158" target="_blank" rel="noopener">原本 コマ158 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">任權大解部　權大錄　村田保</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>任權大解部</td><td>權大錄</td><td>村田保</td></tr></table></div>
     <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0047" class="text-blue-600 hover:underline xref-link">村田保　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
   </div>
 </section>
@@ -7274,21 +7188,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366794/1/167" target="_blank" rel="noopener">原本 コマ167 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">補十一等出仕　磯野恒德
-任權中解部　少解部　村上良親
-任司法權大属　九等出仕　工藤助作
-任中解部　權中解部　佐藤信發
-任司法權中属　十一等出仕　小田切敬
-任少解部　權少解部　日比野迪吉
-同　同　三村正立
-同　同　山崎鑑吉
-任權少解部　十三等出仕　柴田利邦
-同　十四等出仕　坂本七三郞
-補十四等出仕　十五等出仕　原田寛信
-補十五等出仕　等外一等出仕　稻葉俊辰
-同　同　吉野榮信
-任權大解部　中解部　田中義忠
-任司法權少属　十四等出仕　松崎朝益</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>補十一等出仕</td><td></td><td>磯野恒德</td></tr><tr><td>任權中解部</td><td>少解部</td><td>村上良親</td></tr><tr><td>任司法權大属</td><td>九等出仕</td><td>工藤助作</td></tr><tr><td>任中解部</td><td>權中解部</td><td>佐藤信發</td></tr><tr><td>任司法權中属</td><td>十一等出仕</td><td>小田切敬</td></tr><tr><td>任少解部</td><td>權少解部</td><td>日比野迪吉</td></tr><tr><td>同</td><td>同</td><td>三村正立</td></tr><tr><td>同</td><td>同</td><td>山崎鑑吉</td></tr><tr><td>任權少解部</td><td>十三等出仕</td><td>柴田利邦</td></tr><tr><td>同</td><td>十四等出仕</td><td>坂本七三郞</td></tr><tr><td>補十四等出仕</td><td>十五等出仕</td><td>原田寛信</td></tr><tr><td>補十五等出仕</td><td>等外一等出仕</td><td>稻葉俊辰</td></tr><tr><td>同</td><td>同</td><td>吉野榮信</td></tr><tr><td>任權大解部</td><td>中解部</td><td>田中義忠</td></tr><tr><td>任司法權少属</td><td>十四等出仕</td><td>松崎朝益</td></tr></table></div>
     <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3688580.html#fuken_3688580-0117" class="text-blue-600 hover:underline xref-link">磯野恒德　〔大坂府史〕制度部 官員進退 (明治元‐8年)</a></li><li><a href="https://person-archive.github.io/docs/3688977.html#fuken_3688977-0076" class="text-blue-600 hover:underline xref-link">工藤助作　神奈川県史 附録 官員履歴1 (明治元‐11年)</a></li><li><a href="https://person-archive.github.io/docs/3688977.html#fuken_3688977-0194" class="text-blue-600 hover:underline xref-link">佐藤信發　神奈川県史 附録 官員履歴1 (明治元‐11年)</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0444" class="text-blue-600 hover:underline xref-link">田中義忠　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
   </div>
 </section>
@@ -7586,11 +7486,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366794/1/174" target="_blank" rel="noopener">原本 コマ174 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">任少法官　八等出仕　小橋多助
-補十等出仕　秦呑舟
-補十五等出仕　等外一等出仕　川津水城
-免出仕　十四等出仕　松井秋善
-補十五等出仕　等外一等出仕　內藤正脩</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>任少法官</td><td>八等出仕</td><td>小橋多助</td></tr><tr><td>補十等出仕</td><td></td><td>秦呑舟</td></tr><tr><td>補十五等出仕</td><td>等外一等出仕</td><td>川津水城</td></tr><tr><td>免出仕</td><td>十四等出仕</td><td>松井秋善</td></tr><tr><td>補十五等出仕</td><td>等外一等出仕</td><td>內藤正脩</td></tr></table></div>
     
   </div>
 </section>
@@ -8230,16 +8126,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366794/1/189" target="_blank" rel="noopener">原本 コマ189 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">任大解部　權大解部　村田保
-補十一等出仕　正院十一等出仕　豐田弘世
-山本豐躬
-同
-同　高橋敬次郞
-任司法少属　中撿部　難波純直
-補十二等出仕　濱中義良
-白川縣權少属　高木靜三
-辻耕造
-補十三等出仕　二宮眞通</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>任大解部</td><td>權大解部</td><td>村田保</td></tr><tr><td>補十一等出仕</td><td>正院十一等出仕</td><td>豐田弘世</td></tr><tr><td></td><td></td><td>山本豐躬</td></tr><tr><td>同</td><td></td><td></td></tr><tr><td>同</td><td></td><td>高橋敬次郞</td></tr><tr><td>任司法少属</td><td>中撿部</td><td>難波純直</td></tr><tr><td>補十二等出仕</td><td></td><td>濱中義良</td></tr><tr><td></td><td>白川縣權少属</td><td>高木靜三</td></tr><tr><td></td><td></td><td>辻耕造</td></tr><tr><td>補十三等出仕</td><td></td><td>二宮眞通</td></tr></table></div>
     <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0047" class="text-blue-600 hover:underline xref-link">村田保　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/3688662.html#fuken_3688662-0070" class="text-blue-600 hover:underline xref-link">高橋敬次郞　島根県歴史附録 附録（島根県官員履歴）(明治8年)</a></li><li><a href="https://person-archive.github.io/docs/3692668.html#fuken_3692668-0061" class="text-blue-600 hover:underline xref-link">高木靜三　白川県国史2 制度部・官員履歴 (明治8年)</a></li><li><a href="https://person-archive.github.io/docs/3692669.html#fuken_3692669-0231" class="text-blue-600 hover:underline xref-link">高木靜三　白川県国史5 附録（官員履歴）(明治4‐7年)</a></li><li><a href="https://person-archive.github.io/docs/3692672.html#fuken_3692672-0040" class="text-blue-600 hover:underline xref-link">高木靜三　熊本県国史 下 制度部・官員履歴（明治10年）</a></li><li><a href="https://person-archive.github.io/docs/3692673.html#fuken_3692673-0052" class="text-blue-600 hover:underline xref-link">高木靜三　熊本県国史 下 制度部・官員履歴 (明治9年)</a></li><li><a href="https://person-archive.github.io/docs/3692798.html#fuken_3692798-0031" class="text-blue-600 hover:underline xref-link">高木靜三　白川県国史 附録（八代県国史）（明治4‐6年）</a></li></ul></div>
   </div>
 </section>

@@ -21,6 +21,13 @@
 </script>
 <style>
   .item-body { white-space: pre-wrap; word-break: break-all; }
+  /* 人事記事の「辞令　官職　氏名」（罫線なしの表） */
+  .jinji { border-collapse: collapse; }
+  .jinji td { padding: 0 1.5em 0 0; vertical-align: top; }
+  .jinji td:last-child { padding-right: 0; }
+  .jinji td:nth-child(3) { white-space: nowrap; }  /* 氏名は途中で折り返さない */
+  .jinji td[colspan] { padding-left: 1em; }  /* 氏名の後ろの辞令の文は、上の行の人の分と分かるよう1字下げる */
+  @media (max-width: 640px) { .jinji td { padding-right: 1em; } }
   @media print { .item { break-inside: avoid; } }
 
   /* 正誤対応の相互リンク・リンク先記事の強調 */
@@ -97,15 +104,21 @@
 </div>
 </details>
 
-<div class="bg-white border border-gray-200 rounded-lg p-3 mb-4 flex flex-wrap gap-3 items-center text-sm" id="type-filter">
+<div class="bg-white border border-gray-200 rounded-lg p-3 mb-4 text-sm" id="type-filter">
+<div class="flex flex-wrap gap-3 items-center">
 <span class="font-medium">表示する種別:</span>
-<label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="article">未分類（81）</label>
+<label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="article">未分類（77）</label>
 <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="人事">人事（18）</label>
 <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="伺">伺（176）</label>
 <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="布達">布達（10）</label>
 <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="正誤">正誤（2）</label>
-<button type="button" class="px-2 py-0.5 rounded text-xs font-medium hover:bg-gray-100" id="type-filter-all">全選択</button>
-<button type="button" class="px-2 py-0.5 rounded text-xs font-medium hover:bg-gray-100" id="type-filter-none">全解除</button>
+<label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="聽訟表">聽訟表（2）</label>
+<label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="行刑表">行刑表（2）</label>
+</div>
+<div class="flex gap-2 mt-2">
+<button type="button" class="px-2 py-0.5 rounded text-xs font-medium hover:bg-gray-100 border border-gray-300" id="type-filter-all">全選択</button>
+<button type="button" class="px-2 py-0.5 rounded text-xs font-medium hover:bg-gray-100 border border-gray-300" id="type-filter-none">全解除</button>
+</div>
 </div>
 <script>
 (function () {
@@ -606,7 +619,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/12" target="_blank" rel="noopener">原本 コマ12 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1"></div>
-    <div class="item-body text-base leading-relaxed">任司法權少錄　督學局十三等出仕　北島義男</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>任司法權少錄</td><td>督學局十三等出仕</td><td>北島義男</td></tr></table></div>
     
   </div>
 </section>
@@ -1265,7 +1278,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/31" target="_blank" rel="noopener">原本 コマ31 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">任明法大属　明法權大属　牧野成行</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>任明法大属</td><td>明法權大属</td><td>牧野成行</td></tr></table></div>
     
   </div>
 </section>
@@ -1371,9 +1384,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/33" target="_blank" rel="noopener">原本 コマ33 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">任少法官　權少法官　橫山尙
-任明法權中屬　明法少屬　谷新助
-任明法少屬　明法權少屬　濱口惟長</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>任少法官</td><td>權少法官</td><td>橫山尙</td></tr><tr><td>任明法權中屬</td><td>明法少屬</td><td>谷新助</td></tr><tr><td>任明法少屬</td><td>明法權少屬</td><td>濱口惟長</td></tr></table></div>
     
   </div>
 </section>
@@ -1602,7 +1613,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/39" target="_blank" rel="noopener">原本 コマ39 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">補十三等出仕　藤本良興</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>補十三等出仕</td><td></td><td>藤本良興</td></tr></table></div>
     
   </div>
 </section>
@@ -3238,7 +3249,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/82" target="_blank" rel="noopener">原本 コマ82 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1"></div>
-    <div class="item-body text-base leading-relaxed">補十一等出仕　開拓使御用掛　田村英俊</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>補十一等出仕</td><td>開拓使御用掛</td><td>田村英俊</td></tr></table></div>
     
   </div>
 </section>
@@ -3994,10 +4005,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/104" target="_blank" rel="noopener">原本 コマ104 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1"></div>
-    <div class="item-body text-base leading-relaxed">補十四等出仕　十五等出仕　水野恭保
-同　同　松田就正
-同　同　大里直信
-依願免本官　大解部　石田賴慶</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>補十四等出仕</td><td>十五等出仕</td><td>水野恭保</td></tr><tr><td>同</td><td>同</td><td>松田就正</td></tr><tr><td>同</td><td>同</td><td>大里直信</td></tr><tr><td>依願免本官</td><td>大解部</td><td>石田賴慶</td></tr></table></div>
     <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3688580.html#fuken_3688580-0001" class="text-blue-600 hover:underline xref-link">石田賴慶　〔大坂府史〕制度部 官員進退 (明治元‐8年)</a></li></ul></div>
   </div>
 </section>
@@ -4033,11 +4041,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/105" target="_blank" rel="noopener">原本 コマ105 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1"></div>
-    <div class="item-body text-base leading-relaxed">補十四等出仕　十五等出仕　淸水在信
-同　同　赤尾有隣
-補十五等出仕　等外一等出仕　二階堂次郞
-同　同二等出仕　齋藤周藏
-依願免出仕　十五等出仕　櫻井義勇</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>補十四等出仕</td><td>十五等出仕</td><td>淸水在信</td></tr><tr><td>同</td><td>同</td><td>赤尾有隣</td></tr><tr><td>補十五等出仕</td><td>等外一等出仕</td><td>二階堂次郞</td></tr><tr><td>同</td><td>同二等出仕</td><td>齋藤周藏</td></tr><tr><td>依願免出仕</td><td>十五等出仕</td><td>櫻井義勇</td></tr></table></div>
     <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3691488.html#fuken_3691488-0073" class="text-blue-600 hover:underline xref-link">赤尾有隣　佐倉県歴史 (明治元‐4年)</a></li><li><a href="https://person-archive.github.io/docs/3691489.html#fuken_3691489-0009" class="text-blue-600 hover:underline xref-link">赤尾有隣　千葉県歴史 附録 官員履歴2（明治6‐18年）</a></li><li><a href="https://person-archive.github.io/docs/3691488.html#fuken_3691488-0055" class="text-blue-600 hover:underline xref-link">櫻井義勇　佐倉県歴史 (明治元‐4年)</a></li></ul></div>
   </div>
 </section>
@@ -4464,7 +4468,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/115" target="_blank" rel="noopener">原本 コマ115 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">補九等出仕　正院十等出仕　室田充美</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>補九等出仕</td><td>正院十等出仕</td><td>室田充美</td></tr></table></div>
     
   </div>
 </section>
@@ -4812,11 +4816,11 @@
     
   </div>
 </section>
-<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-158" data-type-base="article" data-pid="1366809" data-frame="124">
+<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-158" data-type-base="聽訟表" data-pid="1366809" data-frame="124">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
       <a href="#a20-158" class="inline-block px-2 rounded-full bg-gray-800 text-xs leading-5 text-white hover:bg-gray-700" title="この記事へのリンク">a20-158</a>
-      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">article</span>
+      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">聽訟表</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">明治8年第54号</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1875-04-09</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">18頁</span>
@@ -4828,11 +4832,11 @@
     
   </div>
 </section>
-<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-159" data-type-base="article" data-pid="1366809" data-frame="124">
+<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-159" data-type-base="行刑表" data-pid="1366809" data-frame="124">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
       <a href="#a20-159" class="inline-block px-2 rounded-full bg-gray-800 text-xs leading-5 text-white hover:bg-gray-700" title="この記事へのリンク">a20-159</a>
-      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">article</span>
+      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">行刑表</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">明治8年第54号</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1875-04-09</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">19頁</span>
@@ -4844,11 +4848,11 @@
     
   </div>
 </section>
-<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-160" data-type-base="article" data-pid="1366809" data-frame="124">
+<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-160" data-type-base="聽訟表" data-pid="1366809" data-frame="124">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
       <a href="#a20-160" class="inline-block px-2 rounded-full bg-gray-800 text-xs leading-5 text-white hover:bg-gray-700" title="この記事へのリンク">a20-160</a>
-      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">article</span>
+      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">聽訟表</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">明治8年第54号</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1875-04-09</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">19頁</span>
@@ -4861,11 +4865,11 @@
     
   </div>
 </section>
-<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-161" data-type-base="article" data-pid="1366809" data-frame="124">
+<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-161" data-type-base="行刑表" data-pid="1366809" data-frame="124">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
       <a href="#a20-161" class="inline-block px-2 rounded-full bg-gray-800 text-xs leading-5 text-white hover:bg-gray-700" title="この記事へのリンク">a20-161</a>
-      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">article</span>
+      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">行刑表</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">明治8年第54号</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1875-04-09</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">19頁</span>
@@ -5813,10 +5817,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/149" target="_blank" rel="noopener">原本 コマ149 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">補十二等出仕　足立常雄
-補十四等出仕　野口惟和
-同　冷泉豐亮
-同　加藤謹吾</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>補十二等出仕</td><td></td><td>足立常雄</td></tr><tr><td>補十四等出仕</td><td></td><td>野口惟和</td></tr><tr><td>同</td><td></td><td>冷泉豐亮</td></tr><tr><td>同</td><td></td><td>加藤謹吾</td></tr></table></div>
     <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3692219.html#fuken_3692219-0038" class="text-blue-600 hover:underline xref-link">野口惟和　和歌山県史案（第1編）　附録　県官履歴（明治4‐13年）</a></li></ul></div>
   </div>
 </section>
@@ -6384,7 +6385,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/164" target="_blank" rel="noopener">原本 コマ164 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1"></div>
-    <div class="item-body text-base leading-relaxed">依願免本官　少解部　田丸良也</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>依願免本官</td><td>少解部</td><td>田丸良也</td></tr></table></div>
     <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3692589.html#fuken_3692589-0082" class="text-blue-600 hover:underline xref-link">田丸良也　兵庫県史 政治之部 官員履歴 (明治元‐13年)</a></li></ul></div>
   </div>
 </section>
@@ -7222,7 +7223,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/185" target="_blank" rel="noopener">原本 コマ185 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">補九等出仕　床次正精</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>補九等出仕</td><td></td><td>床次正精</td></tr></table></div>
     <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0371" class="text-blue-600 hover:underline xref-link">床次正精　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
   </div>
 </section>
@@ -7240,7 +7241,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/185" target="_blank" rel="noopener">原本 コマ185 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1"></div>
-    <div class="item-body text-base leading-relaxed">依願免出仕　十等出仕　長松修造</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>依願免出仕</td><td>十等出仕</td><td>長松修造</td></tr></table></div>
     
   </div>
 </section>
@@ -7297,7 +7298,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/186" target="_blank" rel="noopener">原本 コマ186 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1"></div>
-    <div class="item-body text-base leading-relaxed">補十等出仕　岩手縣中屬　中川渚</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>補十等出仕</td><td>岩手縣中屬</td><td>中川渚</td></tr></table></div>
     
   </div>
 </section>
@@ -8325,7 +8326,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/212" target="_blank" rel="noopener">原本 コマ212 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">任司法權中錄　司法少錄　田所千秋</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>任司法權中錄</td><td>司法少錄</td><td>田所千秋</td></tr></table></div>
     <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3692990.html#fuken_3692990-0141" class="text-blue-600 hover:underline xref-link">田所千秋　飾磨県史 政治之部 官員履歴 (明治4‐9年)</a></li></ul></div>
   </div>
 </section>

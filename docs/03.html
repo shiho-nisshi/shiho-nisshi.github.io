@@ -21,6 +21,13 @@
 </script>
 <style>
   .item-body { white-space: pre-wrap; word-break: break-all; }
+  /* 人事記事の「辞令　官職　氏名」（罫線なしの表） */
+  .jinji { border-collapse: collapse; }
+  .jinji td { padding: 0 1.5em 0 0; vertical-align: top; }
+  .jinji td:last-child { padding-right: 0; }
+  .jinji td:nth-child(3) { white-space: nowrap; }  /* 氏名は途中で折り返さない */
+  .jinji td[colspan] { padding-left: 1em; }  /* 氏名の後ろの辞令の文は、上の行の人の分と分かるよう1字下げる */
+  @media (max-width: 640px) { .jinji td { padding-right: 1em; } }
   @media print { .item { break-inside: avoid; } }
 
   /* 正誤対応の相互リンク・リンク先記事の強調 */
@@ -100,16 +107,22 @@
 </div>
 </details>
 
-<div class="bg-white border border-gray-200 rounded-lg p-3 mb-4 flex flex-wrap gap-3 items-center text-sm" id="type-filter">
+<div class="bg-white border border-gray-200 rounded-lg p-3 mb-4 text-sm" id="type-filter">
+<div class="flex flex-wrap gap-3 items-center">
 <span class="font-medium">表示する種別:</span>
-<label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="article">未分類（29）</label>
+<label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="article">未分類（25）</label>
 <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="人事">人事（11）</label>
 <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="伺">伺（240）</label>
 <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="布達">布達（14）</label>
 <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="正誤">正誤（6）</label>
 <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="裁判所申渡">裁判所申渡（7）</label>
-<button type="button" class="px-2 py-0.5 rounded text-xs font-medium hover:bg-gray-100" id="type-filter-all">全選択</button>
-<button type="button" class="px-2 py-0.5 rounded text-xs font-medium hover:bg-gray-100" id="type-filter-none">全解除</button>
+<label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="聽訟表">聽訟表（2）</label>
+<label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="行刑表">行刑表（2）</label>
+</div>
+<div class="flex gap-2 mt-2">
+<button type="button" class="px-2 py-0.5 rounded text-xs font-medium hover:bg-gray-100 border border-gray-300" id="type-filter-all">全選択</button>
+<button type="button" class="px-2 py-0.5 rounded text-xs font-medium hover:bg-gray-100 border border-gray-300" id="type-filter-none">全解除</button>
+</div>
 </div>
 <script>
 (function () {
@@ -1321,7 +1334,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366792/1/43" target="_blank" rel="noopener">原本 コマ43 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">任權中撿部　十三等出仕　土居和之</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>任權中撿部</td><td>十三等出仕</td><td>土居和之</td></tr></table></div>
     <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3692810.html#fuken_3692810-0201" class="text-blue-600 hover:underline xref-link">土居和之　熊本県史 官員履歴 (明治17年)</a></li><li><a href="https://person-archive.github.io/docs/3693306.html#fuken_3693306-0077" class="text-blue-600 hover:underline xref-link">土居和之　旧新治県官員履歴 (明治4‐8年)</a></li></ul></div>
   </div>
 </section>
@@ -1387,12 +1400,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366792/1/44" target="_blank" rel="noopener">原本 コマ44 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">補十四等出仕　增田濶
-任權中属　司法少属　荻野重省
-依願免本官　權少法官　黑川誠一郞
-權少判事　大屋祐義
-茨城裁判所在勤可有之候事
-前同斷申付候事　權中属　荻野重省</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>補十四等出仕</td><td></td><td>增田濶</td></tr><tr><td>任權中属</td><td>司法少属</td><td>荻野重省</td></tr><tr><td>依願免本官</td><td>權少法官</td><td>黑川誠一郞</td></tr><tr><td></td><td>權少判事</td><td>大屋祐義</td></tr><tr><td colspan="3">茨城裁判所在勤可有之候事</td></tr><tr><td>前同斷申付候事</td><td>權中属</td><td>荻野重省</td></tr></table></div>
     <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0315" class="text-blue-600 hover:underline xref-link">黑川誠一郞　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
   </div>
 </section>
@@ -1756,11 +1764,11 @@
     
   </div>
 </section>
-<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a03-049" data-type-base="article" data-pid="1366792" data-frame="56">
+<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a03-049" data-type-base="行刑表" data-pid="1366792" data-frame="56">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
       <a href="#a03-049" class="inline-block px-2 rounded-full bg-gray-800 text-xs leading-5 text-white hover:bg-gray-700" title="この記事へのリンク">a03-049</a>
-      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">article</span>
+      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">行刑表</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">明治6年第24号</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1873-08-05</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">8頁</span>
@@ -1773,11 +1781,11 @@
     
   </div>
 </section>
-<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a03-050" data-type-base="article" data-pid="1366792" data-frame="56">
+<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a03-050" data-type-base="聽訟表" data-pid="1366792" data-frame="56">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
       <a href="#a03-050" class="inline-block px-2 rounded-full bg-gray-800 text-xs leading-5 text-white hover:bg-gray-700" title="この記事へのリンク">a03-050</a>
-      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">article</span>
+      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">聽訟表</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">明治6年第24号</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1873-08-05</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">9頁</span>
@@ -1789,11 +1797,11 @@
     
   </div>
 </section>
-<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a03-051" data-type-base="article" data-pid="1366792" data-frame="56">
+<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a03-051" data-type-base="聽訟表" data-pid="1366792" data-frame="56">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
       <a href="#a03-051" class="inline-block px-2 rounded-full bg-gray-800 text-xs leading-5 text-white hover:bg-gray-700" title="この記事へのリンク">a03-051</a>
-      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">article</span>
+      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">聽訟表</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">明治6年第24号</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1873-08-05</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">9頁</span>
@@ -1859,11 +1867,11 @@
     
   </div>
 </section>
-<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a03-054" data-type-base="article" data-pid="1366792" data-frame="58">
+<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a03-054" data-type-base="行刑表" data-pid="1366792" data-frame="58">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
       <a href="#a03-054" class="inline-block px-2 rounded-full bg-gray-800 text-xs leading-5 text-white hover:bg-gray-700" title="この記事へのリンク">a03-054</a>
-      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">article</span>
+      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">行刑表</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">明治6年第24号</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1873-07-22</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">12頁</span>
@@ -2400,9 +2408,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366792/1/76" target="_blank" rel="noopener">原本 コマ76 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○式部寮達書</div>
-    <div class="item-body text-base leading-relaxed">任大法官　權大法官　水本成美
-任中法官　權中法官　荒木博臣
-右本日宣下相成候條此旨申入候也</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>任大法官</td><td>權大法官</td><td>水本成美</td></tr><tr><td>任中法官</td><td>權中法官</td><td>荒木博臣</td></tr></table>右本日宣下相成候條此旨申入候也</div>
     <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3692635.html#fuken_3692635-0051" class="text-blue-600 hover:underline xref-link">水本成美　東京府史料 附録之部 履歴1（明治元‐8年）</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0577" class="text-blue-600 hover:underline xref-link">水本成美　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0455" class="text-blue-600 hover:underline xref-link">荒木博臣　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
   </div>
 </section>
@@ -2440,9 +2446,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366792/1/77" target="_blank" rel="noopener">原本 コマ77 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○式部寮達書</div>
-    <div class="item-body text-base leading-relaxed">任大法官　權大法官　水本成美
-任中法官　權中法官　荒木博臣
-右本日宣下相成候條此旨申入候也</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>任大法官</td><td>權大法官</td><td>水本成美</td></tr><tr><td>任中法官</td><td>權中法官</td><td>荒木博臣</td></tr></table>右本日宣下相成候條此旨申入候也</div>
     <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3692635.html#fuken_3692635-0051" class="text-blue-600 hover:underline xref-link">水本成美　東京府史料 附録之部 履歴1（明治元‐8年）</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0577" class="text-blue-600 hover:underline xref-link">水本成美　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0455" class="text-blue-600 hover:underline xref-link">荒木博臣　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
   </div>
 </section>
@@ -3095,8 +3099,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366792/1/96" target="_blank" rel="noopener">原本 コマ96 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">任中解部　十等出仕　柳川千里
-任少解部　十二等出仕　根岸敬</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>任中解部</td><td>十等出仕</td><td>柳川千里</td></tr><tr><td>任少解部</td><td>十二等出仕</td><td>根岸敬</td></tr></table></div>
     <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3692668.html#fuken_3692668-0004" class="text-blue-600 hover:underline xref-link">柳川千里　白川県国史2 制度部・官員履歴 (明治8年)</a></li><li><a href="https://person-archive.github.io/docs/3692669.html#fuken_3692669-0165" class="text-blue-600 hover:underline xref-link">柳川千里　白川県国史5 附録（官員履歴）(明治4‐7年)</a></li></ul></div>
   </div>
 </section>
@@ -4317,19 +4320,8 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366792/1/132" target="_blank" rel="noopener">原本 コマ132 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">補十三等出仕　兵庫縣十四等出仕　吉弘春海
-茨城裁判所在勤　權少判事　南部甕男
-大屋權少判事交代歸京可有之候事
-茨城裁判所在勤申付候事　中解部　柳川千里
-羣馬裁判所在勤申付候事　少解部　根岸敬
-大撿部　窪田盛明
-杤木裁判所在勤中病氣爲療養出京ノ所御用都合有之右
-裁判所ヘ不及歸任候事
-茨城裁判所在勤申付候事　少撿事　犬塚盛巍
-權少撿事　野副勤有
-茨城裁判所在勤申付置候所御用都合有之不及其儀候事
-少解部　今村信行
-羣馬裁判所在勤申付候所御用都合有之不及其儀候事</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>補十三等出仕</td><td>兵庫縣十四等出仕</td><td>吉弘春海</td></tr><tr><td>茨城裁判所在勤</td><td>權少判事</td><td>南部甕男</td></tr><tr><td colspan="3">大屋權少判事交代歸京可有之候事</td></tr><tr><td>茨城裁判所在勤申付候事</td><td>中解部</td><td>柳川千里</td></tr><tr><td>羣馬裁判所在勤申付候事</td><td>少解部</td><td>根岸敬</td></tr><tr><td></td><td>大撿部</td><td>窪田盛明</td></tr><tr><td colspan="3">杤木裁判所在勤中病氣爲療養出京ノ所御用都合有之右
+裁判所ヘ不及歸任候事</td></tr><tr><td>茨城裁判所在勤申付候事</td><td>少撿事</td><td>犬塚盛巍</td></tr><tr><td></td><td>權少撿事</td><td>野副勤有</td></tr><tr><td colspan="3">茨城裁判所在勤申付置候所御用都合有之不及其儀候事</td></tr><tr><td></td><td>少解部</td><td>今村信行</td></tr><tr><td colspan="3">羣馬裁判所在勤申付候所御用都合有之不及其儀候事</td></tr></table></div>
     <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3688580.html#fuken_3688580-0184" class="text-blue-600 hover:underline xref-link">吉弘春海　〔大坂府史〕制度部 官員進退 (明治元‐8年)</a></li><li><a href="https://person-archive.github.io/docs/3689033.html#fuken_3689033-0094" class="text-blue-600 hover:underline xref-link">吉弘春海　大阪府史料 官員現任 (明治7年12月調)</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0606" class="text-blue-600 hover:underline xref-link">南部甕男　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/3692668.html#fuken_3692668-0004" class="text-blue-600 hover:underline xref-link">柳川千里　白川県国史2 制度部・官員履歴 (明治8年)</a></li><li><a href="https://person-archive.github.io/docs/3692669.html#fuken_3692669-0165" class="text-blue-600 hover:underline xref-link">柳川千里　白川県国史5 附録（官員履歴）(明治4‐7年)</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0370" class="text-blue-600 hover:underline xref-link">犬塚盛巍　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0403" class="text-blue-600 hover:underline xref-link">野副勤有　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0476" class="text-blue-600 hover:underline xref-link">今村信行　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
   </div>
 </section>
@@ -4424,9 +4416,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366792/1/134" target="_blank" rel="noopener">原本 コマ134 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">任大解部　少撿事　牧山矩
-依願免本官　中解部　都志春暉
-除服出仕申付候事　權少属　深尾近義</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>任大解部</td><td>少撿事</td><td>牧山矩</td></tr><tr><td>依願免本官</td><td>中解部</td><td>都志春暉</td></tr><tr><td>除服出仕申付候事</td><td>權少属</td><td>深尾近義</td></tr></table></div>
     <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3688580.html#fuken_3688580-0037" class="text-blue-600 hover:underline xref-link">都志春暉　〔大坂府史〕制度部 官員進退 (明治元‐8年)</a></li><li><a href="https://person-archive.github.io/docs/3691750.html#fuken_3691750-0019" class="text-blue-600 hover:underline xref-link">都志春暉　官員履歴 (慶応4‐明治4年)</a></li></ul></div>
   </div>
 </section>
@@ -5998,8 +5988,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366792/1/180" target="_blank" rel="noopener">原本 コマ180 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">補九等出仕　陸軍省十等出仕　島村雅事
-補十等出仕　石崎治郞太</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>補九等出仕</td><td>陸軍省十等出仕</td><td>島村雅事</td></tr><tr><td>補十等出仕</td><td></td><td>石崎治郞太</td></tr></table></div>
     <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3691341.html#fuken_3691341-0090" class="text-blue-600 hover:underline xref-link">島村雅事　高知県史5 附録 図書目録・官員履歴 (明治9年)</a></li></ul></div>
   </div>
 </section>
@@ -6049,9 +6038,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366792/1/181" target="_blank" rel="noopener">原本 コマ181 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">補十三等出仕　師岡太郞
-埼玉裁判所在勤申付候事　大解部　高木勤
-右同人
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>補十三等出仕</td><td></td><td>師岡太郞</td></tr><tr><td>埼玉裁判所在勤申付候事</td><td>大解部</td><td>高木勤</td></tr></table>右同人
 埼玉裁判所當分所長代申付候條徒以下ノ刑ハ處决シ流
 以上ハ可伺出事</div>
     <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3692687.html#fuken_3692687-0278" class="text-blue-600 hover:underline xref-link">師岡太郞　秋田県史稿　附録　官員履歴（明治5‐7年）</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0417" class="text-blue-600 hover:underline xref-link">高木勤　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
@@ -6523,7 +6510,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366792/1/197" target="_blank" rel="noopener">原本 コマ197 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">任權中解部　權中属　鶴見直常</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>任權中解部</td><td>權中属</td><td>鶴見直常</td></tr></table></div>
     
   </div>
 </section>
@@ -8766,12 +8753,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366792/1/266" target="_blank" rel="noopener">原本 コマ266 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">補十五等出仕　中村義行
-任權中解部　直村種德
-依願免出仕　十四等出仕　中田長祥
-各通　權中解部　直村種德
-權少解部　土生淸誠
-茨城裁判所在勤申付候事</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>補十五等出仕</td><td></td><td>中村義行</td></tr><tr><td>任權中解部</td><td></td><td>直村種德</td></tr><tr><td>依願免出仕</td><td>十四等出仕</td><td>中田長祥</td></tr><tr><td>各通</td><td>權中解部</td><td>直村種德</td></tr><tr><td></td><td>權少解部</td><td>土生淸誠</td></tr><tr><td colspan="3">茨城裁判所在勤申付候事</td></tr></table></div>
     <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3691601.html#fuken_3691601-0050" class="text-blue-600 hover:underline xref-link">直村種德　印旛県歴史（明治4‐6年）</a></li><li><a href="https://person-archive.github.io/docs/3691601.html#fuken_3691601-0050" class="text-blue-600 hover:underline xref-link">直村種德　印旛県歴史（明治4‐6年）</a></li></ul></div>
   </div>
 </section>
