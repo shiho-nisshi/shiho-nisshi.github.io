@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ja">
 <head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5EFWF84DPZ"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-5EFWF84DPZ"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -14,7 +14,7 @@
 <link rel="icon" href="../favicon.ico" sizes="32x32">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = { theme: { extend: { fontFamily: { sans: ['"Noto Sans JP"', 'ui-sans-serif', 'system-ui', 'sans-serif'] } } } }
@@ -75,7 +75,7 @@
   </div>
 </div>
 
-<details class="bg-white rounded-lg border border-gray-200 mb-6" open>
+<details class="bg-white rounded-lg border border-gray-200 mb-6" open="">
 <summary class="px-4 py-3 text-lg font-medium cursor-pointer">目次（号一覧）</summary>
 <div class="px-4 pb-4">
 <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-1">
@@ -9642,11 +9642,11 @@ revealHashTarget();
   });
 })();
 </script>
-<script src="../source_viewer.js?v=0575b9d0" defer></script>
-<script src="../fulltext/fulltext.js?v=cbfa04d8" defer></script>
+<script src="../viewer.js?v=e8c02bf7" defer></script>
+<script src="../search/search.js?v=5186a4c2" defer></script>
 <script>
 // 全文検索の結果から開かれたとき（?q=…）は、本文中の検索語を強調して該当箇所へ移る
-addEventListener('DOMContentLoaded', () => FullTextSearch.highlightFromQuery({ base: '../fulltext/', root: '#articles' }));
+addEventListener('DOMContentLoaded', () => Search.highlightFromQuery({ base: '../search/', root: '#articles' }));
 </script>
 </body>
 </html>

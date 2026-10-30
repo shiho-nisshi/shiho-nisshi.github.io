@@ -20,7 +20,7 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="style.css">
-<script src="fulltext/fulltext.js?v=cbfa04d8"></script>
+<script src="search/search.js?v=5186a4c2"></script>
 </head>
 <body class="bg-gray-50 text-gray-900 min-h-screen font-sans">
 
@@ -38,7 +38,7 @@
   </div>
 
   <!-- 全文検索（law-platform 議事録の一覧と同じく、巻一覧の上に置き、検索中だけ巻一覧を隠す） -->
-  <div id="fulltextRoot" class="mb-8"></div>
+  <div id="searchRoot" class="mb-8"></div>
 
   <div id="browse">
   <p class="mb-4 text-sm text-gray-500">全26巻（うち25巻・記事7136件を収録・閲覧可能）</p>
@@ -91,11 +91,11 @@
 
 </div>
 <script>
-// 全文検索（fulltext/ の静的索引をブラウザ側で検索する。fulltext_index.py が生成）。
+// 全文検索（search/ の静的索引をブラウザ側で検索する。search_index.py が生成）。
 // Enter・検索ボタンで検索し、検索中は巻一覧を隠す。欄を空にすると巻一覧に戻る
 const browse = document.getElementById('browse');
-const fulltext = FullTextSearch.mount(document.getElementById('fulltextRoot'), {
-  base: 'fulltext/', hashKey: 'search', groupLabel: '巻',
+const search = Search.mount(document.getElementById('searchRoot'), {
+  base: 'search/', hashKey: 'search', groupLabel: '巻',
   onChange: searching => { browse.hidden = searching; },
 });
 
@@ -105,11 +105,11 @@ const savedY = history.state && history.state.resultScrollY;
 addEventListener('pagehide', () => {
   if (location.hash.startsWith('#search?')) history.replaceState(Object.assign({}, history.state, { resultScrollY: scrollY }), '');
 });
-if (fulltext.restoreFromHash() && savedY) {
+if (search.restoreFromHash() && savedY) {
   history.scrollRestoration = 'manual';
-  const results = document.querySelector('#fulltextRoot .fts-results');
+  const results = document.querySelector('#searchRoot .search-results');
   const restore = () => {
-    if (!results.querySelector('.fts-title')) return false;
+    if (!results.querySelector('.search-title')) return false;
     scrollTo(0, savedY);
     return true;
   };

@@ -1,86 +1,86 @@
 /*
  * 全文検索（静的索引をブラウザ側で検索する）
  *
- * 索引は fulltext_index.py がビルド時に生成する（形式はそちらの冒頭コメント参照）。
- * このファイルは各サイトにコピーされて公開される（司法省日誌は fulltext/fulltext.js、
- * 人名アーカイブスはサイト直下の fulltext.js）。
- * 正本は 近世近代人名アーカイブス用データ作成/program/publish/fulltext.js なので、
- * 直すときは正本を直してから各サイトの generate_docs.py を実行し直すこと。
+ * 索引は search_index.py がビルド時に生成する（形式はそちらの冒頭コメント参照）。
+ * このファイルは各サイトにコピーされて公開される（司法省日誌は search/search.js、
+ * 人名アーカイブスはサイト直下の search.js）。
+ * 正本は 近世近代人名アーカイブス/program/search.js なので、
+ * 直すときは正本を直してから各サイトの build.py を実行し直すこと。
  *
  * 使い方（全文検索の検索欄。司法省日誌の索引ページ）:
- *   const fts = FullTextSearch.mount(要素, { base: 'fulltext/', hashKey: 'search', groupLabel: '巻',
+ *   const search = Search.mount(要素, { base: 'search/', hashKey: 'search', groupLabel: '巻',
  *                                            onChange: 検索中か => { … } });
  *   Enter・検索ボタンで検索し（入力中には検索しない）、検索状態は #search?q=… に残す。
  *   onChange で検索の開始・解除を受け取れる（司法省日誌は検索中だけ巻一覧を隠している）
- *   fts.restoreFromHash();   // URLが #search?q=… なら検索を復元して true を返す
+ *   search.restoreFromHash();   // URLが #search?q=… なら検索を復元して true を返す
  * 使い方（資料ページ）: 検索結果のリンクには ?q=… が付くので、開いた先で検索語を強調する
- *   FullTextSearch.highlightFromQuery({ base: '../fulltext/', root: '.doc-body' });
+ *   Search.highlightFromQuery({ base: '../search/', root: '.doc-body' });
  * 人名アーカイブスの人物検索は openIndex / queryTerms / markHtml / snippetsHtml / injectStyle を使い、
- * 検索欄・結果の見た目は司法省日誌の全文検索と同じ fts-* のクラスにしている（index.html 参照）。
+ * 検索欄・結果の見た目は司法省日誌の全文検索と同じ search-* のクラスにしている（index.html 参照）。
  */
 (function () {
   'use strict';
 
-  // fulltext_index.py の WHITESPACE / FIELD_SEP と同じ
+  // search_index.py の WHITESPACE / FIELD_SEP と同じ
   const WS = new Set([' ', '\t', '\n', '\r', '\f', '\v']);
   const FIELD_SEP = '\x1f';
   const CONTEXT = 40;
   const MAX_SNIPPETS = 3;
 
   const CSS = `
-.fts-form { display: flex; border: 1px solid #d1d5db; border-radius: 8px; background: #fff; overflow: hidden;
+.search-form { display: flex; border: 1px solid #d1d5db; border-radius: 8px; background: #fff; overflow: hidden;
   box-shadow: 0 1px 2px rgba(0,0,0,.05); transition: box-shadow .15s, border-color .15s; }
-.fts-form:focus-within { border-color: #3b82f6; box-shadow: 0 0 0 2px #3b82f6; }
-.fts-input { flex: 1; min-width: 0; padding: 12px 16px; border: 0; outline: none; font: inherit; font-size: 1rem;
+.search-form:focus-within { border-color: #3b82f6; box-shadow: 0 0 0 2px #3b82f6; }
+.search-input { flex: 1; min-width: 0; padding: 12px 16px; border: 0; outline: none; font: inherit; font-size: 1rem;
   background: transparent; color: #111827; }
-.fts-btn { padding: 12px 24px; border: 0; background: #2563eb; color: #fff; font: inherit; font-size: 1rem;
+.search-btn { padding: 12px 24px; border: 0; background: #2563eb; color: #fff; font: inherit; font-size: 1rem;
   font-weight: 500; cursor: pointer; transition: background .15s; }
-.fts-btn:hover { background: #1d4ed8; }
-.fts-btn:disabled { opacity: .5; cursor: not-allowed; }
-.fts-help { margin: 8px 0 24px; font-size: .8125rem; color: #6b7280; line-height: 1.7; }
-.fts-status { text-align: center; padding: 24px; color: #4b5563; }
-.fts-status.fts-error { color: #dc2626; }
-.fts-spinner { display: inline-block; width: 18px; height: 18px; margin-right: 6px; vertical-align: middle;
-  border: 2px solid #e5e7eb; border-top-color: #2563eb; border-radius: 50%; animation: fts-spin .7s linear infinite; }
-@keyframes fts-spin { to { transform: rotate(360deg); } }
-.fts-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px;
+.search-btn:hover { background: #1d4ed8; }
+.search-btn:disabled { opacity: .5; cursor: not-allowed; }
+.search-help { margin: 8px 0 24px; font-size: .8125rem; color: #6b7280; line-height: 1.7; }
+.search-status { text-align: center; padding: 24px; color: #4b5563; }
+.search-status.search-error { color: #dc2626; }
+.search-spinner { display: inline-block; width: 18px; height: 18px; margin-right: 6px; vertical-align: middle;
+  border: 2px solid #e5e7eb; border-top-color: #2563eb; border-radius: 50%; animation: search-spin .7s linear infinite; }
+@keyframes search-spin { to { transform: rotate(360deg); } }
+.search-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px;
   margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid #e5e7eb; font-size: .9rem; color: #4b5563; }
-.fts-head strong { color: #111827; }
-.fts-group { max-width: 100%; padding: 6px 8px; border: 1px solid #d1d5db; border-radius: 6px; background: #fff;
+.search-head strong { color: #111827; }
+.search-group { max-width: 100%; padding: 6px 8px; border: 1px solid #d1d5db; border-radius: 6px; background: #fff;
   font: inherit; font-size: .875rem; color: #111827; }
-.fts-list { list-style: none; margin: 0; padding: 0; }
-.fts-item { background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 16px; margin-bottom: 8px;
+.search-list { list-style: none; margin: 0; padding: 0; }
+.search-item { background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 16px; margin-bottom: 8px;
   box-shadow: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.04); }
-.fts-item-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; }
-.fts-title { font-weight: 600; color: #2563eb; text-decoration: none; word-break: break-all; }
-.fts-title:hover { text-decoration: underline; }
-.fts-badge { display: inline-block; padding: 0 8px; border: 1px solid #d1d5db; border-radius: 9999px;
+.search-item-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; }
+.search-title { font-weight: 600; color: #2563eb; text-decoration: none; word-break: break-all; }
+.search-title:hover { text-decoration: underline; }
+.search-badge { display: inline-block; padding: 0 8px; border: 1px solid #d1d5db; border-radius: 9999px;
   font-size: .75rem; line-height: 1.5rem; color: #4b5563; white-space: nowrap; }
-.fts-hits { font-size: .75rem; color: #6b7280; margin-left: auto; white-space: nowrap; }
-.fts-snip { margin-top: 6px; font-size: .9rem; line-height: 1.8; color: #374151; word-break: break-all; }
-.fts-snip + .fts-snip { margin-top: 2px; }
-.fts-snip mark { background: #fef08a; color: #1f2937; padding: 0 2px; border-radius: 2px; }
-mark.fts-hl { background: #fef08a; color: inherit; padding: 0 1px; border-radius: 2px; }
-.fts-sep { color: #9ca3af; margin: 0 .25em; }
-.fts-more { margin-top: 2px; font-size: .75rem; color: #6b7280; }
-.fts-pager { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 20px; }
-.fts-pager button { padding: 6px 14px; border: 1px solid #e5e7eb; border-radius: 6px; background: #fff; font: inherit;
+.search-hits { font-size: .75rem; color: #6b7280; margin-left: auto; white-space: nowrap; }
+.search-snip { margin-top: 6px; font-size: .9rem; line-height: 1.8; color: #374151; word-break: break-all; }
+.search-snip + .search-snip { margin-top: 2px; }
+.search-snip mark { background: #fef08a; color: #1f2937; padding: 0 2px; border-radius: 2px; }
+mark.search-hl { background: #fef08a; color: inherit; padding: 0 1px; border-radius: 2px; }
+.search-sep { color: #9ca3af; margin: 0 .25em; }
+.search-more { margin-top: 2px; font-size: .75rem; color: #6b7280; }
+.search-pager { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 20px; }
+.search-pager button { padding: 6px 14px; border: 1px solid #e5e7eb; border-radius: 6px; background: #fff; font: inherit;
   font-size: .875rem; color: #374151; cursor: pointer; }
-.fts-pager button:hover:not(:disabled) { border-color: #2563eb; color: #2563eb; background: #eff6ff; }
-.fts-pager button:disabled { opacity: .35; cursor: not-allowed; }
-.fts-pager span { font-size: .875rem; color: #4b5563; }
-.fts-empty { text-align: center; padding: 40px 16px; color: #4b5563; }
+.search-pager button:hover:not(:disabled) { border-color: #2563eb; color: #2563eb; background: #eff6ff; }
+.search-pager button:disabled { opacity: .35; cursor: not-allowed; }
+.search-pager span { font-size: .875rem; color: #4b5563; }
+.search-empty { text-align: center; padding: 40px 16px; color: #4b5563; }
 `;
 
   function injectStyle() {
-    if (document.getElementById('fts-style')) return;
+    if (document.getElementById('search-style')) return;
     const el = document.createElement('style');
-    el.id = 'fts-style';
+    el.id = 'search-style';
     el.textContent = CSS;
     document.head.appendChild(el);
   }
 
-  // fulltext_index.py の shard_of と同じハッシュ
+  // search_index.py の shard_of と同じハッシュ
   function shardOf(key, n) {
     let h = 0;
     for (const ch of key) h = (Math.imul(h, 31) + ch.codePointAt(0)) >>> 0;
@@ -139,7 +139,7 @@ mark.fts-hl { background: #fef08a; color: inherit; padding: 0 1px; border-radius
       const meta = await this.json('meta.json');
       const table = meta.norm;
       const memo = new Map();
-      // fulltext_index.py の normalize_char と同じ規則（旧字→新字、NFKC、再度旧字→新字、ひらがな→カタカナ、
+      // search_index.py の normalize_char と同じ規則（旧字→新字、NFKC、再度旧字→新字、ひらがな→カタカナ、
       // 英大文字→小文字、空白・改行は除去）
       this.normChar = c => {
         let r = memo.get(c);
@@ -274,7 +274,7 @@ mark.fts-hl { background: #fef08a; color: inherit; padding: 0 1px; border-radius
   }
 
   function renderSnippetText(text) {
-    return escapeHtml(text).replace(/\n/g, '').replace(/\x1f/g, '<span class="fts-sep">／</span>');
+    return escapeHtml(text).replace(/\n/g, '').replace(/\x1f/g, '<span class="search-sep">／</span>');
   }
 
   // 検索語: 空白区切り、正規化済み、重複なし
@@ -324,32 +324,32 @@ mark.fts-hl { background: #fef08a; color: inherit; padding: 0 1px; border-radius
         pos = b;
       }
       body += renderSnippetText(text.slice(pos, w.end)) + (w.end < text.length ? '…' : '');
-      html += `<div class="fts-snip">${body}</div>`;
+      html += `<div class="search-snip">${body}</div>`;
     }
     const rest = windows.slice(MAX_SNIPPETS).reduce((n, w) => n + w.hits.length, 0);
-    if (rest) html += `<div class="fts-more">ほか${rest}箇所</div>`;
+    if (rest) html += `<div class="search-more">ほか${rest}箇所</div>`;
     return { html, count: hits.length };
   }
 
   function mount(root, opts) {
     injectStyle();
-    const base = opts.base || 'fulltext/';
-    const hashKey = opts.hashKey || 'fulltext';
+    const base = opts.base || 'search/';
+    const hashKey = opts.hashKey || 'search';
     const groupLabel = opts.groupLabel || '資料';
     const pageSize = opts.pageSize || 50;
     const index = new Index(base);
 
     root.innerHTML = `
-      <form class="fts-form" role="search">
-        <input type="search" class="fts-input" aria-label="全文検索" autocomplete="off">
-        <button type="submit" class="fts-btn">検索</button>
+      <form class="search-form" role="search">
+        <input type="search" class="search-input" aria-label="全文検索" autocomplete="off">
+        <button type="submit" class="search-btn">検索</button>
       </form>
-      <p class="fts-help">旧字・新字、ひらがな・カタカナの違いや改行は区別せずに探します。スペースで区切ると、すべての語を含むものを探します。</p>
-      <div class="fts-results" aria-live="polite"></div>`;
-    const form = root.querySelector('.fts-form');
-    const input = root.querySelector('.fts-input');
-    const button = root.querySelector('.fts-btn');
-    const area = root.querySelector('.fts-results');
+      <p class="search-help">旧字・新字、ひらがな・カタカナの違いや改行は区別せずに探します。スペースで区切ると、すべての語を含むものを探します。</p>
+      <div class="search-results" aria-live="polite"></div>`;
+    const form = root.querySelector('.search-form');
+    const input = root.querySelector('.search-input');
+    const button = root.querySelector('.search-btn');
+    const area = root.querySelector('.search-results');
 
     // 現在の検索状態
     let state = { q: '', terms: [], docs: [], group: -1, page: 1 };
@@ -380,7 +380,7 @@ mark.fts-hl { background: #fef08a; color: inherit; padding: 0 1px; border-radius
       state.page = Math.min(Math.max(1, state.page), totalPages);
       history.replaceState(null, '', location.pathname + location.search + hash());
       if (!state.docs.length) {
-        area.innerHTML = `<div class="fts-empty">「${escapeHtml(state.q)}」を含む本文はありませんでした</div>`;
+        area.innerHTML = `<div class="search-empty">「${escapeHtml(state.q)}」を含む本文はありませんでした</div>`;
         return;
       }
       const pageDocs = docs.slice((state.page - 1) * pageSize, state.page * pageSize);
@@ -394,11 +394,11 @@ mark.fts-hl { background: #fef08a; color: inherit; padding: 0 1px; border-radius
       }
 
       let html = `
-        <div class="fts-head">
+        <div class="search-head">
           <span>「<strong>${escapeHtml(state.q)}</strong>」— 全${state.docs.length}件${state.group >= 0 ? `（うち${docs.length}件を表示）` : ''}</span>
-          <select class="fts-group" aria-label="${escapeHtml(groupLabel)}で絞り込み">${options}</select>
+          <select class="search-group" aria-label="${escapeHtml(groupLabel)}で絞り込み">${options}</select>
         </div>
-        <ol class="fts-list">`;
+        <ol class="search-list">`;
       for (const d of pageDocs) {
         const [url, title, badges, text] = data.get(d);
         // 資料ページ側で検索語を強調できるよう ?q= を付ける（docs/12.html?q=…#a12-200）
@@ -406,11 +406,11 @@ mark.fts-hl { background: #fef08a; color: inherit; padding: 0 1px; border-radius
         const href = `${path}?q=${encodeURIComponent(state.q)}${frag ? '#' + frag : ''}`;
         const snip = snippetsHtml(index, text, state.terms);
         html += `
-          <li class="fts-item">
-            <div class="fts-item-head">
-              <a class="fts-title" href="${escapeHtml(href)}">${escapeHtml(title || '（見出しなし）')}</a>
-              ${[index.meta.groups[index.groupOf(d)][0], ...badges].filter(Boolean).map(b => `<span class="fts-badge">${escapeHtml(b)}</span>`).join('')}
-              ${snip.count > 1 ? `<span class="fts-hits">${snip.count}箇所</span>` : ''}
+          <li class="search-item">
+            <div class="search-item-head">
+              <a class="search-title" href="${escapeHtml(href)}">${escapeHtml(title || '（見出しなし）')}</a>
+              ${[index.meta.groups[index.groupOf(d)][0], ...badges].filter(Boolean).map(b => `<span class="search-badge">${escapeHtml(b)}</span>`).join('')}
+              ${snip.count > 1 ? `<span class="search-hits">${snip.count}箇所</span>` : ''}
             </div>
             ${snip.html}
           </li>`;
@@ -418,19 +418,19 @@ mark.fts-hl { background: #fef08a; color: inherit; padding: 0 1px; border-radius
       html += '</ol>';
       if (totalPages > 1) {
         html += `
-          <div class="fts-pager">
+          <div class="search-pager">
             <button type="button" data-page="${state.page - 1}" ${state.page === 1 ? 'disabled' : ''}>← 前へ</button>
             <span>${state.page} / ${totalPages} ページ</span>
             <button type="button" data-page="${state.page + 1}" ${state.page === totalPages ? 'disabled' : ''}>次へ →</button>
           </div>`;
       }
       area.innerHTML = html;
-      area.querySelector('.fts-group').addEventListener('change', e => {
+      area.querySelector('.search-group').addEventListener('change', e => {
         state.group = Number(e.target.value);
         state.page = 1;
         show();
       });
-      area.querySelectorAll('.fts-pager button').forEach(btn => btn.addEventListener('click', () => {
+      area.querySelectorAll('.search-pager button').forEach(btn => btn.addEventListener('click', () => {
         state.page = Number(btn.dataset.page);
         show().then(() => root.scrollIntoView({ behavior: 'smooth', block: 'start' }));
       }));
@@ -441,7 +441,7 @@ mark.fts-hl { background: #fef08a; color: inherit; padding: 0 1px; border-radius
       try {
         await render();
       } catch (err) {
-        area.innerHTML = `<div class="fts-status fts-error">エラーが発生しました: ${escapeHtml(err.message)}</div>`;
+        area.innerHTML = `<div class="search-status search-error">エラーが発生しました: ${escapeHtml(err.message)}</div>`;
       }
     }
 
@@ -462,7 +462,7 @@ mark.fts-hl { background: #fef08a; color: inherit; padding: 0 1px; border-radius
       opts.onChange?.(true);
       const my = ++token;
       button.disabled = true;
-      area.innerHTML = '<div class="fts-status"><span class="fts-spinner"></span>検索中…</div>';
+      area.innerHTML = '<div class="search-status"><span class="search-spinner"></span>検索中…</div>';
       try {
         await index.load();
         const terms = queryTerms(index, q);
@@ -471,7 +471,7 @@ mark.fts-hl { background: #fef08a; color: inherit; padding: 0 1px; border-radius
         state = { q, terms, docs, group, page };
         await render();
       } catch (err) {
-        if (my === token) area.innerHTML = `<div class="fts-status fts-error">エラーが発生しました: ${escapeHtml(err.message)}</div>`;
+        if (my === token) area.innerHTML = `<div class="search-status search-error">エラーが発生しました: ${escapeHtml(err.message)}</div>`;
       } finally {
         if (my === token) button.disabled = false;
       }
@@ -504,7 +504,7 @@ mark.fts-hl { background: #fef08a; color: inherit; padding: 0 1px; border-radius
   // 全文検索の結果から開かれた資料ページ（?q=…）で、本文中の検索語を強調し、
   // 該当の記事・人物（#id）の中か、最初の該当箇所へ移る（law-platform 議事録の minutes.js と同じ）。
   // 照合は検索と同じ正規化（旧字・新字、ひらがな・カタカナ、改行の違いは無視）。要素をまたぐ語は強調しない
-  //   base: 索引のディレクトリ（'../fulltext/'）、root: 強調する範囲のセレクタ
+  //   base: 索引のディレクトリ（'../search/'）、root: 強調する範囲のセレクタ
   async function highlightFromQuery({ base, root }) {
     const q = new URLSearchParams(location.search).get('q');
     const roots = [...document.querySelectorAll(root)];
@@ -527,7 +527,7 @@ mark.fts-hl { background: #fef08a; color: inherit; padding: 0 1px; border-radius
         for (const [a, b] of hits) {
           frag.append(text.slice(pos, a));
           const m = document.createElement('mark');
-          m.className = 'fts-hl';
+          m.className = 'search-hl';
           m.textContent = text.slice(a, b);
           frag.append(m);
           pos = b;
@@ -537,7 +537,7 @@ mark.fts-hl { background: #fef08a; color: inherit; padding: 0 1px; border-radius
       }
     }
     // 表示切替・種別フィルタで隠れている箇所は飛ばす
-    const visibleMark = el => [...el.querySelectorAll('mark.fts-hl')].find(m => m.offsetParent);
+    const visibleMark = el => [...el.querySelectorAll('mark.search-hl')].find(m => m.offsetParent);
     const target = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
     const first = (target && visibleMark(target)) || roots.map(visibleMark).find(Boolean);
     if (first) first.scrollIntoView({ block: 'center' });
@@ -556,10 +556,10 @@ mark.fts-hl { background: #fef08a; color: inherit; padding: 0 1px; border-radius
     return html + escapeHtml(text.slice(pos));
   }
 
-  window.FullTextSearch = {
+  window.Search = {
     mount,
     highlightFromQuery,
-    // 人名アーカイブスの人物検索が同じ索引形式・正規化・結果の見た目（fts-* のクラス）を使うための部品
+    // 人名アーカイブスの人物検索が同じ索引形式・正規化・結果の見た目（search-* のクラス）を使うための部品
     openIndex: base => new Index(base),
     queryTerms,
     markHtml,

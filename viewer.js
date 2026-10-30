@@ -9,17 +9,17 @@
  *   - 「本文に連動」が有効なら、スクロールに合わせて表示中のカードのコマに切り替える
  *   - ページを開いた時点では常に閉じている（以前は開閉を localStorage に覚えて次のページでも開いていた）
  *
- * 原本サイトの違いは window.SOURCE_VIEWER で指定する（無ければ国立国会図書館）:
+ * 原本サイトの違いは window.VIEWER で指定する（無ければ国立国会図書館）:
  *   国立国会図書館: 各カードの data-pid / data-frame から画像URLを組み立てる
  *   国立公文書館:  { images: [コマ1のIIIF画像URL, コマ2…], page: '…/img/3688059#{frame}', site: '公文書館' }
  *                  （画像URLがコマ番号から組み立てられないので、manifest から一覧を埋め込む）
  *
- * 正本は 近世近代人名アーカイブス用データ作成/program/publish/source_viewer.js。
- * 各サイトの source_viewer.js は generate_docs.py が生成時にコピーしたもの（直接編集しない）。
+ * 正本は 近世近代人名アーカイブス/program/viewer.js。
+ * 各サイトの viewer.js は build.py が生成時にコピーしたもの（直接編集しない）。
  */
 (() => {
   const OSD_URL = 'https://cdnjs.cloudflare.com/ajax/libs/openseadragon/5.0.1/openseadragon.min.js';
-  const cfg = window.SOURCE_VIEWER || {};
+  const cfg = window.VIEWER || {};
   const parts = [...document.querySelectorAll('[data-frame]')];
   if (!parts.length) return;
 
