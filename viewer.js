@@ -161,6 +161,24 @@
     return cur;
   }
 
+  // 本文に連動：画面上部 1/4 の位置のカードが表示中と違うコマのときだけ切り替える
+  // （同じコマの記事どうしでは青枠を動かさない。クリックで選んだ記事に残すため）
+  function follow() {
+    const card = currentCard();
+    if (!card) return;
+    if (shownCard && shown && card.dataset.pid === shown.pid && Number(card.dataset.frame) === shown.frame) return;
+    showCard(card);
+  }
+
+  // クリックで記事まで自動スクロールしている間は連動しない（途中の記事に青枠が移らないように）
+  let autoScrolling = false;
+  let autoScrollTimer = 0;
+  function waitScrollEnd() {
+    autoScrolling = true;
+    clearTimeout(autoScrollTimer);
+    autoScrollTimer = setTimeout(() => { autoScrolling = false; }, 200);
+  }
+
   function open(card) {
     panel.hidden = false;
     document.body.classList.add('viewer-open');
@@ -213,14 +231,16 @@
     const card = src.closest('[data-frame]');
     followBox.checked = true;
     open(card);
+    waitScrollEnd();
     card.scrollIntoView({ block: 'start', behavior: 'smooth' });
   });
 
   let ticking = false;
   window.addEventListener('scroll', () => {
+    if (autoScrolling) { waitScrollEnd(); return; }
     if (panel.hidden || !followBox.checked || ticking) return;
     ticking = true;
-    requestAnimationFrame(() => { ticking = false; showCard(currentCard()); });
+    requestAnimationFrame(() => { ticking = false; follow(); });
   }, { passive: true });
 
 })();
