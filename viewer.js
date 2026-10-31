@@ -6,7 +6,9 @@
  *   - その中の「原本 コマN →」（.source）のクリックで、リンク先へ移る代わりにそのコマを開く
  *     （Ctrl/⌘/Shift クリックなどは通常どおり原本サイトを開く）
  *   - [data-viewer-toggle]（「原本画像を並べて表示 →」）で開閉する
- *   - 「本文に連動」が有効なら、スクロールに合わせて表示中のカードのコマに切り替える
+ *   - 「本文に連動」が有効なら、スクロールに合わせて表示中のカードのコマに切り替え、
+ *     逆に ‹ › でコマを送ると本文もそのコマのカードまでスクロールする。
+ *     史料はカードごとに読むものなので、最初は無効にしておく（2026-10-31 ユーザー指示）
  *   - ページを開いた時点では常に閉じている（以前は開閉を localStorage に覚えて次のページでも開いていた）
  *
  * 原本サイトの違いは window.VIEWER で指定する（無ければ国立国会図書館）:
@@ -73,7 +75,7 @@
       <button type="button" data-act="prev" title="前のコマ">‹</button>
       <span class="label"></span>
       <button type="button" data-act="next" title="次のコマ">›</button>
-      <label title="スクロールに合わせて表示中の箇所のコマに切り替える"><input type="checkbox" checked> 本文に連動</label>
+      <label title="本文のスクロールとコマ送りを連動させる"><input type="checkbox"> 本文に連動</label>
       <span class="spacer"></span>
       <button type="button" data-act="right" title="右頁を拡大">右頁</button>
       <button type="button" data-act="left" title="左頁を拡大">左頁</button>
@@ -161,22 +163,30 @@
     return cur;
   }
 
-  // 本文に連動：画面上部 1/4 の位置のカードが表示中と違うコマのときだけ切り替える
-  // （同じコマの記事どうしでは青枠を動かさない。クリックで選んだ記事に残すため）
-  function follow() {
-    const card = currentCard();
-    if (!card) return;
-    if (shownCard && shown && card.dataset.pid === shown.pid && Number(card.dataset.frame) === shown.frame) return;
-    showCard(card);
-  }
-
-  // クリックで記事まで自動スクロールしている間は連動しない（途中の記事に青枠が移らないように）
+  // 記事まで自動スクロールしている間は連動しない（途中のカードに青枠が移らないように）
   let autoScrolling = false;
   let autoScrollTimer = 0;
   function waitScrollEnd() {
     autoScrolling = true;
     clearTimeout(autoScrollTimer);
     autoScrollTimer = setTimeout(() => { autoScrolling = false; }, 200);
+  }
+
+  function scrollToCard(card) {
+    waitScrollEnd();
+    card.scrollIntoView({ block: 'start', behavior: 'smooth' });
+  }
+
+  // ‹ › でコマを送る。「本文に連動」が有効なら本文もそのコマのカードまでスクロールする
+  // （そのコマのカードが無ければ画像だけ送る）
+  function step(delta) {
+    const { pid } = shown;
+    const frame = Math.min(Math.max(1, shown.frame + delta), maxFrame);
+    const card = followBox.checked
+      && parts.find(p => p.offsetParent && p.dataset.pid === pid && Number(p.dataset.frame) === frame);
+    markCard(card || null);
+    show(pid, frame);
+    if (card) scrollToCard(card);
   }
 
   function open(card) {
@@ -199,10 +209,7 @@
     switch (act) {
       case 'prev':
       case 'next':
-        if (!shown) break;
-        followBox.checked = false;
-        markCard(null);
-        show(shown.pid, shown.frame + (act === 'next' ? 1 : -1));
+        if (shown) step(act === 'next' ? 1 : -1);
         break;
       case 'close': close(); break;
       case 'home': vp?.goHome(); break;
@@ -229,10 +236,8 @@
     if (!src) return;
     e.preventDefault();
     const card = src.closest('[data-frame]');
-    followBox.checked = true;
     open(card);
-    waitScrollEnd();
-    card.scrollIntoView({ block: 'start', behavior: 'smooth' });
+    scrollToCard(card);
   });
 
   let ticking = false;
@@ -240,7 +245,7 @@
     if (autoScrolling) { waitScrollEnd(); return; }
     if (panel.hidden || !followBox.checked || ticking) return;
     ticking = true;
-    requestAnimationFrame(() => { ticking = false; follow(); });
+    requestAnimationFrame(() => { ticking = false; showCard(currentCard()); });
   }, { passive: true });
 
 })();
