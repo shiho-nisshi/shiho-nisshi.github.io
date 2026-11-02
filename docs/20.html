@@ -27,6 +27,7 @@
   .jinji td:last-child { padding-right: 0; }
   .jinji td:nth-child(3) { white-space: nowrap; }  /* 氏名は途中で折り返さない */
   .jinji td[colspan] { padding-left: 1em; }  /* 氏名の後ろの辞令の文は、上の行の人の分と分かるよう1字下げる */
+  .jinji td.jinji-all { padding-left: 0; }  /* 前の何人かにまとめてかかる辞令（s だけの p）は字下げしない */
   @media (max-width: 640px) { .jinji td { padding-right: 1em; } }
   @media print { .item { break-inside: avoid; } }
 
@@ -107,11 +108,12 @@
 <div class="bg-white border border-gray-200 rounded-lg p-3 mb-4 text-sm" id="type-filter">
 <div class="flex flex-wrap gap-3 items-center">
 <span class="font-medium">表示する種別:</span>
-<label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="article">未分類（51）</label>
-<label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="人事">人事（18）</label>
+<label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="article">未分類（48）</label>
+<label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="人事">人事（21）</label>
 <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="伺">伺（176）</label>
 <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="布達">布達（10）</label>
-<label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="達書">達書（19）</label>
+<label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="達書">達書（9）</label>
+<label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="官庁宛達書">官庁宛達書（10）</label>
 <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="正誤">正誤（2）</label>
 <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="裁判所申渡/言渡">裁判所申渡/言渡（7）</label>
 <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="聽訟表">聽訟表（2）</label>
@@ -157,11 +159,11 @@
 <h2 class="card-issue-head">司法省日誌明治八年第四十三號</h2>
 <div class="card-dategroup filter-group">
 <h3 class="card-dategroup-head">○三月二十日</h3>
-<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-001" data-type-base="達書" data-pid="1366809" data-frame="2">
+<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-001" data-type-base="官庁宛達書" data-pid="1366809" data-frame="2">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
       <a href="#a20-001" class="inline-block px-2 rounded-full bg-gray-800 text-xs leading-5 text-white hover:bg-gray-700" title="この記事へのリンク">a20-001</a>
-      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">達書</span>
+      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">官庁宛達書</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">明治8年第43号</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1875-03-20</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1頁</span>
@@ -628,11 +630,11 @@
 </div>
 <div class="card-dategroup filter-group">
 <h3 class="card-dategroup-head">○三月十七日分</h3>
-<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-021" data-type-base="達書" data-pid="1366809" data-frame="12">
+<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-021" data-type-base="官庁宛達書" data-pid="1366809" data-frame="12">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
       <a href="#a20-021" class="inline-block px-2 rounded-full bg-gray-800 text-xs leading-5 text-white hover:bg-gray-700" title="この記事へのリンク">a20-021</a>
-      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">達書</span>
+      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">官庁宛達書</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">明治8年第43号</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1875-03-17</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">20頁</span>
@@ -797,11 +799,11 @@
     
   </div>
 </section>
-<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-026" data-type-base="達書" data-pid="1366809" data-frame="16">
+<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-026" data-type-base="官庁宛達書" data-pid="1366809" data-frame="16">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
       <a href="#a20-026" class="inline-block px-2 rounded-full bg-gray-800 text-xs leading-5 text-white hover:bg-gray-700" title="この記事へのリンク">a20-026</a>
-      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">達書</span>
+      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">官庁宛達書</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">明治8年第44号</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1875-03-22</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">9頁</span>
@@ -1630,10 +1632,8 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/39" target="_blank" rel="noopener">原本 コマ39 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">足柄裁判所在勤申付候事　中解部　藤井光
-足柄在勤 同　宮田重固
-御用都合有之歸京申付候事</div>
-    
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>足柄裁判所在勤申付候事</td><td>中解部</td><td>藤井光</td></tr><tr><td>足柄在勤</td><td>同</td><td>宮田重固</td></tr><tr><td colspan="3">御用都合有之歸京申付候事</td></tr></table></div>
+    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0486" class="text-blue-600 hover:underline xref-link">藤井光　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-052" data-type-base="伺" data-pid="1366809" data-frame="39">
@@ -2141,11 +2141,11 @@
     
   </div>
 </section>
-<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-070" data-type-base="達書" data-pid="1366809" data-frame="51">
+<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-070" data-type-base="官庁宛達書" data-pid="1366809" data-frame="51">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
       <a href="#a20-070" class="inline-block px-2 rounded-full bg-gray-800 text-xs leading-5 text-white hover:bg-gray-700" title="この記事へのリンク">a20-070</a>
-      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">達書</span>
+      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">官庁宛達書</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">明治8年第47号</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1875-03-27</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">19頁</span>
@@ -2461,11 +2461,11 @@
 </div>
 <div class="card-dategroup filter-group">
 <h3 class="card-dategroup-head">○三月十八日分</h3>
-<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-077" data-type-base="article" data-pid="1366809" data-frame="62">
+<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-077" data-type-base="人事" data-pid="1366809" data-frame="62">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
       <a href="#a20-077" class="inline-block px-2 rounded-full bg-gray-800 text-xs leading-5 text-white hover:bg-gray-700" title="この記事へのリンク">a20-077</a>
-      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">article</span>
+      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">人事</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">明治8年第48号</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1875-03-18</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">20頁</span>
@@ -2481,11 +2481,11 @@
 <h2 class="card-issue-head">司法省日誌明治八年第四十九號</h2>
 <div class="card-dategroup filter-group">
 <h3 class="card-dategroup-head">○三月二十七日</h3>
-<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-078" data-type-base="達書" data-pid="1366809" data-frame="62">
+<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-078" data-type-base="官庁宛達書" data-pid="1366809" data-frame="62">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
       <a href="#a20-078" class="inline-block px-2 rounded-full bg-gray-800 text-xs leading-5 text-white hover:bg-gray-700" title="この記事へのリンク">a20-078</a>
-      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">達書</span>
+      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">官庁宛達書</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">明治8年第49号</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1875-03-27</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1頁</span>
@@ -3628,8 +3628,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/95" target="_blank" rel="noopener">原本 コマ95 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">少解部　莊資倫
-兵庫裁判所在勤申付候事</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td>少解部</td><td>莊資倫</td></tr><tr><td colspan="3">兵庫裁判所在勤申付候事</td></tr></table></div>
     
   </div>
 </section>
@@ -3987,10 +3986,9 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/104" target="_blank" rel="noopener">原本 コマ104 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">中解部　藤井光
-兼テ足柄裁判所在勤申付置候所御用都合有之不及其儀
-候事</div>
-    
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td>中解部</td><td>藤井光</td></tr><tr><td colspan="3">兼テ足柄裁判所在勤申付置候所御用都合有之不及其儀
+候事</td></tr></table></div>
+    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0486" class="text-blue-600 hover:underline xref-link">藤井光　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
   </div>
 </section>
 </div>
@@ -4320,8 +4318,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/111" target="_blank" rel="noopener">原本 コマ111 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">兵庫在勤 大解部　近野種德
-御用都合有之歸京申付候事</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>兵庫在勤</td><td>大解部</td><td>近野種德</td></tr><tr><td colspan="3">御用都合有之歸京申付候事</td></tr></table></div>
     
   </div>
 </section>
@@ -4450,13 +4447,8 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/114" target="_blank" rel="noopener">原本 コマ114 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">權少判事　井上好武
-新治裁判所在勤被仰付候事
-新治在勤 權少判事　三島毅
-御用都合有之歸京被仰付候事
-司法權中属　石崎肅之
-兵庫裁判所在勤申付候事</div>
-    
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td>權少判事</td><td>井上好武</td></tr><tr><td colspan="3">新治裁判所在勤被仰付候事</td></tr><tr><td>新治在勤</td><td>權少判事</td><td>三島毅</td></tr><tr><td colspan="3">御用都合有之歸京被仰付候事</td></tr><tr><td></td><td>司法權中属</td><td>石崎肅之</td></tr><tr><td colspan="3">兵庫裁判所在勤申付候事</td></tr></table></div>
+    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3693307.html#fuken_3693307-0069" class="text-blue-600 hover:underline xref-link">井上好武　茨城県官員履歴（明治4‐7年）</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0425" class="text-blue-600 hover:underline xref-link">井上好武　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-146" data-type-base="人事" data-pid="1366809" data-frame="115">
@@ -5594,11 +5586,11 @@
     
   </div>
 </section>
-<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-186" data-type-base="達書" data-pid="1366809" data-frame="143">
+<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-186" data-type-base="官庁宛達書" data-pid="1366809" data-frame="143">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
       <a href="#a20-186" class="inline-block px-2 rounded-full bg-gray-800 text-xs leading-5 text-white hover:bg-gray-700" title="この記事へのリンク">a20-186</a>
-      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">達書</span>
+      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">官庁宛達書</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">明治8年第56号</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1875-04-13</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">16頁</span>
@@ -5875,11 +5867,11 @@
     
   </div>
 </section>
-<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-194" data-type-base="達書" data-pid="1366809" data-frame="151">
+<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-194" data-type-base="官庁宛達書" data-pid="1366809" data-frame="151">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
       <a href="#a20-194" class="inline-block px-2 rounded-full bg-gray-800 text-xs leading-5 text-white hover:bg-gray-700" title="この記事へのリンク">a20-194</a>
-      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">達書</span>
+      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">官庁宛達書</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">明治8年第57号</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1875-04-14</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">12頁</span>
@@ -5968,10 +5960,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/153" target="_blank" rel="noopener">原本 コマ153 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">十二等出仕　足立常雄
-十四等出仕　冷泉豐亮
-同　加藤謹吾
-兵庫裁判所在勤申付候事 通</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td>十二等出仕</td><td>足立常雄</td></tr><tr><td></td><td>十四等出仕</td><td>冷泉豐亮</td></tr><tr><td>同</td><td></td><td>加藤謹吾</td></tr><tr><td colspan="3" class="jinji-all">兵庫裁判所在勤申付候事 通</td></tr></table></div>
     
   </div>
 </section>
@@ -6405,9 +6394,8 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/164" target="_blank" rel="noopener">原本 コマ164 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">茨城在勤 權少判事　吉本知幾
-御用都合有之歸京被仰付候事</div>
-    
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>茨城在勤</td><td>權少判事</td><td>吉本知幾</td></tr><tr><td colspan="3">御用都合有之歸京被仰付候事</td></tr></table></div>
+    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3689579.html#fuken_3689579-0011" class="text-blue-600 hover:underline xref-link">吉本知幾　元白河県史（明治2‐4年）</a></li></ul></div>
   </div>
 </section>
 </div>
@@ -6779,19 +6767,19 @@
 </div>
 <div class="card-dategroup filter-group">
 <h3 class="card-dategroup-head">○四月十日分</h3>
-<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-222" data-type-base="article" data-pid="1366809" data-frame="176">
+<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-222" data-type-base="人事" data-pid="1366809" data-frame="176">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
       <a href="#a20-222" class="inline-block px-2 rounded-full bg-gray-800 text-xs leading-5 text-white hover:bg-gray-700" title="この記事へのリンク">a20-222</a>
-      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">article</span>
+      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">人事</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">明治8年第59号</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1875-04-10</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">20頁</span>
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/176" target="_blank" rel="noopener">原本 コマ176 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">少解部　前川茂保</div>
-    
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>免本官</td><td>少解部</td><td>前川茂保</td></tr></table></div>
+    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3688580.html#fuken_3688580-0060" class="text-blue-600 hover:underline xref-link">前川茂保　〔大坂府史〕　制度部　官員進退（明治元‐8年）</a></li><li><a href="https://person-archive.github.io/docs/3692219.html#fuken_3692219-0178" class="text-blue-600 hover:underline xref-link">前川茂保　和歌山県史案（第1編）　附録　県官履歴（明治4‐13年）</a></li></ul></div>
   </div>
 </section>
 </div></div>
@@ -7005,11 +6993,11 @@
     
   </div>
 </section>
-<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-232" data-type-base="達書" data-pid="1366809" data-frame="180">
+<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-232" data-type-base="官庁宛達書" data-pid="1366809" data-frame="180">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
       <a href="#a20-232" class="inline-block px-2 rounded-full bg-gray-800 text-xs leading-5 text-white hover:bg-gray-700" title="この記事へのリンク">a20-232</a>
-      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">達書</span>
+      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">官庁宛達書</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">明治8年第60号</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1875-04-18</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">9頁</span>
@@ -7206,11 +7194,8 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/185" target="_blank" rel="noopener">原本 コマ185 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">司法權大錄蒲原忠藏
-函館裁判所出張申付候事
-同中錄　近藤貫一
-新潟裁判所建築御用ニ付臨時出張申付候事
-但御用ノ儀ハ高木七等出仕ヘ可承合事</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td>司法權大錄</td><td>蒲原忠藏</td></tr><tr><td colspan="3">函館裁判所出張申付候事</td></tr><tr><td></td><td>同中錄</td><td>近藤貫一</td></tr><tr><td colspan="3">新潟裁判所建築御用ニ付臨時出張申付候事
+但御用ノ儀ハ高木七等出仕ヘ可承合事</td></tr></table></div>
     
   </div>
 </section>
@@ -7261,9 +7246,8 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/185" target="_blank" rel="noopener">原本 コマ185 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">七等出仕　高木秀臣
-新潟裁判所建築御用ニ付臨時出張被仰付候事</div>
-    
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td>七等出仕</td><td>高木秀臣</td></tr><tr><td colspan="3">新潟裁判所建築御用ニ付臨時出張被仰付候事</td></tr></table></div>
+    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0313" class="text-blue-600 hover:underline xref-link">高木秀臣　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-243" data-type-base="article" data-pid="1366809" data-frame="185">
@@ -8105,11 +8089,11 @@
     
   </div>
 </section>
-<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-272" data-type-base="達書" data-pid="1366809" data-frame="206">
+<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-272" data-type-base="官庁宛達書" data-pid="1366809" data-frame="206">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
       <a href="#a20-272" class="inline-block px-2 rounded-full bg-gray-800 text-xs leading-5 text-white hover:bg-gray-700" title="この記事へのリンク">a20-272</a>
-      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">達書</span>
+      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">官庁宛達書</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">明治8年第63号</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1875-04-22</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1頁</span>
@@ -8420,11 +8404,11 @@
     
   </div>
 </section>
-<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-283" data-type-base="達書" data-pid="1366809" data-frame="214">
+<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-283" data-type-base="官庁宛達書" data-pid="1366809" data-frame="214">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
       <a href="#a20-283" class="inline-block px-2 rounded-full bg-gray-800 text-xs leading-5 text-white hover:bg-gray-700" title="この記事へのリンク">a20-283</a>
-      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">達書</span>
+      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">官庁宛達書</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">明治8年第63号</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1875-04-25</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">17頁</span>
@@ -8509,18 +8493,18 @@
     
   </div>
 </section>
-<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-287" data-type-base="article" data-pid="1366809" data-frame="216">
+<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a20-287" data-type-base="人事" data-pid="1366809" data-frame="216">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
       <a href="#a20-287" class="inline-block px-2 rounded-full bg-gray-800 text-xs leading-5 text-white hover:bg-gray-700" title="この記事へのリンク">a20-287</a>
-      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">article</span>
+      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">人事</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">明治8年第63号</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1875-04-25</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">20頁</span>
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366809/1/216" target="_blank" rel="noopener">原本 コマ216 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">十三等出仕　石川雄吉</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>免出仕</td><td>十三等出仕</td><td>石川雄吉</td></tr></table></div>
     
   </div>
 </section>
@@ -8591,5 +8575,7 @@ revealHashTarget();
 // 全文検索の結果から開かれたとき（?q=…）は、本文中の検索語を強調して該当箇所へ移る
 addEventListener('DOMContentLoaded', () => Search.highlightFromQuery({ base: '../search/', root: '#articles' }));
 </script>
+<script>window.PROOF_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdNUCoRSxKiYXCiUDRwfZLecgOZl_8EKb7JeobXT5F0UnLMFQ/viewform?usp=pp_url&entry.1909662132=ID&entry.1668640403=HEAD&entry.2000655517=TEXT";</script>
+<script src="../proof.js?v=83c69186" defer></script>
 </body>
 </html>

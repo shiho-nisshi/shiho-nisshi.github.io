@@ -27,6 +27,7 @@
   .jinji td:last-child { padding-right: 0; }
   .jinji td:nth-child(3) { white-space: nowrap; }  /* 氏名は途中で折り返さない */
   .jinji td[colspan] { padding-left: 1em; }  /* 氏名の後ろの辞令の文は、上の行の人の分と分かるよう1字下げる */
+  .jinji td.jinji-all { padding-left: 0; }  /* 前の何人かにまとめてかかる辞令（s だけの p）は字下げしない */
   @media (max-width: 640px) { .jinji td { padding-right: 1em; } }
   @media print { .item { break-inside: avoid; } }
 
@@ -106,11 +107,12 @@
 <div class="bg-white border border-gray-200 rounded-lg p-3 mb-4 text-sm" id="type-filter">
 <div class="flex flex-wrap gap-3 items-center">
 <span class="font-medium">表示する種別:</span>
-<label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="article">未分類（72）</label>
-<label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="人事">人事（18）</label>
+<label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="article">未分類（69）</label>
+<label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="人事">人事（21）</label>
 <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="伺">伺（175）</label>
 <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="布達">布達（16）</label>
-<label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="達書">達書（25）</label>
+<label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="達書">達書（17）</label>
+<label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="官庁宛達書">官庁宛達書（8）</label>
 <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="正誤">正誤（6）</label>
 <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="裁判所申渡/言渡">裁判所申渡/言渡（7）</label>
 <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" class="accent-blue-600" checked data-type-filter="聽訟表">聽訟表（2）</label>
@@ -1175,19 +1177,18 @@
 </div>
 <div class="card-dategroup filter-group">
 <h3 class="card-dategroup-head">○四月廿九日分</h3>
-<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a09-036" data-type-base="article" data-pid="1366798" data-frame="28">
+<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a09-036" data-type-base="人事" data-pid="1366798" data-frame="28">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
       <a href="#a09-036" class="inline-block px-2 rounded-full bg-gray-800 text-xs leading-5 text-white hover:bg-gray-700" title="この記事へのリンク">a09-036</a>
-      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">article</span>
+      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">人事</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">明治7年第84号</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1874-04-29</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">12頁</span>
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366798/1/28" target="_blank" rel="noopener">原本 コマ28 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">○
-補十二等出仕　堀倶定</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>補十二等出仕</td><td></td><td>堀倶定</td></tr></table></div>
     
   </div>
 </section>
@@ -1205,12 +1206,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366798/1/28" target="_blank" rel="noopener">原本 コマ28 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">杤木裁判所在勤申付候事　十三等出仕　久保成乎
-十等出仕 井 今 良
-十三等出仕　田中政永
-久保十三等出仕交代歸京申付候事
-歸京申付候事
-在勤</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>杤木裁判所在勤申付候事</td><td>十三等出仕</td><td>久保成乎</td></tr><tr><td>杤木在勤</td><td>十等出仕</td><td>今井良一</td></tr><tr><td colspan="3">久保十三等出仕交代歸京申付候事</td></tr><tr><td>千葉在勤</td><td>十三等出仕</td><td>田中政永</td></tr><tr><td colspan="3">歸京申付候事</td></tr></table></div>
     
   </div>
 </section>
@@ -1228,9 +1224,8 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366798/1/28" target="_blank" rel="noopener">原本 コマ28 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">權少判事　大久保親正
-神奈川裁判所在勤被仰付候事</div>
-    
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td>權少判事</td><td>大久保親正</td></tr><tr><td colspan="3">神奈川裁判所在勤被仰付候事</td></tr></table></div>
+    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3693296.html#fuken_3693296-0255" class="text-blue-600 hover:underline xref-link">大久保親正　旧藩県官員履歴（明治2‐4年）</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0411" class="text-blue-600 hover:underline xref-link">大久保親正　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
   </div>
 </section>
 </div>
@@ -1288,8 +1283,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366798/1/29" target="_blank" rel="noopener">原本 コマ29 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">元十等出仕　本鄕閑鷗
-滿一箇年以上勤續ノ廉ヲ以テ月給半箇月分下賜候事</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td>元十等出仕</td><td>本鄕閑鷗</td></tr><tr><td colspan="3">滿一箇年以上勤續ノ廉ヲ以テ月給半箇月分下賜候事</td></tr></table></div>
     
   </div>
 </section>
@@ -2183,11 +2177,11 @@
     
   </div>
 </section>
-<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a09-076" data-type-base="達書" data-pid="1366798" data-frame="49">
+<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a09-076" data-type-base="官庁宛達書" data-pid="1366798" data-frame="49">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
       <a href="#a09-076" class="inline-block px-2 rounded-full bg-gray-800 text-xs leading-5 text-white hover:bg-gray-700" title="この記事へのリンク">a09-076</a>
-      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">達書</span>
+      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">官庁宛達書</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">明治7年第86号</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1874-05-09</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">15頁</span>
@@ -2252,11 +2246,11 @@
     
   </div>
 </section>
-<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a09-079" data-type-base="達書" data-pid="1366798" data-frame="50">
+<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a09-079" data-type-base="官庁宛達書" data-pid="1366798" data-frame="50">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
       <a href="#a09-079" class="inline-block px-2 rounded-full bg-gray-800 text-xs leading-5 text-white hover:bg-gray-700" title="この記事へのリンク">a09-079</a>
-      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">達書</span>
+      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">官庁宛達書</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">明治7年第86号</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1874-05-10</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">17頁</span>
@@ -2286,9 +2280,8 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366798/1/51" target="_blank" rel="noopener">原本 コマ51 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">權少判事　大久保親正
-神奈川裁判所副所長被仰付候事</div>
-    
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td>權少判事</td><td>大久保親正</td></tr><tr><td colspan="3">神奈川裁判所副所長被仰付候事</td></tr></table></div>
+    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3693296.html#fuken_3693296-0255" class="text-blue-600 hover:underline xref-link">大久保親正　旧藩県官員履歴（明治2‐4年）</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0411" class="text-blue-600 hover:underline xref-link">大久保親正　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a09-081" data-type-base="人事" data-pid="1366798" data-frame="51">
@@ -2344,11 +2337,11 @@
     
   </div>
 </section>
-<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a09-084" data-type-base="article" data-pid="1366798" data-frame="52">
+<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a09-084" data-type-base="人事" data-pid="1366798" data-frame="52">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
       <a href="#a09-084" class="inline-block px-2 rounded-full bg-gray-800 text-xs leading-5 text-white hover:bg-gray-700" title="この記事へのリンク">a09-084</a>
-      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">article</span>
+      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">人事</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">明治7年第86号</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1874-04-28</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">20頁</span>
@@ -2767,18 +2760,10 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366798/1/59" target="_blank" rel="noopener">原本 コマ59 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">權中判事　早川景矩
-河野權大判事臨時出張中兼テ同人取扱事務代理被仰付
-置候所今般同人歸京相成候ニ付最早不及其儀候事
-大解部　田中廣德
-權大解部　土師經典
-權中解部　長沼東夫
-少属　遠山旭
-御用有之京攝出張申付候事 各通
-權中解部　永島保邦
-山梨裁判所在勤兼テ申付置候所御用都合有之不及其儀
-候事</div>
-    
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td>權中判事</td><td>早川景矩</td></tr><tr><td colspan="3">河野權大判事臨時出張中兼テ同人取扱事務代理被仰付
+置候所今般同人歸京相成候ニ付最早不及其儀候事</td></tr><tr><td></td><td>大解部</td><td>田中廣德</td></tr><tr><td></td><td>權大解部</td><td>土師經典</td></tr><tr><td></td><td>權中解部</td><td>長沼東夫</td></tr><tr><td></td><td>少属</td><td>遠山旭</td></tr><tr><td colspan="3" class="jinji-all">御用有之京攝出張申付候事 各通</td></tr><tr><td></td><td>權中解部</td><td>永島保邦</td></tr><tr><td colspan="3">山梨裁判所在勤兼テ申付置候所御用都合有之不及其儀
+候事</td></tr></table></div>
+    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0450" class="text-blue-600 hover:underline xref-link">土師經典　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a09-103" data-type-base="人事" data-pid="1366798" data-frame="60">
@@ -2855,7 +2840,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366798/1/62" target="_blank" rel="noopener">原本 コマ62 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">權中錄　佐々木高吉</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td>權中錄</td><td>佐々木高吉</td></tr></table></div>
     
   </div>
 </section>
@@ -2918,11 +2903,11 @@
     
   </div>
 </section>
-<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a09-109" data-type-base="達書" data-pid="1366798" data-frame="63">
+<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a09-109" data-type-base="官庁宛達書" data-pid="1366798" data-frame="63">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
       <a href="#a09-109" class="inline-block px-2 rounded-full bg-gray-800 text-xs leading-5 text-white hover:bg-gray-700" title="この記事へのリンク">a09-109</a>
-      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">達書</span>
+      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">官庁宛達書</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">明治7年第88号</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1874-05-13</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">2頁</span>
@@ -3285,7 +3270,8 @@
 テ御指令ノ上ニハ候ヘ共實地ノ事情尙ホ具申仕此段再
 應相伺候也
 指令
-人民便覽ノ爲メ御布告等揭示スル板榜ヲ毀壞スル者情</div>
+人民便覽ノ爲メ御布告等揭示スル板榜ヲ毀壞スル者情
+ヲ量リ不應爲ノ輕重ニ問フ</div>
     
   </div>
 </section>
@@ -3303,10 +3289,8 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366798/1/72" target="_blank" rel="noopener">原本 コマ72 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">忠 元
-任權大觧部
-中解部　筧</div>
-    
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>任權大觧部</td><td>中解部</td><td>筧元忠</td></tr></table></div>
+    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0608" class="text-blue-600 hover:underline xref-link">筧元忠　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
   </div>
 </section>
 </div></div>
@@ -3425,10 +3409,9 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366798/1/74" target="_blank" rel="noopener">原本 コマ74 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">權大解部　別府景通
-更ニ山梨裁判所在勤兼テ申付置候所御用都合有之歸京
-申付候事</div>
-    
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td>權大解部</td><td>別府景通</td></tr><tr><td colspan="3">更ニ山梨裁判所在勤兼テ申付置候所御用都合有之歸京
+申付候事</td></tr></table></div>
+    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-3962" class="text-blue-600 hover:underline xref-link">別府景通　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a09-128" data-type-base="伺" data-pid="1366798" data-frame="75">
@@ -4000,15 +3983,9 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366798/1/88" target="_blank" rel="noopener">原本 コマ88 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">權中判事　小畑美稻
-臨時御用ニ付京攝出張被仰付候事
-權少撿事　益田勇
-長崎裁判所在勤申付候事
-十等出仕　西村讓
-正
-更ニ大坂裁判所在勤申付候事
-佐賀裁判所在勤申付候事　十一等出仕渡邊</div>
-    
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td>權中判事</td><td>小畑美稻</td></tr><tr><td colspan="3">臨時御用ニ付京攝出張被仰付候事</td></tr><tr><td></td><td>權少撿事</td><td>益田勇</td></tr><tr><td colspan="3">長崎裁判所在勤申付候事</td></tr><tr><td></td><td>十等出仕</td><td>西村讓</td></tr><tr><td colspan="3">正
+更ニ大坂裁判所在勤申付候事</td></tr><tr><td>佐賀裁判所在勤申付候事</td><td>十一等出仕</td><td>渡邊</td></tr></table></div>
+    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0354" class="text-blue-600 hover:underline xref-link">小畑美稻　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0433" class="text-blue-600 hover:underline xref-link">益田勇　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0481" class="text-blue-600 hover:underline xref-link">西村讓　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/3692369.html#fuken_3692369-0410" class="text-blue-600 hover:underline xref-link">渡邊　県治紀事　官員履歴2（明治2‐16年）</a></li></ul></div>
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a09-148" data-type-base="伺" data-pid="1366798" data-frame="89">
@@ -4315,11 +4292,11 @@
     
   </div>
 </section>
-<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a09-158" data-type-base="達書" data-pid="1366798" data-frame="96">
+<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a09-158" data-type-base="官庁宛達書" data-pid="1366798" data-frame="96">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
       <a href="#a09-158" class="inline-block px-2 rounded-full bg-gray-800 text-xs leading-5 text-white hover:bg-gray-700" title="この記事へのリンク">a09-158</a>
-      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">達書</span>
+      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">官庁宛達書</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">明治7年第91号</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1874-05-17</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">9頁</span>
@@ -4944,11 +4921,11 @@
 <h2 class="card-issue-head">司法省日誌明治七年第九十三號</h2>
 <div class="card-dategroup filter-group">
 <h3 class="card-dategroup-head">○五月十七日</h3>
-<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a09-180" data-type-base="達書" data-pid="1366798" data-frame="112">
+<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a09-180" data-type-base="官庁宛達書" data-pid="1366798" data-frame="112">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
       <a href="#a09-180" class="inline-block px-2 rounded-full bg-gray-800 text-xs leading-5 text-white hover:bg-gray-700" title="この記事へのリンク">a09-180</a>
-      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">達書</span>
+      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">官庁宛達書</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">明治7年第93号</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1874-05-17</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1頁</span>
@@ -5121,11 +5098,8 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366798/1/116" target="_blank" rel="noopener">原本 コマ116 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">達書</div>
-    <div class="item-body text-base leading-relaxed">京都裁判所在勤申付候事　權大解部　土屋正直
-權中解部　長崎疆
-兼テ埼玉裁判所在勤申付置候所御用都合有之不及其儀
-候事
-埼玉裁判所在勤申付候事　同　永島保邦</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>京都裁判所在勤申付候事</td><td>權大解部</td><td>土屋正直</td></tr><tr><td></td><td>權中解部</td><td>長崎疆</td></tr><tr><td colspan="3">兼テ埼玉裁判所在勤申付置候所御用都合有之不及其儀
+候事</td></tr><tr><td>埼玉裁判所在勤申付候事</td><td>同</td><td>永島保邦</td></tr></table></div>
     
   </div>
 </section>
@@ -6016,10 +5990,9 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366798/1/138" target="_blank" rel="noopener">原本 コマ138 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">大解部　中澤重業
-兼テ京都裁判所在勤申付置候處御用都合有之不及其儀
-候事</div>
-    
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td>大解部</td><td>中澤重業</td></tr><tr><td colspan="3">兼テ京都裁判所在勤申付置候處御用都合有之不及其儀
+候事</td></tr></table></div>
+    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0376" class="text-blue-600 hover:underline xref-link">中澤重業　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
   </div>
 </section>
 </div>
@@ -6313,19 +6286,18 @@
     
   </div>
 </section>
-<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a09-230" data-type-base="article" data-pid="1366798" data-frame="145">
+<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a09-230" data-type-base="人事" data-pid="1366798" data-frame="145">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
       <a href="#a09-230" class="inline-block px-2 rounded-full bg-gray-800 text-xs leading-5 text-white hover:bg-gray-700" title="この記事へのリンク">a09-230</a>
-      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">article</span>
+      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">人事</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">明治7年第96号</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1874-05-23</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">6頁</span>
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366798/1/145" target="_blank" rel="noopener">原本 コマ145 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed">明法中属　於保貞夫
-任明法權大属</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>任明法權大属</td><td>明法中属</td><td>於保貞夫</td></tr></table></div>
     
   </div>
 </section>
@@ -6340,10 +6312,8 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366798/1/145" target="_blank" rel="noopener">原本 コマ145 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">中解部　深江種虎
-少属　山口正佳
-新治縣下常州用內郡角崎村其外地所出入一件ニ付實地
-撿査ノ爲メ出張申付候事 通 各</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td>中解部</td><td>深江種虎</td></tr><tr><td></td><td>少属</td><td>山口正佳</td></tr><tr><td colspan="3" class="jinji-all">新治縣下常州用內郡角崎村其外地所出入一件ニ付實地
+撿査ノ爲メ出張申付候事 各通</td></tr></table></div>
     
   </div>
 </section>
@@ -7016,11 +6986,11 @@
 <h2 class="card-issue-head">司法省日誌明治七年第九十八號</h2>
 <div class="card-dategroup filter-group">
 <h3 class="card-dategroup-head">○五月廿五日</h3>
-<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a09-254" data-type-base="達書" data-pid="1366798" data-frame="162">
+<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a09-254" data-type-base="官庁宛達書" data-pid="1366798" data-frame="162">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
       <a href="#a09-254" class="inline-block px-2 rounded-full bg-gray-800 text-xs leading-5 text-white hover:bg-gray-700" title="この記事へのリンク">a09-254</a>
-      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">達書</span>
+      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">官庁宛達書</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">明治7年第98号</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1874-05-25</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1頁</span>
@@ -7253,8 +7223,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366798/1/167" target="_blank" rel="noopener">原本 コマ167 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">權中錄　佐々木高吉
-歸京申付候事</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td>權中錄</td><td>佐々木高吉</td></tr><tr><td colspan="3">歸京申付候事</td></tr></table></div>
     
   </div>
 </section>
@@ -7290,10 +7259,9 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366798/1/168" target="_blank" rel="noopener">原本 コマ168 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">權大解部　筧元忠
-交代歸京ノ儀兼テ申付置候處御用都合有之更ニ山梨裁
-判所在勤申付候事</div>
-    
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td>權大解部</td><td>筧元忠</td></tr><tr><td colspan="3">交代歸京ノ儀兼テ申付置候處御用都合有之更ニ山梨裁
+判所在勤申付候事</td></tr></table></div>
+    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0608" class="text-blue-600 hover:underline xref-link">筧元忠　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
   </div>
 </section>
 </div>
@@ -7380,8 +7348,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366798/1/169" target="_blank" rel="noopener">原本 コマ169 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">十一等出仕　石崎肅之
-長崎裁判所在勤申付候事</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td>十一等出仕</td><td>石崎肅之</td></tr><tr><td colspan="3">長崎裁判所在勤申付候事</td></tr></table></div>
     
   </div>
 </section>
@@ -7669,11 +7636,11 @@
     
   </div>
 </section>
-<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a09-282" data-type-base="達書" data-pid="1366798" data-frame="175">
+<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a09-282" data-type-base="官庁宛達書" data-pid="1366798" data-frame="175">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
       <a href="#a09-282" class="inline-block px-2 rounded-full bg-gray-800 text-xs leading-5 text-white hover:bg-gray-700" title="この記事へのリンク">a09-282</a>
-      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">達書</span>
+      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">官庁宛達書</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">明治7年第99号</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1874-05-28</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">6頁</span>
@@ -7698,12 +7665,9 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366798/1/175" target="_blank" rel="noopener">原本 コマ175 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書 〕</div>
-    <div class="item-body text-base leading-relaxed">大解部　增淵正脩
-同　竹中邦香
-岐阜縣下濃州山縣郡中屋村千疋村幷ニ靜岡縣下駿州安
-信郡俵峰村等論地一件ニ付爲實地撿查出張申付候事 通 各
-熊谷裁判所在勤申付候事　十二等出仕　多賀叢生</div>
-    
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td>大解部</td><td>增淵正脩</td></tr><tr><td>同</td><td></td><td>竹中邦香</td></tr><tr><td colspan="3" class="jinji-all">岐阜縣下濃州山縣郡中屋村千疋村幷ニ靜岡縣下駿州安
+信郡俵峰村等論地一件ニ付爲實地撿查出張申付候事 各通</td></tr><tr><td>熊谷裁判所在勤申付候事</td><td>十二等出仕</td><td>多賀叢生</td></tr></table></div>
+    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3688894.html#fuken_3688894-0084" class="text-blue-600 hover:underline xref-link">竹中邦香　判任官履歴書2（明治元‐7年）</a></li></ul></div>
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a09-284" data-type-base="伺" data-pid="1366798" data-frame="175">
@@ -7985,22 +7949,9 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366798/1/182" target="_blank" rel="noopener">原本 コマ182 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">權少判事　山田信道
-兼テ出京ノ所御用都合有之不及歸任候事
-同　芳野親義
-足柄裁判所在勤被仰付候事
-京都裁判所在勤申付候事　大解部　橫山直陽
-權大解部　土屋正直
-兼テ京都裁判所在勤申付置候所御用都合有之不及其儀
-候事
-山梨裁判所在勤申付候事　權中解部　今村信行
-十等出仕　上村行豐
-十二等出仕　金田淸次郞
-同　同　齋田虎尾
-同　十三等出仕　田中立文
-十四等出仕　澤崎廉二
-右歸京申付候事</div>
-    
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td>權少判事</td><td>山田信道</td></tr><tr><td colspan="3">兼テ出京ノ所御用都合有之不及歸任候事</td></tr><tr><td>同</td><td></td><td>芳野親義</td></tr><tr><td colspan="3">足柄裁判所在勤被仰付候事</td></tr><tr><td>京都裁判所在勤申付候事</td><td>大解部</td><td>橫山直陽</td></tr><tr><td></td><td>權大解部</td><td>土屋正直</td></tr><tr><td colspan="3">兼テ京都裁判所在勤申付置候所御用都合有之不及其儀
+候事</td></tr><tr><td>山梨裁判所在勤申付候事</td><td>權中解部</td><td>今村信行</td></tr><tr><td></td><td>十等出仕</td><td>上村行豐</td></tr><tr><td></td><td>十二等出仕</td><td>金田淸次郞</td></tr><tr><td>同</td><td>同</td><td>齋田虎尾</td></tr><tr><td>同</td><td>十三等出仕</td><td>田中立文</td></tr><tr><td></td><td>十四等出仕</td><td>澤崎廉二</td></tr><tr><td colspan="3" class="jinji-all">右歸京申付候事</td></tr></table></div>
+    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0440" class="text-blue-600 hover:underline xref-link">山田信道　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0328" class="text-blue-600 hover:underline xref-link">芳野親義　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/3691202.html#fuken_3691202-0084" class="text-blue-600 hover:underline xref-link">橫山直陽　高知県史6　官員履歴（明治4‐7年）</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0476" class="text-blue-600 hover:underline xref-link">今村信行　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/3693306.html#fuken_3693306-0159" class="text-blue-600 hover:underline xref-link">上村行豐　旧新治県官員履歴（明治4‐8年）</a></li><li><a href="https://person-archive.github.io/docs/3693307.html#fuken_3693307-0167" class="text-blue-600 hover:underline xref-link">上村行豐　茨城県官員履歴（明治4‐7年）</a></li></ul></div>
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a09-294" data-type-base="伺" data-pid="1366798" data-frame="183">
@@ -8570,11 +8521,11 @@
     
   </div>
 </section>
-<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a09-314" data-type-base="達書" data-pid="1366798" data-frame="197">
+<section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a09-314" data-type-base="官庁宛達書" data-pid="1366798" data-frame="197">
   <div class="p-4">
     <div class="flex flex-wrap items-center gap-2 text-sm mb-2 pb-2 border-b border-dashed border-gray-200">
       <a href="#a09-314" class="inline-block px-2 rounded-full bg-gray-800 text-xs leading-5 text-white hover:bg-gray-700" title="この記事へのリンク">a09-314</a>
-      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">達書</span>
+      <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">官庁宛達書</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">明治7年第101号</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">1874-05-31</span>
       <span class="inline-block px-2 rounded-full border border-gray-300 text-xs leading-5 text-gray-700">8頁</span>
@@ -8901,5 +8852,7 @@ revealHashTarget();
 // 全文検索の結果から開かれたとき（?q=…）は、本文中の検索語を強調して該当箇所へ移る
 addEventListener('DOMContentLoaded', () => Search.highlightFromQuery({ base: '../search/', root: '#articles' }));
 </script>
+<script>window.PROOF_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdNUCoRSxKiYXCiUDRwfZLecgOZl_8EKb7JeobXT5F0UnLMFQ/viewform?usp=pp_url&entry.1909662132=ID&entry.1668640403=HEAD&entry.2000655517=TEXT";</script>
+<script src="../proof.js?v=83c69186" defer></script>
 </body>
 </html>

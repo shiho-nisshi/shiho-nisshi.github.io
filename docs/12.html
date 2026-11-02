@@ -27,6 +27,7 @@
   .jinji td:last-child { padding-right: 0; }
   .jinji td:nth-child(3) { white-space: nowrap; }  /* 氏名は途中で折り返さない */
   .jinji td[colspan] { padding-left: 1em; }  /* 氏名の後ろの辞令の文は、上の行の人の分と分かるよう1字下げる */
+  .jinji td.jinji-all { padding-left: 0; }  /* 前の何人かにまとめてかかる辞令（s だけの p）は字下げしない */
   @media (max-width: 640px) { .jinji td { padding-right: 1em; } }
   @media print { .item { break-inside: avoid; } }
 
@@ -247,10 +248,7 @@
     <div class="font-semibold text-base mb-1">〔達書〕</div>
     <div class="item-body text-base leading-relaxed">ボアソナード
 今般大久保辨理大臣淸國ヘ被差遣候ニ付爲顧問隨行被
-仰付候條此旨相達候事
-茨城裁判所在勤申付候事　十一等出仕　鷹松重明
-少解部　關田耕作
-御用都合有之歸京申付候事</div>
+仰付候條此旨相達候事<table class="jinji"><tr><td>茨城裁判所在勤申付候事</td><td>十一等出仕</td><td>鷹松重明</td></tr><tr><td></td><td>少解部</td><td>關田耕作</td></tr><tr><td colspan="3">御用都合有之歸京申付候事</td></tr></table></div>
     
   </div>
 </section>
@@ -1593,15 +1591,9 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366801/1/36" target="_blank" rel="noopener">原本 コマ36 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">少判事　大塚正男
-中撿事　橋口兼三
-臨時御用有之靑森縣出張被　仰付候事
-大解部　田中廣德
-同　中澤重業
-權大属　近藤秀寬
-臨時御用有之靑森縣出張申付候事 通 各
-但御用ノ儀ハ大塚少判事ヘ可承合事</div>
-    
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td>少判事</td><td>大塚正男</td></tr><tr><td></td><td>中撿事</td><td>橋口兼三</td></tr><tr><td colspan="3" class="jinji-all">臨時御用有之靑森縣出張被　仰付候事</td></tr><tr><td></td><td>大解部</td><td>田中廣德</td></tr><tr><td>同</td><td></td><td>中澤重業</td></tr><tr><td></td><td>權大属</td><td>近藤秀寬</td></tr><tr><td colspan="3" class="jinji-all">臨時御用有之靑森縣出張申付候事 各通
+但御用ノ儀ハ大塚少判事ヘ可承合事</td></tr></table></div>
+    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0339" class="text-blue-600 hover:underline xref-link">大塚正男　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0389" class="text-blue-600 hover:underline xref-link">橋口兼三　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0376" class="text-blue-600 hover:underline xref-link">中澤重業　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a12-056" data-type-base="article" data-pid="1366801" data-frame="36">
@@ -1669,10 +1661,9 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366801/1/37" target="_blank" rel="noopener">原本 コマ37 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">十等出仕　上村行豐
-臨時御用ニ付靑森縣出張申付候事
-但御用ノ儀ハ橋口中撿事ヘ可承合事</div>
-    
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td>十等出仕</td><td>上村行豐</td></tr><tr><td colspan="3">臨時御用ニ付靑森縣出張申付候事
+但御用ノ儀ハ橋口中撿事ヘ可承合事</td></tr></table></div>
+    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3693306.html#fuken_3693306-0159" class="text-blue-600 hover:underline xref-link">上村行豐　旧新治県官員履歴（明治4‐8年）</a></li><li><a href="https://person-archive.github.io/docs/3693307.html#fuken_3693307-0167" class="text-blue-600 hover:underline xref-link">上村行豐　茨城県官員履歴（明治4‐7年）</a></li></ul></div>
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a12-059" data-type-base="article" data-pid="1366801" data-frame="37">
@@ -2383,7 +2374,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366801/1/51" target="_blank" rel="noopener">原本 コマ51 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>補十三等出仕</td><td>豐岡縣十三等出仕</td><td>草問正名</td></tr><tr><td>補十四等出仕</td><td></td><td></td></tr><tr><td>同</td><td>十四等出仕</td><td>宮川達夫</td></tr></table></div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>補十三等出仕</td><td>豐岡縣十三等出仕</td><td>草問正名</td></tr><tr><td>補十四等出仕</td><td>同十四等出仕</td><td>宮川達夫</td></tr></table></div>
     <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3692209.html#fuken_3692209-0102" class="text-blue-600 hover:underline xref-link">宮川達夫　豊岡県史　政治之部　官員履歴（明治4‐8年）</a></li></ul></div>
   </div>
 </section>
@@ -2766,12 +2757,8 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366801/1/60" target="_blank" rel="noopener">原本 コマ60 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">茨城裁判所在勤申付候事　中解部　太田屋身
-歸京申付候事
-兵庫在勤 大解部　犬塚重遠
-千葉在勤 同　高鹽又四郞
-千葉裁判所副所長申付候事</div>
-    
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>茨城裁判所在勤申付候事</td><td>中解部</td><td>太田屋身</td></tr><tr><td colspan="3">歸京申付候事</td></tr><tr><td>兵庫在勤</td><td>大解部</td><td>犬塚重遠</td></tr><tr><td>千葉在勤</td><td>同</td><td>高鹽又四郞</td></tr><tr><td colspan="3" class="jinji-all">千葉裁判所副所長申付候事</td></tr></table></div>
+    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3688977.html#fuken_3688977-0137" class="text-blue-600 hover:underline xref-link">太田屋身　神奈川県史　附録　官員履歴1（明治元‐11年）</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0346" class="text-blue-600 hover:underline xref-link">犬塚重遠　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0485" class="text-blue-600 hover:underline xref-link">高鹽又四郞　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
   </div>
 </section>
 </div>
@@ -2836,7 +2823,7 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366801/1/62" target="_blank" rel="noopener">原本 コマ62 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">大坂裁判所在勤申付候事　權大屬　船來龍</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>大坂裁判所在勤申付候事</td><td>權大屬</td><td>船來龍</td></tr></table></div>
     
   </div>
 </section>
@@ -3662,21 +3649,14 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366801/1/81" target="_blank" rel="noopener">原本 コマ81 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">權大判事　河野敏廉
-今般函館港ニ於テ獨逸國領事ヲ殺害致候秋田縣士族田
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td>權大判事</td><td>河野敏廉</td></tr><tr><td colspan="3">今般函館港ニ於テ獨逸國領事ヲ殺害致候秋田縣士族田
 崎秀延儀ヲ吟味ノ爲メ同港ヘ出張被仰付候ニ付テハ右
 顚末精細取調濟ノ上ハ書類取纏メ出京ノ上斷刑相伺可
 申尤モ右處刑申渡丈ケノ儀ハ伺濟ノ上函館裁判所長井
-上權少判事取計候樣兼テ打合置可申候事
-中解部　香坂昌邦
-臨時御用ニ付至急函館表出張申付候事
-但御用ノ儀ハ河野權大判事ヘ可承合事
-大撿事　岸良兼養
-臨時御用ニ付至急函館表出張被仰付候事
-八等出仕　月形潔
-臨時御用ニ付至急函館表出張申付候事
-但御用ノ儀ハ岸良大撿事ヘ可承合事</div>
-    <div class="xref"><div><span class="xref-caption">正誤:</span> <a href="13.html#a13-064" class="text-blue-600 hover:underline xref-link">a13-064 ○正誤</a></div></div>
+上權少判事取計候樣兼テ打合置可申候事</td></tr><tr><td></td><td>中解部</td><td>香坂昌邦</td></tr><tr><td colspan="3">臨時御用ニ付至急函館表出張申付候事
+但御用ノ儀ハ河野權大判事ヘ可承合事</td></tr><tr><td></td><td>大撿事</td><td>岸良兼養</td></tr><tr><td colspan="3">臨時御用ニ付至急函館表出張被仰付候事</td></tr><tr><td></td><td>八等出仕</td><td>月形潔</td></tr><tr><td colspan="3">臨時御用ニ付至急函館表出張申付候事
+但御用ノ儀ハ岸良大撿事ヘ可承合事</td></tr></table></div>
+    <div class="xref"><div><span class="xref-caption">正誤:</span> <a href="13.html#a13-064" class="text-blue-600 hover:underline xref-link">a13-064 ○正誤</a></div></div><div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0177" class="text-blue-600 hover:underline xref-link">香坂昌邦　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0596" class="text-blue-600 hover:underline xref-link">岸良兼養　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
   </div>
 </section>
 </div></div>
@@ -4089,9 +4069,8 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366801/1/92" target="_blank" rel="noopener">原本 コマ92 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">十三等出仕　中岡藹
-兼テ佐賀裁判所在勤申付置候處御用都合有之不及其儀
-候事</div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td>十三等出仕</td><td>中岡藹</td></tr><tr><td colspan="3">兼テ佐賀裁判所在勤申付置候處御用都合有之不及其儀
+候事</td></tr></table></div>
     
   </div>
 </section>
@@ -4803,9 +4782,8 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366801/1/109" target="_blank" rel="noopener">原本 コマ109 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed">佐賀裁判所在勤申付候事　十一等出仕　井手亨
-神奈川裁判所在勤申付候事　十三等出仕　三木二郞松</div>
-    
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>佐賀裁判所在勤申付候事</td><td>十一等出仕</td><td>井手亨</td></tr><tr><td>神奈川裁判所在勤申付候事</td><td>十三等出仕</td><td>三木二郞松</td></tr></table></div>
+    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3688580.html#fuken_3688580-0126" class="text-blue-600 hover:underline xref-link">井手亨　〔大坂府史〕　制度部　官員進退（明治元‐8年）</a></li><li><a href="https://person-archive.github.io/docs/3689174.html#fuken_3689174-0091" class="text-blue-600 hover:underline xref-link">井手亨　長崎県史稿　政治部　履歴1（慶応4‐明治13年）</a></li></ul></div>
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a12-177" data-type-base="article" data-pid="1366801" data-frame="109">
@@ -5019,5 +4997,7 @@ revealHashTarget();
 // 全文検索の結果から開かれたとき（?q=…）は、本文中の検索語を強調して該当箇所へ移る
 addEventListener('DOMContentLoaded', () => Search.highlightFromQuery({ base: '../search/', root: '#articles' }));
 </script>
+<script>window.PROOF_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdNUCoRSxKiYXCiUDRwfZLecgOZl_8EKb7JeobXT5F0UnLMFQ/viewform?usp=pp_url&entry.1909662132=ID&entry.1668640403=HEAD&entry.2000655517=TEXT";</script>
+<script src="../proof.js?v=83c69186" defer></script>
 </body>
 </html>
