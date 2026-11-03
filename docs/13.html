@@ -41,6 +41,16 @@
   }
   .xref-caption { color: #6b7280; }
   .xref-list { margin: .2em 0 0; padding-left: 1.5em; list-style: disc; }
+
+  /* 同名の人物が出てくる記事のある氏名（クリックで日付の並びを開く） */
+  .pn { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer;
+        text-decoration: underline dotted #9ca3af; text-underline-offset: 3px; }
+  .pn:hover, .pn[aria-expanded="true"] { color: #2563eb; text-decoration-color: #2563eb; }
+  .pn-pop { position: absolute; z-index: 40; max-width: min(30em, calc(100vw - 16px)); padding: .5em .75em;
+            background: #fff; border: 1px solid #e5e7eb; border-radius: .375rem; box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
+            font-size: .875rem; line-height: 1.7; }
+  .pn-caption { color: #6b7280; font-size: .75rem; }
+  .pn-pop a, .pn-self { white-space: nowrap; }  /* 日付は途中で折り返さない */
   section[id], .card-issue { scroll-margin-top: 3.5rem; }
   .card-issue { margin-top: 2rem; }
   .card-issue-head { font-size: 1.125rem; font-weight: 700; border-bottom: 2px solid #e5e7eb; padding-bottom: .25em; margin-bottom: .75rem; }
@@ -343,9 +353,9 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366802/1/8" target="_blank" rel="noopener">原本 コマ8 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td>權大解部</td><td>小林藹</td></tr><tr><td colspan="3">臨時御用有之茨城表出張申付候事
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td>權大解部</td><td><button type="button" class="pn" aria-expanded="false" title="同名の人物が出てくる記事">小林藹</button></td></tr><tr><td colspan="3">臨時御用有之茨城表出張申付候事
 但御用ノ儀ハ小畑權中判事ヘ可承合事</td></tr></table></div>
-    <div class="xref"><span class="xref-caption">司法省日誌（同名の人物）:</span><ul class="xref-list"><li>小林藹：明治7年9月4日、<a class="text-blue-600 hover:underline xref-link" title="a18-163" href="18.html#a18-163">明治8年1月23日</a></li></ul></div><div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3693307.html#fuken_3693307-0068" class="text-blue-600 hover:underline xref-link">小林藹　茨城県官員履歴（明治4‐7年）</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0381" class="text-blue-600 hover:underline xref-link">小林藹　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
+    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3693307.html#fuken_3693307-0068" class="text-blue-600 hover:underline xref-link">小林藹　茨城県官員履歴（明治4‐7年）</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0381" class="text-blue-600 hover:underline xref-link">小林藹　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div><template class="pn-data" data-name="小林藹"><div class="pn-caption">司法省日誌（同名の人物）</div><div><span class="pn-self">明治7年9月4日</span>、<a class="text-blue-600 hover:underline xref-link" title="a18-163" href="18.html#a18-163">明治8年1月23日</a></div></template>
   </div>
 </section>
 </div>
@@ -505,8 +515,8 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366802/1/12" target="_blank" rel="noopener">原本 コマ12 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>任少解部</td><td>少属</td><td>入江恆明</td></tr><tr><td>任權少解部</td><td>十三等出仕</td><td>石田篤滿呂</td></tr></table></div>
-    <div class="xref"><span class="xref-caption">司法省日誌（同名の人物）:</span><ul class="xref-list"><li>入江恆明：明治7年8月24日、<a class="text-blue-600 hover:underline xref-link" title="a22-231" href="22.html#a22-231">明治8年12月14日</a></li><li>石田篤滿呂：<a class="text-blue-600 hover:underline xref-link" title="a07-176" href="07.html#a07-176">明治7年3月20日</a>、明治7年8月24日、<a class="text-blue-600 hover:underline xref-link" title="a23-135" href="23.html#a23-135">明治9年1月4日</a>、<a class="text-blue-600 hover:underline xref-link" title="a24-222" href="24.html#a24-222">明治9年3月3日</a></li></ul></div><div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3688580.html#fuken_3688580-0009" class="text-blue-600 hover:underline xref-link">入江恆明　〔大坂府史〕　制度部　官員進退（明治元‐8年）</a></li></ul></div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>任少解部</td><td>少属</td><td><button type="button" class="pn" aria-expanded="false" title="同名の人物が出てくる記事">入江恆明</button></td></tr><tr><td>任權少解部</td><td>十三等出仕</td><td><button type="button" class="pn" aria-expanded="false" title="同名の人物が出てくる記事">石田篤滿呂</button></td></tr></table></div>
+    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3688580.html#fuken_3688580-0009" class="text-blue-600 hover:underline xref-link">入江恆明　〔大坂府史〕　制度部　官員進退（明治元‐8年）</a></li></ul></div><template class="pn-data" data-name="入江恆明"><div class="pn-caption">司法省日誌（同名の人物）</div><div><span class="pn-self">明治7年8月24日</span>、<a class="text-blue-600 hover:underline xref-link" title="a22-231" href="22.html#a22-231">明治8年12月14日</a></div></template><template class="pn-data" data-name="石田篤滿呂"><div class="pn-caption">司法省日誌（同名の人物）</div><div><a class="text-blue-600 hover:underline xref-link" title="a07-176" href="07.html#a07-176">明治7年3月20日</a>、<span class="pn-self">明治7年8月24日</span>、<a class="text-blue-600 hover:underline xref-link" title="a23-135" href="23.html#a23-135">明治9年1月4日</a>、<a class="text-blue-600 hover:underline xref-link" title="a24-222" href="24.html#a24-222">明治9年3月3日</a></div></template>
   </div>
 </section>
 </div></div>
@@ -942,8 +952,8 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366802/1/21" target="_blank" rel="noopener">原本 コマ21 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>任權中解部</td><td>十一等出仕</td><td>吉岡弘</td></tr></table></div>
-    <div class="xref"><span class="xref-caption">司法省日誌（同名の人物）:</span><ul class="xref-list"><li>吉岡弘：<a class="text-blue-600 hover:underline xref-link" title="a02-049" href="02.html#a02-049">明治6年7月15日</a>、<a class="text-blue-600 hover:underline xref-link" title="a02-160" href="02.html#a02-160">明治6年7月19日</a>、明治7年9月9日</li></ul></div><div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3688662.html#fuken_3688662-0212" class="text-blue-600 hover:underline xref-link">吉岡弘　島根県歴史附録　附録（島根県官員履歴）（明治8年）</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0462" class="text-blue-600 hover:underline xref-link">吉岡弘　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>任權中解部</td><td>十一等出仕</td><td><button type="button" class="pn" aria-expanded="false" title="同名の人物が出てくる記事">吉岡弘</button></td></tr></table></div>
+    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3688662.html#fuken_3688662-0212" class="text-blue-600 hover:underline xref-link">吉岡弘　島根県歴史附録　附録（島根県官員履歴）（明治8年）</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0462" class="text-blue-600 hover:underline xref-link">吉岡弘　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div><template class="pn-data" data-name="吉岡弘"><div class="pn-caption">司法省日誌（同名の人物）</div><div><a class="text-blue-600 hover:underline xref-link" title="a02-049" href="02.html#a02-049">明治6年7月15日</a>、<a class="text-blue-600 hover:underline xref-link" title="a02-160" href="02.html#a02-160">明治6年7月19日</a>、<span class="pn-self">明治7年9月9日</span></div></template>
   </div>
 </section>
 </div>
@@ -960,8 +970,8 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366802/1/21" target="_blank" rel="noopener">原本 コマ21 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>補十二等出仕</td><td></td><td>神谷宗禮</td></tr></table></div>
-    <div class="xref"><span class="xref-caption">司法省日誌（同名の人物）:</span><ul class="xref-list"><li>神谷宗禮：明治7年8月28日、<a class="text-blue-600 hover:underline xref-link" title="a15-129" href="15.html#a15-129">明治7年11月10日</a>、<a class="text-blue-600 hover:underline xref-link" title="a23-151" href="23.html#a23-151">明治9年1月20日</a></li></ul></div><div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3691670.html#fuken_3691670-0044" class="text-blue-600 hover:underline xref-link">神谷宗禮　滋賀県史　附録部　官員履歴4（明治元‐7年）</a></li></ul></div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>補十二等出仕</td><td></td><td><button type="button" class="pn" aria-expanded="false" title="同名の人物が出てくる記事">神谷宗禮</button></td></tr></table></div>
+    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3691670.html#fuken_3691670-0044" class="text-blue-600 hover:underline xref-link">神谷宗禮　滋賀県史　附録部　官員履歴4（明治元‐7年）</a></li></ul></div><template class="pn-data" data-name="神谷宗禮"><div class="pn-caption">司法省日誌（同名の人物）</div><div><span class="pn-self">明治7年8月28日</span>、<a class="text-blue-600 hover:underline xref-link" title="a15-129" href="15.html#a15-129">明治7年11月10日</a>、<a class="text-blue-600 hover:underline xref-link" title="a23-151" href="23.html#a23-151">明治9年1月20日</a></div></template>
   </div>
 </section>
 </div>
@@ -978,8 +988,8 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366802/1/22" target="_blank" rel="noopener">原本 コマ22 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td>權中判事</td><td>小畑美稻</td></tr><tr><td colspan="3">臨時御用ニ付茨城表出張被仰付候事</td></tr><tr><td>同前文 付ニ作ル</td><td>大解部</td><td>土師經典</td></tr></table></div>
-    <div class="xref"><span class="xref-caption">司法省日誌（同名の人物）:</span><ul class="xref-list"><li>小畑美稻：<a class="text-blue-600 hover:underline xref-link" title="a01-089" href="01.html#a01-089">明治6年1月15日</a>、<a class="text-blue-600 hover:underline xref-link" title="a09-147" href="09.html#a09-147">明治7年5月15日</a>、明治7年8月29日、<a class="text-blue-600 hover:underline xref-link" title="a24-273" href="24.html#a24-273">明治9年3月12日</a>、<a class="text-blue-600 hover:underline xref-link" title="a25-135" href="25.html#a25-135">明治9年4月1日</a></li><li>土師經典：<a class="text-blue-600 hover:underline xref-link" title="a01-212" href="01.html#a01-212">明治6年1月14日</a>、<a class="text-blue-600 hover:underline xref-link" title="a03-056" href="03.html#a03-056">明治6年8月7日</a>、<a class="text-blue-600 hover:underline xref-link" title="a09-102" href="09.html#a09-102">明治7年5月12日</a>、<a class="text-blue-600 hover:underline xref-link" title="a11-199" href="11.html#a11-199">明治7年8月2日</a>、明治7年8月29日、<a class="text-blue-600 hover:underline xref-link" title="a21-254" href="21.html#a21-254">明治8年9月18日</a></li></ul></div><div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0354" class="text-blue-600 hover:underline xref-link">小畑美稻　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0450" class="text-blue-600 hover:underline xref-link">土師經典　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td>權中判事</td><td><button type="button" class="pn" aria-expanded="false" title="同名の人物が出てくる記事">小畑美稻</button></td></tr><tr><td colspan="3">臨時御用ニ付茨城表出張被仰付候事</td></tr><tr><td>同前文 付ニ作ル</td><td>大解部</td><td><button type="button" class="pn" aria-expanded="false" title="同名の人物が出てくる記事">土師經典</button></td></tr></table></div>
+    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0354" class="text-blue-600 hover:underline xref-link">小畑美稻　明治十二年明治天皇御下命「人物写真帖」</a></li><li><a href="https://person-archive.github.io/docs/BB11451578.html#BB11451578-0450" class="text-blue-600 hover:underline xref-link">土師經典　明治十二年明治天皇御下命「人物写真帖」</a></li></ul></div><template class="pn-data" data-name="小畑美稻"><div class="pn-caption">司法省日誌（同名の人物）</div><div><a class="text-blue-600 hover:underline xref-link" title="a01-089" href="01.html#a01-089">明治6年1月15日</a>、<a class="text-blue-600 hover:underline xref-link" title="a09-147" href="09.html#a09-147">明治7年5月15日</a>、<span class="pn-self">明治7年8月29日</span>、<a class="text-blue-600 hover:underline xref-link" title="a24-273" href="24.html#a24-273">明治9年3月12日</a>、<a class="text-blue-600 hover:underline xref-link" title="a25-135" href="25.html#a25-135">明治9年4月1日</a></div></template><template class="pn-data" data-name="土師經典"><div class="pn-caption">司法省日誌（同名の人物）</div><div><a class="text-blue-600 hover:underline xref-link" title="a01-212" href="01.html#a01-212">明治6年1月14日</a>、<a class="text-blue-600 hover:underline xref-link" title="a03-056" href="03.html#a03-056">明治6年8月7日</a>、<a class="text-blue-600 hover:underline xref-link" title="a09-102" href="09.html#a09-102">明治7年5月12日</a>、<a class="text-blue-600 hover:underline xref-link" title="a11-199" href="11.html#a11-199">明治7年8月2日</a>、<span class="pn-self">明治7年8月29日</span>、<a class="text-blue-600 hover:underline xref-link" title="a21-254" href="21.html#a21-254">明治8年9月18日</a></div></template>
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a13-031" data-type-base="正誤" data-pid="1366802" data-frame="22">
@@ -1404,8 +1414,8 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366802/1/31" target="_blank" rel="noopener">原本 コマ31 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1"></div>
-    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>補十三等出仕</td><td></td><td>石川雄吉</td></tr></table></div>
-    <div class="xref"><div><span class="xref-caption">正誤:</span> <a href="#a13-092" class="text-blue-600 hover:underline xref-link">a13-092 ○正誤</a></div></div><div class="xref"><span class="xref-caption">司法省日誌（同名の人物）:</span><ul class="xref-list"><li>石川雄吉：明治7年8月30日、<a class="text-blue-600 hover:underline xref-link" title="a13-047" href="#a13-047">明治7年8月30日</a>、<a class="text-blue-600 hover:underline xref-link" title="a20-287" href="20.html#a20-287">明治8年4月25日</a></li></ul></div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>補十三等出仕</td><td></td><td><button type="button" class="pn" aria-expanded="false" title="同名の人物が出てくる記事">石川雄吉</button></td></tr></table></div>
+    <div class="xref"><div><span class="xref-caption">正誤:</span> <a href="#a13-092" class="text-blue-600 hover:underline xref-link">a13-092 ○正誤</a></div></div><template class="pn-data" data-name="石川雄吉"><div class="pn-caption">司法省日誌（同名の人物）</div><div><span class="pn-self">明治7年8月30日</span>、<a class="text-blue-600 hover:underline xref-link" title="a13-047" href="#a13-047">明治7年8月30日</a>、<a class="text-blue-600 hover:underline xref-link" title="a20-287" href="20.html#a20-287">明治8年4月25日</a></div></template>
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a13-047" data-type-base="達書" data-pid="1366802" data-frame="31">
@@ -1419,8 +1429,8 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366802/1/31" target="_blank" rel="noopener">原本 コマ31 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td>少撿事</td><td>莊島包秩</td></tr><tr><td colspan="3">臨時御用有之茨城表出張申付候事</td></tr><tr><td>兵庫裁判所在勤申付候事</td><td>十三等出仕</td><td>石川雄吉</td></tr></table></div>
-    <div class="xref"><div><span class="xref-caption">正誤:</span> <a href="#a13-092" class="text-blue-600 hover:underline xref-link">a13-092 ○正誤</a></div></div><div class="xref"><span class="xref-caption">司法省日誌（同名の人物）:</span><ul class="xref-list"><li>莊島包秩：<a class="text-blue-600 hover:underline xref-link" title="a07-256" href="07.html#a07-256">明治7年3月29日</a>、明治7年8月30日、<a class="text-blue-600 hover:underline xref-link" title="a14-031" href="14.html#a14-031">明治7年10月5日</a>、<a class="text-blue-600 hover:underline xref-link" title="a24-227" href="24.html#a24-227">明治9年3月4日</a></li><li>石川雄吉：<a class="text-blue-600 hover:underline xref-link" title="a13-046" href="#a13-046">明治7年8月30日</a>、明治7年8月30日、<a class="text-blue-600 hover:underline xref-link" title="a20-287" href="20.html#a20-287">明治8年4月25日</a></li></ul></div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td>少撿事</td><td><button type="button" class="pn" aria-expanded="false" title="同名の人物が出てくる記事">莊島包秩</button></td></tr><tr><td colspan="3">臨時御用有之茨城表出張申付候事</td></tr><tr><td>兵庫裁判所在勤申付候事</td><td>十三等出仕</td><td><button type="button" class="pn" aria-expanded="false" title="同名の人物が出てくる記事">石川雄吉</button></td></tr></table></div>
+    <div class="xref"><div><span class="xref-caption">正誤:</span> <a href="#a13-092" class="text-blue-600 hover:underline xref-link">a13-092 ○正誤</a></div></div><template class="pn-data" data-name="莊島包秩"><div class="pn-caption">司法省日誌（同名の人物）</div><div><a class="text-blue-600 hover:underline xref-link" title="a07-256" href="07.html#a07-256">明治7年3月29日</a>、<span class="pn-self">明治7年8月30日</span>、<a class="text-blue-600 hover:underline xref-link" title="a14-031" href="14.html#a14-031">明治7年10月5日</a>、<a class="text-blue-600 hover:underline xref-link" title="a24-227" href="24.html#a24-227">明治9年3月4日</a></div></template><template class="pn-data" data-name="石川雄吉"><div class="pn-caption">司法省日誌（同名の人物）</div><div><a class="text-blue-600 hover:underline xref-link" title="a13-046" href="#a13-046">明治7年8月30日</a>、<span class="pn-self">明治7年8月30日</span>、<a class="text-blue-600 hover:underline xref-link" title="a20-287" href="20.html#a20-287">明治8年4月25日</a></div></template>
   </div>
 </section>
 </div>
@@ -1841,8 +1851,8 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366802/1/42" target="_blank" rel="noopener">原本 コマ42 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td>中解部</td><td>鐸木三郞</td></tr><tr><td></td><td>十二等出仕</td><td>大井治義</td></tr><tr><td colspan="3" class="jinji-all">臨時御用有之愛知縣出張申付候事 各</td></tr></table></div>
-    <div class="xref"><span class="xref-caption">司法省日誌（同名の人物）:</span><ul class="xref-list"><li>鐸木三郞：明治7年9月10日、<a class="text-blue-600 hover:underline xref-link" title="a16-244" href="16.html#a16-244">明治7年12月27日</a>、<a class="text-blue-600 hover:underline xref-link" title="a22-166" href="22.html#a22-166">明治8年12月4日</a></li><li>大井治義：明治7年9月10日、<a class="text-blue-600 hover:underline xref-link" title="a21-085" href="21.html#a21-085">明治8年5月2日</a>、<a class="text-blue-600 hover:underline xref-link" title="a24-235" href="24.html#a24-235">明治9年3月5日</a></li></ul></div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td>中解部</td><td><button type="button" class="pn" aria-expanded="false" title="同名の人物が出てくる記事">鐸木三郞</button></td></tr><tr><td></td><td>十二等出仕</td><td><button type="button" class="pn" aria-expanded="false" title="同名の人物が出てくる記事">大井治義</button></td></tr><tr><td colspan="3" class="jinji-all">臨時御用有之愛知縣出張申付候事 各</td></tr></table></div>
+    <template class="pn-data" data-name="鐸木三郞"><div class="pn-caption">司法省日誌（同名の人物）</div><div><span class="pn-self">明治7年9月10日</span>、<a class="text-blue-600 hover:underline xref-link" title="a16-244" href="16.html#a16-244">明治7年12月27日</a>、<a class="text-blue-600 hover:underline xref-link" title="a22-166" href="22.html#a22-166">明治8年12月4日</a></div></template><template class="pn-data" data-name="大井治義"><div class="pn-caption">司法省日誌（同名の人物）</div><div><span class="pn-self">明治7年9月10日</span>、<a class="text-blue-600 hover:underline xref-link" title="a21-085" href="21.html#a21-085">明治8年5月2日</a>、<a class="text-blue-600 hover:underline xref-link" title="a24-235" href="24.html#a24-235">明治9年3月5日</a></div></template>
   </div>
 </section>
 </div>
@@ -1953,8 +1963,8 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366802/1/45" target="_blank" rel="noopener">原本 コマ45 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">〔達書〕</div>
-    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td>十二等出仕</td><td>泉謙三郞</td></tr><tr><td colspan="3">熊谷裁判所在勤申付置候處舊用都合有之不及其儀候事</td></tr></table></div>
-    <div class="xref"><span class="xref-caption">司法省日誌（同名の人物）:</span><ul class="xref-list"><li>泉謙三郞：<a class="text-blue-600 hover:underline xref-link" title="a10-271" href="10.html#a10-271">明治7年6月28日</a>、<a class="text-blue-600 hover:underline xref-link" title="a10-272" href="10.html#a10-272">明治7年6月28日</a>、明治7年9月19日、<a class="text-blue-600 hover:underline xref-link" title="a14-045" href="14.html#a14-045">明治7年10月5日</a></li></ul></div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td></td><td>十二等出仕</td><td><button type="button" class="pn" aria-expanded="false" title="同名の人物が出てくる記事">泉謙三郞</button></td></tr><tr><td colspan="3">熊谷裁判所在勤申付置候處舊用都合有之不及其儀候事</td></tr></table></div>
+    <template class="pn-data" data-name="泉謙三郞"><div class="pn-caption">司法省日誌（同名の人物）</div><div><a class="text-blue-600 hover:underline xref-link" title="a10-271" href="10.html#a10-271">明治7年6月28日</a>、<a class="text-blue-600 hover:underline xref-link" title="a10-272" href="10.html#a10-272">明治7年6月28日</a>、<span class="pn-self">明治7年9月19日</span>、<a class="text-blue-600 hover:underline xref-link" title="a14-045" href="14.html#a14-045">明治7年10月5日</a></div></template>
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a13-068" data-type-base="伺" data-pid="1366802" data-frame="45">
@@ -3062,8 +3072,8 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366802/1/72" target="_blank" rel="noopener">原本 コマ72 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>補十等出仕</td><td></td><td>宮本貞幹</td></tr></table></div>
-    <div class="xref"><span class="xref-caption">司法省日誌（同名の人物）:</span><ul class="xref-list"><li>宮本貞幹：明治7年9月15日、<a class="text-blue-600 hover:underline xref-link" title="a15-129" href="15.html#a15-129">明治7年11月10日</a></li></ul></div><div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3688580.html#fuken_3688580-0094" class="text-blue-600 hover:underline xref-link">宮本貞幹　〔大坂府史〕　制度部　官員進退（明治元‐8年）</a></li></ul></div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>補十等出仕</td><td></td><td><button type="button" class="pn" aria-expanded="false" title="同名の人物が出てくる記事">宮本貞幹</button></td></tr></table></div>
+    <div class="xref"><span class="xref-caption">人名アーカイブス（同名の人物）:</span><ul class="xref-list"><li><a href="https://person-archive.github.io/docs/3688580.html#fuken_3688580-0094" class="text-blue-600 hover:underline xref-link">宮本貞幹　〔大坂府史〕　制度部　官員進退（明治元‐8年）</a></li></ul></div><template class="pn-data" data-name="宮本貞幹"><div class="pn-caption">司法省日誌（同名の人物）</div><div><span class="pn-self">明治7年9月15日</span>、<a class="text-blue-600 hover:underline xref-link" title="a15-129" href="15.html#a15-129">明治7年11月10日</a></div></template>
   </div>
 </section>
 </div>
@@ -3080,8 +3090,8 @@
       <span class="ml-auto flex items-center gap-3"><a class="source" href="https://dl.ndl.go.jp/pid/1366802/1/73" target="_blank" rel="noopener">原本 コマ73 →</a><a href="#top" class="text-xs text-gray-500 hover:underline">↑先頭へ</a></span>
     </div>
     <div class="font-semibold text-base mb-1">○</div>
-    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>依願免出仕</td><td>十五等出仕</td><td>北條新三郞</td></tr></table></div>
-    <div class="xref"><span class="xref-caption">司法省日誌（同名の人物）:</span><ul class="xref-list"><li>北條新三郞：<a class="text-blue-600 hover:underline xref-link" title="a02-226" href="02.html#a02-226">明治6年7月28日</a>、明治7年9月16日</li></ul></div>
+    <div class="item-body text-base leading-relaxed"><table class="jinji"><tr><td>依願免出仕</td><td>十五等出仕</td><td><button type="button" class="pn" aria-expanded="false" title="同名の人物が出てくる記事">北條新三郞</button></td></tr></table></div>
+    <template class="pn-data" data-name="北條新三郞"><div class="pn-caption">司法省日誌（同名の人物）</div><div><a class="text-blue-600 hover:underline xref-link" title="a02-226" href="02.html#a02-226">明治6年7月28日</a>、<span class="pn-self">明治7年9月16日</span></div></template>
   </div>
 </section>
 <section class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4" id="a13-106" data-type-base="正誤" data-pid="1366802" data-frame="73">
@@ -5263,6 +5273,42 @@ revealHashTarget();
     e.preventDefault();
     history.go(-(depth + 1));
   });
+})();
+
+// 本文の氏名（.pn）をクリックすると、同名の人物が出てくる記事の日付の並び（記事の <template class="pn-data">）を
+// 氏名の下に開く。もう一度クリック・ほかの所のクリック・Esc・並びの中のリンクで閉じる
+(function () {
+  var pop = null, owner = null;
+  function close() {
+    if (!pop) return;
+    pop.remove();
+    owner.setAttribute('aria-expanded', 'false');
+    pop = owner = null;
+  }
+  document.addEventListener('click', function (e) {
+    if (pop && pop.contains(e.target)) {
+      if (e.target.closest('a')) close();
+      return;
+    }
+    var btn = e.target.closest('.pn');
+    var reopen = btn && btn !== owner;
+    close();
+    if (!reopen) return;
+    var tpl = Array.prototype.find.call(btn.closest('section').querySelectorAll('template.pn-data'),
+      function (t) { return t.dataset.name === btn.textContent; });
+    if (!tpl) return;
+    pop = document.createElement('div');
+    pop.className = 'pn-pop';
+    pop.appendChild(tpl.content.cloneNode(true));
+    document.body.appendChild(pop);
+    var r = btn.getBoundingClientRect();
+    var maxLeft = scrollX + document.documentElement.clientWidth - pop.offsetWidth - 8;
+    pop.style.left = Math.max(scrollX + 8, Math.min(r.left + scrollX, maxLeft)) + 'px';
+    pop.style.top = (r.bottom + scrollY + 4) + 'px';
+    owner = btn;
+    btn.setAttribute('aria-expanded', 'true');
+  });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
 })();
 </script>
 <script src="../viewer.js?v=23ae2245" defer></script>
